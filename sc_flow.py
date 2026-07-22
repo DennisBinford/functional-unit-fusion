@@ -2,14 +2,15 @@
 """SiliconCompiler synthesis + STA backend for the evaluation framework.
 
 This module gives the framework a real PPA path: it drives SiliconCompiler's
-synthesis + static-timing flow (Yosys -> OpenSTA) on the Skywater130 open PDK
-and returns area / timing / power numbers in the framework's result-dict
+synthesis + static-timing flow (Yosys -> OpenSTA) on the FreePDK45 (Nangate45)
+open PDK and returns area / timing / power numbers in the framework's result-dict
 contract (a JSON-serializable dict carrying at least a ``status`` field).
 
 It is intentionally free of design-specific knowledge: the adapter passes the
 top module, RTL sources, and an SDC, and this module runs the flow. Tool
 binaries are resolved from the project-local, no-sudo toolchain installed under
-``tools/`` (OSS CAD Suite Yosys + a locally built OpenSTA + the sky130 PDK).
+``tools/`` (OSS CAD Suite Yosys + a locally built OpenSTA); the FreePDK45
+Nangate45 standard cells and timing corners are supplied by SiliconCompiler.
 """
 
 import os
@@ -19,7 +20,7 @@ from typing import Any, Dict, List, Optional, Sequence
 ROOT = Path(__file__).resolve().parent
 
 # Project-local tool locations (installed without root; see README/action_items).
-_EDA_ENV = ROOT / "tools" / "mm" / "root" / "envs" / "eda"      # OpenSTA + sky130 deps
+_EDA_ENV = ROOT / "tools" / "mm" / "root" / "envs" / "eda"      # OpenSTA + PDK deps
 _OSS_BIN = ROOT / "tools" / "oss-cad-suite" / "bin"             # Yosys 0.67 (>= SC floor)
 
 
@@ -92,7 +93,7 @@ def synthesize_design_sc(
 
     # Imported here so the module can be inspected without SC installed.
     from siliconcompiler import ASIC, Design
-    from siliconcompiler.targets import skywater130_demo
+    from siliconcompiler.targets import freepdk45_demo
     from siliconcompiler.flows import synflow
 
     sources = [str(Path(s).resolve()) for s in rtl_sources]
@@ -117,7 +118,7 @@ def synthesize_design_sc(
 
     proj = ASIC(design)
     proj.add_fileset(["rtl", "sdc"])
-    skywater130_demo(proj)                       # sky130 PDK + stdcell lib + corners
+    freepdk45_demo(proj)                         # FreePDK45 PDK + Nangate45 stdcells + corners
     proj.set_flow(synflow.SynthesisFlow())       # synthesis + STA only (no P&R)
     proj.set("option", "builddir", str(builddir))
     # Locally built OpenSTA reports version 3.1.0 (>= SC floor) so no bypass is
@@ -173,8 +174,8 @@ def synthesize_design_sc(
         "operation": "synthesis",
         "tool": "siliconcompiler",
         "flow": "synflow.SynthesisFlow",
-        "pdk": "skywater130 (sky130hd)",
-        "stdcell_library": "sky130_fd_sc_hd",
+        "pdk": "freepdk45",
+        "stdcell_library": "nangate45 (NangateOpenCellLibrary_typical)",
         "synthesis_tool": "yosys",
         "timing_tool": "opensta",
         "design": design_top,

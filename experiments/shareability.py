@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Quantify 'is there a lot of shared logic?' for the demo_alu operations.
 
-Maps designs to the SAME sky130 standard cells as the main flow (Yosys + ABC) and
+Maps designs to the SAME FreePDK45/Nangate45 standard cells as the main flow (Yosys + ABC) and
 reads back mapped area (um^2). It answers the shareability question three ways:
 
   1. Aggregate: fused ALU vs the fair separate-selected baseline (N units behind
@@ -16,9 +16,9 @@ reads back mapped area (um^2). It answers the shareability question three ways:
 Fix vs the earlier version: area is now summed over ALL modules in the design,
 not just the top. The separate-selected baseline keeps op boundaries
 (keep_hierarchy) so Yosys can't flatten them, which means the op submodules must
-be counted too. See ../02_quantifying_shared_logic.md.
+be counted too. See the brainstorm notes (02_quantifying_shared_logic).
 
-Run:  .venv/bin/python brainstorm/experiments/shareability.py
+Run:  .venv/bin/python experiments/shareability.py
 """
 
 import itertools
@@ -30,11 +30,12 @@ import sys
 import tempfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 OSS_BIN = ROOT / "tools" / "oss-cad-suite" / "bin"
 YOSYS = OSS_BIN / "yosys"
-LIB = ROOT / "brainstorm" / "experiments" / "sky130hd_tt.lib"
-GEN = ROOT / "brainstorm" / "experiments" / "gen"
+HERE = Path(__file__).resolve().parent
+LIB = HERE / "nangate45_typical.lib"   # fetched from the SC PDK cache on first run
+GEN = HERE / "gen"
 
 # Operation semantics, coded to match rtl/demo_alu.sv exactly (WIDTH=32).
 # Each maps an output name to a SystemVerilog expression over a_i, b_i.
@@ -113,10 +114,10 @@ def pair_area(i: str, j: str) -> float:
 
 def main() -> int:
     if not LIB.is_file():
-        import gzip
-        s = next(Path.home().glob(".sc/cache/lambdapdk-*/lambdapdk/sky130/libs/sky130hd/"
-                                  "nldm/sky130_fd_sc_hd__tt_025C_1v80.lib.gz"))
-        LIB.write_bytes(gzip.decompress(s.read_bytes()))
+        import shutil
+        s = next(Path.home().glob(".sc/cache/lambdapdk-*/lambdapdk/freepdk45/libs/"
+                                  "nangate45/nldm/NangateOpenCellLibrary_typical.lib"))
+        shutil.copyfile(s, LIB)
 
     # --- individual op areas ---
     print("individual op areas (um^2):")
@@ -147,7 +148,7 @@ def main() -> int:
         }
 
     metrics = {
-        "library": "sky130_fd_sc_hd (tt, 25C, 1.80V)",
+        "library": "nangate45 (NangateOpenCellLibrary_typical)",
         "individual_op_um2": a,
         "sum_of_individual_ops_um2": sum_ops,
         "fused_um2": a_fused,
@@ -160,7 +161,7 @@ def main() -> int:
     out_path = Path(__file__).resolve().parent / "shareability.json"
     out_path.write_text(json.dumps(metrics, indent=2, sort_keys=True))
 
-    print("\n--- aggregate (sky130hd) ---")
+    print("\n--- aggregate (nangate45) ---")
     print(f"sum of 7 individual ops : {sum_ops:8.1f} um^2")
     print(f"separate-selected (fair): {a_sep:8.1f} um^2  (+{metrics['selection_overhead_um2']:.0f} selection overhead)")
     print(f"fused demo_alu          : {a_fused:8.1f} um^2")
