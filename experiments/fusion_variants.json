@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "interface": {
+    "operand_width": 32,
+    "operations": {
+      "0": "add",
+      "1": "sub",
+      "2": "and",
+      "3": "or",
+      "4": "xor",
+      "5": "signed_less_than",
+      "6": "shift_left_logical",
+      "7": "invalid_returns_zero"
+    }
+  },
+  "simulation": {
+    "top": "tb_demo_variants",
+    "testbench": "tb/tb_demo_variants.sv",
+    "expected_checks": 1757,
+    "expected_variants": 6
+  },
+  "variants": [
+    {
+      "name": "separate_locked",
+      "top": "demo_alu_separate_locked",
+      "sources": [
+        "rtl/baselines/demo_op_add.sv", "rtl/baselines/demo_op_sub.sv",
+        "rtl/baselines/demo_op_and.sv", "rtl/baselines/demo_op_or.sv",
+        "rtl/baselines/demo_op_xor.sv", "rtl/baselines/demo_op_slt.sv",
+        "rtl/baselines/demo_op_sll.sv", "rtl/baselines/demo_alu_separate_locked.sv"
+      ],
+      "sharing_policy": "keep_hierarchy_between_operations",
+      "expected_locked_instances": ["u_add", "u_sub", "u_and", "u_or", "u_xor", "u_slt", "u_sll"],
+      "power_policy": "eager"
+    },
+    {
+      "name": "separate_isolated",
+      "top": "demo_alu_separate_locked_isolated",
+      "sources": [
+        "rtl/baselines/demo_op_add.sv", "rtl/baselines/demo_op_sub.sv",
+        "rtl/baselines/demo_op_and.sv", "rtl/baselines/demo_op_or.sv",
+        "rtl/baselines/demo_op_xor.sv", "rtl/baselines/demo_op_slt.sv",
+        "rtl/baselines/demo_op_sll.sv", "rtl/baselines/demo_alu_separate_locked_isolated.sv"
+      ],
+      "sharing_policy": "keep_hierarchy_between_operations",
+      "expected_locked_instances": ["u_add", "u_sub", "u_and", "u_or", "u_xor", "u_slt", "u_sll"],
+      "power_policy": "operand_isolation"
+    },
+    {
+      "name": "separate_flat_auto",
+      "top": "demo_alu_separate_flat_auto",
+      "sources": [
+        "rtl/baselines/demo_op_add.sv", "rtl/baselines/demo_op_sub.sv",
+        "rtl/baselines/demo_op_and.sv", "rtl/baselines/demo_op_or.sv",
+        "rtl/baselines/demo_op_xor.sv", "rtl/baselines/demo_op_slt.sv",
+        "rtl/baselines/demo_op_sll.sv", "rtl/baselines/demo_alu_separate_flat_auto.sv"
+      ],
+      "sharing_policy": "normal_yosys_flatten_and_share",
+      "power_policy": "eager"
+    },
+    {
+      "name": "fused_auto",
+      "top": "demo_alu",
+      "sources": ["rtl/demo_alu.sv"],
+      "sharing_policy": "normal_yosys_optimization",
+      "power_policy": "selected_expression"
+    },
+    {
+      "name": "fused_manual",
+      "top": "demo_alu_manual_fused",
+      "sources": ["rtl/demo_alu_manual_fused.sv"],
+      "sharing_policy": "explicit_shared_add_sub_slt_path",
+      "power_policy": "selected_expression"
+    },
+    {
+      "name": "dedicated_parallel",
+      "top": "demo_alu_dedicated_parallel",
+      "sources": [
+        "rtl/baselines/demo_op_add.sv", "rtl/baselines/demo_op_sub.sv",
+        "rtl/baselines/demo_op_and.sv", "rtl/baselines/demo_op_or.sv",
+        "rtl/baselines/demo_op_xor.sv", "rtl/baselines/demo_op_slt.sv",
+        "rtl/baselines/demo_op_sll.sv", "rtl/baselines/demo_alu_dedicated_parallel.sv"
+      ],
+      "sharing_policy": "independent_parallel_outputs",
+      "power_policy": "eager",
+      "ppa_eligible": false,
+      "capacity_note": "All seven results are available concurrently; normalize throughput before comparing area."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+tools/
+third_party/
+designs/*.source.json
+
+.venv/
+.DS_Store
+
+# working docs -- keep local, do not publish
+*.md
