@@ -78,8 +78,8 @@ demo:
 		--clock-period $(CLOCK_PERIOD) --jobs $(JOBS) --seed $(SEED) --clean --json
 
 # End-to-end open-source demo: Verilator simulation + SiliconCompiler PPA on
-# the Skywater130 PDK (Yosys -> OpenSTA). No Liberty/lock args needed; the SC
-# flow supplies the sky130 standard-cell library and timing corners itself.
+# the FreePDK45 PDK (Yosys -> OpenSTA). No Liberty/lock args needed; the SC
+# flow supplies the Nangate45 standard-cell library and timing corners itself.
 ppa-sc:
 	$(SC_PYTHON) framework.py synthesize --adapter adapter.py \
 		--synthesizer siliconcompiler --clean --json
