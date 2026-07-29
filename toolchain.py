@@ -132,7 +132,18 @@ def select_cxx() -> Dict[str, Any]:
             path = Path(configured).expanduser()
             if path.is_file() and os.access(str(path), os.X_OK):
                 candidates.append((os.path.abspath(str(path)), environment_name))
-    for binary in ("clang++", "g++", "c++"):
+    # Try the unversioned names first (so a default toolchain that is already
+    # coroutine-capable is chosen, preserving prior behavior), then fall back to
+    # version-suffixed names in descending order. This finds a newer side-by-side
+    # install (e.g. g++-11 next to a distro-default g++-9 that predates
+    # <coroutine>) without the user having to set FU_CXX. Non-existent names are
+    # skipped cheaply, and inspect_cxx only runs on binaries that actually exist.
+    clang_versions = range(22, 13, -1)   # clang shipped non-experimental <coroutine> at 14
+    gcc_versions = range(16, 10, -1)     # gcc has full -std=c++20 coroutines from 11
+    binary_names = ["clang++", "g++", "c++"]
+    binary_names += ["clang++-{}".format(v) for v in clang_versions]
+    binary_names += ["g++-{}".format(v) for v in gcc_versions]
+    for binary in binary_names:
         executable = None
         for directory in _candidate_directories():
             candidate = Path(directory) / binary

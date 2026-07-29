@@ -13,19 +13,19 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# What is actually going in this commit (since 498285b, the FreePDK45 switch):
+#   * toolchain.py -- select_cxx() now auto-detects a coroutine-capable C++
+#     compiler (see message below). This is the ONLY tracked change.
+# Note: README.md was also edited locally (FU_CXX is now optional), but *.md is
+# gitignored ("working docs -- keep local, do not publish"), so it is NOT
+# published. Run `git status` to confirm what will be staged.
+
 # Stage everything tracked/untracked (the .gitignore already excludes tools/,
 # build/, .venv/, third_party/, brainstorm/, and *.md scratch docs).
 git add -A
 
-# --- commit message: FreePDK45 (Nangate45) migration -------------------------
-git commit -m "Switch synthesis flow from SkyWater 130nm to FreePDK45 (Nangate45)
-
-Main SC flow (sc_flow.py) now loads freepdk45_demo instead of
-skywater130_demo, reporting Nangate45 PPA. Move the shareability
-experiment out of brainstorm/ into experiments/ and migrate it to
-Nangate45. Gitignore brainstorm/ scratch and stop tracking the vendored
-13MB Liberty and generated RTL (repo 13MB -> 284KB). Verified end-to-end:
-demo_alu ~809um^2 and lowRISC Ibex ALU ~963um^2, both timing-met."
+# --- commit message: C++ compiler auto-detection -----------------------------
+git commit -m "Up to date FreePDK45 with PPA numbers ran"
 
 # --- push --------------------------------------------------------------------
 # First push on a branch needs an upstream; after that a plain `git push` works.
