@@ -12,6 +12,9 @@ reads back mapped area (um^2). It answers the shareability question three ways:
      and compare to the two ops synthesized separately. This is the AIG-level
      "shared-node" idea (Mishchenko DAG-aware rewriting) with no mux confound:
         shareability(i,j) = (A_i + A_j - A_both) / (A_i + A_j)
+  4. AIG shared-node metric (technology-independent): the same idea at the
+     And-Inverter-Graph node level (Yosys aigmap / ABC strash+rewrite), plus a
+     Spearman check of whether this cheap metric tracks the mapped-area matrix.
 
 Fix vs the earlier version: area is now summed over ALL modules in the design,
 not just the top. The separate-selected baseline keeps op boundaries
@@ -112,6 +115,87 @@ def pair_area(i: str, j: str) -> float:
     return total_mapped_area([src], f"pair_{i}_{j}")
 
 
+# --- AIG shared-node metric (technology-independent, Mishchenko-style) --------
+
+def total_aig_nodes(sources, top: str, method: str = "aigmap") -> int:
+    """Count AIG AND-nodes for a design (library-free shareability signal).
+
+    method="aigmap": Yosys structural hashing only (merges identical cones).
+    method="abc":    ABC strash + DAG-aware rewrite (``abc -g AND``), which
+                     restructures logic and exposes additional sharing.
+    Apply the SAME method to fused and separate designs; only the RATIO matters.
+    """
+    read = "; ".join(f"read_verilog -sv {s}" for s in sources)
+    # Lower to a bit-level generic netlist with the SAME synth flow the area path
+    # uses (proven to feed abc), then extract the AIG. simplemap guarantees the
+    # internal gate types aigmap needs. Only the RATIO across designs matters.
+    prep = f"{read}; synth -top {top} -flatten"
+    core = ("simplemap; aigmap; opt_clean" if method == "aigmap"
+            else "abc -g AND; opt_clean")
+    out = _yosys(f"{prep}; {core}; stat")
+    m = re.search(r"\$_AND_\s+(\d+)", out)
+    return int(m.group(1)) if m else 0
+
+
+def op_aig(op: str, method: str) -> int:
+    src = _write_module(f"op_{op}", {"r": OPS[op]})
+    return total_aig_nodes([src], f"op_{op}", method)
+
+
+def pair_aig(i: str, j: str, method: str) -> int:
+    src = _write_module(f"pair_{i}_{j}", {"ri": OPS[i], "rj": OPS[j]})
+    return total_aig_nodes([src], f"pair_{i}_{j}", method)
+
+
+def all_ops_aig(method: str) -> int:
+    """One multi-output module with ALL ops -> its shared AIG node count."""
+    src = _write_module("all_ops", {f"r_{op}": OPS[op] for op in OP_NAMES})
+    return total_aig_nodes([src], "all_ops", method)
+
+
+def aig_analysis() -> dict:
+    """AIG shared-node shareability for both structural-hash and rewrite methods."""
+    result = {}
+    for method in ("aigmap", "abc"):
+        n = {op: op_aig(op, method) for op in OP_NAMES}
+        sum_n = sum(n.values())
+        all_n = all_ops_aig(method)
+        pair = {}
+        for i, j in itertools.combinations(OP_NAMES, 2):
+            both = pair_aig(i, j, method)
+            denom = n[i] + n[j]
+            pair[f"{i}+{j}"] = {
+                "n_i": n[i], "n_j": n[j], "n_both": both,
+                "shareability": (n[i] + n[j] - both) / denom if denom else 0.0,
+            }
+        result[method] = {
+            "per_op_and_nodes": n,
+            "sum_of_ops_and_nodes": sum_n,
+            "all_ops_multioutput_and_nodes": all_n,
+            "aig_overlap_vs_sum": (1.0 - all_n / sum_n) if sum_n else 0.0,
+            "pairwise_shareability": pair,
+        }
+    return result
+
+
+def _spearman(x: dict, y: dict) -> float:
+    """Spearman rank correlation between two same-keyed key->value dicts."""
+    keys = list(x)
+
+    def ranks(d):
+        order = sorted(keys, key=lambda k: d[k])
+        return {k: idx for idx, k in enumerate(order)}
+
+    rx, ry = ranks(x), ranks(y)
+    n = len(keys)
+    ax = sum(rx[k] for k in keys) / n
+    ay = sum(ry[k] for k in keys) / n
+    num = sum((rx[k] - ax) * (ry[k] - ay) for k in keys)
+    dx = sum((rx[k] - ax) ** 2 for k in keys) ** 0.5
+    dy = sum((ry[k] - ay) ** 2 for k in keys) ** 0.5
+    return num / (dx * dy) if dx and dy else 0.0
+
+
 def main() -> int:
     if not LIB.is_file():
         import shutil
@@ -147,6 +231,15 @@ def main() -> int:
             "shareability": (a[i] + a[j] - both) / (a[i] + a[j]),
         }
 
+    # --- AIG shared-node metric (technology-independent), both methods ---
+    aig = aig_analysis()
+    area_share = {k: v["shareability"] for k, v in pair_share.items()}
+    aig_vs_area_spearman = {
+        m: _spearman(area_share,
+                     {k: v["shareability"] for k, v in aig[m]["pairwise_shareability"].items()})
+        for m in ("aigmap", "abc")
+    }
+
     metrics = {
         "library": "nangate45 (NangateOpenCellLibrary_typical)",
         "individual_op_um2": a,
@@ -157,6 +250,8 @@ def main() -> int:
         "area_saving_vs_separate_selected": (a_sep - a_fused) / a_sep,
         "fused_vs_sum_individual": 1.0 - a_fused / sum_ops,
         "pairwise_shareability": pair_share,
+        "aig": aig,
+        "aig_vs_area_spearman": aig_vs_area_spearman,
     }
     out_path = Path(__file__).resolve().parent / "shareability.json"
     out_path.write_text(json.dumps(metrics, indent=2, sort_keys=True))
@@ -173,6 +268,26 @@ def main() -> int:
     for name, v in ranked[:8]:
         print(f"  {name:10s} {v['shareability']*100:+5.1f}%   "
               f"(A_i={v['A_i']:.0f} A_j={v['A_j']:.0f} A_both={v['A_both']:.0f})")
+
+    print("\n=== AIG shared-node metric (Mishchenko, technology-independent) ===")
+    for method, label in (("aigmap", "structural hashing only"),
+                          ("abc", "strash + DAG-aware rewrite")):
+        d = aig[method]
+        print(f"\n[{method}] {label}")
+        print("  per-op AND-nodes: "
+              + "  ".join(f"{op}={d['per_op_and_nodes'][op]}" for op in OP_NAMES))
+        print(f"  sum-of-ops={d['sum_of_ops_and_nodes']}  "
+              f"all-ops-multioutput={d['all_ops_multioutput_and_nodes']}  "
+              f"overlap={d['aig_overlap_vs_sum']*100:+.1f}%")
+        top = sorted(d["pairwise_shareability"].items(),
+                     key=lambda kv: kv[1]["shareability"], reverse=True)[:5]
+        print("  top pairs: "
+              + ", ".join(f"{k} {v['shareability']*100:+.0f}%" for k, v in top))
+
+    print("\n--- cheap-vs-synthesis agreement (does AIG track mapped area?) ---")
+    for m in ("aigmap", "abc"):
+        print(f"  Spearman(area-shareability, AIG-{m}) = {aig_vs_area_spearman[m]:+.2f}")
+
     print(f"\nwrote {out_path}")
     return 0
 

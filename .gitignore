@@ -3,6 +3,10 @@ __pycache__/
 .pytest_cache/
 build/
 tools/
+
+# Local meeting media and transcripts: keep originals out of version control.
+meetings/2026-summer-professor/recordings/*
+!meetings/2026-summer-professor/recordings/.gitkeep
 third_party/
 designs/*.source.json
 
