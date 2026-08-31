@@ -52,6 +52,7 @@ OSS_BIN = ROOT / "tools" / "oss-cad-suite" / "bin"
 YOSYS = OSS_BIN / "yosys"
 
 LEVELS = ("ast", "module", "rtlil", "gate", "aig")
+GRAPH_SCHEMA = "fu-graph/v1"
 
 
 class GraphExtractError(RuntimeError):
@@ -121,6 +122,7 @@ class FUGraph:
 
     def to_dict(self) -> Dict[str, Any]:
         return {
+            "schema": GRAPH_SCHEMA,
             "design": self.design,
             "level": self.level,
             "top": self.top,
@@ -129,6 +131,27 @@ class FUGraph:
             "nodes": [asdict(n) for n in self.nodes],
             "edges": [asdict(e) for e in self.edges],
         }
+
+    def node_signature(self, node_id: str) -> Tuple[Any, ...]:
+        """Return an ID-independent semantic signature for one node.
+
+        This is deliberately a local signature: graph matching will later add
+        predecessor signatures and canonicalize commutative operands. Tool-
+        generated node IDs must never be used as cross-design identities.
+        """
+        node = self.node_map()[node_id]
+        attrs = node.attrs or {}
+        parameters = attrs.get("parameters", {})
+        parameter_items = tuple(sorted((str(k), str(v)) for k, v in parameters.items()))
+        operation = attrs.get("operation") or normalize_operation(node.kind)
+        return (
+            self.level,
+            operation,
+            node.kind,
+            node.width,
+            attrs.get("signed"),
+            parameter_items,
+        )
 
     def save(self, path: Path) -> Path:
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -147,6 +170,22 @@ class FUGraph:
         graph.nodes = [Node(**n) for n in data["nodes"]]
         graph.edges = [Edge(**e) for e in data["edges"]]
         return graph
+
+
+def normalize_operation(kind: str) -> str:
+    """Map common Yosys/tool spellings to a stable semantic operation name."""
+    value = str(kind).lstrip("$").strip("_").lower()
+    aliases = {
+        "add": "add", "sub": "sub", "mul": "mul", "div": "div",
+        "mod": "mod", "lt": "compare", "le": "compare", "gt": "compare",
+        "ge": "compare", "eq": "compare", "ne": "compare",
+        "mux": "mux", "pmux": "mux", "bmux": "mux",
+        "shl": "shift", "shr": "shift", "sshl": "shift", "sshr": "shift",
+        "and": "and", "or": "or", "xor": "xor", "xnor": "xnor",
+        "not": "not", "buf": "buf", "port_in": "port_in",
+        "port_out": "port_out", "const": "const", "module": "module",
+    }
+    return aliases.get(value, value)
 
 
 # --- Yosys driver ------------------------------------------------------------
