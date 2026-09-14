@@ -82,6 +82,7 @@ class Edge:
     dst_port: str = ""
     width: int = 1
     inverted: bool = False
+    attrs: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -608,6 +609,31 @@ def _ibex_sources() -> List[str]:
     )
 
 
+def _ibex_fused_ex_sources() -> List[str]:
+    rtl = ROOT / "third_party" / "ibex" / "rtl"
+    wrapper = ROOT / "rtl" / "ibex_fused_ex_block_wrapper.sv"
+    prim = ROOT / "third_party" / "ibex" / "vendor" / "lowrisc_ip" / "ip" / "prim" / "rtl" / "prim_assert.sv"
+    converted = ROOT / "build" / "ibex_fused_ex_block" / "ibex_fused_ex_block_wrapper.v"
+    if not converted.is_file():
+        converted.parent.mkdir(parents=True, exist_ok=True)
+        sv2v = OSS_BIN / "sv2v"
+        inputs = [prim, rtl / "ibex_pkg.sv", rtl / "ibex_alu.sv", rtl / "ibex_multdiv_fast.sv", rtl / "ibex_ex_block.sv", wrapper]
+        command = [str(sv2v), "-I", str(prim.parent), "--write", str(converted)] + [str(path) for path in inputs]
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.returncode != 0 or not converted.is_file():
+            raise GraphExtractError("sv2v conversion failed: {}".format(result.stderr.strip()))
+    return [str(converted)]
+
+
+def _tachyum_fma_sources() -> List[str]:
+    reference = ROOT / "third_party" / "tachyum-fma-rtl"
+    wrapper = ROOT / "rtl" / "fma_experiment" / "tachyum_fma_single_wrapper.sv"
+    sources = sorted(reference.glob("*.v"))
+    sources.append(reference / "tb" / "scells.v")
+    sources.insert(0, wrapper)
+    return [str(path) for path in sources]
+
+
 DESIGNS: Dict[str, Dict[str, Any]] = {
     "demo_alu": {
         "top": "demo_alu",
@@ -620,6 +646,30 @@ DESIGNS: Dict[str, Dict[str, Any]] = {
     "ibex_alu_wrapper": {
         "top": "ibex_alu_wrapper",
         "sources": _ibex_sources,
+    },
+    "ibex_fused_ex_block_wrapper": {
+        "top": "ibex_fused_ex_block_wrapper",
+        "sources": _ibex_fused_ex_sources,
+    },
+    "tachyum_fma_single_wrapper": {
+        "top": "tachyum_fma_single_wrapper",
+        "sources": _tachyum_fma_sources,
+    },
+    "separate_mul_add": {
+        "top": "separate_mul_add",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "separate_mul_add.sv")],
+    },
+    "scheduled_mul_add": {
+        "top": "scheduled_mul_add",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "scheduled_mul_add.sv")],
+    },
+    "fused_mul_add": {
+        "top": "fused_mul_add",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "fused_mul_add.sv")],
+    },
+    "shared_iterative_mul_add": {
+        "top": "shared_iterative_mul_add",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "shared_iterative_mul_add.sv")],
     },
 }
 

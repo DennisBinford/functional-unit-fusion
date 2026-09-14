@@ -9,7 +9,7 @@ JOBS ?= 1
 SEED ?= 1
 TOOLCHAIN_LOCK ?= toolchain.lock.json
 
-.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all clean
+.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo clean
 
 help:
 	@$(PYTHON) framework.py --help
@@ -110,6 +110,26 @@ demo-ibex: ibex-fetch
 
 # Run BOTH designs end to end: the local demo_alu and the open-source Ibex ALU.
 demo-all: demo-sc demo-ibex
+
+# Functionally compare the local integer ADD/MUL baselines and shared design.
+# verilator_flow.py records the exact compiler/tool/source command manifest.
+integer-fma-sim:
+	$(PYTHON) verilator_flow.py run \
+		--rtl rtl/fma_experiment/separate_mul_add.sv \
+		--rtl rtl/fma_experiment/fused_mul_add.sv \
+		--rtl rtl/fma_experiment/scheduled_mul_add.sv \
+		--rtl rtl/fma_experiment/shared_iterative_mul_add.sv \
+		--testbench tb/tb_integer_mul_add_variants.sv \
+		--design-top separate_mul_add \
+		--testbench-top tb_integer_mul_add_variants \
+		--output build/integer_fma_regression \
+		--jobs $(JOBS) --seed $(SEED) --no-trace --lint-testbench
+	@grep 'INTEGER_FMA_TEST_PASS checks=70' build/integer_fma_regression/simulation.log
+
+# Produce the small graph-merge demonstration, graph figures, fresh functional
+# evidence, and comparable mapped-area evidence used in the professor meeting.
+fma-meeting-demo:
+	bash scripts/run_fma_meeting_demo.sh
 
 clean:
 	rm -rf build

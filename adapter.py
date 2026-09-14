@@ -561,7 +561,11 @@ def _parse_yosys_metrics(
     }
 
 
-def _parse_opensta_metrics(output: Path, clock_period: float) -> Dict[str, Any]:
+def _parse_opensta_metrics(
+    output: Path,
+    clock_period: float,
+    clock_port: Optional[str] = None,
+) -> Dict[str, Any]:
     timing_text = (output / "timing.rpt").read_text(errors="replace")
     slack_text = (output / "slack.rpt").read_text(errors="replace")
     power_text = (output / "power.rpt").read_text(errors="replace")
@@ -582,15 +586,23 @@ def _parse_opensta_metrics(output: Path, clock_period: float) -> Dict[str, Any]:
 
     input_delay = clock_period * IO_DELAY_FRACTION
     output_delay = clock_period * IO_DELAY_FRACTION
-    internal_delay = arrival - input_delay if arrival is not None else None
-    slack_derived_delay = (
-        clock_period - input_delay - output_delay - slack
-        if slack is not None else None
-    )
-    consistency_delta = (
-        abs(internal_delay - slack_derived_delay)
-        if internal_delay is not None and slack_derived_delay is not None else None
-    )
+    if clock_port:
+        # For a clocked design, the worst setup path may be register-to-register
+        # and therefore has no input/output reservation. Period minus slack is
+        # the effective delay of that constrained path, including setup time.
+        internal_delay = clock_period - slack if slack is not None else None
+        slack_derived_delay = internal_delay
+        consistency_delta = 0.0 if internal_delay is not None else None
+    else:
+        internal_delay = arrival - input_delay if arrival is not None else None
+        slack_derived_delay = (
+            clock_period - input_delay - output_delay - slack
+            if slack is not None else None
+        )
+        consistency_delta = (
+            abs(internal_delay - slack_derived_delay)
+            if internal_delay is not None and slack_derived_delay is not None else None
+        )
 
     # OpenSTA's report_power Total row is Internal, Switching, Leakage, Total.
     power_values = None
@@ -638,7 +650,10 @@ def _parse_opensta_metrics(output: Path, clock_period: float) -> Dict[str, Any]:
     }
 
 
-def _parse_activity_annotation(report_path: Path) -> Dict[str, Any]:
+def _parse_activity_annotation(
+    report_path: Path,
+    expected_pins: Optional[Sequence[str]] = None,
+) -> Dict[str, Any]:
     text = report_path.read_text(errors="replace")
     summary_match = re.search(r"^\s*vcd\s+(\d+)\s*$", text, flags=re.MULTILINE)
     annotated = set()
@@ -649,7 +664,7 @@ def _parse_activity_annotation(report_path: Path) -> Dict[str, Any]:
         if pin.startswith("\\"):
             pin = pin[1:]
         annotated.add(pin)
-    expected = set(EXPECTED_ACTIVITY_INPUT_PINS)
+    expected = set(expected_pins or EXPECTED_ACTIVITY_INPUT_PINS)
     missing = sorted(expected - annotated)
     return {
         "summary_vcd_pins": int(summary_match.group(1)) if summary_match else None,
@@ -735,12 +750,18 @@ def _write_yosys_script(
     rtl_sources: Optional[Sequence[Path]] = None,
     design_top: str = DESIGN_TOP,
     netlist_name: Optional[str] = None,
+    defines: Optional[Sequence[str]] = None,
 ) -> Path:
     script = output / "synth.ys"
     sources = list(rtl_sources or RTL_SOURCES)
     mapped_netlist = output / (netlist_name or "{}_netlist.v".format(design_top))
+    define_args = " ".join(
+        "-D{}".format(shlex.quote(str(define))) for define in (defines or [])
+    )
     lines = [
-        "read_verilog -sv {}".format(" ".join(shlex.quote(str(path)) for path in sources)),
+        "read_verilog -sv {} {}".format(
+            define_args, " ".join(shlex.quote(str(path)) for path in sources)
+        ).strip(),
         "hierarchy -check -top {}".format(design_top),
         "check -assert",
         # Flatten ordinary hierarchy so separate_flat_auto genuinely exposes
@@ -786,6 +807,9 @@ def _run_opensta(
     activity_vcd: Path,
     design_top: str = DESIGN_TOP,
     netlist_name: Optional[str] = None,
+    activity_required_signals: Sequence[str] = ("a_i", "b_i", "op_i"),
+    expected_activity_input_pins: Optional[Sequence[str]] = None,
+    clock_port: Optional[str] = None,
 ) -> Tuple[str, float, Dict[str, Any]]:
     sta = find_executable("sta", "FU_OPENSTA")
     if not sta:
@@ -794,8 +818,12 @@ def _run_opensta(
         )
     activity_scope = _find_vcd_scope(activity_vcd)
     primary_activity = _write_primary_input_vcd(
-        activity_vcd, output / "primary_inputs.vcd", activity_scope
+        activity_vcd,
+        output / "primary_inputs.vcd",
+        activity_scope,
+        required_signals=activity_required_signals,
     )
+    expected_pins = set(expected_activity_input_pins or EXPECTED_ACTIVITY_INPUT_PINS)
     config = {
         "FU_TOP": design_top,
         "FU_NETLIST": str(
@@ -808,6 +836,7 @@ def _run_opensta(
         "FU_BUILD_DIR": str(output.resolve()),
         "FU_ACTIVITY_VCD": primary_activity["path"],
         "FU_ACTIVITY_SCOPE": activity_scope,
+        "FU_CLOCK_PORT": clock_port or "",
     }
     config_path = output / "opensta_config.tcl"
     config_path.write_text(
@@ -865,20 +894,22 @@ def _run_opensta(
             )
         )
     annotated_pins = int(annotations[-1])
-    if annotated_pins != len(EXPECTED_ACTIVITY_INPUT_PINS):
+    if annotated_pins != len(expected_pins):
         raise AdapterError(
             "Primary-input-only VCD annotated {} pins; expected exactly {}".format(
-                annotated_pins, len(EXPECTED_ACTIVITY_INPUT_PINS)
+                annotated_pins, len(expected_pins)
             )
         )
-    annotation = _parse_activity_annotation(output / "activity_annotation.rpt")
+    annotation = _parse_activity_annotation(
+        output / "activity_annotation.rpt", expected_pins=expected_pins
+    )
     if annotation["summary_vcd_pins"] != annotated_pins:
         raise AdapterError(
             "OpenSTA annotation log/report disagree: {} versus {}".format(
                 annotated_pins, annotation["summary_vcd_pins"]
             )
         )
-    metrics = _parse_opensta_metrics(output, clock_period)
+    metrics = _parse_opensta_metrics(output, clock_period, clock_port=clock_port)
     metrics["total_power"]["activity_source"] = "primary_inputs_only_vcd"
     metrics["activity_annotation"] = {
         "annotated_pins": annotated_pins,
@@ -905,6 +936,11 @@ def synthesizeDesign(
     activity_workload: str = "directed_and_uniform_random_regression",
     activity_provenance: Optional[Dict[str, Any]] = None,
     toolchain_lock: Optional[str] = None,
+    activity_required_signals: Optional[Sequence[str]] = None,
+    expected_activity_input_pins: Optional[Sequence[str]] = None,
+    clock_port: Optional[str] = None,
+    activity_stimulus_interval_ns: Optional[float] = None,
+    yosys_defines: Optional[Sequence[str]] = None,
     **_unused: Any
 ) -> Dict[str, Any]:
     """Map with Yosys; with Liberty+VCD, run OpenSTA for PPA estimates.
@@ -936,6 +972,17 @@ def synthesizeDesign(
         raise AdapterError("clock_period must be greater than zero")
     if not re.match(r"^[A-Za-z_][A-Za-z0-9_$]*$", design_top):
         raise AdapterError("Invalid design top: {}".format(design_top))
+    selected_defines = list(yosys_defines or [])
+    invalid_defines = [
+        define for define in selected_defines
+        if not re.match(r"^[A-Za-z_][A-Za-z0-9_]*(?:=[A-Za-z_][A-Za-z0-9_$]*)?$", define)
+    ]
+    if invalid_defines:
+        raise AdapterError(
+            "Invalid Yosys preprocessor define(s): {}".format(
+                ", ".join(invalid_defines)
+            )
+        )
     yosys = _select_yosys()
     output = _prepare_directory(
         Path(build_dir).resolve() if build_dir else ROOT / "build" / "synthesis",
@@ -974,6 +1021,7 @@ def synthesizeDesign(
         rtl_sources=selected_rtl,
         design_top=design_top,
         netlist_name=netlist_name,
+        defines=selected_defines,
     )
     yosys_seconds = _run([yosys, "-s", str(script)], output, output / "yosys.log")
     yosys_text = (output / "yosys.log").read_text(errors="replace")
@@ -1038,6 +1086,11 @@ def synthesizeDesign(
             activity,
             design_top=design_top,
             netlist_name=netlist_name,
+            activity_required_signals=(
+                activity_required_signals or ("a_i", "b_i", "op_i")
+            ),
+            expected_activity_input_pins=expected_activity_input_pins,
+            clock_port=clock_port,
         )
         metrics.update(sta_metrics)
         _validate_ppa_metrics(metrics)
@@ -1073,6 +1126,7 @@ def synthesizeDesign(
         ),
         "clock_period_ns": clock_period,
         "constraints": {
+            "clock_port": clock_port,
             "io_delay_fraction": IO_DELAY_FRACTION,
             "input_delay_ns": clock_period * IO_DELAY_FRACTION,
             "output_delay_ns": clock_period * IO_DELAY_FRACTION,
@@ -1080,6 +1134,7 @@ def synthesizeDesign(
             "input_transition_ns": clock_period * INPUT_TRANSITION_FRACTION,
             "output_load": OUTPUT_LOAD,
             "output_load_unit": "selected_liberty_capacitance_unit",
+            "yosys_defines": selected_defines,
         },
         "activity_vcd": str(activity) if activity.is_file() else None,
         "activity_vcd_sha256": sha256_file(activity) if activity.is_file() else None,
@@ -1092,7 +1147,11 @@ def synthesizeDesign(
         "activity_workload": activity_workload if activity.is_file() else None,
         "activity_seed": activity_seed if activity.is_file() else None,
         "activity_provenance": activity_provenance if activity.is_file() else None,
-        "activity_stimulus_interval_ns": STIMULUS_INTERVAL_NS if activity.is_file() else None,
+        "activity_stimulus_interval_ns": (
+            activity_stimulus_interval_ns
+            if activity_stimulus_interval_ns is not None
+            else STIMULUS_INTERVAL_NS
+        ) if activity.is_file() else None,
         "estimate_stage": "post_synthesis_pre_layout",
         "ppa_validated": bool(library and sta_path),
         "source_manifest": source_manifest(

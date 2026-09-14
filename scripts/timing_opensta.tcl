@@ -4,11 +4,23 @@ read_verilog $env(FU_NETLIST)
 link_design -no_black_boxes $env(FU_TOP)
 
 set clock_period $env(FU_CLOCK_PERIOD)
-create_clock -name virtual_clock -period $clock_period
+if {[info exists env(FU_CLOCK_PORT)] && $env(FU_CLOCK_PORT) ne ""} {
+  set clock_pin [get_ports $env(FU_CLOCK_PORT)]
+  create_clock -name design_clock -period $clock_period $clock_pin
+  # OpenSTA 2.0 does not provide remove_from_collection. Applying the external
+  # delay/transition to the clock port as well is harmless: launch/capture
+  # timing still comes from create_clock, while all data inputs stay covered.
+  set constrained_inputs [all_inputs]
+  set constraint_clock design_clock
+} else {
+  create_clock -name virtual_clock -period $clock_period
+  set constrained_inputs [all_inputs]
+  set constraint_clock virtual_clock
+}
 set io_delay [expr {$clock_period * 0.10}]
-set_input_delay $io_delay -clock virtual_clock [all_inputs]
-set_output_delay $io_delay -clock virtual_clock [all_outputs]
-set_input_transition $env(FU_INPUT_TRANSITION) [all_inputs]
+set_input_delay $io_delay -clock $constraint_clock $constrained_inputs
+set_output_delay $io_delay -clock $constraint_clock [all_outputs]
+set_input_transition $env(FU_INPUT_TRANSITION) $constrained_inputs
 set_load $env(FU_OUTPUT_LOAD) [all_outputs]
 
 check_setup -verbose > "$env(FU_BUILD_DIR)/check_setup.rpt"
