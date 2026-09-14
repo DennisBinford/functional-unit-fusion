@@ -9,7 +9,7 @@ JOBS ?= 1
 SEED ?= 1
 TOOLCHAIN_LOCK ?= toolchain.lock.json
 
-.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo clean
+.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo professor-meeting-demo professor-meeting-demo-full professor-meeting-demo-cached clean
 
 help:
 	@$(PYTHON) framework.py --help
@@ -130,6 +130,20 @@ integer-fma-sim:
 # evidence, and comparable mapped-area evidence used in the professor meeting.
 fma-meeting-demo:
 	bash scripts/run_fma_meeting_demo.sh
+
+# Full rebuild: tests, all PPA families, pinned intake/lock validation, fresh
+# graph/capability evidence, generated RTL, simulations, and summaries.
+professor-meeting-demo-full:
+	$(SC_PYTHON) scripts/professor_meeting_demo.py --mode full
+
+# Cached mode never silently trusts stale PPA, fair-baseline, generator, or
+# graph evidence; it validates their schemas, source hashes, and provenance.
+professor-meeting-demo-cached:
+	$(SC_PYTHON) scripts/professor_meeting_demo.py --mode cached
+
+# The unqualified meeting target is the reproducible full workflow.
+professor-meeting-demo:
+	$(MAKE) professor-meeting-demo-full
 
 clean:
 	rm -rf build

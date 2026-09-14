@@ -1,0 +1,78 @@
+{
+  "derived_from_graph": {
+    "evidence_paths": {
+      "graph_a": "/home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json",
+      "graph_b": "/home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json",
+      "match": "/home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_match.json",
+      "merge": "/home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_merge.json"
+    },
+    "matched_multiplier": {
+      "graph_a": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+      "graph_b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+    },
+    "mux_behavior": {
+      "ADD": "bypass multiplication",
+      "MAC": "route product through shared final adder",
+      "MUL": "bypass final add"
+    },
+    "operand_width": 32,
+    "operations": [
+      "add",
+      "mul",
+      "mux"
+    ],
+    "output_width": 64,
+    "ports": [
+      "a_i",
+      "add_i",
+      "b_i",
+      "result_o"
+    ],
+    "shared_operator": "matched multiplier candidate"
+  },
+  "generated_rtl_sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe",
+  "graph_to_fused_rtl_status": "partial",
+  "inputs": {
+    "generated_rtl": {
+      "path": "/home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv",
+      "sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe"
+    },
+    "generator": {
+      "path": "/home/dabinford/research/rtl_generator.py",
+      "sha256": "3bfd8d1661ec862893ea9c4635ea4ada7b5d9ea141759cd7f77f7b25355cf27f"
+    },
+    "graph_a": {
+      "path": "/home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json",
+      "sha256": "13971b05069964081fd9e3cf706a8cfa8cfc0d907aaed03b3d73e655a041d3e3"
+    },
+    "graph_b": {
+      "path": "/home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json",
+      "sha256": "71c97e94e884995e3b230f021280173ef1f6faf86a00bbc79ba50b5d56465525"
+    },
+    "match": {
+      "path": "/home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_match.json",
+      "sha256": "9f6d2cfbdc9e3e27e0d68941cacd69c14319e8e4c492d29da09c84b210ca7da9"
+    },
+    "merge": {
+      "path": "/home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_merge.json",
+      "sha256": "b5f758a88eee6beb62a160e060f51c78c4f106c752c7521d7094dac35438e490"
+    }
+  },
+  "mac_topology_derived_from_structural_merge": false,
+  "modes": {
+    "ADD": "bypass multiplication",
+    "MAC": "route product through shared final adder",
+    "MUL": "bypass final add"
+  },
+  "protocol": {
+    "initiation_interval_cycles": 1,
+    "latency_cycles": 1,
+    "ready": "rst_ni"
+  },
+  "schema": "fu-rtl-generator/v2",
+  "specialization": "graph-gated_specialized_RTL_template_unsigned_32bit_ADD_MUL_MAC",
+  "structural_candidate_role": "eligibility and provenance evidence only; not executable hardware",
+  "structural_merge_executable": false,
+  "template_backed": true,
+  "universal": false
+}

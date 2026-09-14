@@ -1,6 +1,6 @@
 import unittest
 
-from graph_match import GraphMatchError, compare
+from graph_match import GraphMatchError, capability_compatible, compare
 
 
 def graph_template(design="x", level="rtlil", **metadata):
@@ -18,6 +18,93 @@ def graph_template(design="x", level="rtlil", **metadata):
 
 
 class GraphMatchTest(unittest.TestCase):
+    def test_capability_mode_records_wider_to_narrower_adaptation(self):
+        wide = graph_template("wide")
+        narrow = graph_template("narrow")
+        wide["nodes"] = [{"id": "w", "kind": "$add", "width": 64,
+                           "attrs": {"signed": False}}]
+        narrow["nodes"] = [{"id": "n", "kind": "$add", "width": 32,
+                             "attrs": {"signed": False}}]
+        result = compare(wide, narrow, mode="capability")
+        self.assertEqual(result["common_node_count"], 1)
+        relation = result["matched_nodes"][0]["capability"]
+        self.assertEqual(relation["direction"], "a_implements_b")
+        self.assertEqual(relation["adaptation"]["output_slicing"]["from_width"], 64)
+        self.assertEqual(relation["adaptation"]["output_slicing"]["to_width"], 32)
+        self.assertEqual(relation["adaptation"]["input_extension"][0]["to_width"], 64)
+
+    def test_capability_direction_is_not_reversible(self):
+        def node(width, signed=False, operation="$add"):
+            return {"id": "n", "kind": operation, "width": width,
+                    "attrs": {"signed": signed}}
+        self.assertIsNotNone(capability_compatible(node(64), node(32)))
+        self.assertIsNone(capability_compatible(node(32), node(64)))
+        self.assertIsNone(capability_compatible(node(64, True), node(32, False)))
+        self.assertIsNone(capability_compatible(node(64, operation="$mul"), node(32)))
+
+    def test_capability_mode_rejects_incompatible_interface(self):
+        def graph(design, output_name):
+            result = graph_template(design)
+            result["nodes"] = [
+                {"id": "a", "kind": "port_in", "label": "a_i", "width": 32,
+                 "attrs": {"direction": "input"}},
+                {"id": "b", "kind": "port_in", "label": "b_i", "width": 32,
+                 "attrs": {"direction": "input"}},
+                {"id": "y", "kind": "port_out", "label": output_name, "width": 32,
+                 "attrs": {"direction": "output"}},
+                {"id": "add", "kind": "$add", "width": 32,
+                 "attrs": {"signed": False}},
+            ]
+            return result
+
+        result = compare(graph("wide", "result_o"), graph("narrow", "other_o"),
+                         mode="capability")
+        self.assertEqual(result["common_node_count"], 0)
+        self.assertFalse(result["interface"]["compatible"])
+
+    def test_capability_mode_matches_connected_rtl_widths_both_directions(self):
+        def graph(design, width, operation="$add", swapped=False, signed=False):
+            result = graph_template(design)
+            result["nodes"] = [
+                {"id": "a", "kind": "port_in", "label": "a_i", "width": width,
+                 "attrs": {"direction": "input"}},
+                {"id": "b", "kind": "port_in", "label": "b_i", "width": width,
+                 "attrs": {"direction": "input"}},
+                {"id": "y", "kind": "port_out", "label": "result_o", "width": width,
+                 "attrs": {"direction": "output"}},
+                {"id": "op", "kind": operation, "width": width,
+                 "attrs": {"signed": signed}},
+            ]
+            sources = [("a", "A"), ("b", "B")]
+            if swapped:
+                sources = [(source, "B" if port == "A" else "A")
+                           for source, port in sources]
+            result["edges"] = [
+                {"src": source_id, "dst": "op", "src_port": source_id,
+                 "dst_port": port, "width": width, "inverted": False}
+                for source_id, port in sources
+            ] + [{"src": "op", "dst": "y", "src_port": "Y",
+                  "dst_port": "result_o", "width": width, "inverted": False}]
+            return result
+
+        wide, narrow = graph("wide", 64), graph("narrow", 32)
+        forward = compare(wide, narrow, mode="capability")
+        reverse = compare(narrow, wide, mode="capability")
+        self.assertEqual(forward["common_node_count"], 4)
+        self.assertEqual(reverse["common_node_count"], 4)
+        self.assertEqual(forward["interface"]["direction"], "a_implements_b")
+        self.assertEqual(reverse["interface"]["direction"], "b_implements_a")
+        self.assertEqual(len(forward["matched_edges"]), 3)
+        self.assertEqual({edge["capability"]["adapter"] for edge in forward["matched_edges"]},
+                         {"zero_extend", "slice"})
+        self.assertEqual(compare(graph("signed", 64, signed=True), narrow,
+                                 mode="capability")["common_node_count"], 0)
+        self.assertEqual(compare(graph("wrong", 64, operation="$mul"), narrow,
+                                 mode="capability")["common_node_count"], 2)
+        self.assertEqual(compare(graph("sub", 64, operation="$sub", swapped=True),
+                                 graph("sub2", 32, operation="$sub"),
+                                 mode="capability")["common_node_count"], 2)
+
     def test_matches_unique_structural_node_without_using_ids(self):
         def graph(node_id, source_id):
             graph = graph_template(node_id, top=node_id)

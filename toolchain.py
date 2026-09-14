@@ -47,6 +47,10 @@ def _candidate_directories(extra_paths: Optional[Sequence[str]] = None) -> List[
     if suite:
         candidates.append(str(Path(suite).expanduser() / "bin"))
     candidates.append(str(ROOT / "tools" / "oss-cad-suite" / "bin"))
+    # OpenSTA is built beside the OSS CAD Suite in the local no-root EDA
+    # environment.  Keep this in discovery so a SiliconCompiler run and the
+    # activity-annotation run lock to the same STA binary.
+    candidates.append(str(ROOT / "tools" / "mm" / "root" / "envs" / "eda" / "bin"))
     return candidates
 
 

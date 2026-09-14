@@ -7,10 +7,9 @@ set clock_period $env(FU_CLOCK_PERIOD)
 if {[info exists env(FU_CLOCK_PORT)] && $env(FU_CLOCK_PORT) ne ""} {
   set clock_pin [get_ports $env(FU_CLOCK_PORT)]
   create_clock -name design_clock -period $clock_period $clock_pin
-  # OpenSTA 2.0 does not provide remove_from_collection. Applying the external
-  # delay/transition to the clock port as well is harmless: launch/capture
-  # timing still comes from create_clock, while all data inputs stay covered.
-  set constrained_inputs [all_inputs]
+  # Do not apply a data-input delay to the port that owns the clock.  OpenSTA
+  # 3.x diagnoses that combination and it can obscure the actual data path.
+  set constrained_inputs [get_ports -filter "direction == input && name != $env(FU_CLOCK_PORT)" *]
   set constraint_clock design_clock
 } else {
   create_clock -name virtual_clock -period $clock_period
@@ -24,7 +23,11 @@ set_input_transition $env(FU_INPUT_TRANSITION) $constrained_inputs
 set_load $env(FU_OUTPUT_LOAD) [all_outputs]
 
 check_setup -verbose > "$env(FU_BUILD_DIR)/check_setup.rpt"
-report_units > "$env(FU_BUILD_DIR)/units.rpt"
+# report_units is a Tcl procedure without shell-redirection support in the
+# current OpenSTA. Capture its output with the supported helper instead.
+set units_file [open "$env(FU_BUILD_DIR)/units.rpt" w]
+puts $units_file [with_output_to_variable units_text {report_units}]
+close $units_file
 report_checks -path_delay max -group_path_count 10 -digits 6 > "$env(FU_BUILD_DIR)/timing.rpt"
 report_worst_slack -max -digits 6 > "$env(FU_BUILD_DIR)/slack.rpt"
 

@@ -11,7 +11,7 @@ import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 from graph_extract import GRAPH_SCHEMA, normalize_operation
 
@@ -86,6 +86,207 @@ def _node_key(node: Dict[str, Any]) -> Tuple[Any, ...]:
     )
 
 
+def _signedness(node: Dict[str, Any]) -> Any:
+    attrs = node.get("attrs") or {}
+    if "signed" in attrs:
+        value = attrs["signed"]
+        if isinstance(value, str):
+            return value.lower() not in ("0", "false", "no", "unsigned")
+        return bool(value)
+    params = attrs.get("parameters") or {}
+    values = tuple(sorted((str(k), str(v)) for k, v in params.items()
+                          if "SIGNED" in str(k).upper()))
+    if not values:
+        return None
+    return any(str(value).lower() not in ("0", "false", "no", "unsigned")
+               for _, value in values)
+
+
+def _unsigned_capability_node(node: Dict[str, Any]) -> bool:
+    """Capability mode is deliberately limited to explicitly unsigned nodes."""
+    return _signedness(node) in (None, False)
+
+
+def _input_widths(node: Dict[str, Any]) -> List[int]:
+    attrs = node.get("attrs") or {}
+    value = attrs.get("input_width", attrs.get("input_widths"))
+    if isinstance(value, (list, tuple)):
+        return [int(item) for item in value]
+    if isinstance(value, (int, float)):
+        return [int(value)]
+    params = attrs.get("parameters") or {}
+    widths = [int(params[name]) for name in ("A_WIDTH", "B_WIDTH", "C_WIDTH")
+              if name in params]
+    if widths:
+        return widths
+    width = node.get("width")
+    return [int(width)] if isinstance(width, int) else []
+
+
+def _output_width(node: Dict[str, Any]) -> Optional[int]:
+    attrs = node.get("attrs") or {}
+    value = attrs.get("output_width", attrs.get("output_widths"))
+    if isinstance(value, (list, tuple)):
+        return int(value[0]) if value else None
+    if isinstance(value, (int, float)):
+        return int(value)
+    params = attrs.get("parameters") or {}
+    if "Y_WIDTH" in params:
+        return int(params["Y_WIDTH"])
+    return node.get("width") if isinstance(node.get("width"), int) else None
+
+
+def _capability_key(node: Dict[str, Any]) -> Tuple[Any, ...]:
+    """Semantic key for capability matching, intentionally width-agnostic."""
+    attrs = node.get("attrs") or {}
+    params = attrs.get("parameters") or {}
+    # Width and signedness are checked separately. Other parameters remain
+    # semantic requirements; a different multiplier algorithm is not a match.
+    params = tuple(sorted((str(k), str(v)) for k, v in params.items()
+                          if "WIDTH" not in str(k).upper()
+                          and "SIGNED" not in str(k).upper()))
+    label = (str(node.get("label", node.get("id", "")))
+             if node.get("kind") in ("port_in", "port_out") else "")
+    return (_operation(node), node.get("kind", "").lstrip("$").strip("_").lower(),
+            _signedness(node), label, params)
+
+
+def capability_compatible(implementer: Dict[str, Any], required: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Return a directional adaptation when *implementer* can realize *required*.
+
+    This is deliberately a narrow width-capability relation.  It does not
+    claim algebraic equivalence, signed/unsigned equivalence, or interface
+    compatibility that is not present in the graph metadata.
+    """
+    if (not _unsigned_capability_node(implementer) or
+            not _unsigned_capability_node(required) or
+            _capability_key(implementer) != _capability_key(required)):
+        return None
+    iw, rw = implementer.get("width"), required.get("width")
+    if not isinstance(iw, int) or not isinstance(rw, int) or iw < rw:
+        return None
+    implementation_inputs = _input_widths(implementer)
+    required_inputs = _input_widths(required)
+    if len(implementation_inputs) != len(required_inputs):
+        return None
+    if any(actual < needed for actual, needed in
+           zip(implementation_inputs, required_inputs)):
+        return None
+    implementation_output = _output_width(implementer)
+    required_output = _output_width(required)
+    if (implementation_output is None or required_output is None or
+            implementation_output < required_output):
+        return None
+    return {
+        "direction": "implementer_to_required",
+        "implementer_width": iw,
+        "required_width": rw,
+        "input_extension": [
+            {"input": index, "from_width": int(width),
+             "to_width": int(implementation_inputs[index]), "mode": "zero_extend"}
+            for index, width in enumerate(required_inputs)
+        ],
+        "output_slicing": {
+            "from_width": int(implementation_output), "to_width": int(required_output),
+            "range": "[{}:0]".format(int(required_output) - 1),
+        },
+    }
+
+
+def _interface_compatible(implementer: Dict[str, Any], required: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Check that a wider implementation has the same named port interface."""
+    def ports(graph: Dict[str, Any]) -> Dict[Tuple[str, str], Dict[str, Any]]:
+        return {
+            (node.get("kind", ""), str(node.get("label", node.get("id", "")))): node
+            for node in graph.get("nodes", [])
+            if node.get("kind") in ("port_in", "port_out")
+        }
+
+    implementation_ports, required_ports = ports(implementer), ports(required)
+    if set(implementation_ports) != set(required_ports):
+        return None
+    adaptations = []
+    for key in sorted(required_ports):
+        implementation, requirement = implementation_ports[key], required_ports[key]
+        iw, rw = implementation.get("width"), requirement.get("width")
+        if not isinstance(iw, int) or not isinstance(rw, int) or iw < rw:
+            return None
+        direction = "input" if key[0] == "port_in" else "output"
+        adaptations.append({
+            "port": key[1], "direction": direction,
+            "implementer_width": iw, "required_width": rw,
+            "adaptation": ("zero_extend" if direction == "input" and iw > rw
+                           else "slice" if direction == "output" and iw > rw
+                           else "none"),
+        })
+    return {"ports": adaptations}
+
+
+def _edge_width_adapter(edge_a: Dict[str, Any], edge_b: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    width_a, width_b = edge_a.get("width", 1), edge_b.get("width", 1)
+    if not isinstance(width_a, int) or not isinstance(width_b, int):
+        return None
+    if width_a >= width_b:
+        direction, implementation, required = "a_implements_b", width_a, width_b
+    elif width_b >= width_a:
+        direction, implementation, required = "b_implements_a", width_b, width_a
+    else:
+        return None
+    return {
+        "direction": direction,
+        "implementer_width": implementation,
+        "required_width": required,
+        "adapter": "zero_extend" if implementation > required else "none",
+    }
+
+
+def _matched_capability_edges(
+    graph_a: Dict[str, Any], graph_b: Dict[str, Any],
+    matched_nodes: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    """Match connected edges after node matching, retaining width adapters."""
+    nodes_a = {node["id"]: node for node in graph_a.get("nodes", [])}
+    nodes_b = {node["id"]: node for node in graph_b.get("nodes", [])}
+    mapping = {item["a"]: item["b"] for item in matched_nodes}
+    edges_b = list(graph_b.get("edges", []))
+    used_b = set()
+    records = []
+    for edge_a in graph_a.get("edges", []):
+        if edge_a.get("src") not in mapping or edge_a.get("dst") not in mapping:
+            continue
+        candidates = []
+        for index, edge_b in enumerate(edges_b):
+            if index in used_b:
+                continue
+            if (edge_b.get("src") != mapping[edge_a["src"]] or
+                    edge_b.get("dst") != mapping[edge_a["dst"]] or
+                    edge_b.get("src_port", "") != edge_a.get("src_port", "") or
+                    bool(edge_b.get("inverted", False)) != bool(edge_a.get("inverted", False))):
+                continue
+            operation = _operation(nodes_a[edge_a["dst"]])
+            if (operation not in COMMUTATIVE_OPERATIONS and
+                    edge_b.get("dst_port", "") != edge_a.get("dst_port", "")):
+                continue
+            adapter = _edge_width_adapter(edge_a, edge_b)
+            if adapter is not None:
+                if (nodes_a[edge_a["dst"]].get("kind") == "port_out" or
+                        nodes_b[edge_b["dst"]].get("kind") == "port_out"):
+                    adapter["adapter"] = "slice" if adapter["implementer_width"] > adapter["required_width"] else "none"
+                candidates.append((index, edge_b, adapter))
+        if len(candidates) != 1:
+            continue
+        index, edge_b, adapter = candidates[0]
+        used_b.add(index)
+        records.append({
+            "a": {key: edge_a.get(key) for key in
+                  ("src", "dst", "src_port", "dst_port", "width", "inverted")},
+            "b": {key: edge_b.get(key) for key in
+                  ("src", "dst", "src_port", "dst_port", "width", "inverted")},
+            "capability": adapter,
+        })
+    return records
+
+
 def _incoming(graph: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     incoming = defaultdict(list)
     for edge in graph.get("edges", []):
@@ -93,12 +294,13 @@ def _incoming(graph: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
     return incoming
 
 
-def _signatures(graph: Dict[str, Any]) -> Dict[str, Tuple[Any, ...]]:
+def _signatures(graph: Dict[str, Any], capability: bool = False) -> Dict[str, Tuple[Any, ...]]:
     """Build compact fixed-point rooted signatures for a DAG or stable graph."""
     nodes = {node["id"]: node for node in graph.get("nodes", [])}
     incoming = _incoming(graph)
+    base_key = _capability_key if capability else _node_key
     signatures = {
-        node_id: hashlib.sha256(repr(_node_key(node)).encode()).hexdigest()
+        node_id: hashlib.sha256(repr(base_key(node)).encode()).hexdigest()
         for node_id, node in nodes.items()
     }
     # A fixed point may require graph depth iterations, but using node count as
@@ -108,17 +310,22 @@ def _signatures(graph: Dict[str, Any]) -> Dict[str, Tuple[Any, ...]]:
         for node_id, node in nodes.items():
             if _operation(node) in COMMUTATIVE_OPERATIONS:
                 parents = sorted(
-                    (edge.get("width", 1),
-                     bool(edge.get("inverted", False)), signatures.get(edge["src"]))
+                    ((edge.get("width", 1),) if not capability else ()) +
+                    (bool(edge.get("inverted", False)), signatures.get(edge["src"]))
                     for edge in incoming[node_id]
                 )
             else:
-                parents = sorted(
-                    (edge.get("dst_port", ""), edge.get("width", 1),
-                     bool(edge.get("inverted", False)), signatures.get(edge["src"]))
-                    for edge in incoming[node_id]
-                )
-            payload = repr((_node_key(node), parents)).encode()
+                # Preserve the destination-port association for
+                # noncommutative operations. Sorting the complete tuples
+                # would erase operand order when source signatures differ.
+                parents = [
+                    (edge.get("dst_port", ""),) +
+                    ((edge.get("width", 1),) if not capability else ()) +
+                    (bool(edge.get("inverted", False)), signatures.get(edge["src"]))
+                    for edge in sorted(incoming[node_id],
+                                       key=lambda edge: edge.get("dst_port", ""))
+                ]
+            payload = repr((base_key(node), parents)).encode()
             updated[node_id] = hashlib.sha256(payload).hexdigest()
         if updated == signatures:
             break
@@ -126,9 +333,20 @@ def _signatures(graph: Dict[str, Any]) -> Dict[str, Tuple[Any, ...]]:
     return signatures
 
 
-def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any]) -> Dict[str, Any]:
+def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any], mode: str = "exact") -> Dict[str, Any]:
     _validate_graph_pair(graph_a, graph_b)
-    sig_a, sig_b = _signatures(graph_a), _signatures(graph_b)
+    if mode not in ("exact", "capability"):
+        raise GraphMatchError("unknown match mode {!r}".format(mode))
+    capability = mode == "capability"
+    interface_a_to_b = _interface_compatible(graph_a, graph_b) if capability else {}
+    interface_b_to_a = _interface_compatible(graph_b, graph_a) if capability else {}
+    signed_capability_blocked = capability and any(
+        not _unsigned_capability_node(node)
+        for graph in (graph_a, graph_b) for node in graph.get("nodes", [])
+    )
+    sig_a, sig_b = _signatures(graph_a, capability), _signatures(graph_b, capability)
+    nodes_a = {node["id"]: node for node in graph_a.get("nodes", [])}
+    nodes_b = {node["id"]: node for node in graph_b.get("nodes", [])}
     by_sig_b = defaultdict(list)
     for node_id, signature in sig_b.items():
         by_sig_b[signature].append(node_id)
@@ -136,16 +354,40 @@ def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any]) -> Dict[str, Any]:
     matched = []
     used_b = set()
     for node_id in sorted(sig_a):
-        candidates = [candidate for candidate in by_sig_b[sig_a[node_id]]
-                      if candidate not in used_b]
+        candidates = []
+        for candidate in by_sig_b[sig_a[node_id]]:
+            if candidate in used_b:
+                continue
+            if capability and (signed_capability_blocked or
+                               (interface_a_to_b is None and interface_b_to_a is None)):
+                continue
+            if capability:
+                relation = (capability_compatible(nodes_a[node_id], nodes_b[candidate])
+                            or capability_compatible(nodes_b[candidate], nodes_a[node_id]))
+                if relation is None:
+                    continue
+            candidates.append(candidate)
         if len(candidates) == 1:
-            matched.append({"a": node_id, "b": candidates[0]})
+            item = {"a": node_id, "b": candidates[0]}
+            if capability:
+                a, b = nodes_a[node_id], nodes_b[candidates[0]]
+                a_to_b = capability_compatible(a, b)
+                b_to_a = capability_compatible(b, a)
+                if a_to_b and b_to_a:
+                    item["capability"] = {"direction": "equal_width", "adaptation": a_to_b}
+                elif a_to_b:
+                    item["capability"] = {"direction": "a_implements_b", "adaptation": a_to_b}
+                else:
+                    item["capability"] = {"direction": "b_implements_a", "adaptation": b_to_a}
+            matched.append(item)
             used_b.add(candidates[0])
 
     ids_a, ids_b = set(sig_a), set(sig_b)
     count = len(matched)
+    matched_edges = (_matched_capability_edges(graph_a, graph_b, matched)
+                     if capability else [])
     common_subgraphs = enumerate_common_subgraphs(graph_a, graph_b, matched)
-    return {
+    result = {
         "schema": MATCH_SCHEMA,
         "graph_a": graph_a.get("design"),
         "graph_b": graph_b.get("design"),
@@ -154,9 +396,9 @@ def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any]) -> Dict[str, Any]:
             "a": _graph_metadata(graph_a),
             "b": _graph_metadata(graph_b),
         },
-        "match_mode": "exact_rooted_structural",
+        "match_mode": "capability_rooted_structural" if capability else "exact_rooted_structural",
         "matched_nodes": matched,
-        "matched_edges": [],
+        "matched_edges": matched_edges,
         "common_subgraphs": common_subgraphs,
         "common_node_count": count,
         "coverage": {
@@ -173,6 +415,25 @@ def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any]) -> Dict[str, Any]:
             "A match is not evidence that fusion improves PPA.",
         ],
     }
+    if capability:
+        if signed_capability_blocked:
+            result["capability_rejected"] = "signed node metadata is unsupported in capability mode"
+        if interface_a_to_b is None and interface_b_to_a is None:
+            result["interface"] = {"compatible": False}
+        elif interface_a_to_b and interface_b_to_a:
+            result["interface"] = {"compatible": True, "direction": "equal_width",
+                                    "adaptation": interface_a_to_b}
+        elif interface_a_to_b:
+            result["interface"] = {"compatible": True, "direction": "a_implements_b",
+                                    "adaptation": interface_a_to_b}
+        else:
+            result["interface"] = {"compatible": True, "direction": "b_implements_a",
+                                    "adaptation": interface_b_to_a}
+        result["limitations"].extend([
+            "Capability mode is unsigned and width-directional; it does not prove algebraic equivalence.",
+            "The recorded direction identifies the wider implementer; reverse replacement is rejected.",
+        ])
+    return result
 
 
 def enumerate_common_subgraphs(graph_a: Dict[str, Any], graph_b: Dict[str, Any],
@@ -252,10 +513,12 @@ def main() -> int:
     parser.add_argument("graph_b", type=Path)
     parser.add_argument("-o", "--output", type=Path, required=True)
     parser.add_argument("--max-subgraph-size", type=int, default=6)
+    parser.add_argument("--mode", choices=("exact", "capability"), default="exact",
+                        help="exact (default) or directional width-capability matching")
     args = parser.parse_args()
     graph_a = json.loads(args.graph_a.read_text())
     graph_b = json.loads(args.graph_b.read_text())
-    result = compare(graph_a, graph_b)
+    result = compare(graph_a, graph_b, mode=args.mode)
     result["common_subgraphs"] = enumerate_common_subgraphs(
         graph_a, graph_b, result["matched_nodes"], max_size=args.max_subgraph_size)
     args.output.parent.mkdir(parents=True, exist_ok=True)

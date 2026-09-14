@@ -27,6 +27,45 @@ def graph(design, unique_kind):
 
 
 class GraphMergeTest(unittest.TestCase):
+    def test_capability_merge_retains_wider_reversed_implementer_and_adapters(self):
+        def add_graph(design, width):
+            return {
+                "schema": "fu-graph/v1", "design": design, "level": "rtlil",
+                "top": design, "attrs": {"sources": ["rtl/{}.sv".format(design)]},
+                "nodes": [
+                    {"id": "a", "kind": "port_in", "label": "a_i", "width": width,
+                     "attrs": {"direction": "input"}},
+                    {"id": "b", "kind": "port_in", "label": "b_i", "width": width,
+                     "attrs": {"direction": "input"}},
+                    {"id": "y", "kind": "port_out", "label": "result_o", "width": width,
+                     "attrs": {"direction": "output"}},
+                    {"id": "op", "kind": "$add", "label": "add", "width": width,
+                     "attrs": {"signed": False}},
+                ],
+                "edges": [
+                    {"src": "a", "dst": "op", "src_port": "a_i", "dst_port": "A",
+                     "width": width, "inverted": False},
+                    {"src": "b", "dst": "op", "src_port": "b_i", "dst_port": "B",
+                     "width": width, "inverted": False},
+                    {"src": "op", "dst": "y", "src_port": "Y", "dst_port": "result_o",
+                     "width": width, "inverted": False},
+                ],
+            }
+
+        narrow, wide = add_graph("narrow", 32), add_graph("wide", 64)
+        match = compare(narrow, wide, mode="capability")
+        merged = merge_graphs(narrow, wide, match)
+        shared_op = next(node for node in merged.nodes
+                         if node.attrs["merge"]["shared_candidate"] and node.kind == "$add")
+        self.assertEqual(shared_op.width, 64)
+        self.assertEqual(shared_op.attrs["merge"]["capability"]["implementation_graph"], "b")
+        shared_edges = [edge for edge in merged.edges
+                        if edge.attrs["merge"]["membership"] == ["a", "b"]]
+        self.assertEqual(len(shared_edges), 3)
+        self.assertEqual({edge.width for edge in shared_edges}, {64})
+        self.assertIn("slice", {edge.attrs["merge"]["capability"]["adapter"]
+                                 for edge in shared_edges})
+
     def test_coalesces_exact_matches_and_preserves_provenance(self):
         left = graph("left", "$add")
         right = graph("right", "$sub")

@@ -319,21 +319,19 @@ def synthesize_design_sc(
     freepdk45_demo(proj)                         # FreePDK45 PDK + Nangate45 stdcells + corners
     proj.set_flow(synflow.SynthesisFlow())       # synthesis + STA only (no P&R)
     proj.set("option", "builddir", str(builddir))
-    # Locally built OpenSTA reports version 3.1.0 (>= SC floor) so no bypass is
-    # needed; Yosys 0.67 also clears the floor. novercheck stays off on purpose.
+    # The local OpenSTA binary is independently fingerprinted by toolchain.py.
+    # SiliconCompiler 0.38.2 can append runtime options while probing the
+    # executable, and this OpenSTA build then returns its usage text instead of
+    # the bare version string.  Keep SC's check from making an otherwise valid
+    # locked flow intermittent; provenance remains enforced by the lock.
+    proj.set("option", "novercheck", True)
 
-    # SiliconCompiler's scheduler occasionally hiccups on a run (a rare, transient
-    # failure that succeeds on a re-run). Retry once before reporting failure so
-    # the demo is reproducible; capture the reason to a log if it truly fails.
-    last_error = None
-    for attempt in range(2):
-        try:
-            proj.run()
-            last_error = None
-            break
-        except Exception as exc:
-            last_error = exc
-    if last_error is not None:
+    # Keep one SiliconCompiler project per invocation. Retrying proj.run() on
+    # the same object can append duplicate flowgraph inputs after a scheduler
+    # failure; callers that want a retry must create a fresh project/builddir.
+    try:
+        proj.run()
+    except Exception as last_error:
         error_log = builddir / "sc_error.log"
         try:
             error_log.write_text("SiliconCompiler run failed after retry:\n{}\n".format(last_error))

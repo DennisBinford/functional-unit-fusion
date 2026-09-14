@@ -18,8 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 import adapter  # noqa: E402
+import measurement_guardrails  # noqa: E402
 from sc_flow import synthesize_design_sc  # noqa: E402
-from toolchain import find_executable, select_cxx, verify_lock  # noqa: E402
+from toolchain import find_executable, select_cxx, sha256_file, verify_lock  # noqa: E402
 from verilator_flow import create_plan, execute_plan  # noqa: E402
 
 
@@ -40,6 +41,8 @@ VARIANTS = {
         "mul_latency_cycles": 1,
         "mul_initiation_interval_cycles": 1,
         "description": "independent one-cycle ADD and MUL datapaths",
+        "semantic_contract": {"ADD": "32-bit a+b result sign-extended to 64 bits",
+                              "MUL": "unsigned a*b producing 64 bits"},
     },
     "radix2_original": {
         "top": "shared_iterative_mul_add",
@@ -49,6 +52,8 @@ VARIANTS = {
         "mul_latency_cycles": 32,
         "mul_initiation_interval_cycles": 32,
         "description": "radix-2 iterative MUL plus a separate ADD datapath",
+        "semantic_contract": {"ADD": "33-bit a+b computation with low 32 bits sign-extended to 64 bits",
+                              "MUL": "unsigned a*b producing 64 bits"},
     },
     "radix2_reused": {
         "top": "shared_reused_adder_mul_add",
@@ -58,6 +63,8 @@ VARIANTS = {
         "mul_latency_cycles": 32,
         "mul_initiation_interval_cycles": 32,
         "description": "radix-2 MUL accumulator adder reused by ADD",
+        "semantic_contract": {"ADD": "33-bit a+b computation with low 32 bits sign-extended to 64 bits",
+                              "MUL": "unsigned a*b producing 64 bits"},
     },
     "radix4_reused": {
         "top": "radix4_reused_adder_mul_add",
@@ -67,6 +74,8 @@ VARIANTS = {
         "mul_latency_cycles": 16,
         "mul_initiation_interval_cycles": 16,
         "description": "radix-4 MUL with its accumulator adder reused by ADD",
+        "semantic_contract": {"ADD": "33-bit a+b computation with low 32 bits sign-extended to 64 bits",
+                              "MUL": "unsigned a*b producing 64 bits"},
     },
 }
 
@@ -123,13 +132,14 @@ def _simulation(name, spec, clean):
 
 def _synthesis_and_power(name, spec, vcd, clean):
     sc_dir = BUILD / "sc" / (name + "_p10")
-    synthesis = synthesize_design_sc(
-        spec["top"],
-        [str(spec["source"])],
-        str(SDC),
-        build_dir=str(sc_dir),
-        clean=clean,
-    )
+    synthesis = None
+    for attempt in range(2):
+        synthesis = synthesize_design_sc(
+            spec["top"], [str(spec["source"])], str(SDC),
+            build_dir=str(sc_dir), clean=clean or attempt > 0,
+        )
+        if synthesis.get("status") == "pass":
+            break
     if synthesis.get("status") != "pass":
         raise RuntimeError("SiliconCompiler failed: {}".format(synthesis.get("error")))
 
@@ -200,10 +210,16 @@ def _derive(name, spec, simulation, metrics):
         "energy_per_workload_operation_pj": energy_per_workload_op_pj,
         "simulation_cycles_for_70_operations": simulation["cycles"],
         "add_latency_cycles": spec["add_latency_cycles"],
+        "add_initiation_interval_cycles": 1,
         "mul_latency_cycles": spec["mul_latency_cycles"],
         "mul_initiation_interval_cycles": spec["mul_initiation_interval_cycles"],
+        "estimated_add_throughput_mops": fmax_mhz,
         "estimated_peak_mul_throughput_mops": (
             fmax_mhz / spec["mul_initiation_interval_cycles"]
+        ),
+        "estimated_workload_throughput_mops": (
+            1000.0 * simulation["checks"] /
+            (simulation["cycles"] * CLOCK_PERIOD_NS)
         ),
         "activity_annotation_fraction": metrics["activity_annotation"][
             "primary_input_annotation_fraction"
@@ -219,15 +235,17 @@ def _markdown(rows):
         "a 10 ns clock, identical I/O constraints, and each candidate's VCD from "
         "the same 70-operation self-checking workload.",
         "",
-        "| Architecture | Area (um^2) | Delay (ns) | Est. fmax (MHz) | Power @ 100 MHz (mW) | Energy/workload op (pJ) | MUL latency / II (cycles) |",
-        "|---|---:|---:|---:|---:|---:|---:|",
+        "| Architecture | Area (um^2) | Cells | Delay (ns) | Est. fmax (MHz) | Slack (ns) | Power @ 100 MHz (mW) | Energy/workload op (pJ) | ADD lat/II | MUL lat/II | Workload throughput (Mops/s) |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in rows:
         lines.append(
-            "| {name} | {area_um2:.3f} | {critical_path_delay_ns:.3f} | "
-            "{estimated_fmax_mhz:.1f} | {average_power_mw_at_100mhz:.4f} | "
-            "{energy_per_workload_operation_pj:.3f} | {mul_latency_cycles} / "
-            "{mul_initiation_interval_cycles} |".format(**row)
+            "| {name} | {area_um2:.3f} | {cells} | {critical_path_delay_ns:.3f} | "
+            "{estimated_fmax_mhz:.1f} | {setup_slack_ns_at_100mhz:.3f} | "
+            "{average_power_mw_at_100mhz:.4f} | {energy_per_workload_operation_pj:.3f} | "
+            "{add_latency_cycles} / {add_initiation_interval_cycles} | "
+            "{mul_latency_cycles} / {mul_initiation_interval_cycles} | "
+            "{estimated_workload_throughput_mops:.2f} |".format(**row)
         )
     lines.extend([
         "",
@@ -258,9 +276,29 @@ def main(argv=None):
             "clock_period_ns": CLOCK_PERIOD_NS,
             "activity": "candidate-specific VCD, identical 70-operation workload",
             "power_frequency_mhz": 100.0,
+            "expected_variants": sorted(VARIANTS),
         },
         "variants": [],
     }
+    lock = verify_lock(LOCK)
+    if lock["status"] != "pass":
+        raise RuntimeError("toolchain lock verification failed: {}".format(lock["differences"]))
+    results["method"].update({
+        "library_path": lock["locked_fingerprint"]["liberty"]["path"],
+        "library_sha256": lock["locked_fingerprint"]["liberty"]["sha256"],
+        "toolchain_lock": str(LOCK.resolve()),
+        "toolchain_lock_sha256": sha256_file(LOCK),
+        "source_sha256": {
+            name: sha256_file(spec["source"]) for name, spec in VARIANTS.items()
+        },
+        "testbench_sha256": sha256_file(ROOT / "tb" / "tb_mul_add_ppa.sv"),
+    })
+    liberty = lock["locked_fingerprint"]["liberty"]["path"]
+    results["method"]["pre_technology_mapping_guardrails"] = {}
+    for name, spec in VARIANTS.items():
+        results["method"]["pre_technology_mapping_guardrails"][name] = measurement_guardrails.inspect_design(
+            spec["source"], spec["top"], CLOCK_PERIOD_NS, SDC, liberty, LOCK,
+            semantics=spec["semantic_contract"])
     for name in args.variants:
         spec = VARIANTS[name]
         print("[{}] simulation".format(name), flush=True)
@@ -277,6 +315,7 @@ def main(argv=None):
             "activity_sta_dir": str(BUILD / "activity_sta" / name),
             "opensta_seconds": sta_seconds,
         }
+        row["pre_technology_mapping_guardrails"] = results["method"]["pre_technology_mapping_guardrails"][name]
         results["variants"].append(row)
         print(json.dumps(row, indent=2, sort_keys=True), flush=True)
 

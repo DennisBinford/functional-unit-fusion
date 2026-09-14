@@ -1,0 +1,55 @@
+Professor meeting evidence — 2026-09-14
+
+Executed commands:
+  make professor-meeting-demo-full
+  make test
+  make integer-fma-sim
+  /home/dabinford/research/.venv/bin/python scripts/run_fma_ppa.py --clean
+  make ibex-fetch
+  /home/dabinford/research/.venv/bin/python toolchain.py verify --lock-file /home/dabinford/research/build/toolchain.lock.json
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design separate_mul_add --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design graph_candidate_add_mul --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json --mode exact --max-subgraph-size 6 -o /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_match.json
+  /home/dabinford/research/.venv/bin/python graph_merge.py /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_match.json -o /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_merge.json --render /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_merge --format svg
+  /home/dabinford/research/.venv/bin/python rtl_generator.py --graph-a /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json --graph-b /home/dabinford/research/meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json --match /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_match.json --merge /home/dabinford/research/meeting-artifacts/2026-09-14/generated/source_merge.json -o /home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv
+  /home/dabinford/research/.venv/bin/python verilator_flow.py run --rtl /home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv --rtl /home/dabinford/research/rtl/fma_experiment/parallel_add_mul_mac_baseline.sv --testbench /home/dabinford/research/tb/tb_generated_fused_add_mul_mac.sv --design-top generated_fused_add_mul_mac --testbench-top tb_generated_fused_add_mul_mac --output /home/dabinford/research/build/professor_meeting_demo/generated_simulation --jobs 1 --seed 1 --lint-testbench
+  /home/dabinford/research/.venv/bin/python scripts/graph_roundtrip.py --source /home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv --top generated_fused_add_mul_mac -o /home/dabinford/research/meeting-artifacts/2026-09-14/roundtrip
+  /home/dabinford/research/.venv/bin/python scripts/run_fair_baselines.py --generated /home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv --output /home/dabinford/research/meeting-artifacts/2026-09-14/fair_baselines.json --clean
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design ibex_fused_ex_block_wrapper --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design ibex_alu_wrapper --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/ibex_alu_wrapper/ibex_alu_wrapper.rtlil.graph.json --mode exact --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/horizontal.rtlil.match.json
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design generated_fused_add_mul_mac --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design parallel_add_mul_mac_baseline --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.rtlil.graph.json --mode exact --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/vertical.rtlil.match.json
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design generated_fused_add_mul_mac --level gate --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design parallel_add_mul_mac_baseline --level gate --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.gate.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.gate.graph.json --mode exact --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/vertical.gate.match.json
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design generated_fused_add_mul_mac --level aig --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design parallel_add_mul_mac_baseline --level aig --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.aig.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.aig.graph.json --mode exact --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/vertical.aig.match.json
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design capability_add32 --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_viz.py --design capability_add64 --level rtlil --format svg --max-nodes 300 --output /home/dabinford/research/build/professor_meeting_demo/studies
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/capability_add64/capability_add64.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability_add32/capability_add32.rtlil.graph.json --mode capability --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/capability.wide_to_narrow.match.json
+  /home/dabinford/research/.venv/bin/python graph_match.py /home/dabinford/research/build/professor_meeting_demo/studies/capability_add32/capability_add32.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability_add64/capability_add64.rtlil.graph.json --mode capability --max-subgraph-size 6 -o /home/dabinford/research/build/professor_meeting_demo/studies/capability.narrow_to_wide.match.json
+  /home/dabinford/research/.venv/bin/python graph_merge.py /home/dabinford/research/build/professor_meeting_demo/studies/capability_add64/capability_add64.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability_add32/capability_add32.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability.wide_to_narrow.match.json -o /home/dabinford/research/build/professor_meeting_demo/studies/capability.wide_to_narrow.merge.json
+  /home/dabinford/research/.venv/bin/python graph_merge.py /home/dabinford/research/build/professor_meeting_demo/studies/capability_add32/capability_add32.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability_add64/capability_add64.rtlil.graph.json /home/dabinford/research/build/professor_meeting_demo/studies/capability.narrow_to_wide.match.json -o /home/dabinford/research/build/professor_meeting_demo/studies/capability.narrow_to_wide.merge.json
+
+Duplicate-adder triple-mode comparison:
+  duplicate-adder parallel area: 8124.172 um^2
+  fused area: 8073.100 um^2
+  delta (duplicate-adder minus fused): 51.072 um^2 (0.63%)
+  result: fused shares one final adder and is smaller than the duplicate-adder triple-mode parallel baseline
+  This does not prove area(AB) < area(A)+area(B).
+
+Literal core-only comparison:
+  area(A)+area(B) = 7330.960 um^2; fused core = 7537.642 um^2; delta = -206.682 um^2 (-2.82%)
+Interface-level separate-system MAC is 2 cycles/II=2; generated ADD/MUL/MAC are 1 cycle/II=1.
+
+Horizontal Ibex study: 385 nodes/650 edges vs 176 nodes/277 edges; matches 20; largest bounded subgraph 5
+Vertical study levels: rtlil matches=7, gate matches=300, aig matches=614
+Capability: ADD64 implements ADD32 with zero-extension/slicing; ADD32->ADD64 and signed capability are rejected.
+Verification: Python tests=62; integer checks=70; core semantic checks=70; generated checks=70; interface checks=70.
+
+Artifacts: summary.json, generated/, roundtrip/, studies/, fair_baselines.json, bundle_manifest.json, and meeting-artifacts/fma-ppa/
+
+Limitations: graph-gated specialized RTL template; c_i/MAC topology is template-backed rather than reconstructed from the structural merge; graph commonality is not an area claim until synthesis; Yosys-native sidecar retained.

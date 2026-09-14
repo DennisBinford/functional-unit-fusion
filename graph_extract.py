@@ -667,9 +667,29 @@ DESIGNS: Dict[str, Dict[str, Any]] = {
         "top": "fused_mul_add",
         "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "fused_mul_add.sv")],
     },
+    "graph_candidate_add_mul": {
+        "top": "graph_candidate_add_mul",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "graph_candidate_add_mul.sv")],
+    },
     "shared_iterative_mul_add": {
         "top": "shared_iterative_mul_add",
         "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "shared_iterative_mul_add.sv")],
+    },
+    "generated_fused_add_mul_mac": {
+        "top": "generated_fused_add_mul_mac",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "generated_fused_add_mul_mac.sv")],
+    },
+    "parallel_add_mul_mac_baseline": {
+        "top": "parallel_add_mul_mac_baseline",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "parallel_add_mul_mac_baseline.sv")],
+    },
+    "capability_add32": {
+        "top": "capability_add32",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "capability_add32.sv")],
+    },
+    "capability_add64": {
+        "top": "capability_add64",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "capability_add64.sv")],
     },
 }
 

@@ -1,0 +1,1008 @@
+{
+  "core_comparison_guardrails": {
+    "composition_checks": 70,
+    "composition_semantics_proven_by": "tb_core_semantics.sv independent 70-case simulation",
+    "standalone_add32_via_zero_extension": true,
+    "width_chain_valid": true
+  },
+  "core_only": {
+    "cores": {
+      "add_core": {
+        "area_um2": 376.1240000000002,
+        "cell_count": 309,
+        "critical_delay_ns": 2.21,
+        "estimated_fmax_mhz": 452.4886877828054,
+        "guardrails": {
+          "all_cell_counts": {
+            "$add": 1
+          },
+          "clock_period_ns": 10.0,
+          "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+          "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+          "operand_widths": {
+            "a_i": 64,
+            "b_i": 64
+          },
+          "operator_counts": {
+            "$add": 1,
+            "$mul": 0
+          },
+          "ports": {
+            "a_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 64
+            },
+            "b_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 64
+            },
+            "result_o": {
+              "direction": "output",
+              "signed": false,
+              "width": 64
+            }
+          },
+          "result_widths": {
+            "result_o": 64
+          },
+          "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+          "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+          "semantics": {
+            "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+            "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+            "MUL": "a * b, producing 64 bits"
+          },
+          "signedness": "unsigned; signed capability is rejected",
+          "source": "/home/dabinford/research/rtl/fma_experiment/core_add_u64.sv",
+          "source_sha256": "dd2b111758204c807385d57dbc57c9ca7dfe2067d391039f9263d9b6d66ed529",
+          "stage": "pre_technology_mapping",
+          "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+          "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+          "top": "core_add_u64",
+          "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+        },
+        "slack_ns": 5.79,
+        "synthesis_result": "/home/dabinford/research/build/fair_baselines/sc/add_core/ppa.json"
+      },
+      "fused_core": {
+        "area_um2": 7537.641999999552,
+        "cell_count": 6825,
+        "critical_delay_ns": 3.1900000000000004,
+        "estimated_fmax_mhz": 313.4796238244514,
+        "guardrails": {
+          "all_cell_counts": {
+            "$add": 1,
+            "$eq": 2,
+            "$logic_not": 1,
+            "$mul": 1,
+            "$mux": 2,
+            "$pmux": 1,
+            "$reduce_or": 1
+          },
+          "clock_period_ns": 10.0,
+          "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+          "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+          "operand_widths": {
+            "a_i": 32,
+            "b_i": 32,
+            "c_i": 32,
+            "mode_i": 2
+          },
+          "operator_counts": {
+            "$add": 1,
+            "$mul": 1
+          },
+          "ports": {
+            "a_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 32
+            },
+            "b_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 32
+            },
+            "c_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 32
+            },
+            "mode_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 2
+            },
+            "result_o": {
+              "direction": "output",
+              "signed": false,
+              "width": 64
+            }
+          },
+          "result_widths": {
+            "result_o": 64
+          },
+          "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+          "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+          "semantics": {
+            "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+            "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+            "MUL": "a * b, producing 64 bits"
+          },
+          "signedness": "unsigned; signed capability is rejected",
+          "source": "/home/dabinford/research/rtl/fma_experiment/core_fused_add_mul_mac_u32.sv",
+          "source_sha256": "09bed2bbae4ae5cc00a53a1c1e13c27d4ea84e87d24e351e45fe7249405b602b",
+          "stage": "pre_technology_mapping",
+          "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+          "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+          "top": "core_fused_add_mul_mac_u32",
+          "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+        },
+        "slack_ns": 4.81,
+        "synthesis_result": "/home/dabinford/research/build/fair_baselines/sc/fused_core/ppa.json"
+      },
+      "mul_core": {
+        "area_um2": 6954.835999999549,
+        "cell_count": 6297,
+        "critical_delay_ns": 2.92,
+        "estimated_fmax_mhz": 342.4657534246575,
+        "guardrails": {
+          "all_cell_counts": {
+            "$mul": 1
+          },
+          "clock_period_ns": 10.0,
+          "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+          "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+          "operand_widths": {
+            "a_i": 32,
+            "b_i": 32
+          },
+          "operator_counts": {
+            "$add": 0,
+            "$mul": 1
+          },
+          "ports": {
+            "a_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 32
+            },
+            "b_i": {
+              "direction": "input",
+              "signed": false,
+              "width": 32
+            },
+            "result_o": {
+              "direction": "output",
+              "signed": false,
+              "width": 64
+            }
+          },
+          "result_widths": {
+            "result_o": 64
+          },
+          "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+          "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+          "semantics": {
+            "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+            "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+            "MUL": "a * b, producing 64 bits"
+          },
+          "signedness": "unsigned; signed capability is rejected",
+          "source": "/home/dabinford/research/rtl/fma_experiment/core_mul_u32.sv",
+          "source_sha256": "70a29c8bc46a00cfdd85e97df6514d0c3790585530d7d9e156c5608fe2d38c02",
+          "stage": "pre_technology_mapping",
+          "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+          "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+          "top": "core_mul_u32",
+          "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+        },
+        "slack_ns": 5.08,
+        "synthesis_result": "/home/dabinford/research/build/fair_baselines/sc/mul_core/ppa.json"
+      }
+    },
+    "delta_percent": -2.819303338171483,
+    "delta_um2_A_plus_B_minus_fused": -206.68200000000343,
+    "fused_core_area_um2": 7537.641999999552,
+    "interpretation": "literal mapped-area sum of standalone unsigned 32-bit ADD and MUL operator cores versus combinational fused core; no claim about registered interface architectures",
+    "literal_area_A_plus_B_um2": 7330.959999999549
+  },
+  "core_semantics_simulation": {
+    "checks": 70,
+    "composition_checks": 70,
+    "simulation_log": "/home/dabinford/research/build/fair_baselines/core_semantics_simulation/simulation.log",
+    "testbench_sha256": "db3cb8a69c96f9c356325bfa3a7c46d6764923dda71705b5a656c10619d26aeb",
+    "warning_count": 0
+  },
+  "guardrails": {
+    "core_only": {
+      "add_core": {
+        "all_cell_counts": {
+          "$add": 1
+        },
+        "clock_period_ns": 10.0,
+        "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "operand_widths": {
+          "a_i": 64,
+          "b_i": 64
+        },
+        "operator_counts": {
+          "$add": 1,
+          "$mul": 0
+        },
+        "ports": {
+          "a_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 64
+          },
+          "b_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 64
+          },
+          "result_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 64
+          }
+        },
+        "result_widths": {
+          "result_o": 64
+        },
+        "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+        "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+        "semantics": {
+          "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+          "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+          "MUL": "a * b, producing 64 bits"
+        },
+        "signedness": "unsigned; signed capability is rejected",
+        "source": "/home/dabinford/research/rtl/fma_experiment/core_add_u64.sv",
+        "source_sha256": "dd2b111758204c807385d57dbc57c9ca7dfe2067d391039f9263d9b6d66ed529",
+        "stage": "pre_technology_mapping",
+        "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+        "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+        "top": "core_add_u64",
+        "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+      },
+      "fused_core": {
+        "all_cell_counts": {
+          "$add": 1,
+          "$eq": 2,
+          "$logic_not": 1,
+          "$mul": 1,
+          "$mux": 2,
+          "$pmux": 1,
+          "$reduce_or": 1
+        },
+        "clock_period_ns": 10.0,
+        "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "operand_widths": {
+          "a_i": 32,
+          "b_i": 32,
+          "c_i": 32,
+          "mode_i": 2
+        },
+        "operator_counts": {
+          "$add": 1,
+          "$mul": 1
+        },
+        "ports": {
+          "a_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "b_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "c_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "mode_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 2
+          },
+          "result_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 64
+          }
+        },
+        "result_widths": {
+          "result_o": 64
+        },
+        "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+        "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+        "semantics": {
+          "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+          "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+          "MUL": "a * b, producing 64 bits"
+        },
+        "signedness": "unsigned; signed capability is rejected",
+        "source": "/home/dabinford/research/rtl/fma_experiment/core_fused_add_mul_mac_u32.sv",
+        "source_sha256": "09bed2bbae4ae5cc00a53a1c1e13c27d4ea84e87d24e351e45fe7249405b602b",
+        "stage": "pre_technology_mapping",
+        "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+        "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+        "top": "core_fused_add_mul_mac_u32",
+        "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+      },
+      "mul_core": {
+        "all_cell_counts": {
+          "$mul": 1
+        },
+        "clock_period_ns": 10.0,
+        "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "operand_widths": {
+          "a_i": 32,
+          "b_i": 32
+        },
+        "operator_counts": {
+          "$add": 0,
+          "$mul": 1
+        },
+        "ports": {
+          "a_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "b_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "result_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 64
+          }
+        },
+        "result_widths": {
+          "result_o": 64
+        },
+        "sdc": "/home/dabinford/research/rtl/fma_experiment/core_10ns.sdc",
+        "sdc_sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4",
+        "semantics": {
+          "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+          "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+          "MUL": "a * b, producing 64 bits"
+        },
+        "signedness": "unsigned; signed capability is rejected",
+        "source": "/home/dabinford/research/rtl/fma_experiment/core_mul_u32.sv",
+        "source_sha256": "70a29c8bc46a00cfdd85e97df6514d0c3790585530d7d9e156c5608fe2d38c02",
+        "stage": "pre_technology_mapping",
+        "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+        "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+        "top": "core_mul_u32",
+        "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+      }
+    },
+    "generated_triple_mode": {
+      "all_cell_counts": {
+        "$add": 1,
+        "$adff": 1,
+        "$adffe": 1,
+        "$eq": 2,
+        "$logic_not": 1,
+        "$mul": 1,
+        "$mux": 2,
+        "$pmux": 1,
+        "$reduce_or": 1
+      },
+      "clock_period_ns": 10.0,
+      "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+      "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+      "operand_widths": {
+        "a_i": 32,
+        "b_i": 32,
+        "c_i": 32,
+        "clk_i": 1,
+        "mode_i": 2,
+        "rst_ni": 1,
+        "valid_i": 1
+      },
+      "operator_counts": {
+        "$add": 1,
+        "$mul": 1
+      },
+      "ports": {
+        "a_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "b_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "c_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "clk_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "mode_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 2
+        },
+        "ready_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 1
+        },
+        "result_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 64
+        },
+        "rst_ni": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "valid_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "valid_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 1
+        }
+      },
+      "result_widths": {
+        "ready_o": 1,
+        "result_o": 64,
+        "valid_o": 1
+      },
+      "sdc": "/home/dabinford/research/rtl/fma_experiment/generated_fused_10ns.sdc",
+      "sdc_sha256": "9eba208c2233cbee657e2033f544496efb6d8cbd585e095d7fa69619b257b6c9",
+      "semantics": {
+        "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+        "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+        "MUL": "a * b, producing 64 bits"
+      },
+      "signedness": "unsigned; signed capability is rejected",
+      "source": "/home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv",
+      "source_sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe",
+      "stage": "pre_technology_mapping",
+      "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+      "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+      "top": "generated_fused_add_mul_mac",
+      "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+    },
+    "separate_system": {
+      "all_cell_counts": {
+        "$add": 1,
+        "$adff": 2,
+        "$adffe": 6,
+        "$eq": 2,
+        "$logic_and": 4,
+        "$logic_not": 3,
+        "$mul": 1,
+        "$mux": 21,
+        "$ne": 2,
+        "$not": 2,
+        "$reduce_and": 3,
+        "$reduce_bool": 1
+      },
+      "clock_period_ns": 10.0,
+      "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+      "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+      "operand_widths": {
+        "a_i": 32,
+        "b_i": 32,
+        "c_i": 32,
+        "clk_i": 1,
+        "mode_i": 2,
+        "rst_ni": 1,
+        "valid_i": 1
+      },
+      "operator_counts": {
+        "$add": 1,
+        "$mul": 1
+      },
+      "ports": {
+        "a_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "b_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "c_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 32
+        },
+        "clk_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "mode_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 2
+        },
+        "ready_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 1
+        },
+        "result_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 64
+        },
+        "rst_ni": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "valid_i": {
+          "direction": "input",
+          "signed": false,
+          "width": 1
+        },
+        "valid_o": {
+          "direction": "output",
+          "signed": false,
+          "width": 1
+        }
+      },
+      "result_widths": {
+        "ready_o": 1,
+        "result_o": 64,
+        "valid_o": 1
+      },
+      "sdc": "/home/dabinford/research/rtl/fma_experiment/generated_fused_10ns.sdc",
+      "sdc_sha256": "9eba208c2233cbee657e2033f544496efb6d8cbd585e095d7fa69619b257b6c9",
+      "semantics": {
+        "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+        "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+        "MUL": "a * b, producing 64 bits"
+      },
+      "signedness": "unsigned; signed capability is rejected",
+      "source": "/home/dabinford/research/rtl/fma_experiment/interface_separate_add_mul_mac.sv",
+      "source_sha256": "18e30a49a97265487f49332542bddf491fe930205f5a13ddb488222d49b035f5",
+      "stage": "pre_technology_mapping",
+      "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+      "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+      "top": "interface_separate_add_mul_mac",
+      "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+    }
+  },
+  "interface_level": {
+    "generated_triple_mode": {
+      "activity_annotation_fraction": 1.0,
+      "area_um2": 8073.099999999568,
+      "cell_count": 7093,
+      "critical_delay_ns": 4.315668,
+      "energy_per_workload_operation_pj": 299.6986876285714,
+      "estimated_fmax_mhz": 231.7138389700042,
+      "guardrails": {
+        "all_cell_counts": {
+          "$add": 1,
+          "$adff": 1,
+          "$adffe": 1,
+          "$eq": 2,
+          "$logic_not": 1,
+          "$mul": 1,
+          "$mux": 2,
+          "$pmux": 1,
+          "$reduce_or": 1
+        },
+        "clock_period_ns": 10.0,
+        "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "operand_widths": {
+          "a_i": 32,
+          "b_i": 32,
+          "c_i": 32,
+          "clk_i": 1,
+          "mode_i": 2,
+          "rst_ni": 1,
+          "valid_i": 1
+        },
+        "operator_counts": {
+          "$add": 1,
+          "$mul": 1
+        },
+        "ports": {
+          "a_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "b_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "c_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "clk_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "mode_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 2
+          },
+          "ready_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 1
+          },
+          "result_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 64
+          },
+          "rst_ni": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "valid_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "valid_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 1
+          }
+        },
+        "result_widths": {
+          "ready_o": 1,
+          "result_o": 64,
+          "valid_o": 1
+        },
+        "sdc": "/home/dabinford/research/rtl/fma_experiment/generated_fused_10ns.sdc",
+        "sdc_sha256": "9eba208c2233cbee657e2033f544496efb6d8cbd585e095d7fa69619b257b6c9",
+        "semantics": {
+          "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+          "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+          "MUL": "a * b, producing 64 bits"
+        },
+        "signedness": "unsigned; signed capability is rejected",
+        "source": "/home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv",
+        "source_sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe",
+        "stage": "pre_technology_mapping",
+        "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+        "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+        "top": "generated_fused_add_mul_mac",
+        "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+      },
+      "initiation_interval_cycles": 1,
+      "internal_power_mw": 11.0918684,
+      "latency_cycles": 1,
+      "leakage_power_mw": 0.188079954,
+      "name": "generated_triple",
+      "opensta_seconds": 13.89589548110962,
+      "operation_latency_and_ii": {
+        "ADD": {
+          "ii_cycles": 1,
+          "latency_cycles": 1
+        },
+        "MAC": {
+          "ii_cycles": 1,
+          "latency_cycles": 1
+        },
+        "MUL": {
+          "ii_cycles": 1,
+          "latency_cycles": 1
+        }
+      },
+      "power_mw": 19.6064562,
+      "simulation": {
+        "checks": 70,
+        "cycles": 107,
+        "simulation_log": "/home/dabinford/research/build/fair_baselines/interface_simulation/simulation.log",
+        "vcd": "/home/dabinford/research/build/fair_baselines/interface_simulation/interface_level_activity.vcd",
+        "warning_count": 0
+      },
+      "slack_ns": 5.684332,
+      "switching_power_mw": 8.326507170000001,
+      "synthesis_result": "/home/dabinford/research/build/fair_baselines/sc/generated_triple/ppa.json",
+      "throughput_by_mode_mops": {
+        "ADD": 100.0,
+        "MAC": 100.0,
+        "MUL": 100.0
+      },
+      "throughput_mops": 100.0,
+      "workload_throughput_mops": 65.42056074766356
+    },
+    "scheduling_difference": "generated ADD/MUL/MAC are one-cycle; separate-system MAC is two cycles through one multiplier followed by one adder",
+    "separate_system": {
+      "activity_annotation_fraction": 1.0,
+      "area_um2": 9561.103999999523,
+      "cell_count": 7795,
+      "critical_delay_ns": 4.086652,
+      "energy_per_workload_operation_pj": 525.0343945000001,
+      "estimated_fmax_mhz": 244.6990837487508,
+      "guardrails": {
+        "all_cell_counts": {
+          "$add": 1,
+          "$adff": 2,
+          "$adffe": 6,
+          "$eq": 2,
+          "$logic_and": 4,
+          "$logic_not": 3,
+          "$mul": 1,
+          "$mux": 21,
+          "$ne": 2,
+          "$not": 2,
+          "$reduce_and": 3,
+          "$reduce_bool": 1
+        },
+        "clock_period_ns": 10.0,
+        "library": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "operand_widths": {
+          "a_i": 32,
+          "b_i": 32,
+          "c_i": 32,
+          "clk_i": 1,
+          "mode_i": 2,
+          "rst_ni": 1,
+          "valid_i": 1
+        },
+        "operator_counts": {
+          "$add": 1,
+          "$mul": 1
+        },
+        "ports": {
+          "a_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "b_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "c_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 32
+          },
+          "clk_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "mode_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 2
+          },
+          "ready_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 1
+          },
+          "result_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 64
+          },
+          "rst_ni": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "valid_i": {
+            "direction": "input",
+            "signed": false,
+            "width": 1
+          },
+          "valid_o": {
+            "direction": "output",
+            "signed": false,
+            "width": 1
+          }
+        },
+        "result_widths": {
+          "ready_o": 1,
+          "result_o": 64,
+          "valid_o": 1
+        },
+        "sdc": "/home/dabinford/research/rtl/fma_experiment/generated_fused_10ns.sdc",
+        "sdc_sha256": "9eba208c2233cbee657e2033f544496efb6d8cbd585e095d7fa69619b257b6c9",
+        "semantics": {
+          "ADD": "zero_extend_64(a) + zero_extend_64(b), modulo 2^64",
+          "MAC": "(a * b + zero_extend_64(c)), modulo 2^64",
+          "MUL": "a * b, producing 64 bits"
+        },
+        "signedness": "unsigned; signed capability is rejected",
+        "source": "/home/dabinford/research/rtl/fma_experiment/interface_separate_add_mul_mac.sv",
+        "source_sha256": "18e30a49a97265487f49332542bddf491fe930205f5a13ddb488222d49b035f5",
+        "stage": "pre_technology_mapping",
+        "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+        "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+        "top": "interface_separate_add_mul_mac",
+        "yosys": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+      },
+      "initiation_interval_cycles": null,
+      "internal_power_mw": 19.394950899999998,
+      "latency_cycles": null,
+      "leakage_power_mw": 0.21370487200000002,
+      "name": "separate_system",
+      "opensta_seconds": 0.6020729541778564,
+      "operation_latency_and_ii": {
+        "ADD": {
+          "ii_cycles": 1,
+          "latency_cycles": 1
+        },
+        "MAC": {
+          "ii_cycles": 2,
+          "latency_cycles": 2
+        },
+        "MUL": {
+          "ii_cycles": 1,
+          "latency_cycles": 1
+        }
+      },
+      "power_mw": 34.3480445,
+      "simulation": {
+        "checks": 70,
+        "cycles": 107,
+        "simulation_log": "/home/dabinford/research/build/fair_baselines/interface_simulation/simulation.log",
+        "vcd": "/home/dabinford/research/build/fair_baselines/interface_simulation/interface_level_activity.vcd",
+        "warning_count": 0
+      },
+      "slack_ns": 5.913348,
+      "switching_power_mw": 14.7393886,
+      "synthesis_result": "/home/dabinford/research/build/fair_baselines/sc/separate_system/ppa.json",
+      "throughput_by_mode_mops": {
+        "ADD": 100.0,
+        "MAC": 50.0,
+        "MUL": 100.0
+      },
+      "throughput_mops": null,
+      "workload_throughput_mops": 65.42056074766356
+    }
+  },
+  "method": {
+    "clock_period_ns": 10.0,
+    "core_only_policy": "source modules contain only combinational operators; the ADD core is 64-bit input/output and the MUL core is 32x32-to-64; no registers, protocol, or wrapper logic",
+    "frequency_mhz": 100.0,
+    "guardrail_stage": "Yosys proc; opt pre-technology-mapping cell/port inspection plus independent semantic simulation",
+    "interface_policy": "same named ready/valid interface; separate-system MAC is two-stage multiply then add",
+    "library": "NangateOpenCellLibrary_typical",
+    "library_path": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+    "library_sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+    "pdk": "FreePDK45",
+    "stage": "post_synthesis_pre_layout",
+    "toolchain_lock": "/home/dabinford/research/build/toolchain.lock.json",
+    "toolchain_lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+    "workload": "70 deterministic ADD/MUL/MAC operations"
+  },
+  "schema": "fair-baselines/v1",
+  "source_sha256": {
+    "/home/dabinford/research/rtl/fma_experiment/core_add_u64.sv": "dd2b111758204c807385d57dbc57c9ca7dfe2067d391039f9263d9b6d66ed529",
+    "/home/dabinford/research/rtl/fma_experiment/core_fused_add_mul_mac_u32.sv": "09bed2bbae4ae5cc00a53a1c1e13c27d4ea84e87d24e351e45fe7249405b602b",
+    "/home/dabinford/research/rtl/fma_experiment/core_mul_u32.sv": "70a29c8bc46a00cfdd85e97df6514d0c3790585530d7d9e156c5608fe2d38c02",
+    "/home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe",
+    "/home/dabinford/research/rtl/fma_experiment/interface_separate_add_mul_mac.sv": "18e30a49a97265487f49332542bddf491fe930205f5a13ddb488222d49b035f5"
+  },
+  "toolchain": {
+    "current_fingerprint": {
+      "host": {
+        "machine": "x86_64",
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+        "python": "3.11.15"
+      },
+      "liberty": {
+        "capacitive_load_unit": "1,ff",
+        "current_unit": "1mA",
+        "leakage_power_unit": "1nW",
+        "library": "NangateOpenCellLibrary",
+        "path": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "time_unit": "1ns",
+        "voltage_unit": "1V"
+      },
+      "policy": "open_source_tools_only",
+      "tools": {
+        "cxx": {
+          "coroutine_support": true,
+          "path": "/home/dabinford/research/tools/mm/root/envs/eda/bin/g++",
+          "version": "g++ (conda-forge gcc 15.2.0-19) 15.2.0"
+        },
+        "opensta": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/mm/root/envs/eda/bin/sta",
+          "version": "3.1.0"
+        },
+        "verilator": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+          "version": "Verilator 5.051 devel rev v5.050-65-g5ead758f2 (mod)"
+        },
+        "yosys": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/oss-cad-suite/bin/yosys",
+          "version": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+        }
+      }
+    },
+    "differences": [],
+    "lock_file": "/home/dabinford/research/build/toolchain.lock.json",
+    "lock_sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45",
+    "locked_fingerprint": {
+      "host": {
+        "machine": "x86_64",
+        "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31",
+        "python": "3.11.15"
+      },
+      "liberty": {
+        "capacitive_load_unit": "1,ff",
+        "current_unit": "1mA",
+        "leakage_power_unit": "1nW",
+        "library": "NangateOpenCellLibrary",
+        "path": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+        "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895",
+        "time_unit": "1ns",
+        "voltage_unit": "1V"
+      },
+      "policy": "open_source_tools_only",
+      "tools": {
+        "cxx": {
+          "coroutine_support": true,
+          "path": "/home/dabinford/research/tools/mm/root/envs/eda/bin/g++",
+          "version": "g++ (conda-forge gcc 15.2.0-19) 15.2.0"
+        },
+        "opensta": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/mm/root/envs/eda/bin/sta",
+          "version": "3.1.0"
+        },
+        "verilator": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+          "version": "Verilator 5.051 devel rev v5.050-65-g5ead758f2 (mod)"
+        },
+        "yosys": {
+          "coroutine_support": null,
+          "path": "/home/dabinford/research/tools/oss-cad-suite/bin/yosys",
+          "version": "Yosys 0.67+34 (git sha1 d4f39588a, Release, Clang /usr/bin/clang++ 18.1.8)"
+        }
+      }
+    },
+    "status": "pass"
+  }
+}
