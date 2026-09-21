@@ -1,0 +1,377 @@
+{
+  "gate_reconstruction": "not claimed; gate/AIG evidence is structural only",
+  "levels": {
+    "ast": {
+      "extraction_runtime_seconds": {
+        "left": 0.039663517847657204,
+        "right": 0.0381809810642153
+      },
+      "left": {
+        "edges": 6252,
+        "kinds": {
+          "AST_ADD": 285,
+          "AST_ALWAYS": 42,
+          "AST_ARGUMENT": 57,
+          "AST_ASSIGN": 109,
+          "AST_ASSIGN_EQ": 277,
+          "AST_BIT_AND": 79,
+          "AST_BIT_NOT": 16,
+          "AST_BIT_OR": 86,
+          "AST_BIT_XOR": 12,
+          "AST_BLOCK": 226,
+          "AST_CASE": 46,
+          "AST_CELL": 15,
+          "AST_CELLTYPE": 15,
+          "AST_CONCAT": 56,
+          "AST_COND": 123,
+          "AST_CONSTANT": 1781,
+          "AST_DEFAULT": 31,
+          "AST_EQ": 62,
+          "AST_FCALL": 15,
+          "AST_FOR": 15,
+          "AST_GE": 5,
+          "AST_GENBLOCK": 28,
+          "AST_GENFOR": 22,
+          "AST_GENIF": 3,
+          "AST_GENVAR": 6,
+          "AST_IDENTIFIER": 1288,
+          "AST_LOCALPARAM": 8,
+          "AST_LOGIC_AND": 4,
+          "AST_LOGIC_NOT": 3,
+          "AST_LOGIC_OR": 8,
+          "AST_LT": 37,
+          "AST_MEMORY": 10,
+          "AST_MODULE": 16,
+          "AST_MUL": 156,
+          "AST_MULTIRANGE": 7,
+          "AST_NE": 16,
+          "AST_PARAMETER": 3,
+          "AST_PARASET": 21,
+          "AST_POW": 1,
+          "AST_RANGE": 458,
+          "AST_REDUCE_BOOL": 28,
+          "AST_REDUCE_OR": 4,
+          "AST_REPLICATE": 17,
+          "AST_SELFSZ": 172,
+          "AST_SHIFT_LEFT": 36,
+          "AST_SHIFT_RIGHT": 62,
+          "AST_SHIFT_SRIGHT": 1,
+          "AST_SUB": 157,
+          "AST_TERNARY": 50,
+          "AST_TO_SIGNED": 1,
+          "AST_TO_UNSIGNED": 102,
+          "AST_WIRE": 190
+        },
+        "nodes": 6268,
+        "operators": 6268
+      },
+      "match": {
+        "common_node_count": 484,
+        "common_subgraph_count": 3907,
+        "coverage": {
+          "a": 0.07721761327377154,
+          "b": 0.07721761327377154
+        },
+        "engine": "native",
+        "largest_connected_subgraph": 6
+      },
+      "match_runtime_seconds": 1.3769056210294366,
+      "right": {
+        "edges": 6252,
+        "kinds": {
+          "AST_ADD": 285,
+          "AST_ALWAYS": 42,
+          "AST_ARGUMENT": 57,
+          "AST_ASSIGN": 109,
+          "AST_ASSIGN_EQ": 277,
+          "AST_BIT_AND": 79,
+          "AST_BIT_NOT": 16,
+          "AST_BIT_OR": 86,
+          "AST_BIT_XOR": 12,
+          "AST_BLOCK": 226,
+          "AST_CASE": 46,
+          "AST_CELL": 15,
+          "AST_CELLTYPE": 15,
+          "AST_CONCAT": 56,
+          "AST_COND": 123,
+          "AST_CONSTANT": 1781,
+          "AST_DEFAULT": 31,
+          "AST_EQ": 62,
+          "AST_FCALL": 15,
+          "AST_FOR": 15,
+          "AST_GE": 5,
+          "AST_GENBLOCK": 28,
+          "AST_GENFOR": 22,
+          "AST_GENIF": 3,
+          "AST_GENVAR": 6,
+          "AST_IDENTIFIER": 1288,
+          "AST_LOCALPARAM": 8,
+          "AST_LOGIC_AND": 4,
+          "AST_LOGIC_NOT": 3,
+          "AST_LOGIC_OR": 8,
+          "AST_LT": 37,
+          "AST_MEMORY": 10,
+          "AST_MODULE": 16,
+          "AST_MUL": 156,
+          "AST_MULTIRANGE": 7,
+          "AST_NE": 16,
+          "AST_PARAMETER": 3,
+          "AST_PARASET": 21,
+          "AST_POW": 1,
+          "AST_RANGE": 458,
+          "AST_REDUCE_BOOL": 28,
+          "AST_REDUCE_OR": 4,
+          "AST_REPLICATE": 17,
+          "AST_SELFSZ": 172,
+          "AST_SHIFT_LEFT": 36,
+          "AST_SHIFT_RIGHT": 62,
+          "AST_SHIFT_SRIGHT": 1,
+          "AST_SUB": 157,
+          "AST_TERNARY": 50,
+          "AST_TO_SIGNED": 1,
+          "AST_TO_UNSIGNED": 102,
+          "AST_WIRE": 190
+        },
+        "nodes": 6268,
+        "operators": 6268
+      }
+    },
+    "gate": {
+      "extraction_runtime_seconds": {
+        "left": 0.08634706400334835,
+        "right": 0.08635119209066033
+      },
+      "left": {
+        "edges": 316,
+        "kinds": {
+          "$_ANDNOT_": 6,
+          "$_AND_": 51,
+          "$_NAND_": 38,
+          "$_NOR_": 1,
+          "$_ORNOT_": 56,
+          "$_XNOR_": 5,
+          "const": 1,
+          "port_in": 2,
+          "port_out": 1
+        },
+        "nodes": 161,
+        "operators": 157
+      },
+      "match": {
+        "connected_subgraph_size": 6,
+        "coverage": {
+          "a": 0.21739130434782608,
+          "b": 0.21739130434782608
+        },
+        "engine": "native",
+        "extraction_runtime_seconds": {
+          "a": 0.08634706400334835,
+          "b": 0.08635119209066033
+        },
+        "graph_size": {
+          "a": {
+            "edges": 316,
+            "kinds": {
+              "$_ANDNOT_": 6,
+              "$_AND_": 51,
+              "$_NAND_": 38,
+              "$_NOR_": 1,
+              "$_ORNOT_": 56,
+              "$_XNOR_": 5,
+              "const": 1,
+              "port_in": 2,
+              "port_out": 1
+            },
+            "nodes": 161,
+            "operators": 157
+          },
+          "b": {
+            "edges": 316,
+            "kinds": {
+              "$_ANDNOT_": 6,
+              "$_AND_": 50,
+              "$_NAND_": 39,
+              "$_NOR_": 1,
+              "$_ORNOT_": 56,
+              "$_XNOR_": 5,
+              "const": 1,
+              "port_in": 2,
+              "port_out": 1
+            },
+            "nodes": 161,
+            "operators": 157
+          }
+        },
+        "level": "gate",
+        "match_mode": "exact_rooted_structural",
+        "match_size": 35,
+        "operator_match_size": 34,
+        "runtime_seconds": 0.031319895992055535,
+        "useful_candidate": true
+      },
+      "right": {
+        "edges": 316,
+        "kinds": {
+          "$_ANDNOT_": 6,
+          "$_AND_": 50,
+          "$_NAND_": 39,
+          "$_NOR_": 1,
+          "$_ORNOT_": 56,
+          "$_XNOR_": 5,
+          "const": 1,
+          "port_in": 2,
+          "port_out": 1
+        },
+        "nodes": 161,
+        "operators": 157
+      }
+    },
+    "module": {
+      "extraction_runtime_seconds": {
+        "left": 0.028568453853949904,
+        "right": 0.027913197875022888
+      },
+      "left": {
+        "edges": 2,
+        "kinds": {
+          "module": 3
+        },
+        "nodes": 3,
+        "operators": 3
+      },
+      "match": {
+        "connected_subgraph_size": 0,
+        "coverage": {
+          "a": 0.0,
+          "b": 0.0
+        },
+        "engine": "native",
+        "extraction_runtime_seconds": {
+          "a": 0.028568453853949904,
+          "b": 0.027913197875022888
+        },
+        "graph_size": {
+          "a": {
+            "edges": 2,
+            "kinds": {
+              "module": 3
+            },
+            "nodes": 3,
+            "operators": 3
+          },
+          "b": {
+            "edges": 2,
+            "kinds": {
+              "module": 3
+            },
+            "nodes": 3,
+            "operators": 3
+          }
+        },
+        "level": "module",
+        "match_mode": "exact_rooted_structural",
+        "match_size": 0,
+        "operator_match_size": 0,
+        "runtime_seconds": 0.00018146494403481483,
+        "useful_candidate": false
+      },
+      "right": {
+        "edges": 2,
+        "kinds": {
+          "module": 3
+        },
+        "nodes": 3,
+        "operators": 3
+      }
+    },
+    "rtlil": {
+      "extraction_runtime_seconds": {
+        "left": 0.032703025033697486,
+        "right": 0.030663758050650358
+      },
+      "left": {
+        "edges": 15,
+        "kinds": {
+          "$add": 1,
+          "$mux": 1,
+          "$not": 4,
+          "$xor": 1,
+          "const": 3,
+          "port_in": 2,
+          "port_out": 1
+        },
+        "nodes": 13,
+        "operators": 7
+      },
+      "match": {
+        "connected_subgraph_size": 6,
+        "coverage": {
+          "a": 0.5384615384615384,
+          "b": 0.5833333333333334
+        },
+        "engine": "native",
+        "extraction_runtime_seconds": {
+          "a": 0.032703025033697486,
+          "b": 0.030663758050650358
+        },
+        "graph_size": {
+          "a": {
+            "edges": 15,
+            "kinds": {
+              "$add": 1,
+              "$mux": 1,
+              "$not": 4,
+              "$xor": 1,
+              "const": 3,
+              "port_in": 2,
+              "port_out": 1
+            },
+            "nodes": 13,
+            "operators": 7
+          },
+          "b": {
+            "edges": 14,
+            "kinds": {
+              "$add": 1,
+              "$mux": 1,
+              "$not": 3,
+              "$xor": 1,
+              "const": 3,
+              "port_in": 2,
+              "port_out": 1
+            },
+            "nodes": 12,
+            "operators": 6
+          }
+        },
+        "level": "rtlil",
+        "match_mode": "exact_rooted_structural",
+        "match_size": 7,
+        "operator_match_size": 6,
+        "runtime_seconds": 0.0008918452076613903,
+        "useful_candidate": true
+      },
+      "right": {
+        "edges": 14,
+        "kinds": {
+          "$add": 1,
+          "$mux": 1,
+          "$not": 3,
+          "$xor": 1,
+          "const": 3,
+          "port_in": 2,
+          "port_out": 1
+        },
+        "nodes": 12,
+        "operators": 6
+      }
+    }
+  },
+  "name_and_style": {
+    "coding_style_variation": "covered by assign versus always_comb word-level regression test",
+    "module_name_independence": "covered by parameterized-child and renamed-module regression tests",
+    "parameter_specialization": "retained: different parameter values are not treated as identical children"
+  },
+  "reason": "specialized word-level RTLIL exposes a six-node connected match including the 34-bit adder and is supported by the executable emitter; AST is source/coding-style dependent, module is an opaque specialization boundary, and gate is larger structural-only evidence",
+  "selected_middle_stop": "rtlil"
+}

@@ -1,0 +1,92 @@
+{
+  "candidate_id": "ibex_lt_ge_independent",
+  "comparison_contract": {
+    "interface": {
+      "externally_visible_results": 1,
+      "latency": {
+        "kind": "combinational",
+        "registered_latency_cycles": null
+      },
+      "operand_sources": [
+        {
+          "independent": true,
+          "name": "source_a",
+          "width": 32
+        },
+        {
+          "independent": true,
+          "name": "source_b",
+          "width": 32
+        }
+      ],
+      "selection_mode": "client_selection",
+      "simultaneous_use_preserved": false,
+      "throughput": {
+        "assumption": "one selected client per evaluation",
+        "available_clients_per_evaluation": 1
+      }
+    }
+  },
+  "expected_commonality": {
+    "not_claimed": "matched nodes do not predict area savings",
+    "selected": "34-bit adder plus comparison control cone"
+  },
+  "hierarchy_stopping_rule": {
+    "gate": "inspect only if RTLIL is not actionable; structural only",
+    "module": "continue when only leaf/specialization wrappers match",
+    "rtlil": "stop for executable assessment when connected operator match is present"
+  },
+  "interface": {
+    "externally_visible_results": 1,
+    "latency": {
+      "kind": "combinational",
+      "registered_latency_cycles": null
+    },
+    "operand_sources": [
+      {
+        "independent": true,
+        "name": "source_a",
+        "width": 32
+      },
+      {
+        "independent": true,
+        "name": "source_b",
+        "width": 32
+      }
+    ],
+    "selection_mode": "client_selection",
+    "simultaneous_use_preserved": false,
+    "throughput": {
+      "assumption": "one selected client per evaluation",
+      "available_clients_per_evaluation": 1
+    }
+  },
+  "match_evidence": {
+    "exact_match_count": 7,
+    "largest_connected_match": 6,
+    "matched_operator_count": 6,
+    "shared_resource_kind": "$add",
+    "shared_resource_pair": {
+      "a": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+      "b": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+    }
+  },
+  "requirements": {
+    "equal_external_interface": true,
+    "required_clients_per_evaluation": 1,
+    "simultaneous_use_required": false
+  },
+  "shared_resource": {
+    "kind": "$add",
+    "role": "shared signed/unsigned comparison adder cone",
+    "width": 34
+  },
+  "source": {
+    "module": "ibex_alu",
+    "operations": [
+      "LT",
+      "GE"
+    ],
+    "selection": "selected-source independent-input"
+  }
+}

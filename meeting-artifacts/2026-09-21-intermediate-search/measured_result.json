@@ -1,0 +1,249 @@
+{
+  "baseline": {
+    "area_um2": 244.45400000000046,
+    "cell_count": 257,
+    "critical_delay_ns": 0.45999999999999996,
+    "fmax_mhz": 2173.913043478261,
+    "metrics": {
+      "cellarea": {
+        "unit": "um^2",
+        "value": 244.45400000000046
+      },
+      "cells": {
+        "unit": null,
+        "value": 257
+      },
+      "constraint_period": {
+        "unit": "ns",
+        "value": 2.5
+      },
+      "core_fraction_of_constraint": {
+        "unit": "ratio",
+        "value": 0.47916666666666663
+      },
+      "core_path_delay": {
+        "unit": "ns",
+        "value": 0.45999999999999996
+      },
+      "data_arrival_time": {
+        "unit": "ns",
+        "value": 0.71
+      },
+      "data_required_time": {
+        "unit": "ns",
+        "value": 2.25
+      },
+      "dynamic_power": {
+        "unit": "mW",
+        "value": 0.04272
+      },
+      "dynamic_power_per_mhz": {
+        "unit": "mW/MHz",
+        "value": 0.00010680000000000001
+      },
+      "fmax_core": {
+        "unit": "Hz",
+        "value": 2173913043.478261
+      },
+      "fmax_with_io_budget": {
+        "unit": "Hz",
+        "value": 1040630000.0000001
+      },
+      "input_external_delay": {
+        "unit": "ns",
+        "value": 0.25
+      },
+      "io_budget": {
+        "unit": "ns",
+        "value": 0.5
+      },
+      "io_budget_dominates": {
+        "unit": "boolean",
+        "value": true
+      },
+      "leakage_fraction": {
+        "unit": "ratio",
+        "value": 0.12459016393442623
+      },
+      "leakagepower": {
+        "unit": "mw",
+        "value": 0.00608
+      },
+      "logicdepth": {
+        "unit": null,
+        "value": 13
+      },
+      "output_external_delay": {
+        "unit": "ns",
+        "value": 0.25
+      },
+      "peakpower": {
+        "unit": "mw",
+        "value": 0.0488
+      },
+      "power_measurement_freq": {
+        "unit": "MHz",
+        "value": 400.0
+      },
+      "setup_slack_from_report": {
+        "unit": "ns",
+        "value": 1.54
+      },
+      "setupslack": {
+        "unit": "ns",
+        "value": 1.54
+      },
+      "setuptns": {
+        "unit": "ns",
+        "value": 0.0
+      }
+    },
+    "status": "pass",
+    "timing_met": true
+  },
+  "candidate": {
+    "area_um2": 303.7720000000003,
+    "cell_count": 284,
+    "critical_delay_ns": 0.59,
+    "fmax_mhz": 1694.9152542372883,
+    "metrics": {
+      "cellarea": {
+        "unit": "um^2",
+        "value": 303.7720000000003
+      },
+      "cells": {
+        "unit": null,
+        "value": 284
+      },
+      "constraint_period": {
+        "unit": "ns",
+        "value": 2.5
+      },
+      "core_fraction_of_constraint": {
+        "unit": "ratio",
+        "value": 0.5412844036697249
+      },
+      "core_path_delay": {
+        "unit": "ns",
+        "value": 0.59
+      },
+      "data_arrival_time": {
+        "unit": "ns",
+        "value": 0.84
+      },
+      "data_required_time": {
+        "unit": "ns",
+        "value": 2.25
+      },
+      "dynamic_power": {
+        "unit": "mW",
+        "value": 0.06656000000000001
+      },
+      "dynamic_power_per_mhz": {
+        "unit": "mW/MHz",
+        "value": 0.00016640000000000003
+      },
+      "fmax_core": {
+        "unit": "Hz",
+        "value": 1694915254.2372882
+      },
+      "fmax_with_io_budget": {
+        "unit": "Hz",
+        "value": 914600000.0
+      },
+      "input_external_delay": {
+        "unit": "ns",
+        "value": 0.25
+      },
+      "io_budget": {
+        "unit": "ns",
+        "value": 0.5
+      },
+      "io_budget_dominates": {
+        "unit": "boolean",
+        "value": false
+      },
+      "leakage_fraction": {
+        "unit": "ratio",
+        "value": 0.09687924016282226
+      },
+      "leakagepower": {
+        "unit": "mw",
+        "value": 0.0071400000000000005
+      },
+      "logicdepth": {
+        "unit": null,
+        "value": 15
+      },
+      "output_external_delay": {
+        "unit": "ns",
+        "value": 0.25
+      },
+      "peakpower": {
+        "unit": "mw",
+        "value": 0.0737
+      },
+      "power_measurement_freq": {
+        "unit": "MHz",
+        "value": 400.0
+      },
+      "setup_slack_from_report": {
+        "unit": "ns",
+        "value": 1.41
+      },
+      "setupslack": {
+        "unit": "ns",
+        "value": 1.41
+      },
+      "setuptns": {
+        "unit": "ns",
+        "value": 0.0
+      }
+    },
+    "status": "pass",
+    "timing_met": true
+  },
+  "comparison": "equal external ports, same source, SDC, and synthesis backend",
+  "decision": {
+    "candidate_id": "ibex_lt_ge_independent",
+    "correctness": {
+      "checks": 518,
+      "log": {
+        "path": "meeting-artifacts/2026-09-21-intermediate-search/simulation.log",
+        "sha256": "9d23c4e04a9605962e6ce43728e3f700984fab812186d2a6bbdccec7caf09f97"
+      },
+      "status": "pass",
+      "tool": "verilator",
+      "vectors": 259
+    },
+    "decision": "REJECT",
+    "deltas": {
+      "area_percent": 24.265505984765927,
+      "area_um2": 59.31799999999981,
+      "critical_delay_ns": 0.13,
+      "fmax_mhz": -478.9977892409727
+    },
+    "policy": {
+      "max_area_increase_percent": 0.0,
+      "max_delay_increase_ns": null
+    },
+    "reasons": [
+      {
+        "code": "performance_bound_unspecified",
+        "message": "delay worsened but no acceptable performance bound was supplied"
+      },
+      {
+        "code": "area_policy_exceeded",
+        "message": "measured area exceeds the explicit policy"
+      }
+    ],
+    "schema": "fu-fusion-decision/v1",
+    "stage": "measured",
+    "version": 1
+  },
+  "policy": {
+    "max_area_increase_percent": 0.0,
+    "max_delay_increase_ns": null,
+    "note": "No performance bound was invented; delay tradeoff is reported."
+  }
+}

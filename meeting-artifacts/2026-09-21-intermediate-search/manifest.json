@@ -1,0 +1,78 @@
+{
+  "artifacts": {
+    "meeting-artifacts/2026-09-21-intermediate-search/candidate_contract.json": "ccc92104adae15e433495e8a7b527b816160d1ca60d35312357cadc276e48706",
+    "meeting-artifacts/2026-09-21-intermediate-search/candidate_survey.json": "94262a32137b2d9d4905462684539dc21d928e3052b2964008b2f89883ef45d3",
+    "meeting-artifacts/2026-09-21-intermediate-search/control_spec.json": "cd05b9078389e735657d4b58a8ce845783542099ca6a842f579656fa24ff0022",
+    "meeting-artifacts/2026-09-21-intermediate-search/executable_graph.rtlil.json": "97e35737acad7aa7f7da77ef0ef5b0a12ed531d3f6de6028ef4dd43775d5e4fa",
+    "meeting-artifacts/2026-09-21-intermediate-search/hierarchy_analysis.json": "8c563a454a14a7226020c446cf64213a0edae5ea255d46b1a7a859350933195c",
+    "meeting-artifacts/2026-09-21-intermediate-search/intermediate_search.sdc": "d3d60aa882875524e8989c064435d9163c2fcce48d71d5a839c658d39be46466",
+    "meeting-artifacts/2026-09-21-intermediate-search/match.rtlil.json": "9bfa330a090ea037d2581ee0c11ded976ebdccca3be888190ffd0671c10a4266",
+    "meeting-artifacts/2026-09-21-intermediate-search/measured_result.json": "30acd3b077100990eecb6098744a2c1283411b66217ff17b9ad14e961c9e7bba",
+    "meeting-artifacts/2026-09-21-intermediate-search/preflight_decision.json": "7b199804e176478b234c6aedcd732ad54fad983dc6897ce15cac348d50b739a4",
+    "meeting-artifacts/2026-09-21-intermediate-search/probes/assign.sv": "5b3c6fbf9d43a3a032a903e1a42c50a91017a9e60c058db812d88cc1ec23bff6",
+    "meeting-artifacts/2026-09-21-intermediate-search/probes/procedural.sv": "3ebd49ec0428e5b400d542f386d81854716e31e13a829dad6ad4652ae206dab9",
+    "meeting-artifacts/2026-09-21-intermediate-search/provenance/ibex.source.json": "f885c3fca7e454121e361c3b91a80cdfd88ba724ad931a94986039e09ea3cd12",
+    "meeting-artifacts/2026-09-21-intermediate-search/provenance/ibex_alu_operation_wrappers.v": "ae04635bc07235c74ccbe0140e754c1c4de43efddd84ca5f4b23b51d5a492e79",
+    "meeting-artifacts/2026-09-21-intermediate-search/provenance_probes.json": "0901c504ad98675f302348720cb466253347a023cf59c11d99c6ac9eea1a7ffa",
+    "meeting-artifacts/2026-09-21-intermediate-search/representation_assessment.json": "cc43a09b2d98566218eee84c23e34b822cd7ad66095d625162a88897d9e2cb40",
+    "meeting-artifacts/2026-09-21-intermediate-search/rtl/ibex_fused_lt_ge32.sv": "fbbc21f3c3091569f1ca2fba3ea80a61aa97b450557199f9284a67cc7d0ac2ae",
+    "meeting-artifacts/2026-09-21-intermediate-search/rtl/ibex_lt_ge_separate.sv": "ee1143fc066cf089b469bb6da43918ea117e20fc3f3f2583a3395c753c8d8b7f",
+    "meeting-artifacts/2026-09-21-intermediate-search/selected_graphs/ge/rtlil.graph.json": "59393f47896cfdd5efe8fe555f0dee6145fb00c1362c1ba15f0a44fadb48a3f2",
+    "meeting-artifacts/2026-09-21-intermediate-search/selected_graphs/lt/rtlil.graph.json": "9cd447105b007efc026ab0bae5adc719abce8fe0c07a5d943895d0117b7f8ac5",
+    "meeting-artifacts/2026-09-21-intermediate-search/simulation.log": "9d23c4e04a9605962e6ce43728e3f700984fab812186d2a6bbdccec7caf09f97",
+    "meeting-artifacts/2026-09-21-intermediate-search/structural_merge.rtlil.json": "dd5e1cd7021ab4ebd580f0eb7e62a8a9c30f87d77821f900d2c6fede857c91cd",
+    "meeting-artifacts/2026-09-21-intermediate-search/tb_intermediate_search.sv": "7f37dcada0c554f5bc51a60986ee52110c5bd287552fe0236f8f033e421be7f5"
+  },
+  "schema": "fu-intermediate-search-manifest/v1",
+  "source_hashes": [
+    {
+      "path": "rtl/ibex_fusion/ibex_alu_operation_wrappers.sv",
+      "sha256": "7098038389e3eeb010aba953876beee3ba443248cbab4ee6fb561dee72e6343c"
+    },
+    {
+      "path": "graph_extract.py",
+      "sha256": "92dcf25a2e9ddf567d6af31e98d6bbe8ad69a84f775b8e8a9843d5e6372f88cf"
+    },
+    {
+      "path": "graph_match.py",
+      "sha256": "5dd5324cc7193db87cb7ed3d60eb0547b486d547e1c1b2166eccadb5cb050ad6"
+    },
+    {
+      "path": "hierarchy_flow.py",
+      "sha256": "9625743b19d2f10c9ce77e40dd7a247ca65a77934c9f5e11b5f60dc76e80cbed"
+    },
+    {
+      "path": "fusion_decision.py",
+      "sha256": "81e0453b61d5c1391896185c200108d3413f73bfc2648c259868f6136ac9495f"
+    },
+    {
+      "path": "executable_graph.py",
+      "sha256": "20d8eb7d532d1828414e3bb2c743c2af65e4bd20fa44cb9a6e301eb163ac9965"
+    },
+    {
+      "path": "graph_rtl_emit.py",
+      "sha256": "b833d17c0af291579449a75b273e8cb3ad3a6b5f37d5998724480ae131332de2"
+    },
+    {
+      "path": "scripts/intermediate_representation_study_2026_09_21.py",
+      "sha256": "dadd65b5a9210624104a07d540ff592adecfbc96e493591e4d6850395b92d683"
+    },
+    {
+      "path": "tests/test_intermediate_representation_study.py",
+      "sha256": "1f549ee553169e83a494b06017b769c3844df15a456b668e74a636402fffd315"
+    },
+    {
+      "path": "meeting-artifacts/ibex-fusion/candidate_matrix.json",
+      "sha256": "172c8a28aa367175367b8e4a2c3b51831fa4827ea6a9e9104fdb16d50a088423"
+    },
+    {
+      "path": "meeting-artifacts/2026-09-21-intermediate-search/provenance/ibex_alu_operation_wrappers.v",
+      "sha256": "ae04635bc07235c74ccbe0140e754c1c4de43efddd84ca5f4b23b51d5a492e79"
+    },
+    {
+      "path": "meeting-artifacts/2026-09-21-intermediate-search/provenance/ibex.source.json",
+      "sha256": "f885c3fca7e454121e361c3b91a80cdfd88ba724ad931a94986039e09ea3cd12"
+    }
+  ],
+  "study": "ibex_lt_ge_independent"
+}

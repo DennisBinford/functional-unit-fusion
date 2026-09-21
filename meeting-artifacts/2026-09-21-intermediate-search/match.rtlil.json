@@ -1,0 +1,824 @@
+{
+  "common_node_count": 7,
+  "common_subgraphs": [
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        }
+      ],
+      "node_count": 5,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 5,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 6,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 5,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$204",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 5,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$auto$opt_expr.cc:605:replace_const_cells$201"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:605:replace_const_cells$201",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+            "src": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+          }
+        },
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          },
+          "b": {
+            "dst": "$procmux$177",
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ],
+      "nodes_b": [
+        "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+        "$procmux$177"
+      ]
+    }
+  ],
+  "coverage": {
+    "a": 0.5384615384615384,
+    "b": 0.5833333333333334
+  },
+  "engine": "native",
+  "graph_a": "ibex_alu_lt32",
+  "graph_b": "ibex_alu_ge32",
+  "level": "rtlil",
+  "limitations": [
+    "Exact structural candidates only; no algebraic or e-graph equivalence.",
+    "Ambiguous repeated signatures are excluded rather than guessed.",
+    "A match is not evidence that fusion improves PPA."
+  ],
+  "match_mode": "exact_rooted_structural",
+  "matched_edges": [],
+  "matched_nodes": [
+    {
+      "a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+      "b": "$auto$opt_expr.cc:277:group_cell_inputs$204"
+    },
+    {
+      "a": "$auto$opt_expr.cc:605:replace_const_cells$201",
+      "b": "$auto$opt_expr.cc:605:replace_const_cells$201"
+    },
+    {
+      "a": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77",
+      "b": "$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77"
+    },
+    {
+      "a": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83",
+      "b": "$flatten\\u.\\u_ibex_alu.$eq$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:99$83"
+    },
+    {
+      "a": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81",
+      "b": "$flatten\\u.\\u_ibex_alu.$xor$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:98$81"
+    },
+    {
+      "a": "$procmux$177",
+      "b": "$procmux$177"
+    },
+    {
+      "a": "const:port:result_o:result_o",
+      "b": "const:port:result_o:result_o"
+    }
+  ],
+  "metadata": {
+    "a": {
+      "design": "ibex_alu_lt32",
+      "level": "rtlil",
+      "top": "ibex_alu_lt32"
+    },
+    "b": {
+      "design": "ibex_alu_ge32",
+      "level": "rtlil",
+      "top": "ibex_alu_ge32"
+    }
+  },
+  "schema": "fu-graph-match/v1",
+  "unmatched": {
+    "a": [
+      "$flatten\\u.\\u_ibex_alu.$not$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:108$87",
+      "const:$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77:A",
+      "const:$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77:B",
+      "port:operand_a_i",
+      "port:operand_b_i",
+      "port:result_o"
+    ],
+    "b": [
+      "const:$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77:A",
+      "const:$flatten\\u.\\u_ibex_alu.$add$$REPO/build/intermediate_search_2026_09_21/ibex_alu_operation_wrappers.v:84$77:B",
+      "port:operand_a_i",
+      "port:operand_b_i",
+      "port:result_o"
+    ]
+  }
+}

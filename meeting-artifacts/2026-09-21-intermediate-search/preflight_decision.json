@@ -1,0 +1,27 @@
+{
+  "candidate_id": "ibex_lt_ge_independent",
+  "decision": "MEASURE",
+  "diagnostic_override": {
+    "allowed": false,
+    "purpose": "emit a rejected candidate for diagnosis only"
+  },
+  "measurement_required": true,
+  "profitability_claim": "none_before_synthesis",
+  "reasons": [],
+  "routing_overhead": {
+    "mapped_mux_area_um2": null,
+    "mapped_mux_cell": null,
+    "mapped_mux_count": null,
+    "measured_area_um2": null,
+    "pretechmap_mux_count": 3,
+    "status": "screening_only",
+    "uncertainty": [
+      "screening evidence is not measured area or delay",
+      "routing congestion, placement, buffering, and cell remapping remain unknown",
+      "MUX2 population is mapped-cell evidence, not a formal causal decomposition"
+    ]
+  },
+  "schema": "fu-fusion-decision/v1",
+  "stage": "preflight",
+  "version": 1
+}

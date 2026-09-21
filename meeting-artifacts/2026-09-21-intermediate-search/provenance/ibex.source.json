@@ -1,0 +1,12 @@
+{
+  "destination": "$REPO/third_party/ibex",
+  "fetched_at": "2026-07-15T23:06:47.117595+00:00",
+  "license": "Apache-2.0",
+  "name": "lowRISC Ibex",
+  "package_dependency": "rtl/ibex_pkg.sv",
+  "primary_unit": "rtl/ibex_alu.sv",
+  "repository": "https://github.com/lowRISC/ibex.git",
+  "requested_revision": "8ed87e07e3331561bce93af1568d9b376948e701",
+  "resolved_commit": "8ed87e07e3331561bce93af1568d9b376948e701",
+  "upstream_open_source_flow": "syn/README.md"
+}

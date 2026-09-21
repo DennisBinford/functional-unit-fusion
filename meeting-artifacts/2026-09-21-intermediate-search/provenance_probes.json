@@ -1,0 +1,16 @@
+{
+  "coding_style_probe": {
+    "forms": [
+      "continuous assign",
+      "procedural always_comb with commuted operands"
+    ],
+    "interpretation": "word-level normalization sees the same adder despite source-style variation",
+    "rtlil_common_nodes": 2,
+    "rtlil_common_operators": 1
+  },
+  "parameterized_module_name_probe": {
+    "different_parameter_specialization_common_nodes": 0,
+    "interpretation": "child names are ignored for equivalent parameterized instances, but parameter specialization remains part of identity",
+    "same_specialization_different_child_names_common_nodes": 2
+  }
+}

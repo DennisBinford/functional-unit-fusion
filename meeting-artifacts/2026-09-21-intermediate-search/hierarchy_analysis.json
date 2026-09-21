@@ -1,0 +1,162 @@
+{
+  "fallthrough": [
+    {
+      "from": "module",
+      "reason": "no useful candidate",
+      "to": "rtlil"
+    }
+  ],
+  "metrics": {
+    "gate": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.21739130434782608,
+        "b": 0.21739130434782608
+      },
+      "engine": "native",
+      "extraction_runtime_seconds": {
+        "a": 0.08634706400334835,
+        "b": 0.08635119209066033
+      },
+      "graph_size": {
+        "a": {
+          "edges": 316,
+          "kinds": {
+            "$_ANDNOT_": 6,
+            "$_AND_": 51,
+            "$_NAND_": 38,
+            "$_NOR_": 1,
+            "$_ORNOT_": 56,
+            "$_XNOR_": 5,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 161,
+          "operators": 157
+        },
+        "b": {
+          "edges": 316,
+          "kinds": {
+            "$_ANDNOT_": 6,
+            "$_AND_": 50,
+            "$_NAND_": 39,
+            "$_NOR_": 1,
+            "$_ORNOT_": 56,
+            "$_XNOR_": 5,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 161,
+          "operators": 157
+        }
+      },
+      "level": "gate",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 35,
+      "operator_match_size": 34,
+      "runtime_seconds": 0.031319895992055535,
+      "useful_candidate": true
+    },
+    "module": {
+      "connected_subgraph_size": 0,
+      "coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "engine": "native",
+      "extraction_runtime_seconds": {
+        "a": 0.028568453853949904,
+        "b": 0.027913197875022888
+      },
+      "graph_size": {
+        "a": {
+          "edges": 2,
+          "kinds": {
+            "module": 3
+          },
+          "nodes": 3,
+          "operators": 3
+        },
+        "b": {
+          "edges": 2,
+          "kinds": {
+            "module": 3
+          },
+          "nodes": 3,
+          "operators": 3
+        }
+      },
+      "level": "module",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 0,
+      "operator_match_size": 0,
+      "runtime_seconds": 0.00018146494403481483,
+      "useful_candidate": false
+    },
+    "rtlil": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.5384615384615384,
+        "b": 0.5833333333333334
+      },
+      "engine": "native",
+      "extraction_runtime_seconds": {
+        "a": 0.032703025033697486,
+        "b": 0.030663758050650358
+      },
+      "graph_size": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "level": "rtlil",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 7,
+      "operator_match_size": 6,
+      "runtime_seconds": 0.0008918452076613903,
+      "useful_candidate": true
+    }
+  },
+  "pair": "ibex_lt_ge_independent",
+  "policy": {
+    "evaluate_all_for_report": true,
+    "gate_is_structural_only": true,
+    "leaf_module_falls_through": true,
+    "order": [
+      "module",
+      "rtlil",
+      "gate"
+    ],
+    "rtlil_is_first_word_level": true,
+    "whole_module_requires_top_match": true
+  },
+  "schema": "fu-hierarchy-study/v1",
+  "selected_level": "rtlil"
+}

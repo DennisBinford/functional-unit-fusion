@@ -1,0 +1,39 @@
+{
+  "pairs": [
+    {
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_match_count": 7,
+      "largest_connected_exact_match": 6,
+      "pair": [
+        "LT",
+        "GE"
+      ],
+      "selection": "chosen"
+    },
+    {
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_match_count": 5,
+      "largest_connected_exact_match": 3,
+      "pair": [
+        "LT",
+        "LTU"
+      ],
+      "selection": "surveyed_alternative"
+    },
+    {
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_match_count": 5,
+      "largest_connected_exact_match": 3,
+      "pair": [
+        "GE",
+        "GEU"
+      ],
+      "selection": "surveyed_alternative"
+    }
+  ],
+  "selection_reason": "LT/GE has the largest connected exact word-level match and exposes a shared 34-bit adder plus comparison control.",
+  "source": {
+    "path": "meeting-artifacts/ibex-fusion/candidate_matrix.json",
+    "sha256": "172c8a28aa367175367b8e4a2c3b51831fa4827ea6a9e9104fdb16d50a088423"
+  }
+}
