@@ -1,0 +1,355 @@
+{
+  "cases": {
+    "independent_equal_interface_separate": {
+      "interface_contract": {
+        "case": "independent_equal_interface_separate",
+        "classification": "Selected-source, independent-input, time-multiplexed sharing derived from two Ibex operation specializations. Only one client result is available at a time.",
+        "client_selection_modeled": true,
+        "number_of_externally_visible_results": 1,
+        "number_of_independent_operand_pairs": 2,
+        "operation_selection_modeled": false,
+        "schema": "fu-interface-contract/v1",
+        "selection_model": "client_selection",
+        "simultaneous_use_preserved": false,
+        "throughput": {
+          "available_clients_per_evaluation": 1,
+          "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+        }
+      },
+      "ppa": {
+        "area_um2": 323.4559999999997,
+        "cell_count": 346,
+        "cells": {
+          "AND2_X1": 1,
+          "AND3_X1": 7,
+          "AOI211_X1": 3,
+          "AOI21_X1": 22,
+          "AOI221_X1": 5,
+          "AOI22_X1": 7,
+          "BUF_X1": 2,
+          "INV_X1": 96,
+          "NAND2_X1": 33,
+          "NAND3_X1": 11,
+          "NOR2_X1": 60,
+          "NOR3_X1": 22,
+          "NOR4_X1": 1,
+          "OAI21_X1": 23,
+          "OAI221_X1": 5,
+          "OAI22_X1": 11,
+          "OR2_X1": 2,
+          "XNOR2_X1": 4,
+          "XOR2_X1": 31
+        },
+        "critical_delay_ns": 1.33,
+        "design": "independent_equal_interface_separate",
+        "fmax_mhz": 751.8796992481203,
+        "mapped_mux2_area_um2": 0.0,
+        "mapped_mux2_count": 0,
+        "pretechmap": {
+          "edge_count": 75,
+          "mux_count": 5,
+          "node_count": 57,
+          "operator_counts": {
+            "$add": 2,
+            "$logic_not": 2,
+            "$mem_v2": 2,
+            "$mux": 5,
+            "$not": 8,
+            "$pmux": 3,
+            "$sshr": 1,
+            "$xor": 3,
+            "const": 25,
+            "port_in": 5,
+            "port_out": 1
+          }
+        },
+        "rtl": "meeting-artifacts/2026-09-21/interface-control/independent_equal_interface_separate.sv",
+        "simulation": {
+          "checks": 524,
+          "log": "meeting-artifacts/2026-09-21/interface-control/independent_equal_interface_separate.simulation.log",
+          "oracle": "authoritative Ibex ibex_alu_sub32/ibex_alu_ltu32 wrappers plus integer model",
+          "status": "pass",
+          "tool": "verilator",
+          "vectors": 262
+        },
+        "stat_report": "build/professor_sprint_2026_09_21/interface_control/independent_equal_interface_separate_ppa/independent_equal_interface_separate/job0/synthesis/0/reports/stat.json",
+        "status": "pass"
+      }
+    },
+    "independent_input_fused": {
+      "interface_contract": {
+        "case": "independent_input_fused",
+        "classification": "Selected-source, independent-input, time-multiplexed sharing derived from two Ibex operation specializations. Only one client result is available at a time.",
+        "client_selection_modeled": true,
+        "number_of_externally_visible_results": 1,
+        "number_of_independent_operand_pairs": 2,
+        "operation_selection_modeled": false,
+        "schema": "fu-interface-contract/v1",
+        "selection_model": "client_selection",
+        "simultaneous_use_preserved": false,
+        "throughput": {
+          "available_clients_per_evaluation": 1,
+          "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+        }
+      },
+      "ppa": {
+        "area_um2": 346.59800000000126,
+        "cell_count": 303,
+        "cells": {
+          "AND2_X1": 5,
+          "AND3_X1": 5,
+          "AOI211_X1": 2,
+          "AOI21_X1": 45,
+          "BUF_X1": 11,
+          "INV_X1": 54,
+          "MUX2_X1": 56,
+          "NAND2_X1": 10,
+          "NOR2_X1": 34,
+          "NOR3_X1": 4,
+          "OAI211_X2": 2,
+          "OAI21_X1": 39,
+          "OAI22_X1": 1,
+          "OAI33_X1": 1,
+          "OR2_X1": 1,
+          "OR3_X1": 1,
+          "OR4_X1": 1,
+          "XNOR2_X1": 3,
+          "XOR2_X1": 28
+        },
+        "critical_delay_ns": 1.46,
+        "design": "ibex_fused_sub_ltu32",
+        "fmax_mhz": 684.931506849315,
+        "mapped_mux2_area_um2": 104.272,
+        "mapped_mux2_count": 56,
+        "pretechmap": {
+          "edge_count": 26,
+          "mux_count": 4,
+          "node_count": 21,
+          "operator_counts": {
+            "$add": 1,
+            "$mux": 4,
+            "$not": 4,
+            "$xor": 1,
+            "const": 5,
+            "port_in": 5,
+            "port_out": 1
+          }
+        },
+        "rtl": "meeting-artifacts/2026-09-21/interface-control/independent_input_fused.sv",
+        "simulation": {
+          "checks": 524,
+          "log": "meeting-artifacts/2026-09-21/interface-control/independent_input_fused.simulation.log",
+          "oracle": "authoritative Ibex ibex_alu_sub32/ibex_alu_ltu32 wrappers plus integer model",
+          "status": "pass",
+          "tool": "verilator",
+          "vectors": 262
+        },
+        "stat_report": "build/professor_sprint_2026_09_21/interface_control/independent_input_fused_ppa/ibex_fused_sub_ltu32/job0/synthesis/0/reports/stat.json",
+        "status": "pass"
+      }
+    },
+    "same_input_separate": {
+      "interface_contract": {
+        "case": "same_input_separate",
+        "classification": "Same-input, operation-selected, time-multiplexed sharing within one ALU interface.",
+        "client_selection_modeled": false,
+        "number_of_externally_visible_results": 1,
+        "number_of_independent_operand_pairs": 1,
+        "operation_selection_modeled": true,
+        "schema": "fu-interface-contract/v1",
+        "selection_model": "operation_selection",
+        "simultaneous_use_preserved": false,
+        "throughput": {
+          "available_clients_per_evaluation": 1,
+          "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+        }
+      },
+      "ppa": {
+        "area_um2": 226.09999999999982,
+        "cell_count": 241,
+        "cells": {
+          "AND2_X1": 3,
+          "AND3_X1": 11,
+          "AOI21_X1": 29,
+          "AOI22_X1": 2,
+          "BUF_X1": 3,
+          "INV_X1": 61,
+          "NAND2_X1": 20,
+          "NAND3_X1": 4,
+          "NOR2_X1": 45,
+          "NOR3_X1": 14,
+          "OAI21_X1": 17,
+          "OR3_X1": 1,
+          "XNOR2_X1": 2,
+          "XOR2_X1": 29
+        },
+        "critical_delay_ns": 1.28,
+        "design": "same_input_separate",
+        "fmax_mhz": 781.25,
+        "mapped_mux2_area_um2": 0.0,
+        "mapped_mux2_count": 0,
+        "pretechmap": {
+          "edge_count": 71,
+          "mux_count": 5,
+          "node_count": 52,
+          "operator_counts": {
+            "$add": 2,
+            "$logic_not": 2,
+            "$mem_v2": 2,
+            "$mux": 5,
+            "$not": 7,
+            "$pmux": 3,
+            "$sshr": 1,
+            "$xor": 2,
+            "const": 24,
+            "port_in": 3,
+            "port_out": 1
+          }
+        },
+        "rtl": "meeting-artifacts/2026-09-21/interface-control/same_input_separate.sv",
+        "simulation": {
+          "checks": 524,
+          "log": "meeting-artifacts/2026-09-21/interface-control/same_input_separate.simulation.log",
+          "oracle": "authoritative Ibex ibex_alu_sub32/ibex_alu_ltu32 wrappers plus integer model",
+          "status": "pass",
+          "tool": "verilator",
+          "vectors": 262
+        },
+        "stat_report": "build/professor_sprint_2026_09_21/interface_control/same_input_separate_ppa/same_input_separate/job0/synthesis/0/reports/stat.json",
+        "status": "pass"
+      }
+    },
+    "same_input_shared": {
+      "interface_contract": {
+        "case": "same_input_shared",
+        "classification": "Same-input, operation-selected, time-multiplexed sharing within one ALU interface.",
+        "client_selection_modeled": false,
+        "number_of_externally_visible_results": 1,
+        "number_of_independent_operand_pairs": 1,
+        "operation_selection_modeled": true,
+        "schema": "fu-interface-contract/v1",
+        "selection_model": "operation_selection",
+        "simultaneous_use_preserved": false,
+        "throughput": {
+          "available_clients_per_evaluation": 1,
+          "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+        }
+      },
+      "ppa": {
+        "area_um2": 223.70600000000005,
+        "cell_count": 231,
+        "cells": {
+          "AND2_X1": 1,
+          "AND3_X1": 21,
+          "AOI21_X1": 24,
+          "AOI22_X1": 1,
+          "BUF_X1": 2,
+          "INV_X1": 61,
+          "NAND2_X1": 13,
+          "NAND3_X1": 1,
+          "NOR2_X1": 36,
+          "NOR3_X1": 16,
+          "OAI21_X1": 17,
+          "OR3_X1": 8,
+          "XNOR2_X1": 2,
+          "XOR2_X1": 28
+        },
+        "critical_delay_ns": 1.21,
+        "design": "same_input_shared",
+        "fmax_mhz": 826.4462809917355,
+        "mapped_mux2_area_um2": 0.0,
+        "mapped_mux2_count": 0,
+        "pretechmap": {
+          "edge_count": 16,
+          "mux_count": 2,
+          "node_count": 13,
+          "operator_counts": {
+            "$add": 1,
+            "$mux": 2,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 3,
+            "port_out": 1
+          }
+        },
+        "rtl": "meeting-artifacts/2026-09-21/interface-control/same_input_shared.sv",
+        "simulation": {
+          "checks": 524,
+          "log": "meeting-artifacts/2026-09-21/interface-control/same_input_shared.simulation.log",
+          "oracle": "authoritative Ibex ibex_alu_sub32/ibex_alu_ltu32 wrappers plus integer model",
+          "status": "pass",
+          "tool": "verilator",
+          "vectors": 262
+        },
+        "stat_report": "build/professor_sprint_2026_09_21/interface_control/same_input_shared_ppa/same_input_shared/job0/synthesis/0/reports/stat.json",
+        "status": "pass"
+      }
+    }
+  },
+  "comparisons": {
+    "independent_equal_interface_separate_vs_independent_input_fused": {
+      "baseline": "independent_equal_interface_separate",
+      "candidate": "independent_input_fused",
+      "interface_equal": true,
+      "interpretation": "Evidence about current automated cross-client fusion under the same two-pair/one-result interface.",
+      "result": {
+        "area_delta_percent": 7.154605263158393,
+        "area_delta_um2": 23.142000000001588,
+        "critical_delay_delta_ns": 0.1299999999999999,
+        "fmax_delta_mhz": -66.9481923988053
+      }
+    },
+    "independent_interface_expansion_context": {
+      "baseline": "same_input_separate",
+      "candidate": "independent_equal_interface_separate",
+      "interface_equal": false,
+      "interpretation": "Observed dimensional context for two operand pairs plus client selection; not a causal decomposition because the interface and selector semantics also change.",
+      "result": {
+        "area_delta_percent": 43.05882352941173,
+        "area_delta_um2": 97.35599999999985,
+        "critical_delay_delta_ns": 0.050000000000000044,
+        "fmax_delta_mhz": -29.370300751879654
+      }
+    },
+    "same_input_separate_vs_same_input_shared": {
+      "baseline": "same_input_separate",
+      "candidate": "same_input_shared",
+      "interface_equal": true,
+      "interpretation": "Controlled within-ALU same-input sharing result; not evidence of two independent clients.",
+      "result": {
+        "area_delta_percent": -1.0588235294116675,
+        "area_delta_um2": -2.393999999999778,
+        "critical_delay_delta_ns": -0.07000000000000006,
+        "fmax_delta_mhz": 45.196280991735534
+      }
+    }
+  },
+  "conditions": {
+    "functional": "262 directed plus deterministic-random vectors per operation selection, 524 checks per case",
+    "mapped_mux2_note": "MUX2_X1 count/area is a mapped cell-population delta, not a formal causal decomposition; other mapped cells partially offset it.",
+    "oracle": "authoritative Ibex operation wrappers and independent integer model",
+    "synthesis": "identical SiliconCompiler synflow, FreePDK45/Nangate45 typical Liberty, Yosys/OpenSTA toolchain, and SDC"
+  },
+  "literal_resource_accounting_reference": {
+    "label": "resource-accounting reference, not an equal-interface baseline",
+    "original_literal_sum_um2": 332.50000000000034,
+    "source": "meeting-artifacts/2026-09-21/fresh/ppa.json"
+  },
+  "original_ibex_same_input_evidence": {
+    "evidence": "ALU_SUB, ALU_LTU and comparator operations select one shared adder input preparation and adder_result_ext_o; LTU derives comparison from that adder result.",
+    "not_new_fusion": true,
+    "source": "third_party/ibex/rtl/ibex_alu.sv",
+    "source_lines": "55-109, 132-173",
+    "status": "corroborating_evidence"
+  },
+  "research_answers": {
+    "automated_cross_client_evidence": "independent_equal_interface_separate versus independent_input_fused",
+    "current_plus_4_240_percent_against_equal_interface": "Use the independent_equal_interface_separate versus independent_input_fused comparison; the old +4.240% literal sum is not that baseline.",
+    "original_ibex_already_shares": true,
+    "same_input_sub_ltu_benefit": "Use same_input_separate versus same_input_shared, whose interfaces and semantics are identical.",
+    "two_independent_operand_pair_overhead": "Use the independent_interface_expansion_context row only as a labeled cross-interface context; it is not a formal causal isolation.",
+    "within_alu_control_only": "same_input_separate versus same_input_shared"
+  },
+  "schema": "fu-interface-control-results/v1"
+}

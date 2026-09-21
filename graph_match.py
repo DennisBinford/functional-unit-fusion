@@ -78,6 +78,10 @@ def _node_key(node: Dict[str, Any]) -> Tuple[Any, ...]:
     params = attrs.get("parameters") or {}
     return (
         _operation(node), node.get("width"), attrs.get("signed"),
+        # Hierarchy nodes carry a name-independent semantic skeleton. This
+        # distinguishes parameterized instances (such as SUB versus LTU)
+        # without making harmless module renames into non-matches.
+        attrs.get("module_signature"),
         _width_attribute(attrs, "input_width"),
         _width_attribute(attrs, "output_width"),
         _width_attribute(attrs, "input_widths"),

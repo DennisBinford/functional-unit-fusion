@@ -1,0 +1,15 @@
+{
+  "case": "independent_equal_interface_separate",
+  "classification": "Selected-source, independent-input, time-multiplexed sharing derived from two Ibex operation specializations. Only one client result is available at a time.",
+  "client_selection_modeled": true,
+  "number_of_externally_visible_results": 1,
+  "number_of_independent_operand_pairs": 2,
+  "operation_selection_modeled": false,
+  "schema": "fu-interface-contract/v1",
+  "selection_model": "client_selection",
+  "simultaneous_use_preserved": false,
+  "throughput": {
+    "available_clients_per_evaluation": 1,
+    "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+  }
+}

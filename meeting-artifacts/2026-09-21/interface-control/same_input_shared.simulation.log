@@ -1,0 +1,5 @@
+INTERFACE_CONTROL_TEST_PASS case=same_input_shared checks=524 vectors=262
+- /home/dabinford/research/meeting-artifacts/2026-09-21/interface-control/same_input_shared.tb.sv:31: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.051 devel
+- Verilator: $finish at 524ns; walltime 0.000 s; speed 8.244 ms/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 7 MB

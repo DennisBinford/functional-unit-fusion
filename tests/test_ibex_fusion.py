@@ -59,6 +59,21 @@ def _plan(kind, width=4):
 
 
 class IbexFusionTest(unittest.TestCase):
+    def test_sub_ltu_interface_contract_cannot_regress_to_same_input_description(self):
+        sprint = (ROOT / "scripts" / "professor_sprint_2026_09_21.py").read_text()
+        self.assertNotIn("same-operands ALU-operation sharing", sprint)
+        self.assertNotIn("same-input design", sprint)
+        contract_path = ROOT / "meeting-artifacts" / "2026-09-21" / "sub_ltu" / "interface_contract.json"
+        if contract_path.exists():
+            contract = json.loads(contract_path.read_text())
+            self.assertEqual(contract["number_of_independent_operand_pairs"], 2)
+            self.assertEqual(contract["number_of_externally_visible_results"], 1)
+            self.assertFalse(contract["simultaneous_use_preserved"])
+            self.assertEqual(contract["selection_model"], "client_selection")
+            self.assertTrue(contract["client_selection_modeled"])
+            self.assertFalse(contract["operation_selection_modeled"])
+            self.assertIn("independent-input", contract["classification"])
+
     def test_all_operation_wrappers_instantiate_upstream_without_fusion_control(self):
         text = WRAPPER.read_text()
         for operation in ("add", "sub", "lt", "ltu", "ge", "geu", "eq", "ne",

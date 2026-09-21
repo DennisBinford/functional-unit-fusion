@@ -1,0 +1,64 @@
+digraph independent_input_fused_rtlil {
+  graph [rankdir=LR, fontname="Helvetica", labelloc="t", label="independent_input_fused RTLIL graph", fontsize=16, nodesep=0.25, ranksep=0.6, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, style="filled", penwidth=1.2, margin="0.08,0.04"];
+  edge  [fontname="Helvetica", fontsize=8, color="#666666", arrowsize=0.6];
+  port_b_operand_a_i [label="b_operand_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_b_operand_b_i [label="b_operand_b_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_operand_a_i [label="operand_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_operand_b_i [label="operand_b_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_source_select_i [label="source_select_i", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_result_o [label="result_o\n[32]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  _add__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_54_78 [label="add[34]", shape=box, fillcolor="#dbe9fb", color="#2f6fb5"];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_43_73 [label="not[32]", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_47_74 [label="not[32]", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_57_79 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_59_81 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [label="mux[34]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [label="mux[34]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_58_80 [label="mux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 [label="mux[32]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _xor__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_52_76 [label="xor", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75_A [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75_B [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77_A [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77_B [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82_A [label="31'b0000000000000000000000000000000\n[31]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 -> _add__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_54_78 [label="34", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 -> _add__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_54_78 [label="34", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_43_73 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_b_operand_b_i -> _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_47_74 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _add__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_54_78 -> _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_57_79 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_58_80 -> _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_59_81 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_b_operand_a_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75_A -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75_B -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [label="2", penwidth=1.1, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_source_select_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_50_75 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_47_74 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77_A -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_43_73 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77_B -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [label="2", penwidth=1.1, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_source_select_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_53_77 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_57_79 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_58_80 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_b_operand_a_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_58_80 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _xor__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_52_76 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_58_80 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _not__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_59_81 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82_A -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 [label="31", penwidth=2.9, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _add__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_54_78 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_source_select_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  port_b_operand_a_i -> _xor__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_52_76 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_b_operand_b_i -> _xor__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_52_76 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_independent_input_fused_sv_61_82 -> port_result_o [label="32", penwidth=3.0, headlabel="result_o", labelfontsize=7, labeldistance=1.4];
+  subgraph cluster_legend {
+    label="key"; fontname="Helvetica"; fontsize=10; color="#cccccc";
+    legend [shape=plaintext, fillcolor="white", label=<
+      <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+        <TR><TD BGCOLOR="#dbe9fb" WIDTH="16"></TD><TD ALIGN="LEFT">arith</TD></TR>
+        <TR><TD BGCOLOR="#f2f2f2" WIDTH="16"></TD><TD ALIGN="LEFT">const</TD></TR>
+        <TR><TD BGCOLOR="#e2f0dc" WIDTH="16"></TD><TD ALIGN="LEFT">logic</TD></TR>
+        <TR><TD BGCOLOR="#efe0f4" WIDTH="16"></TD><TD ALIGN="LEFT">mux</TD></TR>
+        <TR><TD BGCOLOR="#ffffff" WIDTH="16"></TD><TD ALIGN="LEFT">port_in</TD></TR>
+        <TR><TD BGCOLOR="#333333" WIDTH="16"></TD><TD ALIGN="LEFT">port_out</TD></TR>
+      </TABLE>>];
+  }
+}

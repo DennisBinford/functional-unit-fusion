@@ -1,0 +1,142 @@
+digraph same_input_separate_rtlil {
+  graph [rankdir=LR, fontname="Helvetica", labelloc="t", label="same_input_separate RTLIL graph", fontsize=16, nodesep=0.25, ranksep=0.6, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, style="filled", penwidth=1.2, margin="0.08,0.04"];
+  edge  [fontname="Helvetica", fontsize=8, color="#666666", arrowsize=0.6];
+  port_operand_a_i [label="operand_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_operand_b_i [label="operand_b_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_operation_select_i [label="operation_select_i", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_result_o [label="result_o\n[32]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="add[34]", shape=box, fillcolor="#dbe9fb", color="#2f6fb5"];
+  _flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198 [label="not[33]", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [label="memv2", shape=box, fillcolor="#eeeeee", color="#555555"];
+  _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 [label="logicnot", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [label="pmux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_176 [label="mux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_182 [label="mux[33]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106 [label="sshr[33]", shape=box, fillcolor="#fdf3cf", color="#a8880e"];
+  _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="add[34]", shape=box, fillcolor="#dbe9fb", color="#2f6fb5"];
+  _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [label="memv2", shape=box, fillcolor="#eeeeee", color="#555555"];
+  _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 [label="logicnot", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="pmux[32]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_171 [label="pmux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_176 [label="mux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_182 [label="mux[33]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_206_112 [label="xor[32]", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_98_82 [label="xor", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 [label="mux[32]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  const__flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_A [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_B [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198_A [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ADDR [label="6'b011010\n[6]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ARST [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_CLK [label="1'bx", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_EN [label="1'b1", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_SRST [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__procmux_171_S [label="3'b001\n[3]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__procmux_182_A [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106_A [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_A [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_B [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ADDR [label="6'b000001\n[6]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ARST [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_CLK [label="1'bx", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_EN [label="1'b1", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_SRST [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_A [label="32'b00000000000000000000000000000000\n[32]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_B [label="223'b0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\n[223]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_S [label="10'b0100000000\n[10]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_171_S [label="3'b000\n[3]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_182_A [label="1'b0", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73_A [label="31'b0000000000000000000000000000000\n[31]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  port_operand_a_i -> _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_A -> _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_182 -> _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="33", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_B -> _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198_A -> _flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ADDR -> _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [label="6", penwidth=1.4, headlabel="RD_ADDR", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ARST -> _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_ARST", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_CLK -> _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_CLK", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_EN -> _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_EN", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_SRST -> _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_SRST", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 -> _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 -> _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 -> _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_176 -> _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_176 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__procmux_171_S -> _flatten_ltu_cone__u__u_ibex_alu__procmux_171 [label="3", penwidth=1.2, headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_176 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_ltu_cone__u__u_ibex_alu__procmux_176 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_98_82 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_176 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_ltu_cone__u__u_ibex_alu__procmux_182 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__procmux_182_A -> _flatten_ltu_cone__u__u_ibex_alu__procmux_182 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_182 [label="33", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 -> _flatten_ltu_cone__u__u_ibex_alu__procmux_182 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106_A -> _flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106 [label="5", penwidth=1.3, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_A -> _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_182 -> _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [label="33", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78_B -> _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ADDR -> _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [label="6", penwidth=1.4, headlabel="RD_ADDR", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_ARST -> _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_ARST", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_CLK -> _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_CLK", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_EN -> _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_EN", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132_RD_SRST -> _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 [headlabel="RD_SRST", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 -> _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 -> _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 -> _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_176 -> _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_A -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_171 -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__sshr__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_178_106 -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__add__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_84_78 -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_206_112 -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_B -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="223", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_136_S -> _flatten_sub_cone__u__u_ibex_alu__procmux_136 [label="10", penwidth=1.6, headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_95_80 -> _flatten_sub_cone__u__u_ibex_alu__procmux_171 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_108_88 -> _flatten_sub_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_176 -> _flatten_sub_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__not__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_106_87 -> _flatten_sub_cone__u__u_ibex_alu__procmux_171 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_171_S -> _flatten_sub_cone__u__u_ibex_alu__procmux_171 [label="3", penwidth=1.2, headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__eq__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_99_84 -> _flatten_sub_cone__u__u_ibex_alu__procmux_176 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_sub_cone__u__u_ibex_alu__procmux_176 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_98_82 -> _flatten_sub_cone__u__u_ibex_alu__procmux_176 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_sub_cone__u__u_ibex_alu__procmux_182 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_sub_cone__u__u_ibex_alu__procmux_182_A -> _flatten_sub_cone__u__u_ibex_alu__procmux_182 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__auto_opt_expr_cc_702_replace_const_cells_198 -> _flatten_sub_cone__u__u_ibex_alu__procmux_182 [label="33", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__auto_proc_rom_cc_155_do_switch_132 -> _flatten_sub_cone__u__u_ibex_alu__procmux_182 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_206_112 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_206_112 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_operand_a_i -> _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_98_82 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_operand_b_i -> _flatten_sub_cone__u__u_ibex_alu__xor__home_dabinford_research_build_professor_sprint_2026_09_21_ibex_alu_operation_wrappers_v_98_82 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _flatten_ltu_cone__u__u_ibex_alu__procmux_171 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73_A -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 [label="31", penwidth=2.9, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_sub_cone__u__u_ibex_alu__procmux_136 -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_operation_select_i -> _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _ternary__home_dabinford_research_meeting_artifacts_2026_09_21_interface_control_same_input_separate_sv_9_73 -> port_result_o [label="32", penwidth=3.0, headlabel="result_o", labelfontsize=7, labeldistance=1.4];
+  subgraph cluster_legend {
+    label="key"; fontname="Helvetica"; fontsize=10; color="#cccccc";
+    legend [shape=plaintext, fillcolor="white", label=<
+      <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+        <TR><TD BGCOLOR="#dbe9fb" WIDTH="16"></TD><TD ALIGN="LEFT">arith</TD></TR>
+        <TR><TD BGCOLOR="#f2f2f2" WIDTH="16"></TD><TD ALIGN="LEFT">const</TD></TR>
+        <TR><TD BGCOLOR="#e2f0dc" WIDTH="16"></TD><TD ALIGN="LEFT">logic</TD></TR>
+        <TR><TD BGCOLOR="#efe0f4" WIDTH="16"></TD><TD ALIGN="LEFT">mux</TD></TR>
+        <TR><TD BGCOLOR="#eeeeee" WIDTH="16"></TD><TD ALIGN="LEFT">other</TD></TR>
+        <TR><TD BGCOLOR="#ffffff" WIDTH="16"></TD><TD ALIGN="LEFT">port_in</TD></TR>
+        <TR><TD BGCOLOR="#333333" WIDTH="16"></TD><TD ALIGN="LEFT">port_out</TD></TR>
+        <TR><TD BGCOLOR="#fdf3cf" WIDTH="16"></TD><TD ALIGN="LEFT">shift</TD></TR>
+      </TABLE>>];
+  }
+}

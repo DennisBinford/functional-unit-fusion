@@ -1,0 +1,7818 @@
+{
+  "attrs": {
+    "cell_count": 164,
+    "sources": [
+      "/home/dabinford/research/build/professor_sprint_2026_09_21/ibex_alu_operation_wrappers.v"
+    ],
+    "yosys_passes": "synth -top {top} -flatten; opt -full"
+  },
+  "design": "sub_ltu_a",
+  "edges": [
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          8
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1089",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          8
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1089",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          8
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1090",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          8
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1090",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          7
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1091",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          7
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1091",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          7
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1092",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          7
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1092",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          6
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1093",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          6
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1093",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          6
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1094",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          6
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1094",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          5
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1095",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          5
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1095",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          4
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1096",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          4
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1096",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          3
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1097",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          3
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1097",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          2
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1098",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          2
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1098",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          1
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1099",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          1
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1099",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1100",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1100",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          1
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1101",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          1
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1101",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1102",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1100",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1102",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1101",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1103",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1099",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1103",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1102",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          2
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1104",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          2
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1104",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1105",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1103",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1105",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1104",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1106",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1098",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1106",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1105",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          3
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1107",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          3
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1107",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1108",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1106",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1108",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1107",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1109",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1097",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1109",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1108",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          4
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1110",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          4
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1110",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1111",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1109",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1111",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1110",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1112",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1096",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1112",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1111",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          5
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1113",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          5
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1113",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1114",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1112",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1114",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1113",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1115",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1095",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1115",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1114",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1116",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1094",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1116",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1115",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1117",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1093",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1117",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1116",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1118",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1092",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1118",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1117",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1119",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1091",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1119",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1118",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1120",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1090",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1120",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1119",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1121",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1089",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1121",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1120",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          9
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1122",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          9
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1122",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          9
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1123",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          9
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1123",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1124",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1122",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1124",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1123",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1125",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1121",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1125",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1124",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1126",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1090",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1126",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1119",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1127",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1091",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1127",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1092",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1128",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1117",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1128",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1127",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1129",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1094",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1129",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1115",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1130",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1112",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1130",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1113",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1131",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1109",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1131",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1110",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1132",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1106",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1132",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1107",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1133",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1103",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1133",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1104",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1134",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1100",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1134",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1101",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1135",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1135",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          10
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1136",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          10
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1136",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          10
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1137",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          10
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1137",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1138",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1121",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1138",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1122",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1139",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1123",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1139",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1138",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1140",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1137",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1140",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1139",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1141",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1137",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1141",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1139",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1142",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1136",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1142",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1140",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          11
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1143",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          11
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1143",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          11
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1144",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          11
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1144",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1145",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1143",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1145",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1144",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1146",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1142",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1146",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1145",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          12
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1147",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          12
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1147",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          12
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1148",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          12
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1148",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1149",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1142",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1149",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1143",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1150",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1144",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1150",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1149",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1151",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1148",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1151",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1150",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1152",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1148",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1152",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1150",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1153",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1147",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1153",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1151",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          13
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1154",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          13
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1154",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          13
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1155",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          13
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1155",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1156",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1154",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1156",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1155",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1157",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1153",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1157",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1156",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          14
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1158",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          14
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1158",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          14
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1159",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          14
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1159",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1160",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1153",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1160",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1154",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1161",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1155",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1161",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1160",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1162",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1159",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1162",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1161",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1163",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1159",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1163",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1161",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1164",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1158",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1164",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1162",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          15
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1165",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          15
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1165",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          15
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1166",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          15
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1166",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1167",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1165",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1167",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1166",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1168",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1164",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1168",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1167",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          16
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1169",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          16
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1169",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          16
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1170",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          16
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1170",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1171",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1164",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1171",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1165",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1172",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1166",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1172",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1171",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1173",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1170",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1173",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1172",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1174",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1170",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1174",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1172",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1175",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1169",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1175",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1173",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          17
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1176",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          17
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1176",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          17
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1177",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          17
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1177",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1178",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1176",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1178",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1177",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1179",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1175",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1179",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1178",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          18
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1180",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          18
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1180",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          18
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1181",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          18
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1181",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1182",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1175",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1182",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1176",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1183",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1177",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1183",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1182",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1184",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1181",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1184",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1183",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1185",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1181",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1185",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1183",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1186",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1180",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1186",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1184",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          19
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1187",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          19
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1187",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          19
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1188",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          19
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1188",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1189",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1187",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1189",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1188",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1190",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1186",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1190",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1189",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          20
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1191",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          20
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1191",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          20
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1192",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          20
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1192",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1193",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1186",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1193",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1187",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1194",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1188",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1194",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1193",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1195",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1192",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1195",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1194",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1196",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1192",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1196",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1194",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1197",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1191",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1197",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1195",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          21
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1198",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          21
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1198",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          21
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1199",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          21
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1199",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1200",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1198",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1200",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1199",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1201",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1197",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1201",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1200",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          22
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1202",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          22
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1202",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          22
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1203",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          22
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1203",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1204",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1197",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1204",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1198",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1205",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1199",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1205",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1204",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1206",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1203",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1206",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1205",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1207",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1203",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1207",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1205",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1208",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1202",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1208",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1206",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          23
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1209",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          23
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1209",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          23
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1210",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          23
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1210",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1211",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1209",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1211",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1210",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1212",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1208",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1212",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1211",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          24
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1213",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          24
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1213",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          24
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1214",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          24
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1214",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1215",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1208",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1215",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1209",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1216",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1210",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1216",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1215",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1217",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1214",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1217",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1216",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1218",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1214",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1218",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1216",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          28
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1219",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          28
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1219",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          28
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1220",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          28
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1220",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          27
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1221",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          27
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1221",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          27
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1222",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          27
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1222",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          26
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1223",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          26
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1223",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          26
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1224",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          26
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1224",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          25
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1225",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          25
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1225",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1226",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1213",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1226",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1217",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          25
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1227",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          25
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1227",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1228",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1226",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1228",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1227",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1229",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1225",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1229",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1228",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1230",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1224",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1230",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1229",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1231",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1223",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1231",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1230",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1232",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1222",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1232",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1231",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1233",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1221",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1233",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1232",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1234",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1220",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1234",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1233",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1235",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1219",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1235",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1234",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          29
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1236",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          29
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1236",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          29
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1237",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          29
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1237",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1238",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1235",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1238",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1237",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1239",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1235",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1239",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1237",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1240",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1236",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1240",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1238",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          30
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1241",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          30
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1241",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          30
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1242",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          30
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1242",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1243",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1240",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1243",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1242",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1244",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1240",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1244",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1242",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1245",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1241",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1245",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1243",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          31
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1246",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          31
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1246",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1247",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1245",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1247",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1246",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1248",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1221",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1248",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1222",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1249",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1231",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1249",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1248",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1250",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1220",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1250",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1233",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1251",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1224",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1251",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1229",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1252",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1226",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "$abc$1088$auto$blifparse.cc:397:parse_blif$1252",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1227",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1135",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 1,
+        "bit_positions": [
+          1
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1134",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 2,
+        "bit_positions": [
+          2
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1133",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 3,
+        "bit_positions": [
+          3
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1132",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 4,
+        "bit_positions": [
+          4
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1131",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 5,
+        "bit_positions": [
+          5
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1130",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 6,
+        "bit_positions": [
+          6
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1129",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 7,
+        "bit_positions": [
+          7
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1128",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 8,
+        "bit_positions": [
+          8
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1126",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 9,
+        "bit_positions": [
+          9
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1125",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 10,
+        "bit_positions": [
+          10
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1141",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 11,
+        "bit_positions": [
+          11
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1146",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 12,
+        "bit_positions": [
+          12
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1152",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 13,
+        "bit_positions": [
+          13
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1157",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 14,
+        "bit_positions": [
+          14
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1163",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 15,
+        "bit_positions": [
+          15
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1168",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 16,
+        "bit_positions": [
+          16
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1174",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 17,
+        "bit_positions": [
+          17
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1179",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 18,
+        "bit_positions": [
+          18
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1185",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 19,
+        "bit_positions": [
+          19
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1190",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 20,
+        "bit_positions": [
+          20
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1196",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 21,
+        "bit_positions": [
+          21
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1201",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 22,
+        "bit_positions": [
+          22
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1207",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 23,
+        "bit_positions": [
+          23
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1212",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 24,
+        "bit_positions": [
+          24
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1218",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 25,
+        "bit_positions": [
+          25
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1252",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 26,
+        "bit_positions": [
+          26
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1251",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 27,
+        "bit_positions": [
+          27
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1249",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 28,
+        "bit_positions": [
+          28
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1250",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 29,
+        "bit_positions": [
+          29
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1239",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 30,
+        "bit_positions": [
+          30
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1244",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 31,
+        "bit_positions": [
+          31
+        ],
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$abc$1088$auto$blifparse.cc:397:parse_blif$1247",
+      "src_port": "Y",
+      "width": 1
+    }
+  ],
+  "level": "gate",
+  "nodes": [
+    {
+      "attrs": {
+        "direction": "input"
+      },
+      "id": "port:operand_a_i",
+      "kind": "port_in",
+      "label": "operand_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input"
+      },
+      "id": "port:operand_b_i",
+      "kind": "port_in",
+      "label": "operand_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "output"
+      },
+      "id": "port:result_o",
+      "kind": "port_out",
+      "label": "result_o",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1089",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1090",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1091",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1092",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1093",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1094",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1095",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1096",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1097",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1098",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1099",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1100",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1101",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1102",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1103",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1104",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1105",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1106",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1107",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1108",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1109",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1110",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1111",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1112",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1113",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1114",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1115",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1116",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1117",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1118",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1119",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1120",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1121",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1122",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1123",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1124",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1125",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1126",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1127",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1128",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1129",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1130",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1131",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1132",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1133",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1134",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1135",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1136",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1137",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1138",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1139",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1140",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1141",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1142",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1143",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1144",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1145",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1146",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1147",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1148",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1149",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1150",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1151",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1152",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1153",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1154",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1155",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1156",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1157",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1158",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1159",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1160",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1161",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1162",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1163",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1164",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1165",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1166",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1167",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1168",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1169",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1170",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1171",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1172",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1173",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1174",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1175",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1176",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1177",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1178",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1179",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1180",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1181",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1182",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1183",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1184",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1185",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1186",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1187",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1188",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1189",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1190",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1191",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1192",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1193",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1194",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1195",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1196",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1197",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1198",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1199",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1200",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1201",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1202",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1203",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1204",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1205",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1206",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1207",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1208",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1209",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1210",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1211",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1212",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1213",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1214",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1215",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1216",
+      "kind": "$_AND_",
+      "label": "AND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1217",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1218",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1219",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1220",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1221",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1222",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1223",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1224",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1225",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1226",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1227",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1228",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1229",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1230",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1231",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1232",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1233",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1234",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1235",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1236",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1237",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1238",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1239",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1240",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1241",
+      "kind": "$_ORNOT_",
+      "label": "ORNOT",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1242",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1243",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1244",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1245",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1246",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1247",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1248",
+      "kind": "$_NAND_",
+      "label": "NAND",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1249",
+      "kind": "$_XNOR_",
+      "label": "XNOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1250",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1251",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {},
+        "src": null
+      },
+      "id": "$abc$1088$auto$blifparse.cc:397:parse_blif$1252",
+      "kind": "$_XOR_",
+      "label": "XOR",
+      "width": 1
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 360,
+    "kinds": {
+      "$_AND_": 24,
+      "$_NAND_": 46,
+      "$_ORNOT_": 41,
+      "$_XNOR_": 31,
+      "$_XOR_": 22,
+      "port_in": 2,
+      "port_out": 1
+    },
+    "nodes": 167,
+    "operators": 164
+  },
+  "top": "ibex_alu_sub32"
+}

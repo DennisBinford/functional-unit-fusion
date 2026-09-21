@@ -1,0 +1,315 @@
+{
+  "fused": {
+    "area_um2": 346.59800000000126,
+    "cell_count": 303,
+    "cells": {
+      "AND2_X1": 5,
+      "AND3_X1": 5,
+      "AOI211_X1": 2,
+      "AOI21_X1": 45,
+      "BUF_X1": 11,
+      "INV_X1": 54,
+      "MUX2_X1": 56,
+      "NAND2_X1": 10,
+      "NOR2_X1": 34,
+      "NOR3_X1": 4,
+      "OAI211_X2": 2,
+      "OAI21_X1": 39,
+      "OAI22_X1": 1,
+      "OAI33_X1": 1,
+      "OR2_X1": 1,
+      "OR3_X1": 1,
+      "OR4_X1": 1,
+      "XNOR2_X1": 3,
+      "XOR2_X1": 28
+    },
+    "critical_delay_ns": 1.46,
+    "design": "ibex_fused_sub_ltu32",
+    "fmax_mhz": 684.931506849315,
+    "peak_power_mw": 0.11299999999999999,
+    "slack_ns": 0.54,
+    "source": [
+      "/home/dabinford/research/meeting-artifacts/2026-09-21/fresh/ibex_fused_sub_ltu32.sv"
+    ],
+    "stat_report": "build/professor_sprint_2026_09_21/ppa/fused/ibex_fused_sub_ltu32/job0/synthesis/0/reports/stat.json",
+    "status": "pass"
+  },
+  "fused_delta_percent": 4.240000000000282,
+  "fused_delta_um2": 14.098000000000951,
+  "liberty": "/home/dabinford/research/build/professor_sprint_2026_09_21/ppa/unit_a/ibex_alu_sub32/job0/synthesis/0/inputs/sc_nangate45_NangateOpenCellLibrary_typical.lib",
+  "literal_sum_interpretation": "resource-accounting reference; not an equal-interface baseline",
+  "literal_sum_um2": 332.50000000000034,
+  "mapped_breakdown": {
+    "delta_cells": [
+      {
+        "area_delta_um2": 104.272,
+        "area_each_um2": 1.862,
+        "cell": "MUX2_X1",
+        "count_delta": 56
+      },
+      {
+        "area_delta_um2": -65.436,
+        "area_each_um2": 1.596,
+        "cell": "XNOR2_X1",
+        "count_delta": -41
+      },
+      {
+        "area_delta_um2": 27.664,
+        "area_each_um2": 1.064,
+        "cell": "AOI21_X1",
+        "count_delta": 26
+      },
+      {
+        "area_delta_um2": -19.950000000000003,
+        "area_each_um2": 0.798,
+        "cell": "NAND2_X1",
+        "count_delta": -25
+      },
+      {
+        "area_delta_um2": -16.758000000000003,
+        "area_each_um2": 0.798,
+        "cell": "BUF_X1",
+        "count_delta": -21
+      },
+      {
+        "area_delta_um2": -9.044,
+        "area_each_um2": 0.532,
+        "cell": "INV_X1",
+        "count_delta": -17
+      },
+      {
+        "area_delta_um2": 18.088,
+        "area_each_um2": 1.064,
+        "cell": "OAI21_X1",
+        "count_delta": 17
+      },
+      {
+        "area_delta_um2": 23.94,
+        "area_each_um2": 1.596,
+        "cell": "XOR2_X1",
+        "count_delta": 15
+      },
+      {
+        "area_delta_um2": -11.97,
+        "area_each_um2": 1.33,
+        "cell": "AOI22_X1",
+        "count_delta": -9
+      },
+      {
+        "area_delta_um2": -9.31,
+        "area_each_um2": 1.33,
+        "cell": "AOI211_X1",
+        "count_delta": -7
+      },
+      {
+        "area_delta_um2": -7.98,
+        "area_each_um2": 1.596,
+        "cell": "OAI221_X1",
+        "count_delta": -5
+      },
+      {
+        "area_delta_um2": -6.65,
+        "area_each_um2": 1.33,
+        "cell": "OAI22_X1",
+        "count_delta": -5
+      },
+      {
+        "area_delta_um2": -6.65,
+        "area_each_um2": 1.33,
+        "cell": "OR3_X1",
+        "count_delta": -5
+      },
+      {
+        "area_delta_um2": -3.192,
+        "area_each_um2": 0.798,
+        "cell": "NOR2_X1",
+        "count_delta": -4
+      },
+      {
+        "area_delta_um2": 4.256,
+        "area_each_um2": 1.064,
+        "cell": "NOR3_X1",
+        "count_delta": 4
+      },
+      {
+        "area_delta_um2": -2.128,
+        "area_each_um2": 1.064,
+        "cell": "AND2_X1",
+        "count_delta": -2
+      },
+      {
+        "area_delta_um2": -2.128,
+        "area_each_um2": 1.064,
+        "cell": "NAND3_X1",
+        "count_delta": -2
+      },
+      {
+        "area_delta_um2": -2.66,
+        "area_each_um2": 1.33,
+        "cell": "NAND4_X1",
+        "count_delta": -2
+      },
+      {
+        "area_delta_um2": -2.66,
+        "area_each_um2": 1.33,
+        "cell": "NOR4_X1",
+        "count_delta": -2
+      },
+      {
+        "area_delta_um2": 4.788,
+        "area_each_um2": 2.394,
+        "cell": "OAI211_X2",
+        "count_delta": 2
+      },
+      {
+        "area_delta_um2": -2.128,
+        "area_each_um2": 1.064,
+        "cell": "OR2_X1",
+        "count_delta": -2
+      },
+      {
+        "area_delta_um2": -1.33,
+        "area_each_um2": 1.33,
+        "cell": "AND3_X1",
+        "count_delta": -1
+      },
+      {
+        "area_delta_um2": -0.532,
+        "area_each_um2": 0.532,
+        "cell": "LOGIC0_X1",
+        "count_delta": -1
+      },
+      {
+        "area_delta_um2": 1.596,
+        "area_each_um2": 1.596,
+        "cell": "OR4_X1",
+        "count_delta": 1
+      }
+    ],
+    "fused_cell_counts": {
+      "AND2_X1": 5,
+      "AND3_X1": 5,
+      "AOI211_X1": 2,
+      "AOI21_X1": 45,
+      "BUF_X1": 11,
+      "INV_X1": 54,
+      "MUX2_X1": 56,
+      "NAND2_X1": 10,
+      "NOR2_X1": 34,
+      "NOR3_X1": 4,
+      "OAI211_X2": 2,
+      "OAI21_X1": 39,
+      "OAI22_X1": 1,
+      "OAI33_X1": 1,
+      "OR2_X1": 1,
+      "OR3_X1": 1,
+      "OR4_X1": 1,
+      "XNOR2_X1": 3,
+      "XOR2_X1": 28
+    },
+    "interpretation": {
+      "control_cells_are_not_equal_to_pretech_mux_count": true,
+      "dominant_explicit_control_cell": "MUX2_X1",
+      "note": "Mapped delta is a cell-count/Liberty-area attribution, not a causal proof for every optimized gate."
+    },
+    "known_area_delta_um2": 14.097999999999994,
+    "literal_cell_counts": {
+      "AND2_X1": 7,
+      "AND3_X1": 6,
+      "AOI211_X1": 9,
+      "AOI21_X1": 19,
+      "AOI22_X1": 9,
+      "BUF_X1": 32,
+      "INV_X1": 71,
+      "LOGIC0_X1": 1,
+      "NAND2_X1": 35,
+      "NAND3_X1": 2,
+      "NAND4_X1": 2,
+      "NOR2_X1": 38,
+      "NOR4_X1": 2,
+      "OAI21_X1": 22,
+      "OAI221_X1": 5,
+      "OAI22_X1": 6,
+      "OAI33_X1": 1,
+      "OR2_X1": 3,
+      "OR3_X1": 6,
+      "XNOR2_X1": 44,
+      "XOR2_X1": 13
+    },
+    "reported_area_delta_um2": 14.098000000000923,
+    "unpriced_area_delta_um2": 9.29034627006331e-13
+  },
+  "simulation": {
+    "checks": 524,
+    "log": "meeting-artifacts/2026-09-21/fresh/simulation.log",
+    "operations": 2,
+    "status": "pass",
+    "tool": "verilator",
+    "vectors": 262
+  },
+  "source": {
+    "a": {
+      "area_um2": 201.36200000000034,
+      "cell_count": 190,
+      "cells": {
+        "AND2_X1": 5,
+        "AND3_X1": 5,
+        "AOI211_X1": 2,
+        "AOI21_X1": 13,
+        "INV_X1": 36,
+        "NAND2_X1": 24,
+        "NOR2_X1": 28,
+        "OAI21_X1": 16,
+        "OR2_X1": 1,
+        "OR3_X1": 6,
+        "XNOR2_X1": 41,
+        "XOR2_X1": 13
+      },
+      "critical_delay_ns": 1.17,
+      "design": "ibex_alu_sub32",
+      "fmax_mhz": 854.7008547008547,
+      "peak_power_mw": 0.054599999999999996,
+      "slack_ns": 0.83,
+      "source": [
+        "/home/dabinford/research/build/professor_sprint_2026_09_21/ibex_alu_operation_wrappers.v"
+      ],
+      "stat_report": "build/professor_sprint_2026_09_21/ppa/unit_a/ibex_alu_sub32/job0/synthesis/0/reports/stat.json",
+      "status": "pass"
+    },
+    "b": {
+      "area_um2": 131.13799999999998,
+      "cell_count": 143,
+      "cells": {
+        "AND2_X1": 2,
+        "AND3_X1": 1,
+        "AOI211_X1": 7,
+        "AOI21_X1": 6,
+        "AOI22_X1": 9,
+        "BUF_X1": 32,
+        "INV_X1": 35,
+        "LOGIC0_X1": 1,
+        "NAND2_X1": 11,
+        "NAND3_X1": 2,
+        "NAND4_X1": 2,
+        "NOR2_X1": 10,
+        "NOR4_X1": 2,
+        "OAI21_X1": 6,
+        "OAI221_X1": 5,
+        "OAI22_X1": 6,
+        "OAI33_X1": 1,
+        "OR2_X1": 2,
+        "XNOR2_X1": 3
+      },
+      "critical_delay_ns": 0.43000000000000005,
+      "design": "ibex_alu_ltu32",
+      "fmax_mhz": 2325.581395348837,
+      "peak_power_mw": 0.025400000000000002,
+      "slack_ns": 1.57,
+      "source": [
+        "/home/dabinford/research/build/professor_sprint_2026_09_21/ibex_alu_operation_wrappers.v"
+      ],
+      "stat_report": "build/professor_sprint_2026_09_21/ppa/unit_b/ibex_alu_ltu32/job0/synthesis/0/reports/stat.json",
+      "status": "pass"
+    }
+  }
+}

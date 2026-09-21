@@ -1,0 +1,59 @@
+{
+  "attrs": {
+    "sources": [
+      "/home/dabinford/research/build/professor_sprint_2026_09_21/ibex_alu_add_client_fused.v"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt_clean"
+  },
+  "design": "whole_alu_add_client_b",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "ibex_alu_add_client_fused",
+      "src_port": "",
+      "width": 1
+    }
+  ],
+  "level": "module",
+  "nodes": [
+    {
+      "attrs": {
+        "cells": 119,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":34},{\"direction\":\"output\",\"width\":32},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":64},{\"direction\":\"input\",\"width\":64},{\"direction\":\"output\",\"width\":2},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":33},{\"direction\":\"input\",\"width\":33},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":32}]}",
+        "port_bits": 369,
+        "ports": 15
+      },
+      "id": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "kind": "module",
+      "label": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 12,
+        "is_top": true,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\RV32B=s32'00000000000000000000000000000000\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":32}]}",
+        "port_bits": 168,
+        "ports": 7
+      },
+      "id": "ibex_alu_add_client_fused",
+      "kind": "module",
+      "label": "ibex_alu_add_client_fused",
+      "width": null
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 1,
+    "kinds": {
+      "module": 2
+    },
+    "nodes": 2,
+    "operators": 2
+  },
+  "top": "ibex_alu_add_client_fused"
+}

@@ -431,6 +431,16 @@ def _cell_label(name: str, cell_type: str, params: Dict[str, Any]) -> str:
     return operator
 
 
+def _parameterized_type_signature(cell_type: str) -> Optional[str]:
+    """Keep parameter specialization while ignoring the child module name."""
+    if not cell_type.startswith("$paramod"):
+        return None
+    parts = cell_type.split("\\", 2)
+    if len(parts) < 3:
+        return "$paramod"
+    return "$paramod\\" + parts[2]
+
+
 # --- module / hierarchy level ------------------------------------------------
 
 def _graph_from_hierarchy(
@@ -443,6 +453,33 @@ def _graph_from_hierarchy(
 
     for name, module in modules.items():
         ports = module.get("ports", {})
+        port_signature = [
+            {
+                "direction": port.get("direction", ""),
+                "width": len(port.get("bits", [])),
+            }
+            for _, port in sorted(ports.items())
+        ]
+        child_signature = []
+        for cell in module.get("cells", {}).values():
+            cell_type = str(cell.get("type", ""))
+            # Yosys parameterized module specializations are named
+            # ``$paramod...`` but are real hierarchy children. Keep their
+            # specialization identity while still ignoring generic RTLIL
+            # primitives such as ``$add`` at the module level.
+            if cell_type.startswith("$") and not cell_type.startswith("$paramod"):
+                continue
+            parameters = cell.get("parameters", {}) or {}
+            # The child module name is intentionally omitted: module matching
+            # must survive harmless renaming. Parameter values are retained,
+            # because two parameterized instances can have different behavior
+            # even when their hierarchy skeleton is identical (e.g. SUB/LTU).
+            child_signature.append({
+                "parameterized_type": _parameterized_type_signature(cell_type),
+                "parameters": sorted((str(key), str(value))
+                                     for key, value in parameters.items()),
+            })
+        child_signature.sort(key=lambda item: repr(item))
         graph.nodes.append(Node(
             id=name, kind="module", label=name,
             width=None,
@@ -451,6 +488,10 @@ def _graph_from_hierarchy(
                 "cells": len(module.get("cells", {})),
                 "ports": len(ports),
                 "port_bits": sum(len(p.get("bits", [])) for p in ports.values()),
+                "module_signature": json.dumps({
+                    "ports": port_signature,
+                    "children": child_signature,
+                }, sort_keys=True, separators=(",", ":")),
             },
         ))
 

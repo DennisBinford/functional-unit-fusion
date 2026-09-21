@@ -1,0 +1,74 @@
+{
+  "generated_design": "ibex_fused_sub_ltu32",
+  "generated_top": "ibex_fused_sub_ltu32",
+  "graph_a": "ibex_alu_sub32",
+  "graph_b": "ibex_alu_ltu32",
+  "inserted_ports": [
+    {
+      "direction": "input",
+      "name": "source_select_i",
+      "width": 1
+    }
+  ],
+  "level": "rtlil",
+  "outputs": [
+    {
+      "behavior": "selected_source_result",
+      "fused_port": "result_o",
+      "sources": [
+        {
+          "graph": "a",
+          "port": "result_o",
+          "select_when": {
+            "source_select_i": 1
+          }
+        },
+        {
+          "graph": "b",
+          "port": "result_o",
+          "select_when": {
+            "source_select_i": 0
+          }
+        }
+      ]
+    }
+  ],
+  "required_paths": [
+    {
+      "from_port": "operand_a_i",
+      "graph": "a",
+      "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    },
+    {
+      "from_port": "operand_b_i",
+      "graph": "a",
+      "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    },
+    {
+      "from_port": "operand_a_i",
+      "graph": "b",
+      "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    },
+    {
+      "from_port": "operand_b_i",
+      "graph": "b",
+      "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    }
+  ],
+  "schema": "fu-control-spec/v1",
+  "shared_control": {
+    "encoding": {
+      "0": "graph_b",
+      "1": "graph_a"
+    },
+    "port": "source_select_i"
+  },
+  "shared_operator": {
+    "match_pair": {
+      "a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+      "b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    },
+    "operation": "add"
+  },
+  "version": 1
+}

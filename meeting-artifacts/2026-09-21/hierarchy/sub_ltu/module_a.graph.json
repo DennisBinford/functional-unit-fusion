@@ -1,0 +1,81 @@
+{
+  "attrs": {
+    "sources": [
+      "/home/dabinford/research/build/professor_sprint_2026_09_21/ibex_alu_operation_wrappers.v"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt_clean"
+  },
+  "design": "sub_ltu_a",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\ibex_alu_operation_wrapper\\OP=7'0000001",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\ibex_alu_operation_wrapper\\OP=7'0000001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "ibex_alu_sub32",
+      "src_port": "",
+      "width": 1
+    }
+  ],
+  "level": "module",
+  "nodes": [
+    {
+      "attrs": {
+        "cells": 119,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":34},{\"direction\":\"output\",\"width\":32},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":64},{\"direction\":\"input\",\"width\":64},{\"direction\":\"output\",\"width\":2},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":33},{\"direction\":\"input\",\"width\":33},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":32}]}",
+        "port_bits": 369,
+        "ports": 15
+      },
+      "id": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "kind": "module",
+      "label": "$paramod\\ibex_alu\\RV32B=s32'00000000000000000000000000000000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\RV32B=s32'00000000000000000000000000000000\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"output\",\"width\":32}]}",
+        "port_bits": 96,
+        "ports": 3
+      },
+      "id": "$paramod\\ibex_alu_operation_wrapper\\OP=7'0000001",
+      "kind": "module",
+      "label": "$paramod\\ibex_alu_operation_wrapper\\OP=7'0000001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": true,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\OP=7'0000001\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":32},{\"direction\":\"input\",\"width\":32},{\"direction\":\"output\",\"width\":32}]}",
+        "port_bits": 96,
+        "ports": 3
+      },
+      "id": "ibex_alu_sub32",
+      "kind": "module",
+      "label": "ibex_alu_sub32",
+      "width": null
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 2,
+    "kinds": {
+      "module": 3
+    },
+    "nodes": 3,
+    "operators": 3
+  },
+  "top": "ibex_alu_sub32"
+}

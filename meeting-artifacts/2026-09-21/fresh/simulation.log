@@ -1,0 +1,5 @@
+IBEX_FUSION_TEST_PASS checks=524 vectors=262 operations=2
+- /home/dabinford/research/meeting-artifacts/2026-09-21/fresh/tb_ibex_fusion.sv:37: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.051 devel
+- Verilator: $finish at 524ns; walltime 0.000 s; speed 8.987 ms/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 7 MB

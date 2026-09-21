@@ -1,0 +1,42 @@
+{
+  "claim_policy": "candidate only until area and timing are compared under identical constraints",
+  "comparison_baseline": "../fresh/ppa.json",
+  "hypothesis": "mux operands before inversion and 34-bit preparation",
+  "ppa": {
+    "area_um2": 345.00200000000126,
+    "cell_count": 300,
+    "cells": {
+      "AND2_X1": 6,
+      "AND3_X1": 4,
+      "AOI211_X1": 5,
+      "AOI21_X1": 41,
+      "BUF_X1": 11,
+      "INV_X1": 53,
+      "MUX2_X1": 58,
+      "NAND2_X1": 6,
+      "NOR2_X1": 38,
+      "NOR3_X1": 6,
+      "OAI211_X2": 1,
+      "OAI21_X1": 35,
+      "OAI221_X1": 1,
+      "OAI33_X1": 1,
+      "OR2_X1": 1,
+      "OR3_X1": 1,
+      "XNOR2_X1": 3,
+      "XOR2_X1": 29
+    },
+    "critical_delay_ns": 1.44,
+    "design": "ibex_fused_sub_ltu32_operand_mux",
+    "fmax_mhz": 694.4444444444445,
+    "peak_power_mw": 0.112,
+    "stat_report": "build/professor_sprint_2026_09_21/ppa_optimized/ibex_fused_sub_ltu32_operand_mux/job0/synthesis/0/reports/stat.json",
+    "status": "pass"
+  },
+  "simulation": {
+    "checks": 524,
+    "log": "meeting-artifacts/2026-09-21/optimization/simulation.log",
+    "status": "pass",
+    "vectors": 262
+  },
+  "status": "pass"
+}

@@ -9,7 +9,7 @@ JOBS ?= 1
 SEED ?= 1
 TOOLCHAIN_LOCK ?= toolchain.lock.json
 
-.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo graph-to-rtl-demo graph-to-rtl-figures graph-backend-demo graph-backend-doctor ibex-fusion-demo professor-meeting-demo professor-meeting-demo-full professor-meeting-demo-cached clean
+.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo graph-to-rtl-demo graph-to-rtl-figures graph-backend-demo graph-backend-doctor ibex-fusion-demo professor-sprint-2026-09-21 professor-meeting-demo professor-meeting-demo-full professor-meeting-demo-cached clean
 
 help:
 	@$(PYTHON) framework.py --help
@@ -153,6 +153,11 @@ graph-backend-doctor:
 ibex-fusion-demo:
 	$(SC_PYTHON) scripts/ibex_fusion_demo.py
 	$(SC_PYTHON) scripts/ibex_module_preserving_demo.py
+
+# New dated follow-up bundle. It reads the checkpoint artifacts and writes only
+# meeting-artifacts/2026-09-21 plus its dedicated build scratch tree.
+professor-sprint-2026-09-21:
+	$(SC_PYTHON) scripts/professor_sprint_2026_09_21.py
 
 # Full rebuild: tests, all PPA families, pinned intake/lock validation, fresh
 # graph/capability evidence, generated RTL, simulations, and summaries.

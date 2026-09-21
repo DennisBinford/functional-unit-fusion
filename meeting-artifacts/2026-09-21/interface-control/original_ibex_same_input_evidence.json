@@ -1,0 +1,7 @@
+{
+  "evidence": "ALU_SUB, ALU_LTU and comparator operations select one shared adder input preparation and adder_result_ext_o; LTU derives comparison from that adder result.",
+  "not_new_fusion": true,
+  "source": "third_party/ibex/rtl/ibex_alu.sv",
+  "source_lines": "55-109, 132-173",
+  "status": "corroborating_evidence"
+}
