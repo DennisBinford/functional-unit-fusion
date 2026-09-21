@@ -1,0 +1,4024 @@
+{
+  "adapters": {
+    "output_selection_muxes": [
+      "adapter:mux:output:result_o"
+    ],
+    "shared_input_muxes": [
+      "adapter:mux:shared_operator:A",
+      "adapter:mux:shared_operator:B"
+    ],
+    "zero_extensions": 10
+  },
+  "control_spec": {
+    "generated_design": "ibex_fused_sub_ltu32",
+    "generated_top": "ibex_fused_sub_ltu32",
+    "graph_a": "ibex_alu_sub32",
+    "graph_b": "ibex_alu_ltu32",
+    "inserted_ports": [
+      {
+        "direction": "input",
+        "name": "source_select_i",
+        "width": 1
+      }
+    ],
+    "level": "rtlil",
+    "outputs": [
+      {
+        "behavior": "selected_source_result",
+        "fused_port": "result_o",
+        "sources": [
+          {
+            "graph": "a",
+            "port": "result_o",
+            "select_when": {
+              "source_select_i": 1
+            }
+          },
+          {
+            "graph": "b",
+            "port": "result_o",
+            "select_when": {
+              "source_select_i": 0
+            }
+          }
+        ]
+      }
+    ],
+    "required_paths": [
+      {
+        "from_port": "operand_a_i",
+        "graph": "a",
+        "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      },
+      {
+        "from_port": "operand_b_i",
+        "graph": "a",
+        "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      },
+      {
+        "from_port": "operand_a_i",
+        "graph": "b",
+        "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      },
+      {
+        "from_port": "operand_b_i",
+        "graph": "b",
+        "to_node": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      }
+    ],
+    "schema": "fu-control-spec/v1",
+    "shared_control": {
+      "encoding": {
+        "0": "graph_b",
+        "1": "graph_a"
+      },
+      "port": "source_select_i"
+    },
+    "shared_operator": {
+      "match_pair": {
+        "a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+        "b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      },
+      "operation": "add"
+    },
+    "version": 1
+  },
+  "design": "ibex_fused_sub_ltu32",
+  "edges": [
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ]
+            },
+            "dst": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "port:operand_b_i",
+            "src_port": "operand_b_i",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      },
+      "dst": "a:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "a:port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          33
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                33
+              ],
+              "source_bit_positions": [
+                0,
+                1
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0,
+                    33
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+                "src_port": "Y",
+                "width": 2
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "dst_port": "SEG_0",
+            "inverted": false,
+            "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "src_port": "Y",
+            "width": 2
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0,
+              33
+            ],
+            "source_bit_positions": [
+              0,
+              1
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+          "src_port": "Y",
+          "width": 2
+        }
+      },
+      "dst": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "dst_port": "SEG_0",
+      "inverted": false,
+      "src": "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "src_port": "Y",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 1,
+        "bit_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 1,
+              "bit_positions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 1,
+                  "bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "port:operand_a_i",
+                "src_port": "operand_a_i",
+                "width": 32
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "dst_port": "SEG_1",
+            "inverted": false,
+            "src": "port:operand_a_i",
+            "src_port": "operand_a_i",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 1,
+            "bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "source_bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "port:operand_a_i",
+          "src_port": "operand_a_i",
+          "width": 32
+        }
+      },
+      "dst": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "dst_port": "SEG_1",
+      "inverted": false,
+      "src": "a:port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          33
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                33
+              ],
+              "source_bit_positions": [
+                0,
+                1
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0,
+                    33
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+                "src_port": "Y",
+                "width": 2
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "dst_port": "SEG_0",
+            "inverted": false,
+            "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "src_port": "Y",
+            "width": 2
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0,
+              33
+            ],
+            "source_bit_positions": [
+              0,
+              1
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+          "src_port": "Y",
+          "width": 2
+        }
+      },
+      "dst": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "dst_port": "SEG_0",
+      "inverted": false,
+      "src": "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "src_port": "Y",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 1,
+        "bit_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 1,
+              "bit_positions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 1,
+                  "bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+                "src_port": "Y",
+                "width": 32
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "dst_port": "SEG_1",
+            "inverted": false,
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "src_port": "Y",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 1,
+            "bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "source_bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "src_port": "Y",
+          "width": 32
+        }
+      },
+      "dst": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "dst_port": "SEG_1",
+      "inverted": false,
+      "src": "a:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "slice",
+              "bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ],
+                  "source_bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ]
+                },
+                "dst": "port:result_o",
+                "dst_port": "result_o",
+                "inverted": false,
+                "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "src_port": "Y",
+                "width": 32
+              }
+            },
+            "dst": "adapter:slice:port:result_o:result_o",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+            "src_port": "Y",
+            "width": 32
+          }
+        },
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            "source_bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ]
+          },
+          "dst": "port:result_o",
+          "dst_port": "result_o",
+          "inverted": false,
+          "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "src_port": "Y",
+          "width": 32
+        }
+      },
+      "dst": "a:adapter:slice:port:result_o:result_o",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "shared:operator",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "provenance": {
+          "graph": "a",
+          "source": {
+            "attrs": {
+              "adapter": "slice"
+            },
+            "dst": "port:result_o",
+            "dst_port": "result_o",
+            "inverted": false,
+            "src": "adapter:slice:port:result_o:result_o",
+            "src_port": "Y",
+            "width": 32
+          }
+        }
+      },
+      "dst": "a:port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "a:adapter:slice:port:result_o:result_o",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "output_selection"
+      },
+      "dst": "adapter:mux:output:result_o",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:adapter:concat:port:result_o:result_o",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "output_selection"
+      },
+      "dst": "adapter:mux:output:result_o",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "a:adapter:slice:port:result_o:result_o",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "control_spec"
+      },
+      "dst": "adapter:mux:output:result_o",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "port:inserted:source_select_i",
+      "src_port": "source_select_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux",
+        "provenance": {
+          "attrs": {
+            "adapter": "concat"
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+          "src_port": "Y",
+          "width": 34
+        }
+      },
+      "dst": "adapter:mux:shared_operator:A",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "src_port": "Y",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux",
+        "provenance": {
+          "attrs": {
+            "adapter": "concat"
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+          "src_port": "Y",
+          "width": 34
+        }
+      },
+      "dst": "adapter:mux:shared_operator:A",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "src_port": "Y",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "adapter": "control_spec"
+      },
+      "dst": "adapter:mux:shared_operator:A",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "port:inserted:source_select_i",
+      "src_port": "source_select_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux",
+        "provenance": {
+          "attrs": {
+            "adapter": "concat"
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+          "src_port": "Y",
+          "width": 34
+        }
+      },
+      "dst": "adapter:mux:shared_operator:B",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "src_port": "Y",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux",
+        "provenance": {
+          "attrs": {
+            "adapter": "concat"
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+          "src_port": "Y",
+          "width": 34
+        }
+      },
+      "dst": "adapter:mux:shared_operator:B",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "src_port": "Y",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "adapter": "control_spec"
+      },
+      "dst": "adapter:mux:shared_operator:B",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "port:inserted:source_select_i",
+      "src_port": "source_select_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ]
+            },
+            "dst": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "port:operand_b_i",
+            "src_port": "operand_b_i",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      },
+      "dst": "b:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice"
+            },
+            "dst": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+            "src_port": "Y",
+            "width": 1
+          }
+        }
+      },
+      "dst": "b:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "bit_lsb": 0,
+              "bit_positions": [
+                0
+              ],
+              "source_bit_positions": [
+                0
+              ]
+            },
+            "dst": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "$procmux$177",
+            "src_port": "Y",
+            "width": 1
+          }
+        },
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "b:$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:$procmux$177",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice"
+            },
+            "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+            "src_port": "Y",
+            "width": 1
+          }
+        }
+      },
+      "dst": "b:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice"
+            },
+            "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+            "dst_port": "B",
+            "inverted": false,
+            "src": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+            "src_port": "Y",
+            "width": 1
+          }
+        }
+      },
+      "dst": "b:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "bit_lsb": 0,
+              "bit_positions": [
+                0
+              ],
+              "source_bit_positions": [
+                0
+              ]
+            },
+            "dst": "$procmux$177",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+            "src_port": "Y",
+            "width": 1
+          }
+        },
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "b:$procmux$177",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice"
+            },
+            "dst": "$procmux$177",
+            "dst_port": "B",
+            "inverted": false,
+            "src": "adapter:slice:$procmux$177:B",
+            "src_port": "Y",
+            "width": 1
+          }
+        }
+      },
+      "dst": "b:$procmux$177",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:adapter:slice:$procmux$177:B",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "bit_lsb": 0,
+              "bit_positions": [
+                0
+              ],
+              "source_bit_positions": [
+                0
+              ]
+            },
+            "dst": "$procmux$177",
+            "dst_port": "S",
+            "inverted": false,
+            "src": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+            "src_port": "Y",
+            "width": 1
+          }
+        },
+        "source_bit_positions": [
+          0
+        ]
+      },
+      "dst": "b:$procmux$177",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "b:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          33
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                33
+              ],
+              "source_bit_positions": [
+                0,
+                1
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0,
+                    33
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+                "src_port": "Y",
+                "width": 2
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "dst_port": "SEG_0",
+            "inverted": false,
+            "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "src_port": "Y",
+            "width": 2
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0,
+              33
+            ],
+            "source_bit_positions": [
+              0,
+              1
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+          "src_port": "Y",
+          "width": 2
+        }
+      },
+      "dst": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "dst_port": "SEG_0",
+      "inverted": false,
+      "src": "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "src_port": "Y",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 1,
+        "bit_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 1,
+              "bit_positions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 1,
+                  "bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "port:operand_a_i",
+                "src_port": "operand_a_i",
+                "width": 32
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "dst_port": "SEG_1",
+            "inverted": false,
+            "src": "port:operand_a_i",
+            "src_port": "operand_a_i",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 1,
+            "bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "source_bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "port:operand_a_i",
+          "src_port": "operand_a_i",
+          "width": 32
+        }
+      },
+      "dst": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "dst_port": "SEG_1",
+      "inverted": false,
+      "src": "b:port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 0,
+        "bit_positions": [
+          0,
+          33
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 0,
+              "bit_positions": [
+                0,
+                33
+              ],
+              "source_bit_positions": [
+                0,
+                1
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0,
+                    33
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+                "src_port": "Y",
+                "width": 2
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "dst_port": "SEG_0",
+            "inverted": false,
+            "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "src_port": "Y",
+            "width": 2
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0,
+              33
+            ],
+            "source_bit_positions": [
+              0,
+              1
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+          "src_port": "Y",
+          "width": 2
+        }
+      },
+      "dst": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "dst_port": "SEG_0",
+      "inverted": false,
+      "src": "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "src_port": "Y",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 1,
+        "bit_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 1,
+              "bit_positions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 1,
+                  "bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+                "src_port": "Y",
+                "width": 32
+              }
+            },
+            "dst": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "dst_port": "SEG_1",
+            "inverted": false,
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "src_port": "Y",
+            "width": 32
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 1,
+            "bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32
+            ],
+            "source_bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "src_port": "Y",
+          "width": 32
+        }
+      },
+      "dst": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "dst_port": "SEG_1",
+      "inverted": false,
+      "src": "b:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 0,
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 0,
+              "bit_positions": [
+                0
+              ],
+              "source_bit_positions": [
+                0
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0
+                  ],
+                  "source_bit_positions": [
+                    0
+                  ]
+                },
+                "dst": "port:result_o",
+                "dst_port": "result_o",
+                "inverted": false,
+                "src": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+                "src_port": "Y",
+                "width": 1
+              }
+            },
+            "dst": "adapter:concat:port:result_o:result_o",
+            "dst_port": "SEG_0",
+            "inverted": false,
+            "src": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+            "src_port": "Y",
+            "width": 1
+          }
+        },
+        "source_bit_positions": [
+          0
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0
+            ],
+            "source_bit_positions": [
+              0
+            ]
+          },
+          "dst": "port:result_o",
+          "dst_port": "result_o",
+          "inverted": false,
+          "src": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+          "src_port": "Y",
+          "width": 1
+        }
+      },
+      "dst": "b:adapter:concat:port:result_o:result_o",
+      "dst_port": "SEG_0",
+      "inverted": false,
+      "src": "b:$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "bit_lsb": 1,
+        "bit_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat",
+              "bit_lsb": 1,
+              "bit_positions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31
+              ],
+              "source_bit_positions": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 1,
+                  "bit_positions": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31
+                  ],
+                  "source_bit_positions": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22,
+                    23,
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30
+                  ]
+                },
+                "dst": "port:result_o",
+                "dst_port": "result_o",
+                "inverted": false,
+                "src": "const:port:result_o:result_o",
+                "src_port": "Y",
+                "width": 31
+              }
+            },
+            "dst": "adapter:concat:port:result_o:result_o",
+            "dst_port": "SEG_1",
+            "inverted": false,
+            "src": "const:port:result_o:result_o",
+            "src_port": "Y",
+            "width": 31
+          }
+        },
+        "source_bit_positions": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 1,
+            "bit_positions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            "source_bit_positions": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ]
+          },
+          "dst": "port:result_o",
+          "dst_port": "result_o",
+          "inverted": false,
+          "src": "const:port:result_o:result_o",
+          "src_port": "Y",
+          "width": 31
+        }
+      },
+      "dst": "b:adapter:concat:port:result_o:result_o",
+      "dst_port": "SEG_1",
+      "inverted": false,
+      "src": "b:const:port:result_o:result_o",
+      "src_port": "Y",
+      "width": 31
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice",
+              "bit_positions": [
+                0
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0
+                  ],
+                  "source_bit_positions": [
+                    32
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "src_port": "Y",
+                "width": 1
+              }
+            },
+            "dst": "adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+            "src_port": "Y",
+            "width": 1
+          }
+        },
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0
+            ],
+            "source_bit_positions": [
+              32
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "src_port": "Y",
+          "width": 1
+        }
+      },
+      "dst": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "shared:operator",
+      "src_port": "Y",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice",
+              "bit_positions": [
+                0
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0
+                  ],
+                  "source_bit_positions": [
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "port:operand_a_i",
+                "src_port": "operand_a_i",
+                "width": 1
+              }
+            },
+            "dst": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "port:operand_a_i",
+            "src_port": "operand_a_i",
+            "width": 1
+          }
+        },
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0
+            ],
+            "source_bit_positions": [
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "dst_port": "A",
+          "inverted": false,
+          "src": "port:operand_a_i",
+          "src_port": "operand_a_i",
+          "width": 1
+        }
+      },
+      "dst": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice",
+              "bit_positions": [
+                0
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0
+                  ],
+                  "source_bit_positions": [
+                    31
+                  ]
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "port:operand_b_i",
+                "src_port": "operand_b_i",
+                "width": 1
+              }
+            },
+            "dst": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "port:operand_b_i",
+            "src_port": "operand_b_i",
+            "width": 1
+          }
+        },
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0
+            ],
+            "source_bit_positions": [
+              31
+            ]
+          },
+          "dst": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "port:operand_b_i",
+          "src_port": "operand_b_i",
+          "width": 1
+        }
+      },
+      "dst": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:port:operand_b_i",
+      "src_port": "operand_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "slice",
+        "bit_positions": [
+          0
+        ],
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "slice",
+              "bit_positions": [
+                0
+              ],
+              "source_edge": {
+                "attrs": {
+                  "bit_lsb": 0,
+                  "bit_positions": [
+                    0
+                  ],
+                  "source_bit_positions": [
+                    31
+                  ]
+                },
+                "dst": "$procmux$177",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "port:operand_a_i",
+                "src_port": "operand_a_i",
+                "width": 1
+              }
+            },
+            "dst": "adapter:slice:$procmux$177:B",
+            "dst_port": "A",
+            "inverted": false,
+            "src": "port:operand_a_i",
+            "src_port": "operand_a_i",
+            "width": 1
+          }
+        },
+        "source_edge": {
+          "attrs": {
+            "bit_lsb": 0,
+            "bit_positions": [
+              0
+            ],
+            "source_bit_positions": [
+              31
+            ]
+          },
+          "dst": "$procmux$177",
+          "dst_port": "B",
+          "inverted": false,
+          "src": "port:operand_a_i",
+          "src_port": "operand_a_i",
+          "width": 1
+        }
+      },
+      "dst": "b:adapter:slice:$procmux$177:B",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:port:operand_a_i",
+      "src_port": "operand_a_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "adapter": "concat",
+        "provenance": {
+          "graph": "b",
+          "source": {
+            "attrs": {
+              "adapter": "concat"
+            },
+            "dst": "port:result_o",
+            "dst_port": "result_o",
+            "inverted": false,
+            "src": "adapter:concat:port:result_o:result_o",
+            "src_port": "Y",
+            "width": 32
+          }
+        }
+      },
+      "dst": "b:port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "b:adapter:concat:port:result_o:result_o",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux"
+      },
+      "dst": "shared:operator",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "adapter:mux:shared_operator:A",
+      "src_port": "Y",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "adapter": "shared_input_mux"
+      },
+      "dst": "shared:operator",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "adapter:mux:shared_operator:B",
+      "src_port": "Y",
+      "width": 34
+    }
+  ],
+  "hardware_status": {
+    "executable": true,
+    "graph_to_rtl_status": "executable",
+    "template_backed": false
+  },
+  "level": "rtlil",
+  "match_provenance": {
+    "matched_pair": {
+      "a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+      "b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    },
+    "operation": "add",
+    "schema": "fu-graph-match/v1"
+  },
+  "nodes": [
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 32,
+          "Y_WIDTH": 32
+        },
+        "provenance": {
+          "graph": "a",
+          "source_id": "$auto$opt_expr.cc:277:group_cell_inputs$202"
+        },
+        "src": null
+      },
+      "id": "a:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "kind": "$not",
+      "label": "not[32]",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "a",
+          "source_id": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A"
+        },
+        "segments": [
+          {
+            "bit_lsb": 0,
+            "source": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "width": 2
+          },
+          {
+            "bit_lsb": 1,
+            "source": "port:operand_a_i",
+            "width": 32
+          }
+        ],
+        "target_width": 34
+      },
+      "id": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "kind": "concat",
+      "label": "concat[34]",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "a",
+          "source_id": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B"
+        },
+        "segments": [
+          {
+            "bit_lsb": 1,
+            "source": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "width": 32
+          },
+          {
+            "bit_lsb": 0,
+            "source": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "width": 2
+          }
+        ],
+        "target_width": 34
+      },
+      "id": "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "kind": "concat",
+      "label": "concat[34]",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "a",
+          "source_id": "adapter:slice:port:result_o:result_o"
+        },
+        "source_lsb": 1,
+        "source_width": 34
+      },
+      "id": "a:adapter:slice:port:result_o:result_o",
+      "kind": "slice",
+      "label": "slice[31:0]",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "a",
+          "source_id": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A"
+        },
+        "value": "01"
+      },
+      "id": "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "kind": "const",
+      "label": "2'b01",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "a",
+          "source_id": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B"
+        },
+        "value": "01"
+      },
+      "id": "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "kind": "const",
+      "label": "2'b01",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "graph": "a",
+          "source_id": "port:operand_a_i"
+        }
+      },
+      "id": "a:port:operand_a_i",
+      "kind": "port_in",
+      "label": "operand_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "graph": "a",
+          "source_id": "port:operand_b_i"
+        }
+      },
+      "id": "a:port:operand_b_i",
+      "kind": "port_in",
+      "label": "operand_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "output",
+        "provenance": {
+          "graph": "a",
+          "source_id": "port:result_o"
+        }
+      },
+      "id": "a:port:result_o",
+      "kind": "port_out",
+      "label": "result_o",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "WIDTH": 32
+        },
+        "provenance": {
+          "purpose": "explicit_output_selection",
+          "source": "result_o"
+        }
+      },
+      "id": "adapter:mux:output:result_o",
+      "kind": "$mux",
+      "label": "output selection result_o",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "WIDTH": 34
+        },
+        "provenance": {
+          "input_port": "A",
+          "purpose": "shared_operator_input",
+          "sources": [
+            {
+              "edge": {
+                "attrs": {
+                  "adapter": "concat"
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+                "src_port": "Y",
+                "width": 34
+              },
+              "graph": "a"
+            },
+            {
+              "edge": {
+                "attrs": {
+                  "adapter": "concat"
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "A",
+                "inverted": false,
+                "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+                "src_port": "Y",
+                "width": 34
+              },
+              "graph": "b"
+            }
+          ]
+        }
+      },
+      "id": "adapter:mux:shared_operator:A",
+      "kind": "$mux",
+      "label": "shared input mux A",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "WIDTH": 34
+        },
+        "provenance": {
+          "input_port": "B",
+          "purpose": "shared_operator_input",
+          "sources": [
+            {
+              "edge": {
+                "attrs": {
+                  "adapter": "concat"
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+                "src_port": "Y",
+                "width": 34
+              },
+              "graph": "a"
+            },
+            {
+              "edge": {
+                "attrs": {
+                  "adapter": "concat"
+                },
+                "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+                "dst_port": "B",
+                "inverted": false,
+                "src": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+                "src_port": "Y",
+                "width": 34
+              },
+              "graph": "b"
+            }
+          ]
+        }
+      },
+      "id": "adapter:mux:shared_operator:B",
+      "kind": "$mux",
+      "label": "shared input mux B",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 32,
+          "Y_WIDTH": 32
+        },
+        "provenance": {
+          "graph": "b",
+          "source_id": "$auto$opt_expr.cc:277:group_cell_inputs$202"
+        },
+        "src": null
+      },
+      "id": "b:$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "kind": "$not",
+      "label": "not[32]",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 1,
+          "Y_WIDTH": 1
+        },
+        "provenance": {
+          "graph": "b",
+          "source_id": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83"
+        },
+        "src": "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99.23-99.47"
+      },
+      "id": "b:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 1,
+          "Y_WIDTH": 1
+        },
+        "provenance": {
+          "graph": "b",
+          "source_id": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87"
+        },
+        "src": "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108.59-108.76"
+      },
+      "id": "b:$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 1,
+          "B_SIGNED": 0,
+          "B_WIDTH": 1,
+          "Y_WIDTH": 1
+        },
+        "provenance": {
+          "graph": "b",
+          "source_id": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81"
+        },
+        "src": "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98.8-98.41"
+      },
+      "id": "b:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+      "kind": "$xor",
+      "label": "xor",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "WIDTH": 1
+        },
+        "provenance": {
+          "graph": "b",
+          "source_id": "$procmux$177"
+        },
+        "src": "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98.7-98.50|/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98.3-101.52"
+      },
+      "id": "b:$procmux$177",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A"
+        },
+        "segments": [
+          {
+            "bit_lsb": 0,
+            "source": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+            "width": 2
+          },
+          {
+            "bit_lsb": 1,
+            "source": "port:operand_a_i",
+            "width": 32
+          }
+        ],
+        "target_width": 34
+      },
+      "id": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "kind": "concat",
+      "label": "concat[34]",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B"
+        },
+        "segments": [
+          {
+            "bit_lsb": 1,
+            "source": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+            "width": 32
+          },
+          {
+            "bit_lsb": 0,
+            "source": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+            "width": 2
+          }
+        ],
+        "target_width": 34
+      },
+      "id": "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "kind": "concat",
+      "label": "concat[34]",
+      "width": 34
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:concat:port:result_o:result_o"
+        },
+        "segments": [
+          {
+            "bit_lsb": 0,
+            "source": "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+            "width": 1
+          },
+          {
+            "bit_lsb": 1,
+            "source": "const:port:result_o:result_o",
+            "width": 31
+          }
+        ],
+        "target_width": 32
+      },
+      "id": "b:adapter:concat:port:result_o:result_o",
+      "kind": "concat",
+      "label": "concat[32]",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A"
+        },
+        "source_lsb": 32,
+        "source_width": 34
+      },
+      "id": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+      "kind": "slice",
+      "label": "slice[0:0]",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A"
+        },
+        "source_lsb": 31,
+        "source_width": 32
+      },
+      "id": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+      "kind": "slice",
+      "label": "slice[0:0]",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B"
+        },
+        "source_lsb": 31,
+        "source_width": 32
+      },
+      "id": "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+      "kind": "slice",
+      "label": "slice[0:0]",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "adapter:slice:$procmux$177:B"
+        },
+        "source_lsb": 31,
+        "source_width": 32
+      },
+      "id": "b:adapter:slice:$procmux$177:B",
+      "kind": "slice",
+      "label": "slice[0:0]",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A"
+        },
+        "value": "01"
+      },
+      "id": "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "kind": "const",
+      "label": "2'b01",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B"
+        },
+        "value": "01"
+      },
+      "id": "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "kind": "const",
+      "label": "2'b01",
+      "width": 2
+    },
+    {
+      "attrs": {
+        "provenance": {
+          "graph": "b",
+          "source_id": "const:port:result_o:result_o"
+        },
+        "value": "0000000000000000000000000000000"
+      },
+      "id": "b:const:port:result_o:result_o",
+      "kind": "const",
+      "label": "31'b0000000000000000000000000000000",
+      "width": 31
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "graph": "b",
+          "source_id": "port:operand_a_i"
+        }
+      },
+      "id": "b:port:operand_a_i",
+      "kind": "port_in",
+      "label": "b_operand_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "graph": "b",
+          "source_id": "port:operand_b_i"
+        }
+      },
+      "id": "b:port:operand_b_i",
+      "kind": "port_in",
+      "label": "b_operand_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "output",
+        "provenance": {
+          "graph": "b",
+          "source_id": "port:result_o"
+        }
+      },
+      "id": "b:port:result_o",
+      "kind": "port_out",
+      "label": "b_result_o",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "control_spec": "source_select_i"
+        }
+      },
+      "id": "port:inserted:source_select_i",
+      "kind": "port_in",
+      "label": "source_select_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 34,
+          "B_SIGNED": 0,
+          "B_WIDTH": 34,
+          "Y_WIDTH": 34
+        },
+        "provenance": {
+          "graphs": {
+            "a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+            "b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+          },
+          "operation": "add"
+        },
+        "src": "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84.30-84.75"
+      },
+      "id": "shared:operator",
+      "kind": "$add",
+      "label": "add[34]",
+      "width": 34
+    }
+  ],
+  "outputs": [
+    {
+      "behavior": "selected_source_result",
+      "name": "result_o",
+      "select_when": {
+        "source_select_i": 1
+      },
+      "source_graph": "a",
+      "source_node": "adapter:mux:output:result_o",
+      "source_port": "result_o",
+      "sources": [
+        {
+          "graph": "a",
+          "port": "result_o",
+          "select_when": {
+            "source_select_i": 1
+          }
+        },
+        {
+          "graph": "b",
+          "port": "result_o",
+          "select_when": {
+            "source_select_i": 0
+          }
+        }
+      ],
+      "width": 32
+    }
+  ],
+  "schema": "fu-executable-graph/v1",
+  "source_graphs": {
+    "a": {
+      "design": "ibex_alu_sub32",
+      "level": "rtlil"
+    },
+    "b": {
+      "design": "ibex_alu_ltu32",
+      "level": "rtlil"
+    }
+  },
+  "structural_merge_provenance": {
+    "artifact_type": "structural_merged_candidate",
+    "executable": false
+  },
+  "top": "ibex_fused_sub_ltu32",
+  "topological_order": [
+    "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+    "a:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+    "a:port:operand_a_i",
+    "a:port:operand_b_i",
+    "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+    "b:const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+    "b:const:port:result_o:result_o",
+    "b:port:operand_a_i",
+    "b:port:operand_b_i",
+    "port:inserted:source_select_i",
+    "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+    "a:$auto$opt_expr.cc:277:group_cell_inputs$202",
+    "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+    "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:A",
+    "b:adapter:slice:$procmux$177:B",
+    "b:$auto$opt_expr.cc:277:group_cell_inputs$202",
+    "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81:B",
+    "a:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+    "adapter:mux:shared_operator:A",
+    "b:adapter:concat:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+    "b:$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+    "adapter:mux:shared_operator:B",
+    "shared:operator",
+    "a:adapter:slice:port:result_o:result_o",
+    "b:adapter:slice:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83:A",
+    "a:port:result_o",
+    "b:$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+    "b:$procmux$177",
+    "b:$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+    "b:adapter:concat:port:result_o:result_o",
+    "adapter:mux:output:result_o",
+    "b:port:result_o"
+  ],
+  "version": 1
+}

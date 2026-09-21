@@ -1,0 +1,111 @@
+{
+  "control_mux_overhead": {
+    "inserted_output_selection_muxes": 1,
+    "inserted_shared_input_muxes": 2,
+    "note": "Counts are graph-level inserted adapters; no isolated mapped-area claim is made."
+  },
+  "criterion_fused_below_literal_sum": false,
+  "fused_minus_literal_sum_um2": 14.098000000000923,
+  "fused_vs_literal_sum_percent": 4.240000000000273,
+  "literal_area_sum_um2": 332.50000000000034,
+  "ppa": {
+    "fused": {
+      "area_um2": 346.59800000000126,
+      "cell_count": 303,
+      "critical_delay_ns": 1.46,
+      "design": "ibex_fused_sub_ltu32",
+      "dynamic_power_mw": 0.10504,
+      "fmax_mhz": 684.931506849315,
+      "peak_power_mw": 0.11299999999999999,
+      "slack_ns": 0.54,
+      "source": [
+        "/home/dabinford/research/meeting-artifacts/ibex-fusion/ibex_fused_sub_ltu32.sv"
+      ],
+      "status": "pass",
+      "synthesis_result": "/home/dabinford/research/build/ibex_fusion/ppa/fused/ppa.json"
+    },
+    "unit_a": {
+      "area_um2": 201.36200000000034,
+      "cell_count": 190,
+      "critical_delay_ns": 1.17,
+      "design": "ibex_alu_sub32",
+      "dynamic_power_mw": 0.04976,
+      "fmax_mhz": 854.7008547008547,
+      "peak_power_mw": 0.054599999999999996,
+      "slack_ns": 0.83,
+      "source": [
+        "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v"
+      ],
+      "status": "pass",
+      "synthesis_result": "/home/dabinford/research/build/ibex_fusion/ppa/unit_a/ppa.json"
+    },
+    "unit_b": {
+      "area_um2": 131.13799999999998,
+      "cell_count": 143,
+      "critical_delay_ns": 0.43000000000000005,
+      "design": "ibex_alu_ltu32",
+      "dynamic_power_mw": 0.022060000000000003,
+      "fmax_mhz": 2325.581395348837,
+      "peak_power_mw": 0.025400000000000002,
+      "slack_ns": 1.57,
+      "source": [
+        "/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v"
+      ],
+      "status": "pass",
+      "synthesis_result": "/home/dabinford/research/build/ibex_fusion/ppa/unit_b/ppa.json"
+    }
+  },
+  "pretechmap": {
+    "fused": {
+      "edge_count": 26,
+      "mux_count": 4,
+      "node_count": 21,
+      "operator_counts": {
+        "$add": 1,
+        "$mux": 4,
+        "$not": 4,
+        "$xor": 1
+      }
+    },
+    "unit_a": {
+      "edge_count": 6,
+      "mux_count": 0,
+      "node_count": 7,
+      "operator_counts": {
+        "$add": 1,
+        "$not": 1
+      }
+    },
+    "unit_b": {
+      "edge_count": 14,
+      "mux_count": 1,
+      "node_count": 12,
+      "operator_counts": {
+        "$add": 1,
+        "$mux": 1,
+        "$not": 3,
+        "$xor": 1
+      }
+    }
+  },
+  "schema": "fu-ibex-fusion-results/v1",
+  "selected_operations": {
+    "a": "SUB",
+    "b": "LTU"
+  },
+  "semantics": "RV32I SUB and LTU, 32-bit result",
+  "simulation": {
+    "checks": 524,
+    "log": "meeting-artifacts/ibex-fusion/simulation/simulation.log",
+    "operations": 2,
+    "status": "pass",
+    "tool": "verilator",
+    "vectors": 262
+  },
+  "throughput": {
+    "fused_shared_adder_client": 1,
+    "note": "This SUB/LTU experiment has no multiplier; these are combinational cones, so registered latency and II are undefined without a wrapper.",
+    "separate_sub_ltu_clients": 2,
+    "simultaneous_use_preserved": false
+  }
+}

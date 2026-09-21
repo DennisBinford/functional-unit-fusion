@@ -1,0 +1,21 @@
+digraph graph_unit_a_mul_rtlil {
+  graph [rankdir=LR, fontname="Helvetica", labelloc="t", label="graph_unit_a_mul — rtlil level (4 nodes, 3 edges)", fontsize=16, nodesep=0.25, ranksep=0.6, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, style="filled", penwidth=1.2, margin="0.08,0.04"];
+  edge  [fontname="Helvetica", fontsize=8, color="#666666", arrowsize=0.6];
+  port_a_a_i [label="a_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_b_a_i [label="b_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_product_a_o [label="product_a_o\n[64]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  _mul__home_dabinford_research_rtl_fma_experiment_graph_unit_a_mul_sv_8_1 [label="mul[64]", shape=box, fillcolor="#dbe9fb", color="#2f6fb5"];
+  port_a_a_i -> _mul__home_dabinford_research_rtl_fma_experiment_graph_unit_a_mul_sv_8_1 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_b_a_i -> _mul__home_dabinford_research_rtl_fma_experiment_graph_unit_a_mul_sv_8_1 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  _mul__home_dabinford_research_rtl_fma_experiment_graph_unit_a_mul_sv_8_1 -> port_product_a_o [label="64", penwidth=3.0, headlabel="product_a_o", labelfontsize=7, labeldistance=1.4];
+  subgraph cluster_legend {
+    label="key"; fontname="Helvetica"; fontsize=10; color="#cccccc";
+    legend [shape=plaintext, fillcolor="white", label=<
+      <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+        <TR><TD BGCOLOR="#dbe9fb" WIDTH="16"></TD><TD ALIGN="LEFT">arith</TD></TR>
+        <TR><TD BGCOLOR="#ffffff" WIDTH="16"></TD><TD ALIGN="LEFT">port_in</TD></TR>
+        <TR><TD BGCOLOR="#333333" WIDTH="16"></TD><TD ALIGN="LEFT">port_out</TD></TR>
+      </TABLE>>];
+  }
+}

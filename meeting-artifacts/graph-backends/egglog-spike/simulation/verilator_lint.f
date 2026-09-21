@@ -1,0 +1,10 @@
+--language
+1800-2017
+--timing
+--assert
+-Wall
+--lint-only
+--top-module
+tb_egglog_spike
+/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/egglog_spike.sv
+/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/tb_egglog_spike.sv

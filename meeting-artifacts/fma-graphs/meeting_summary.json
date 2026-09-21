@@ -1,0 +1,58 @@
+{
+  "areas": {
+    "fused_mul_add": {
+      "area_um2": 7150.08,
+      "report": "build/fma_meeting_demo/area/fused_mul_add.report.txt",
+      "sequential_area_um2": 0.0,
+      "sequential_percent": 0.0
+    },
+    "separate_mul_add": {
+      "area_um2": 7137.578,
+      "report": "build/fma_meeting_demo/area/separate_mul_add.report.txt",
+      "sequential_area_um2": 0.0,
+      "sequential_percent": 0.0
+    },
+    "shared_iterative_mul_add": {
+      "area_um2": 2507.848,
+      "report": "build/fma_meeting_demo/area/shared_iterative_mul_add.report.txt",
+      "sequential_area_um2": 1234.24,
+      "sequential_percent": 49.22
+    }
+  },
+  "correctness": {
+    "checks": 70,
+    "log": "build/integer_fma_regression/simulation.log",
+    "status": "pass"
+  },
+  "equivalent_add_or_mul_comparison": {
+    "area_saved_percent": 64.86415980322738,
+    "area_saved_um2": 4629.7300000000005,
+    "baseline": "separate_mul_add",
+    "candidate": "shared_iterative_mul_add",
+    "tradeoff": "ADD latency 1 cycle; unsigned MUL latency and initiation interval 32 cycles"
+  },
+  "graph_merge_demo": {
+    "aig_bounded_subgraphs": 1226,
+    "aig_coverage": {
+      "a": 0.015053012784152886,
+      "b": 0.014944121978688383
+    },
+    "aig_exact_matches": 345,
+    "contract_warning": "these two graphs do not implement equivalent interfaces",
+    "inputs": [
+      "separate_mul_add",
+      "fused_mul_add"
+    ],
+    "merged_graph_executable": false,
+    "rtlil_exact_matches": 1,
+    "rtlil_merged_nodes": 12
+  },
+  "scope": {
+    "area_claim": "separate selectable ADD/MUL versus shared iterative ADD/MUL",
+    "not_area_claim": "fused_mul_add implements a different a*b+c contract"
+  },
+  "technology": {
+    "flow": "Yosys synth/flatten, dfflibmap, ABC, stat with one Liberty file",
+    "library": "/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper/job0/synthesis/0/inputs/sc_nangate45_NangateOpenCellLibrary_typical.lib"
+  }
+}

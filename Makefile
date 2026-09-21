@@ -9,7 +9,7 @@ JOBS ?= 1
 SEED ?= 1
 TOOLCHAIN_LOCK ?= toolchain.lock.json
 
-.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo professor-meeting-demo professor-meeting-demo-full professor-meeting-demo-cached clean
+.PHONY: help doctor snapshot lock verify-lock test verilator-plan variant-plan variant-simulate variant-ppa simulate synthesize ppa ppa-sc demo demo-sc ibex-fetch sim-ibex ppa-ibex demo-ibex demo-all integer-fma-sim fma-meeting-demo graph-to-rtl-demo graph-to-rtl-figures graph-backend-demo graph-backend-doctor ibex-fusion-demo professor-meeting-demo professor-meeting-demo-full professor-meeting-demo-cached clean
 
 help:
 	@$(PYTHON) framework.py --help
@@ -130,6 +130,29 @@ integer-fma-sim:
 # evidence, and comparable mapped-area evidence used in the professor meeting.
 fma-meeting-demo:
 	bash scripts/run_fma_meeting_demo.sh
+
+# First executable RTLIL word-operator graph realization.  This is deliberately
+# separate from the validated meeting-baseline workflow and writes only below
+# build/graph_to_rtl_demo and meeting-artifacts/graph-to-rtl.
+graph-to-rtl-demo:
+	$(SC_PYTHON) scripts/graph_to_rtl_demo.py
+
+graph-to-rtl-figures:
+	$(PYTHON) scripts/graph_to_rtl_figures.py
+
+# Compare the canonical JSON, optional NetworkX structural backend, and the
+# closed e-graph feasibility boundary. This never changes the meeting bundle.
+graph-backend-demo:
+	$(PYTHON) scripts/graph_backend_demo.py
+
+graph-backend-doctor:
+	$(PYTHON) scripts/graph_backend_doctor.py
+
+# Source-derived lowRISC Ibex specialization study.  This writes only below
+# meeting-artifacts/ibex-fusion and never rewrites the tagged meeting bundle.
+ibex-fusion-demo:
+	$(SC_PYTHON) scripts/ibex_fusion_demo.py
+	$(SC_PYTHON) scripts/ibex_module_preserving_demo.py
 
 # Full rebuild: tests, all PPA families, pinned intake/lock validation, fresh
 # graph/capability evidence, generated RTL, simulations, and summaries.

@@ -1,0 +1,181 @@
+{
+  "attrs": {
+    "cell_count": 3,
+    "sources": [
+      "/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt -fast; memory -nomap; flatten; opt -fast"
+  },
+  "design": "graph_candidate_add_mul",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:a_i",
+      "src_port": "a_i",
+      "width": 32
+    },
+    {
+      "attrs": {},
+      "dst": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:b_i",
+      "src_port": "b_i",
+      "width": 32
+    },
+    {
+      "attrs": {},
+      "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "port:a_i",
+      "src_port": "a_i",
+      "width": 32
+    },
+    {
+      "attrs": {},
+      "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "port:b_i",
+      "src_port": "b_i",
+      "width": 32
+    },
+    {
+      "attrs": {},
+      "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {},
+      "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {},
+      "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "port:add_i",
+      "src_port": "add_i",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "port:result_o",
+      "dst_port": "result_o",
+      "inverted": false,
+      "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+      "src_port": "Y",
+      "width": 64
+    }
+  ],
+  "level": "rtlil",
+  "nodes": [
+    {
+      "attrs": {
+        "direction": "input"
+      },
+      "id": "port:a_i",
+      "kind": "port_in",
+      "label": "a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input"
+      },
+      "id": "port:b_i",
+      "kind": "port_in",
+      "label": "b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input"
+      },
+      "id": "port:add_i",
+      "kind": "port_in",
+      "label": "add_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "direction": "output"
+      },
+      "id": "port:result_o",
+      "kind": "port_out",
+      "label": "result_o",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 32,
+          "B_SIGNED": 0,
+          "B_WIDTH": 32,
+          "Y_WIDTH": 32
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15.16-15.25"
+      },
+      "id": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+      "kind": "$add",
+      "label": "add[32]",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 32,
+          "B_SIGNED": 0,
+          "B_WIDTH": 32,
+          "Y_WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14.20-14.29"
+      },
+      "id": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+      "kind": "$mul",
+      "label": "mul[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "parameters": {
+          "WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16.21-16.59"
+      },
+      "id": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+      "kind": "$mux",
+      "label": "mux[64]",
+      "width": 64
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 8,
+    "kinds": {
+      "$add": 1,
+      "$mul": 1,
+      "$mux": 1,
+      "port_in": 3,
+      "port_out": 1
+    },
+    "nodes": 7,
+    "operators": 3
+  },
+  "top": "graph_candidate_add_mul"
+}

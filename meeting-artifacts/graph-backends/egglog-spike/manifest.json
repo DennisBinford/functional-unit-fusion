@@ -1,0 +1,42 @@
+{
+  "artifacts": {
+    "executable_graph": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/selected_executable_graph.json",
+    "rtl": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/egglog_spike.sv",
+    "simulation": {
+      "binary": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/obj_dir/Vtb_egglog_spike",
+      "command_manifest": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_command.json",
+      "compile_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/compile.log",
+      "compile_seconds": 4.759,
+      "cxx_path": "/home/dabinford/research/tools/mm/root/envs/eda/bin/g++",
+      "cxx_version": "g++ (conda-forge gcc 15.2.0-19) 15.2.0",
+      "lint_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/lint.log",
+      "lint_seconds": 0.038,
+      "run_seconds": 0.009,
+      "simulation_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/simulation.log",
+      "tool": "verilator",
+      "tool_path": "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+      "tool_version": "Verilator 5.051 devel rev v5.050-65-g5ead758f2 (mod)",
+      "warning_count": 0
+    },
+    "testbench": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/tb_egglog_spike.sv"
+  },
+  "egglog_version": "1.0.0",
+  "evidence": {
+    "cost_model": "egglog default lowest-cost extractor; local AST estimate add=1, variable=1",
+    "estimated_cost_after": 1,
+    "estimated_cost_before": 2,
+    "original_expression": "BV8.var(\"x\") + BV8(0)",
+    "rewrite": "BV8(x) + BV8(0) -> BV8(x)",
+    "selected_expression": "BV8.var(\"x\")",
+    "signed": false,
+    "width": 8
+  },
+  "hashes": {
+    "executable_graph": "f6b525bbb15aa57fb4d3516224fd8e1e6103b2621502145da98430973b894bf1",
+    "rtl": "af383905b07f22d839dd14ae32e5610c38620b804c2c4304b827fb2310f8da02",
+    "script": "eafca1ccc5d97217ebbb8c2c276138391cf42daa119d31505d6d72e2dedf92c7",
+    "testbench": "53a60ee64224fde154a5132ec42a230b2c43c76757612949175f38abb3ac4891"
+  },
+  "schema": "fu-egraph-spike/v1",
+  "status": "pass"
+}

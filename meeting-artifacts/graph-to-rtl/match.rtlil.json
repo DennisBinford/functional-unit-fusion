@@ -1,0 +1,71 @@
+{
+  "common_node_count": 1,
+  "common_subgraphs": [],
+  "coverage": {
+    "a": 0.25,
+    "b": 0.058823529411764705
+  },
+  "engine": "native",
+  "graph_a": "graph_unit_a_mul",
+  "graph_b": "graph_unit_b_add_mul_mac",
+  "level": "rtlil",
+  "limitations": [
+    "Exact structural candidates only; no algebraic or e-graph equivalence.",
+    "Ambiguous repeated signatures are excluded rather than guessed.",
+    "A match is not evidence that fusion improves PPA."
+  ],
+  "match_mode": "exact_rooted_structural",
+  "matched_edges": [],
+  "matched_nodes": [
+    {
+      "a": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+      "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1"
+    }
+  ],
+  "metadata": {
+    "a": {
+      "design": "graph_unit_a_mul",
+      "level": "rtlil",
+      "sources": [
+        "/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv"
+      ],
+      "top": "graph_unit_a_mul",
+      "yosys_passes": "hierarchy -top {top}; proc; opt -fast; memory -nomap; flatten; opt -fast"
+    },
+    "b": {
+      "design": "graph_unit_b_add_mul_mac",
+      "level": "rtlil",
+      "sources": [
+        "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv"
+      ],
+      "top": "graph_unit_b_add_mul_mac",
+      "yosys_passes": "hierarchy -top {top}; proc; opt -fast; memory -nomap; flatten; opt -fast"
+    }
+  },
+  "schema": "fu-graph-match/v1",
+  "unmatched": {
+    "a": [
+      "port:a_a_i",
+      "port:b_a_i",
+      "port:product_a_o"
+    ],
+    "b": [
+      "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5",
+      "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+      "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+      "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+      "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6",
+      "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2:B",
+      "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4:B",
+      "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:A",
+      "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:B",
+      "port:a_b_i",
+      "port:add_mode_b_i",
+      "port:b_b_i",
+      "port:c_b_i",
+      "port:mac_mode_b_i",
+      "port:mul_mode_b_i",
+      "port:result_b_o"
+    ]
+  }
+}

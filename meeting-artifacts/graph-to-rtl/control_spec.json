@@ -1,0 +1,78 @@
+{
+  "generated_design": "graph_fused_graph_unit_pair",
+  "generated_top": "graph_fused_unit",
+  "graph_a": "graph_unit_a_mul",
+  "graph_b": "graph_unit_b_add_mul_mac",
+  "inserted_ports": [
+    {
+      "direction": "input",
+      "name": "source_select_i",
+      "width": 1
+    }
+  ],
+  "level": "rtlil",
+  "modes": {
+    "A_MUL": {
+      "source_select_i": 1
+    },
+    "B_ADD": {
+      "add_mode_b_i": 1,
+      "mac_mode_b_i": 0,
+      "mul_mode_b_i": 0,
+      "source_select_i": 0
+    },
+    "B_MAC": {
+      "add_mode_b_i": 0,
+      "mac_mode_b_i": 1,
+      "mul_mode_b_i": 0,
+      "source_select_i": 0
+    },
+    "B_MUL": {
+      "add_mode_b_i": 0,
+      "mac_mode_b_i": 0,
+      "mul_mode_b_i": 1,
+      "source_select_i": 0
+    }
+  },
+  "outputs": [
+    {
+      "behavior": "A_MUL",
+      "fused_port": "product_a_o",
+      "graph": "a",
+      "port": "product_a_o",
+      "select_when": {
+        "source_select_i": 1
+      }
+    },
+    {
+      "behavior": "B_ADD_MUL_MAC",
+      "fused_port": "result_b_o",
+      "graph": "b",
+      "port": "result_b_o",
+      "select_when": {
+        "source_select_i": 0
+      }
+    }
+  ],
+  "required_paths": [
+    {
+      "from_port": "c_b_i",
+      "graph": "b",
+      "to_node": "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5"
+    }
+  ],
+  "schema": "fu-control-spec/v1",
+  "shared_control": {
+    "active_value": 1,
+    "port": "source_select_i",
+    "select_semantics": "1 selects graph A; 0 selects graph B"
+  },
+  "shared_operator": {
+    "match_pair": {
+      "a": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+      "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1"
+    },
+    "operation": "mul"
+  },
+  "version": 1
+}

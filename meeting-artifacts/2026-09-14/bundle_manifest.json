@@ -1,0 +1,4421 @@
+{
+  "files": [
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "f7ea55c2e707f3792c4052850ee92b0a5277401f3bdfb9f44e3f17e69a213f05"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "71c97e94e884995e3b230f021280173ef1f6faf86a00bbc79ba50b5d56465525"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "3b153e4db57c880c959b503c0766963204d12436b24be0c296a4b4cdf8c32ec6"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/graph_candidate_add_mul/graph_candidate_add_mul_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "30e1651df33b1def8c7300a98b449c7a83452e3b130558f87135c82f6bc63711"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "a6983e228b6358e8ac76ea0679bcf7ca41ff2e01ddaf339ac0580991067c43c5"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "13971b05069964081fd9e3cf706a8cfa8cfc0d907aaed03b3d73e655a041d3e3"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "5711098e8e65b3327315ad9b833325b8eb70e7c9150e784a48457c4e725b0e22"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/evidence_graphs/separate_mul_add/separate_mul_add_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "8862d9b25277f85b58ed6b8766fb7bad936b075252100cf051baa48290bd2453"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/fair_baselines.json",
+      "role": "bundle_artifact",
+      "sha256": "f8f7eb5eb41e1244d59b066c63bcdb4ccf70dd6b2f982fd6801a137b745e389a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/fair_baselines.md",
+      "role": "bundle_artifact",
+      "sha256": "796b6088e314cbcef6d1d4792088e826bec76480e6442ffb9e48ea657191d3f3"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/generated_fused_add_mul_mac.sv",
+      "role": "bundle_artifact",
+      "sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/generated_fused_add_mul_mac.sv.manifest.json",
+      "role": "bundle_artifact",
+      "sha256": "facd53f264303eddc94e20321362a26c5c3a248add2acf3a0d58e074071b83dc"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/merge.json",
+      "role": "bundle_artifact",
+      "sha256": "106622864d1a164bface0ffffde421478e6c74a78d8add94f7ac29501368c1b9"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/source_match.json",
+      "role": "bundle_artifact",
+      "sha256": "9f6d2cfbdc9e3e27e0d68941cacd69c14319e8e4c492d29da09c84b210ca7da9"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/source_merge.dot",
+      "role": "bundle_artifact",
+      "sha256": "f9f2c174fe38eb402b01f81a41964476a3c1ace1733da35ba24db79d5ad7a39a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/source_merge.json",
+      "role": "bundle_artifact",
+      "sha256": "b5f758a88eee6beb62a160e060f51c78c4f106c752c7521d7094dac35438e490"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/generated/source_merge.svg",
+      "role": "bundle_artifact",
+      "sha256": "80d2e21686582c4af6b64f462706a930858986137c838d86f5912da93d09de3a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.readback.v",
+      "role": "bundle_artifact",
+      "sha256": "e942f94122855709e0bb8bdd00d346536f66b07b14853f50685beaa3dbfe148d"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.rtlil",
+      "role": "bundle_artifact",
+      "sha256": "b18f74ce07c03a1ce00dd3340bbc89f94cd8b7a3876f05e8da3c1fc60bac2532"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "6d5132de89e87d046fa0fb38a2f7d0ce5b5c67a55e020d270305f5e14e6bc7e9"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/roundtrip/roundtrip.json",
+      "role": "bundle_artifact",
+      "sha256": "35ff4ad1a728d57ba4c2c36e8e96668b1a4293899a79ae23ea098395a541593c"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability.narrow_to_wide.match.json",
+      "role": "bundle_artifact",
+      "sha256": "20a7f3a5f47dc084495cd20de5008237cfb66f80dd33f104a77fc78be4a76023"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability.narrow_to_wide.merge.json",
+      "role": "bundle_artifact",
+      "sha256": "b9a47cf1f64f17a64c87e4a7ca8060c8f8cf6caf239a767d2736bb8afb23d424"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability.wide_to_narrow.match.json",
+      "role": "bundle_artifact",
+      "sha256": "39e0b45af1d6d2c1dd390796afbfcfe46273df9c2c874ed00eb718bccb13a14d"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability.wide_to_narrow.merge.json",
+      "role": "bundle_artifact",
+      "sha256": "62af0f9849eefce52b1d5bc865ac1e332549af189141d4bd3fc6e5d4d35bb46a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "fa619f729b5a4cc80e1cb2c9dc6acc96ea54a5a868b743936b3c74155756a1fd"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "5cfdc5722edcefcb5742bafe1b715fd7ab7e07e47abe55273ea7b8ff8c307fa2"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "d0f4cc5b1f2ed467afc8a30202ed2513d45a1ac8403fc0ee0912de209cbc8778"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "34b5ceb976b1e35baa5ce9c3d3a0b0a9c8c07dab46c55da208714fe2d8339d1c"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "c25caaa4d33957579b51a3562ff7f9132371abf09a17a07a9d5648e570241677"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "38c367f2fbf22a8b682e22943193956c162e91b61e92d03e2ba464a071f4f3a6"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "32f7c1acc9cb71646cafde3490df8b160baa67b6b31a002cb91b106ae3e57fce"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "ad01d8b1768b818afc1798b95e5759d2d9f5ef031f732ed2f519b61846fb9daa"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.aig.dot",
+      "role": "bundle_artifact",
+      "sha256": "347e8dfb10f0ceb008d46512bdf29cac98809ae0ddba7be8b6b541b438eac11b"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.aig.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "5a921a644a642616d183384592b39c014c91157e743a9ac11b3140bff12ae37b"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.aig.svg",
+      "role": "bundle_artifact",
+      "sha256": "842b7c4033a2168a28e13ad8bc4ee1abcc2a74a385a9ec1c43b79124c918100d"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.gate.dot",
+      "role": "bundle_artifact",
+      "sha256": "b077630c6b880e4cfebdc767cebc30705ce973d6a3bb649415fe987cfd119604"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.gate.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "12bb109c0d9510a203655fddc76b3b8a82f99a65c09f9d377cb6875f509c06cf"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.gate.svg",
+      "role": "bundle_artifact",
+      "sha256": "e41afa676453c698b22d7642b529b63a3d86c887709cac36755f10f22e4b3812"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "47d1b5bffd2d261c6320388a8e1a6eda3b84676ca53f259c42b5ad5aaeb445c6"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "063a9ce35440dce3767cd53baf076539ae8d28a43ea217ed28f4d4a1b4a49c42"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "b45e26f82823100bf0f80bd173d0cc3ef30d2e30e3c39d228491b2ef00c3afec"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac_aig.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "3cc1f85b17241eb85cf73abac8414bd34e5615a7bf4fecb8678d80e18f0b6989"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac_gate.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "6a97e013b5b4a0a39a196c07c32d1519383d2ec7c26351be5e52c2327974929a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/generated_fused_add_mul_mac/generated_fused_add_mul_mac_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "6d5132de89e87d046fa0fb38a2f7d0ce5b5c67a55e020d270305f5e14e6bc7e9"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/horizontal.rtlil.match.json",
+      "role": "bundle_artifact",
+      "sha256": "f07f162a54749e84cd9262062cf49f545a72cfbc76e9d265738e623a398f7580"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_alu_wrapper/ibex_alu_wrapper.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "9dea4bb6d59098020b920bdaf82437755b9e7bd166393da6fa7c53dba0295b2a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_alu_wrapper/ibex_alu_wrapper.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "6cb3b5df1e1e56681acc6c80b5f47aabe4becbc149363e307695a36f64259b03"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_alu_wrapper/ibex_alu_wrapper.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "a6800b7ef9b25f26eb5faddf1a0a642e2c68b8520832a733e7818ec875106225"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_alu_wrapper/ibex_alu_wrapper_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "2865ad7c37ea9af4760774d21548a3aca89678b59ae0257af630f9d09c13f71b"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "af1f115ab7c99d6d91356b2ae6ff4543fd69f2cda269fd0d9ae427926a06c680"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "2ecf0bc653668b1b945600430a3d01fc45f63d39ee3672a4cb392e35b5084b40"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "34f851d09cd9c6ef16ff42631422623a7104bbb4543dde23fb6de568ddab0e36"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "12723f23b5d77adf7083d62f93b5c8aedb2f058a596fe5826e185939d8dea6b7"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.aig.dot",
+      "role": "bundle_artifact",
+      "sha256": "ab66d4d28a17f8cd55775b96abc9b96e05ba85155c870daf6bf93d5322e68471"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.aig.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "c672f11ab684b658f16e9baec886b0f28a4c4eb3566d9f681cfa8ebb6af56737"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.aig.svg",
+      "role": "bundle_artifact",
+      "sha256": "3e6e52fc8ac4bb94efbb3ca924bc9c0b7264afbff81089ddbc8bf044c7d56ec6"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.gate.dot",
+      "role": "bundle_artifact",
+      "sha256": "59eff6e77d43c728a3a7aeda628961f346fb5505971fc3218853d9d4a35f6dd8"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.gate.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "932214c7e9e2ebc1ce2f1c72fa9e60a14e5fdd4fb586f71e90a3baa8b8abeecc"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.gate.svg",
+      "role": "bundle_artifact",
+      "sha256": "256da445f691aa8de028b4531b0e861e0bdc14a6dad04f331dbaa42739e98249"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.rtlil.dot",
+      "role": "bundle_artifact",
+      "sha256": "79d840ba65a8d22099886425a50ac5a2718249f5dabbc29689f2a652cc55c089"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.rtlil.graph.json",
+      "role": "bundle_artifact",
+      "sha256": "b3e04da1f21c9e5fc0a308e7df8b51e736d989d60a286dc53bf1727256412c6f"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline.rtlil.svg",
+      "role": "bundle_artifact",
+      "sha256": "dd546aa19ae1646863ac0c003739c364c2cd3b7bd86331559c6cde428ca6f74f"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline_aig.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "bf340447ebf7c634e88f9eb6bdfd6bbbe0e163a557ac53ce1e29167751e2dd41"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline_gate.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "f2d5d92f2900f11dd37abac8a7f93a0e89d53ef65256fe7a402ef054fb429f84"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/parallel_add_mul_mac_baseline/parallel_add_mul_mac_baseline_rtlil.yosys.json",
+      "role": "bundle_artifact",
+      "sha256": "ca3f1b9f7dd1513b1471699f2c3934b906b3b35e7fe6cbb9a585d92adaaba21c"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/vertical.aig.match.json",
+      "role": "bundle_artifact",
+      "sha256": "f81dc3d5d4dc9c4915d64b782e2bb5256a678b67a803c8c92bd3b17c557df893"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/vertical.gate.match.json",
+      "role": "bundle_artifact",
+      "sha256": "c6213cdff84d1d9f3afd3940eb630954b75befa16793960cb8cfa44aa948b96a"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/studies/vertical.rtlil.match.json",
+      "role": "bundle_artifact",
+      "sha256": "3331ec437e8bdd8669ff3ea455c02809cd6a837f411d36cd27ccc21f546e4818"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/summary.json",
+      "role": "bundle_artifact",
+      "sha256": "faae45bee92eece60ec35d8ee12a06e13ccf0ab3c658bd1fe200b533f23522aa"
+    },
+    {
+      "kind": "repository",
+      "path": "meeting-artifacts/2026-09-14/summary.txt",
+      "role": "bundle_artifact",
+      "sha256": "8bec536453239591558290655b7e0254fe5910ca483bfd532e8954bb03b642a5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/cs_registers/env/env_dpi.sv",
+      "role": "ibex_source",
+      "sha256": "4c045c64371882fa28470c2c3c16f3e160b6f71dcb1537c9dda2be5937acd7aa"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/cs_registers/reg_driver/reg_dpi.sv",
+      "role": "ibex_source",
+      "sha256": "ed02c79991c5ebaaba0b0ea3fd79716672cde9a3ed314851f3588796dfc62b9e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/cs_registers/rst_driver/rst_dpi.sv",
+      "role": "ibex_source",
+      "sha256": "dd8f459c44f9fb21a7193a0e594384ffa76a797f049c228a8639034b1a472ccb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/cs_registers/tb/tb_cs_registers.sv",
+      "role": "ibex_source",
+      "sha256": "ec7dad115510289dd3563566e3f7adb00516ee7acd9501ee0792ec4aa1b66840"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/encodings.sv",
+      "role": "ibex_source",
+      "sha256": "2e56377ae824f35bcf5e134277f557649f3000b068eacca3b40e0a56d8579333"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/peek/abs.sv",
+      "role": "ibex_source",
+      "sha256": "3cb0e574c156458151df0e332248335b065fea7a417e5cd07cd6c525cf0f2115"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/peek/alt_lsu.sv",
+      "role": "ibex_source",
+      "sha256": "ba7e34f215d5b71b8c528503ba7e64f87f2bec0b6d0532dbbcf3a7f51de4c998"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/peek/compare_helper.sv",
+      "role": "ibex_source",
+      "sha256": "787dd957459b97cab0cc6de1a067292e2446fc3d0bec0441b2b3cfc6a223d011"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/peek/follower.sv",
+      "role": "ibex_source",
+      "sha256": "9bc4031e6471d33e98fceb1b5481de8baaac68ec6b0e8fe572c6ecb238d34089"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/peek/mem.sv",
+      "role": "ibex_source",
+      "sha256": "59395c5ceca30b0a09afae688275e26ac2495485de4e6f0175d885968063834c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/protocol/irqs.sv",
+      "role": "ibex_source",
+      "sha256": "4d444b0398d34866050406b39535e37a2008fee55a87dd698efdafec8dc81a18"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/protocol/mem.sv",
+      "role": "ibex_source",
+      "sha256": "b8312ce2adcfcb68b66355aedc2d30de7e625eb7747dcc15997949189362320b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/spec_instance.sv",
+      "role": "ibex_source",
+      "sha256": "dc9c9b0b2a1aa7e455af757fc2a14a81bfba72b064e7134c134b6bd486cb386f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/check/top.sv",
+      "role": "ibex_source",
+      "sha256": "69010f04fbea70dea1c085da8893b56e789fd603914489a3bcb06eb155f3349a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/spec/spec_api.sv",
+      "role": "ibex_source",
+      "sha256": "ef1b70371cdf1b327fbe73c395d10ccf61cdd8fe78207ec5687d4dd4005ce645"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/formal/spec/stub.sv",
+      "role": "ibex_source",
+      "sha256": "511da5448379540627b1808ebbdf01e5768bfb5ca7fad70fb93368e4265f16b7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/riscv_compliance/rtl/ibex_riscv_compliance.sv",
+      "role": "ibex_source",
+      "sha256": "5f6bde473d15020a26afc9c72ea0f516a0aa65cec2ba6b0d56cdb0306d50e90f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/riscv_compliance/rtl/riscv_testutil.sv",
+      "role": "ibex_source",
+      "sha256": "2d076edd3c0327c3be713213f58ef26f8281008273dd6175cf19f9a537affc1d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/bus_params_pkg/bus_params_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "b559adfd728189194568280f292068d735dfecfb8e49e79060b73a7b04aa3377"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/core_ibex_ifetch_if.sv",
+      "role": "ibex_source",
+      "sha256": "88e898dddd15f361aa4783ca9300fb80476173bd184e7f098db40074a8a3fa13"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/core_ibex_ifetch_pmp_if.sv",
+      "role": "ibex_source",
+      "sha256": "2e1c85b3a965dab71399f5b042436c6858753fe5a109532d33225b6209e87c23"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_agent.sv",
+      "role": "ibex_source",
+      "sha256": "aa145dbf5f9a59b779a040b6393127ac0f1b06c63b1c326996791b9328cfc9c3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "c778c89b58003bcdbca22f3bb1bdf0add2466fda7b676d19c94d0ec460c18f9a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "882ab518f9cf6e339952404471e272f02d13206f6950f9da0d0224c27196fdad"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_cosim_scoreboard.sv",
+      "role": "ibex_source",
+      "sha256": "62e5782fde6b3cd2f73f1427ca93a5e937aeb13f977808783fa2118e37dfa458"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_ifetch_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "cc3597a4148049c0a3b2e6e4c40cbf9244b6f9f7ec6c0bac183b86067bcbe375"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_ifetch_pmp_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "e193073c7225ad2c01ed8d0eae44f3d59bc8f8ae4702b73bf30be4e44573da20"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_ifetch_pmp_seq_item.sv",
+      "role": "ibex_source",
+      "sha256": "3b57cb4a662c8817d5b0bb9ec69506cfc155254fb0552cdcceec674169a620bd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_ifetch_seq_item.sv",
+      "role": "ibex_source",
+      "sha256": "a88b1f15f14ee6b1013a483bfa32456873370fd1678ccca2f2aa35f0ab411f6a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_rvfi_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "4256038e4b5f00e151b35d16f8d39f156ca24f739af7bafe40bd88ba72a15fc1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_cosim_agent/ibex_rvfi_seq_item.sv",
+      "role": "ibex_source",
+      "sha256": "2f7ac65f45aaf245777dd0df985ea8a7b89111b4585046b96e2731d002841f0d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf.sv",
+      "role": "ibex_source",
+      "sha256": "824d8993981d057e2d712cc6bd204d5343497e808c16581b3c8d4d04010e3e25"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "107ff5893ce9c9e2c703fd008c6264a8f0ac2718d356aa584d49b02474bab7e1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "418841b8d9f07bac3afb8340707386b457aaa44cc10bdced4cf287b8ef840d7b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "decefd198eebf0cc8b93b9dc3c841da60098588b5ed5f01f3621dacba6c4aa18"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_request_agent.sv",
+      "role": "ibex_source",
+      "sha256": "39ddf136d787de862163a2edb56d845da2bcd865c9c756b57979dc995fce0ea6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_request_driver.sv",
+      "role": "ibex_source",
+      "sha256": "f429008a428b5fd7c68efdcbfa39b9643e3f217f42e8ba955a9bcd1235c059b8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_agent.sv",
+      "role": "ibex_source",
+      "sha256": "f218f2c3c944989fd347ebc45d4d3bc50003f6910e0a18e8c9c01449c2d37658"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_agent_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "d01e840ea61afbaa380ae0397780af674ef5bf05cb9aba81796fe58b4d461928"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_driver.sv",
+      "role": "ibex_source",
+      "sha256": "178845fb435fe5a24dba1646abbcf4ca712c5b21e9d87942244bda2cff2c6274"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_seq_lib.sv",
+      "role": "ibex_source",
+      "sha256": "af3c1f52717d1cac285b00103f73fee0fc4a8fc482b7c6dc3c02828360477450"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_response_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "a63c1d5c83d2534d3cdf2279ba47be4fef3497c8162a41c237f4174c74587785"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/ibex_mem_intf_agent/ibex_mem_intf_seq_item.sv",
+      "role": "ibex_source",
+      "sha256": "bcbedc3fe2d8ff4149259484e0ea56724e2a138c0d1fb9735b89225e84b26b06"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "b2a33d85a24d28e203329d04dd425a1d66b2f17984532bd811e9ee26db2d9633"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_if.sv",
+      "role": "ibex_source",
+      "sha256": "e2388b3135cd783871f6b4de7326dc114feece086c878973d316cab5147ad165"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "6619d444d483df23abbdb6670eb81d657a25e7f556b852590449fd2f6af72d30"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_request_agent.sv",
+      "role": "ibex_source",
+      "sha256": "4dfb829d51c4c9472d79b6593d8f672481e11d451d3437946023889674aab317"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_request_driver.sv",
+      "role": "ibex_source",
+      "sha256": "e9d60a286eb23c4dfb9092786dd9a31efc3436b6dd682caac24f4dc1411ec2a1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/common/irq_agent/irq_seq_item.sv",
+      "role": "ibex_source",
+      "sha256": "713ab3081aafdc6caff54a0a10ffd0004ed465f7566cd5dde4857536430a90de"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_csr_if.sv",
+      "role": "ibex_source",
+      "sha256": "1317f31312d32eb20a23270256f196593aa63db23963171d1f17527ffaadba43"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_dut_probe_if.sv",
+      "role": "ibex_source",
+      "sha256": "415eb036313a529c9e7fd003ed537c8fccbad44bfe41cb883b0cb06a916c3dde"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_env.sv",
+      "role": "ibex_source",
+      "sha256": "1f526fb1f73d3925a8481112f5fff9f8909e8ead6acecb68f05483783b41e021"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_env_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "03e655dd8b2d4bb32b34503176e766c13d1cf1511a580d1ebfaeaf9920bbdb72"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_env_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "c5764aea8f12360b8d91df48ccc83d94e4ff27b8ef00d6c8dbb3d8406a6b171a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_instr_monitor_if.sv",
+      "role": "ibex_source",
+      "sha256": "d660379eb56bbca2708dfc93e4fa476462d06f445612f8978a218a4e7b91cb11"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_rvfi_if.sv",
+      "role": "ibex_source",
+      "sha256": "a07f40beffc78fb0e9bb32f8620c0d52a02b1d9de12bad51211d6850d3d9e988"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_scoreboard.sv",
+      "role": "ibex_source",
+      "sha256": "9741bd1e9b5492e46b4e55dfbc9439733c1d1afbabac8706d5ff58cce3efcf9a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/env/core_ibex_vseqr.sv",
+      "role": "ibex_source",
+      "sha256": "528dfd09aaea778417d8247e003337dd78cf35db944980325596e95a073c3c8e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/fcov/core_ibex_fcov_bind.sv",
+      "role": "ibex_source",
+      "sha256": "aadc3ce8502daf1be233ee1b82d0c26642aef39bcc3da9b79adde140a958429b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/fcov/core_ibex_fcov_if.sv",
+      "role": "ibex_source",
+      "sha256": "080846d378bc1cd9cdb000b1de0836a1ca9a59e03803695a93dcd8807d7e088e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/fcov/core_ibex_pmp_fcov_if.sv",
+      "role": "ibex_source",
+      "sha256": "ac60ca5607f3eb9b83b639035a66f727c906ddd8a9130b800d755419539a2d4f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/riscv_dv_extension/ibex_asm_program_gen.sv",
+      "role": "ibex_source",
+      "sha256": "834ffe7472b1ce0b882d0d048ae88ee7ce72fd5fe79861484c397cc4b2b5ba47"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/riscv_dv_extension/ibex_debug_triggers_overrides.sv",
+      "role": "ibex_source",
+      "sha256": "a61946245a90ff88e19d726f94a07888146e0efa0123749d9f413ba770af3189"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/riscv_dv_extension/ibex_directed_instr_lib.sv",
+      "role": "ibex_source",
+      "sha256": "07a4357cd328001dcd306ad01e793fdf2607580d2e239eeaa5da20cf18e7e0ba"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/riscv_dv_extension/riscv_core_setting.tpl.sv",
+      "role": "ibex_source",
+      "sha256": "fa3850d7e977e1efdd397e22f97005615f560c8399013aadf95e35a98415ef46"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tb/core_ibex_tb_top.sv",
+      "role": "ibex_source",
+      "sha256": "43da12814f75e362b7368c8add9f0b2d03c86a779ff6a18b2855a88cecfe82da"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_base_test.sv",
+      "role": "ibex_source",
+      "sha256": "e1d2fea0c7003d86e536f3fddfe4271aa0309640313c129dc415096da3c1fb53"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_new_seq_lib.sv",
+      "role": "ibex_source",
+      "sha256": "fa78edcffe0f4bc9e1eb7705659027b065b972d9cd6ac84473348699e51322fa"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_report_server.sv",
+      "role": "ibex_source",
+      "sha256": "8d3c7500136e05fadb869869f637f99c20d2cd58249b1950d43410875f24f435"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_seq_lib.sv",
+      "role": "ibex_source",
+      "sha256": "2ea97e0a720ff273f4b7552f836870d2f456800ac882adee8f912875982454c0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_test_lib.sv",
+      "role": "ibex_source",
+      "sha256": "67f5d1a0aea689d6f6aef20e536bb45932a5ef89f29abf07dd2b6d2fb14b4251"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_test_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "227961062dc1aef296687c4ddc5fc7cba743b31418252b94069799d86628a35c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/core_ibex/tests/core_ibex_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "76d734934c661b3189926f14c4ae9620608696093fb465dec40f0882aa26fe47"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_env.sv",
+      "role": "ibex_source",
+      "sha256": "cd50ca3f02739a946f56248e628e98a70dc9a919ed03f520876ccbead75ca0c7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_env_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "4089d214f0e21dd9ce44420d90edc92a5cd72071874c178c8d75927374da6bc2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_env_cov.sv",
+      "role": "ibex_source",
+      "sha256": "a31f62f4ea7ee2aa0d8c1af6bcc73ee7830146e15666ff03645fb534917e3a1b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_env_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "5a412c817b15cc8075360ab8c0c5a7a4576fc0a340e9027d472f8f0f1a42eb4a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_ram_if.sv",
+      "role": "ibex_source",
+      "sha256": "0b9d1b94f6fe973dc05142e04dfff8c4f6839232347cffbb91b433a5216997f3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_scoreboard.sv",
+      "role": "ibex_source",
+      "sha256": "7e562c5cdbbfa18b7be020f721748454401ef557216b679beb91bb59e1a6f44e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/ibex_icache_virtual_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "e63c3159255d3322560fa8e92bef754f15df9a07d2cbf0dade28b68142471916"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_back_line_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "ef0010ffa80d795180afc24d1577aa389d2d06f8d3c8c87f61af118d9c2836c6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_base_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "d52c0eb387c65c325560b10c8b88c8c064da345a209516870a4be0c5cf0c4ff2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_caching_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "843d41080224c088c796fd284a2d3ef9080b72a563393894eb3e4d42bc5ea5a8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_combo_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "b99598ebf0810a431be7bd809493773c8b8f0cd6fea8efb33ba1339293746c86"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_ecc_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "5a5855532497c3b623bf3d4946f4727a25b25b1936dc7c1ed1c96662fd34628b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_invalidation_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "efaf06fc7647ebeaa0928f5bb0eda1b0e8ecfc2e67a92a812da52b3987615049"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_many_errors_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "d28da1caef9a0ed3d724e577c7801a3846cf39e4c001df23dd3af37df70e8fd0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_oldval_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "62c5804fe19f14c76416b801449030e9c4a22cdb7b117bc3944787a125ab9871"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_passthru_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "68db7a0df9a2b0f8b28a09fd66887e29fbac9ff7d3a3ccf6935893970f9428fd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_reset_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "43e039245071f8b0dafb491888f22e9ea87baa7afec2dcbab45755ef603e2e69"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/env/seq_lib/ibex_icache_vseq_list.sv",
+      "role": "ibex_source",
+      "sha256": "abbf7fe19b0aeafe248a76dd6c0a0af5a4abba5ce8678a859794b4643f5e5f14"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/fcov/ibex_icache_fcov_bind.sv",
+      "role": "ibex_source",
+      "sha256": "295978e34ff2b0ab62aa80e45d6b5a54543800bebe7a816bd408b50c88e90d5b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/fcov/ibex_icache_fcov_if.sv",
+      "role": "ibex_source",
+      "sha256": "cea4d0f1a0be1d7b9c70ccac0d8c01e3f1446513173d7ee8103579ef9a0ff979"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_agent.sv",
+      "role": "ibex_source",
+      "sha256": "ea29ec97b8ca0c31a1f995947a414e560439da0e94302f202e9469a714333306"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_agent_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "de4be4bc71a70521f9110c79dcf0c2a958d107cb9b378b6f3fea50ac416a7528"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_agent_cov.sv",
+      "role": "ibex_source",
+      "sha256": "d184ed6fa060502ff269d8224c0b3e9b0f21730d3d4ba9ca69cc416a70a817c5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "58ceb3df43e7c129a2e432ba3fd79505b067498c9dc1633657fb95f185bd9300"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_bus_item.sv",
+      "role": "ibex_source",
+      "sha256": "6e0c2eba10f22dd81cf977d88f94f52d21597d2b8899057da1e79ebe81c6a42a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_driver.sv",
+      "role": "ibex_source",
+      "sha256": "8b9e1e03fb0b8f7b17ff2e77644dc2213ac002521971bc43a8aa768bb46fdd08"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_if.sv",
+      "role": "ibex_source",
+      "sha256": "34df9038262201866c550abbf2d039c62034a199ac16570206eed95b15c05118"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "51aa5c6e8f47e63019d70ce43b784b5333708ee065ba07bd4fa28146c76a4e28"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_protocol_checker.sv",
+      "role": "ibex_source",
+      "sha256": "7fb23da015ed054e665d36e73ebeffdbec3eb23666b58c2175611ea1ff756e52"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_req_item.sv",
+      "role": "ibex_source",
+      "sha256": "dd1876ce708d191e2c84d815d1e4cd10bfc458b7c9fee7db3ac408498ab6d01c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_rsp_item.sv",
+      "role": "ibex_source",
+      "sha256": "13ac3b146799ba9316de8468857d05001837af107dd8aaaadaa534c1d7bfe171"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/ibex_icache_core_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "e52aaf79cf0973df0727047eb8649546d9d01d31992a1e71901cddd67d6d9581"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/seq_lib/ibex_icache_core_back_line_seq.sv",
+      "role": "ibex_source",
+      "sha256": "305e3c8122cdfcd0ada5c8a20f86323f3115e2f26cca1bd1f154941deea99073"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/seq_lib/ibex_icache_core_base_seq.sv",
+      "role": "ibex_source",
+      "sha256": "e85b93145712fb9dc86dada222cc444c00c0bbe9ba95995841eb57f0acd4d3f4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_core_agent/seq_lib/ibex_icache_core_seq_list.sv",
+      "role": "ibex_source",
+      "sha256": "d7967f52ee8694de183caf8c046bbc31304a4b805ae5ecf4b974ec6caa51f4fa"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_agent.sv",
+      "role": "ibex_source",
+      "sha256": "47c0e4b08cfb8e5d1faa483795c410d450741f3e490d4f75f9d0e903e8714837"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_agent_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "1edef170b423feeb0defc1dc82e7f743698dda73a8e3be6e0a8c305c2b238828"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_agent_cov.sv",
+      "role": "ibex_source",
+      "sha256": "e59b8ee2f3683c617826041e7fd395aa35e703f7d001e4d7691c059ff2759a3d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "1a7103757a9e387b4ee5e5f254199ec75046e842f561af3d547ee9fafdcf85c6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_bus_item.sv",
+      "role": "ibex_source",
+      "sha256": "e8b557f5aaa9c5e12b30871b7f426d36f8f7db19fb7111fd1952b80d1e0150d1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_driver.sv",
+      "role": "ibex_source",
+      "sha256": "7a12c1e921f49f85a6f5d8ba396be9654f6e13343239cf0dc7f0722c531000cf"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_if.sv",
+      "role": "ibex_source",
+      "sha256": "6086da3e053614d920b583cc05f83a49fcd6f29a4b3e28c2d644d5bb49e2e3de"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_model.sv",
+      "role": "ibex_source",
+      "sha256": "1d3dd5fe92b9b2b96ec6d282fb7be1b30400eb0d4947430d11fa289d95ae5ae7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "474ea89abb61ba34a3858af23175304058024d221d38ca7c4206f68356348194"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_protocol_checker.sv",
+      "role": "ibex_source",
+      "sha256": "912b00ed6923f55de43ffe8afeb2c80de1d3e836e0df45022a402f4d5a0ef1c3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_req_item.sv",
+      "role": "ibex_source",
+      "sha256": "e91aed6919e288ebfec61a6d0eeb7852789affe77de26a536ef0ff3c09e2ebff"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_resp_item.sv",
+      "role": "ibex_source",
+      "sha256": "1ab3b5ae3b5150554aa2a98bc646d73578f02871958e80ab40e2f0550576d252"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/ibex_icache_mem_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "a7cf97b52f0eae3490f57f4f67ea250b0318f078b059fff31d1b4be2aa1e76c2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/seq_lib/ibex_icache_mem_base_seq.sv",
+      "role": "ibex_source",
+      "sha256": "e464da55d899099b625f16fd258a938d9ebab1421e7af52b8c1cdafb2114d0fd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/seq_lib/ibex_icache_mem_resp_seq.sv",
+      "role": "ibex_source",
+      "sha256": "de145f5a62bda7a610157291438ca831ddae9faf01f2f1bb156ad49249ad7151"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/ibex_icache_mem_agent/seq_lib/ibex_icache_mem_seq_list.sv",
+      "role": "ibex_source",
+      "sha256": "bc7630973d0adf7205b629042157ea09df38c987823ec1fa3054c98d9bf41d06"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/tb/tb.sv",
+      "role": "ibex_source",
+      "sha256": "649789db20471ce1ce75ba8ab0fdf90fec70c4aaa0a2c6d92aaa9b210c6b5793"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/tests/ibex_icache_base_test.sv",
+      "role": "ibex_source",
+      "sha256": "264981d272ce247f6648805dd1f7b1e443848fc8558c67e50556513d17cca05c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/tests/ibex_icache_oldval_test.sv",
+      "role": "ibex_source",
+      "sha256": "ff872360afa012acb38ba00c6c99e8a79a9c19b9e6b643d6bb2eb072806c73c7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/uvm/icache/dv/tests/ibex_icache_test_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "ec3731d2b5f8d29e7be956a451caf94d0d2c19ce623576db3d63fb99262a0229"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/verilator/simple_system_cosim/ibex_simple_system_cosim_checker.sv",
+      "role": "ibex_source",
+      "sha256": "820971614a9f82b7747d4b3ac24fd9f983678a5775e5a03e310e21a57349f99e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/dv/verilator/simple_system_cosim/ibex_simple_system_cosim_checker_bind.sv",
+      "role": "ibex_source",
+      "sha256": "8df7d38e9aa19a4a3f83cd686d1568a8a64dba3f0b8fbc7cf82ba43fa3f8c6c9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/examples/simple_system/rtl/ibex_simple_system.sv",
+      "role": "ibex_source",
+      "sha256": "e6f01ac26becb1953bf90636de2acd614cb2678fa94a3b1ababea9b7bf2852a3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/formal/data_ind_timing/formal_tb.sv",
+      "role": "ibex_source",
+      "sha256": "75383b52a37afd1e0bd4647416e1dfe2c9078eae6b5289201644a44eb46713f0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/formal/icache/formal_tb.sv",
+      "role": "ibex_source",
+      "sha256": "eb867f7b012d2c5e51fe4b832623e20b0b402d7751b12112661da2708ccc6d79"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_alu.sv",
+      "role": "ibex_source",
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_branch_predict.sv",
+      "role": "ibex_source",
+      "sha256": "78d4120eac2606e34b9338581eac55e3ba3b48c718799a46a887ac9efab2240e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_compressed_decoder.sv",
+      "role": "ibex_source",
+      "sha256": "9a75e724398065c888281726890037f75a713343cf42dfb777a5fdbd25c0d6f6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_controller.sv",
+      "role": "ibex_source",
+      "sha256": "0176847253773bf41094e8d55e35c949eafc142eae805f707660d51d0d9e10ec"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_core.sv",
+      "role": "ibex_source",
+      "sha256": "fa081f154c7ee220484481c6545dc77df60bbf94eb0b6ed9455863d3029321a5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_counter.sv",
+      "role": "ibex_source",
+      "sha256": "0e953e2e05b5070833029d0f6fed6d3a48fbd3c02dc05785962fb0d451425d8e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_cs_registers.sv",
+      "role": "ibex_source",
+      "sha256": "adabb5a3f27140629fbc940bb08ae1f2b95f771e46f44f4a03e29a1f85a34644"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_csr.sv",
+      "role": "ibex_source",
+      "sha256": "6533fffc57e233b3961ebd94722a14a1a4320771ce4a76e69481bf2deb1d8514"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_decoder.sv",
+      "role": "ibex_source",
+      "sha256": "ba04566d91209d1f58d70a63405b137cfa28d76207d2e5bebdd5dcbf2d9fd88a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_dummy_instr.sv",
+      "role": "ibex_source",
+      "sha256": "8899ec7fcd6df73d7ea96ad25e73f664ee2ae2a95b2186a36a7ab885e16e292e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_ex_block.sv",
+      "role": "ibex_source",
+      "sha256": "6451d5cd6af214b5fbb70f7499f898de981188cd7a25bf49247c0819b907c90b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_fetch_fifo.sv",
+      "role": "ibex_source",
+      "sha256": "b4e811b6dd8f6659dc3a2b56a9ddedf0700210652762f1e0dff63e91abbd6068"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_icache.sv",
+      "role": "ibex_source",
+      "sha256": "83f21bc20d21548c51a958e396e0ca8ceb02541c9ab6963f770a1ea38db75db3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_id_stage.sv",
+      "role": "ibex_source",
+      "sha256": "16a39447a94cc6e0a96c4dcacb8a34064577b7bb426a93729fd82bd6ff37a8c5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_if_stage.sv",
+      "role": "ibex_source",
+      "sha256": "ead80ddf0a8fe83e42a8d62657b30d582c7548f7f1b0093994b44f457d9c8cc0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_load_store_unit.sv",
+      "role": "ibex_source",
+      "sha256": "cf32b24f749d7a1ad8e2675ed5747fcabade6595d99621cdabf6c7990611130e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_lockstep.sv",
+      "role": "ibex_source",
+      "sha256": "583a22824f4841dd216e4f4251bdb5d8e91f7cd733a29a8debe4258978767e0c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_multdiv_fast.sv",
+      "role": "ibex_source",
+      "sha256": "c86ca819b58b8ce2fc4ff5db887346bcd622b868fb7815fa07dd77119c68c04a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_multdiv_slow.sv",
+      "role": "ibex_source",
+      "sha256": "88b7392d3e2cd1f67f2c39b7425075030c78646cba2409356d6cfce262a46db6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "d79438e9c857d94552b02af03c725b88d2cbf5c9c165c6fa0632b92c3e26e26f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_pmp.sv",
+      "role": "ibex_source",
+      "sha256": "a564fb312d5337b0875d16f434e8b69348e12c2560548fad93f9270f9c4b9176"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_prefetch_buffer.sv",
+      "role": "ibex_source",
+      "sha256": "2f5fa22949c9b8089d8b7918997ac544eb0e039a17a19b68818492d4199607d1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_register_file_ff.sv",
+      "role": "ibex_source",
+      "sha256": "05f5ae9879befbe1d40c72e4a6bcf16fed6f90e8f6f1c8cbe9056ba162f2d378"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_register_file_fpga.sv",
+      "role": "ibex_source",
+      "sha256": "85fc2800b2c3f62f8d668bc5df9b694500fb15465caa442e8dde5cc00f6567df"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_register_file_latch.sv",
+      "role": "ibex_source",
+      "sha256": "e9036eb7514f3d13405d91748263a3485ce74a6f1fec0ab4c2063b4f3cd8fe6e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_top.sv",
+      "role": "ibex_source",
+      "sha256": "1475b460d389987a860f991431eba62be684185a060a1bd9505d386cf96d4360"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_top_tracing.sv",
+      "role": "ibex_source",
+      "sha256": "002345de6bce08003ab71fd343e2488d0c763ac02d1380844c34c5a18f80caf3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_tracer.sv",
+      "role": "ibex_source",
+      "sha256": "79be99271bf4eff371fb81aeb192ef8dee7e56af6ea9645e7302912e37db6eef"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_tracer_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "135213c082f5efda224653c45ec1421c13246cbb6ad14321c47df55560e9a5f5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/rtl/ibex_wb_stage.sv",
+      "role": "ibex_source",
+      "sha256": "a07086b5200d7ee08b8ea19b6ccac55fb4bc4b0d43e76e826833419da263023a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/bus.sv",
+      "role": "ibex_source",
+      "sha256": "b24c2cbe36cee25230c61d533258a66707ee03c7c3857cc97494c8d95a2a2953"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/fpga/xilinx/clkgen_xil7series.sv",
+      "role": "ibex_source",
+      "sha256": "e7c307ddb6cec44f07cb66fa0cbe45199b5701b6dbbce8e559c5954350ca2fe7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/ram_1p.sv",
+      "role": "ibex_source",
+      "sha256": "a59dcc87134665e879bc99da507eed03f8fd3dd501e30ff3ad898c28bd658c9c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/ram_2p.sv",
+      "role": "ibex_source",
+      "sha256": "c479f3814048706cdeea24138c465d7cc4d3129326568deaa3590c66df0465a5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/sim/simulator_ctrl.sv",
+      "role": "ibex_source",
+      "sha256": "a56bbcdbee206d4b3e54c798c9a3295b4ff0772988231d59a2727dace4fd7e8e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/shared/rtl/timer.sv",
+      "role": "ibex_source",
+      "sha256": "c4fda0e19686f167f242e5dbb0686c92c89c896d8630832acfc9c9f6cf6d7613"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/custom/riscv_custom_instr.sv",
+      "role": "ibex_source",
+      "sha256": "856ada6da0a8e9ded932b3db135171c38d5b71848e3c1dd18dfdef8c5bf638bf"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/custom/riscv_custom_instr_enum.sv",
+      "role": "ibex_source",
+      "sha256": "4ec8449a16363d62aec52e0f1ad4c84425502b95c82f7e757bd147efb3af6bb2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/custom/rv32x_instr.sv",
+      "role": "ibex_source",
+      "sha256": "c8090a0b50dc5a9bdd24c04f541c67dc683923396c5003c966ee82e687b77336"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/custom/rv64x_instr.sv",
+      "role": "ibex_source",
+      "sha256": "944e77a12c0b037120eda364bfa583e29ef83d9aa9f1972b2ae21f417e8febae"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_amo_instr.sv",
+      "role": "ibex_source",
+      "sha256": "16325d293832a757d82d1dee94f700b705bae15d7dcccef7906b531d29d894c4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_b_instr.sv",
+      "role": "ibex_source",
+      "sha256": "afa5b6789068b3d5113a410168004e3654df5f4502a943a5a12c4ed4ac2bff99"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_compressed_instr.sv",
+      "role": "ibex_source",
+      "sha256": "6f7dad71e459642d68e2e6996a2aa36993b991b8c54a55897edfadfed76b8775"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_csr_instr.sv",
+      "role": "ibex_source",
+      "sha256": "f8906c6f02aef4197646c7ed4e7425ebaf9e1302607cd97622bd4bcb58a34e0c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_floating_point_instr.sv",
+      "role": "ibex_source",
+      "sha256": "90b349a7ea4af570824a902d7c735c1227ca1648c3fd722975829b2e1c5907bb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_instr.sv",
+      "role": "ibex_source",
+      "sha256": "62430c1aa7dee9c42f6c79642a24743d5e355b73021f9b6df9b6027f7b804bbe"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_vector_instr.sv",
+      "role": "ibex_source",
+      "sha256": "23f87a73babb916f084a8cfa56c808d2570038da02910658fa44cef2c543ecf7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_zba_instr.sv",
+      "role": "ibex_source",
+      "sha256": "45534599f5d6d8ac703ecb5c93867c700a7c437270a5d5a0d277ff08ba0e71f7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_zbb_instr.sv",
+      "role": "ibex_source",
+      "sha256": "c00f35d4785fa88126d2c9b9422f824965e15ff64abf5da8ff4ea8b1ab4ec523"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_zbc_instr.sv",
+      "role": "ibex_source",
+      "sha256": "8f7dea06d3636fab2f2f6c6c50ee9145692c3b3d7ae0d0e7889c9eef05fe5b72"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/riscv_zbs_instr.sv",
+      "role": "ibex_source",
+      "sha256": "356aa7dffdf3b10a9f7e2a0d84f9bb176e0b8b5b8e69c7a6dcfbe8deddc71903"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv128c_instr.sv",
+      "role": "ibex_source",
+      "sha256": "97b19c7f820d51d194f3121e622427a6058aba097149438a51a9a1a09f948e0d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32a_instr.sv",
+      "role": "ibex_source",
+      "sha256": "003a20b22700cb4b1862232cec5b094d3777a8414271845ed046a2d804787edd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32b_instr.sv",
+      "role": "ibex_source",
+      "sha256": "f692fac985b00f18bbad01a49b666b2a4b9dbd65975a9ccdcf421d906540e2a8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32c_instr.sv",
+      "role": "ibex_source",
+      "sha256": "b0289a333bde473fa098835cde01ed7ce27912b4aadc8a1d7cc3aa3161783c95"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32d_instr.sv",
+      "role": "ibex_source",
+      "sha256": "0d5bd323785710e98a5dea54ff827d664b41e224606ddc3c632ea17c43963738"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32dc_instr.sv",
+      "role": "ibex_source",
+      "sha256": "ff3101cf1f3ab03d12b69824e01765e4f6d30512a8242a10f741805ad0d11e10"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32f_instr.sv",
+      "role": "ibex_source",
+      "sha256": "93ef829be9dcebfe09aea33e48dcaf570c47fa322b75ee474270e9e26a023160"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32fc_instr.sv",
+      "role": "ibex_source",
+      "sha256": "37c5504b0ba1aba4bf4563cfef94d72247c332591fff18636ec88602c6df3bfa"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32i_instr.sv",
+      "role": "ibex_source",
+      "sha256": "3fb342a99cde8c0ab8a30c2828d57376fc1a213e54df5458ce898145e1a0ed85"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32m_instr.sv",
+      "role": "ibex_source",
+      "sha256": "fa9f26573a96d909d8648cace38ce59806a7fe7cf4dc3c46a8e5c4fff77660a0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32v_instr.sv",
+      "role": "ibex_source",
+      "sha256": "bd3a53981270b1c64ea492b7d098a3e377b277ead394d6f7f628763bdec9cbc6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32zba_instr.sv",
+      "role": "ibex_source",
+      "sha256": "49c6094a53d3ad728a417bc43f6115f9cee41dfe16887cccdf4f09d1db60f97b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32zbb_instr.sv",
+      "role": "ibex_source",
+      "sha256": "c14d1ff64265492b97f003e60e63f3381b52feb08ab38316fcf5912b0de04c22"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32zbc_instr.sv",
+      "role": "ibex_source",
+      "sha256": "18fb2496003b0db0652570393de3f9b6bf9133c2cc8bcb71203d9ccca777e70b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv32zbs_instr.sv",
+      "role": "ibex_source",
+      "sha256": "13a118c402dc484ddd285c516b9b3514116493d16c118ea54f6dd5188a987978"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64a_instr.sv",
+      "role": "ibex_source",
+      "sha256": "89890fa7382cf21049b9e7d55e7afa28a1e6023e8403db302a98dde253c064ab"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64b_instr.sv",
+      "role": "ibex_source",
+      "sha256": "739e6dd65fbbf41e803a16032ce63e6f4f5221425afefcd16cd6457b97ecf609"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64c_instr.sv",
+      "role": "ibex_source",
+      "sha256": "c20d2ce3052f73df4d648e2ee3d3cd4af8bb7db7fb47a3caefa07b4d9076d0d9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64d_instr.sv",
+      "role": "ibex_source",
+      "sha256": "82b7fff0d5b4e772a29cbe26390f92811248ef39f7750b4aafd65e2382f275b0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64f_instr.sv",
+      "role": "ibex_source",
+      "sha256": "1d6875daf1695b46fe245032da42e56e85f77d3d0a53edff5521d8a39bd67fe1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64i_instr.sv",
+      "role": "ibex_source",
+      "sha256": "6ff36c685aeb29f4ad0ef2ee35357dce7107342bfcc33eb64167461e67468383"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64m_instr.sv",
+      "role": "ibex_source",
+      "sha256": "1fd079d7124ee8173ab65ee5764822a10227d6394fd117f9198c224f0e1f4098"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64zba_instr.sv",
+      "role": "ibex_source",
+      "sha256": "d44cc1f1d00b91380ca4f8bd71888f65aacca596ef0aac8df5b9ff9ef9ca1695"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/isa/rv64zbb_instr.sv",
+      "role": "ibex_source",
+      "sha256": "e6437f1913ab6c9b9e980280bd7d49657f5620656c31b3e41ddcf16c4797d16e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_amo_instr_lib.sv",
+      "role": "ibex_source",
+      "sha256": "5e94c1c01944f4a447a4feccc30fe57957be76591c02278ee2109336b739f547"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_asm_program_gen.sv",
+      "role": "ibex_source",
+      "sha256": "bcf964a648a037e3624b9615192aecb1d011f5d109faaeec492b5ee84fb71d60"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_callstack_gen.sv",
+      "role": "ibex_source",
+      "sha256": "f044de715bad59a413bc48523b03f6178e853d789c1aa91eccf5b450f1a2c517"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_data_page_gen.sv",
+      "role": "ibex_source",
+      "sha256": "43f573b4fed7ca6983b3881a8f6ca73f8e1397e75e3dcfa5c7d6f9f381d3b3b1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_debug_rom_gen.sv",
+      "role": "ibex_source",
+      "sha256": "f71c5a1ff0f73a1af2ebc5ae557d057a10ec1de314ca9c2b50608cbcc215e3e6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_directed_instr_lib.sv",
+      "role": "ibex_source",
+      "sha256": "86f0639111ef9128c9db713ed9f8391fbd32b4a44122b5f2feaeab5be0cd2038"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_illegal_instr.sv",
+      "role": "ibex_source",
+      "sha256": "076130445188d1efbcb81e05958454447120b680d2b27e5235937e18121b2a6c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_instr_cover_group.sv",
+      "role": "ibex_source",
+      "sha256": "456258ce6384cb678388342e92606a2a728f08f060a1b35868b44899bca9e530"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_instr_gen_config.sv",
+      "role": "ibex_source",
+      "sha256": "3e223d4d1e84a0ca93b35477f80b7f93d3cd9cb55b2c6a63ecaeb3dbbeb5d10e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_instr_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "6f4db52e89c067f931f49015bffb339e3b9f78e307049102187c851f754849da"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_instr_sequence.sv",
+      "role": "ibex_source",
+      "sha256": "adf309435b4c63f09f25e45090b7cd9f50f9b354c67c8d4c6ce4095d85f65cf0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_instr_stream.sv",
+      "role": "ibex_source",
+      "sha256": "20d4bc0ec4c192da267b72d147d7088a81636c498b17404a59d3411d2da30a49"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_load_store_instr_lib.sv",
+      "role": "ibex_source",
+      "sha256": "b23d9f21cd7c796004c4a16d7776ec1e9ae0e7f251e78a0c31e2fb2852f71f4c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_loop_instr.sv",
+      "role": "ibex_source",
+      "sha256": "d5f76e003f1fac8f5692f9068e5a444a171f415b2ab8c596da97b1d129dd2ae1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_page_table.sv",
+      "role": "ibex_source",
+      "sha256": "f7944cf2f21bb972448c39d585a484e71b8cd6a298c1aa6ce1e6a1a07d2d561a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_page_table_entry.sv",
+      "role": "ibex_source",
+      "sha256": "28251d5f63df04a89240f6bfdba56a782b3f11ad417af99311137eca531ad765"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_page_table_exception_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "2d89eb1f784bff45ba97cfc5d3d0b96db2217c1344e1fe889eab9e6007799f2f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_page_table_list.sv",
+      "role": "ibex_source",
+      "sha256": "46e7fe05e3869880e6836ea612c370c770d5c342efdd1fa0f06faa2c8b169471"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_pmp_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "055c3fedc134c00ef3fc07425f5eaf83f49340888b8c562a90ee1b23c20ce193"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_privil_reg.sv",
+      "role": "ibex_source",
+      "sha256": "e03dc8c2c55665bd5637a25a3132c137ac7d56c492897e2585dc81ee4fda9d62"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_privileged_common_seq.sv",
+      "role": "ibex_source",
+      "sha256": "b9d72569804638630a45069ad5f35605d0e9cfbf306ee1914c63467a66b56fd9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_pseudo_instr.sv",
+      "role": "ibex_source",
+      "sha256": "8e507a45be7c2431a45fcfe2b682e04a565e39478f1066d72749d759bbc5bb62"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_reg.sv",
+      "role": "ibex_source",
+      "sha256": "f04da6d8733d2eb490fe597b0209e4ceaedfef497648edc8077c6fc306c65d31"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_signature_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "f0b41c8cefcef9f5af287405ae72b586246acaca5356bd0e191fc46fdc191314"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/src/riscv_vector_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "cecd717cac453584ac8eb871ce3b4406ea542b52e96300fed3249d4e0b287599"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/ml/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "e8d1909b54ead0c49567f15879da2628cab231d1bb525f8f332335e7cfa23a95"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/multi_harts/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "c4b0297e4d0507640a53187cf1cba2f482a11be33a588d1c2d76ce4b0351b81a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv32i/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "30cc7198fb35cdfc9db3be0039ca59374b98975976ae5c9ef9094ab0c7573eba"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv32imafdc/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "1621583ad9e4043c15253e9e6c3bb0f7c5a3b50fe7309e2bab46dc80b24ea7ee"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv32imc/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "ed893f01a09bbab7b5afe062b9efca597f8a3ae0e56547e41bbd2f70a778937f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv32imc_sv32/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "3fe8063dd707f19525fc19e3a8ed7c88d2d2244803b372cf40df1d814e0aac9f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv32imcb/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "776020d7f050a200fe069d9b112a4180cd1a9a3aba2074b1d081ba2719897b09"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv64gc/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "9b4112470077508f07117f8234d079679b39fc04354c97a144886e36e797627f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv64gcv/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "9897eb9ea30fc4d63e33775cc1fd1b7d2388d458fef1784b91b85fcba0825d58"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv64imafdc/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "9b4112470077508f07117f8234d079679b39fc04354c97a144886e36e797627f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv64imc/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "f6772e67a8bdea4ea8a273519a0e44bd8c17dd92bc7df66e49c908503bf394eb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/target/rv64imcb/riscv_core_setting.sv",
+      "role": "ibex_source",
+      "sha256": "f6e8144e6a175a6a9c786dc7773a416f1568e13bfd97efcd97dc57c861ad0c6c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_base_test.sv",
+      "role": "ibex_source",
+      "sha256": "10b48f156c402379d2db28226df0c5eefd2595d67dd0e90fa0468c6d17d05928"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_cov_test.sv",
+      "role": "ibex_source",
+      "sha256": "6b781e5a16e3611c7e17d8d730f07949da2c69f38b72d4727526a47f80ab4bb4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_gen_tb_top.sv",
+      "role": "ibex_source",
+      "sha256": "dd447c2b2b43c8620ab7c9691c6e9bb2ea441b3416857520e0347530df0cd49c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_test.sv",
+      "role": "ibex_source",
+      "sha256": "ee58abe18c6c67d7949f561d721673cf6831c0f0f9fa3694b32991d60e8d6247"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_test_lib.sv",
+      "role": "ibex_source",
+      "sha256": "4861da018bb5286077459b7db6d34d8b2792dce559277f120805535d764e0019"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/google_riscv-dv/test/riscv_instr_test_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "52963f54ca7e654dd7575cdc530e558a6d07b039a0e04e3273f290cead6e4509"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/clk_if.sv",
+      "role": "ibex_source",
+      "sha256": "77b8d22f22e90abf34eae50ed858d2e262fb54249f18b8d6c8276a67b89ac988"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/clk_rst_if.sv",
+      "role": "ibex_source",
+      "sha256": "85868b2613ccb6e6d40dac3c79da422ff5e3d8b3f7cb62e3ec80c26539a7395d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/common_ifs_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "b7e10f46bb5606f158dd7a32bbfe9e79b2161012cbf332351ef8c76271e0da01"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/entropy_subsys_fifo_exception_if.sv",
+      "role": "ibex_source",
+      "sha256": "03be2e3211af5161fadd13bff97576f0af9f9a0ec88877de00f4bc4df8f338a1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/entropy_subsys_fifo_exception_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "140c7dc0b70be679444833b5dcb873014bb4eceff0b6baa234178365ee3fdcae"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/pins_if.sv",
+      "role": "ibex_source",
+      "sha256": "3d321b31be503d12f1af51b33847a0d523dafcccb215e8f00ef6327e1871ec2d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/common_ifs/rst_shadowed_if.sv",
+      "role": "ibex_source",
+      "sha256": "ead960de3ae4cb4f4e378ffe75e8322807e7532b9efc949f92ad6b4bc543dc51"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/csr_utils/csr_seq_lib.sv",
+      "role": "ibex_source",
+      "sha256": "e9c6c09f0bf38efa54ad41e923ba98d8b2de135c3009b36c57ac27a3d5bbd3f7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/csr_utils/csr_utils_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "050c0984dabbee3d63773fd5a32aa92a5d112266650601e9652205d11190660f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/csr_excl_item.sv",
+      "role": "ibex_source",
+      "sha256": "440d919b9363d275ffd9dfeebec56b52f59d03b4877d62f2f12c386757df64c9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_lockable_field_cov.sv",
+      "role": "ibex_source",
+      "sha256": "d90fac5272e313552545e645ce6c130b41eff1f0d628ed1fc1fafa561a88c4a7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_mem.sv",
+      "role": "ibex_source",
+      "sha256": "62c4e65ced717fcd393ba0b73082874152b4f6a99162375626dc680e56c10b37"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_mubi_cov.sv",
+      "role": "ibex_source",
+      "sha256": "2c779a5352d402b09a37b36bd9d216937cb48d71b05d0fd5f59d4f319b5225f9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_reg.sv",
+      "role": "ibex_source",
+      "sha256": "e0e94cb85e2a341d589cebf3f62f5759e6eb4f7da4d3593383d38c7a1e1474ca"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_reg_block.sv",
+      "role": "ibex_source",
+      "sha256": "337cb3568de7ed9d9551f2cece8d2ac5ed2f27c4286bb91cadcd79c3904bffda"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_reg_field.sv",
+      "role": "ibex_source",
+      "sha256": "192b96351e224de1b83ba4546cb76e790fcda56f3192012c31fa69a10b81415d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_reg_map.sv",
+      "role": "ibex_source",
+      "sha256": "62603a407ba3415d803626de6725df2e8c91541cf36970d32674d136717d23c2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_reg_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "ad322dbff31eabc913bdac8f5725ed079731efa93e6daa24fe6628a1213d7dd0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_base_reg/dv_base_shadowed_field_cov.sv",
+      "role": "ibex_source",
+      "sha256": "7c91829b6d6a5b28d8790d8f15f6a12e97d141fe9d5cb648f48d5f95948a0782"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_agent.sv",
+      "role": "ibex_source",
+      "sha256": "006f487596fa4af650e40d34053cd6672cbe6231592a9f92a7310891ced895d3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_agent_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "baf0244664dda9eac3e79b885a4c5668fe4e8b3804e8ec5653ba43f4ca8c39f2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_agent_cov.sv",
+      "role": "ibex_source",
+      "sha256": "5432f4a5859e58f41d40493f7667d2f120f1881212e35eb531bc2f3ef2adbf4b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_driver.sv",
+      "role": "ibex_source",
+      "sha256": "00be9a9d5bfa7b555f2905f35ace6a9619d49badf7627462179be8866c806782"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_env.sv",
+      "role": "ibex_source",
+      "sha256": "77d8c74b0637831212db7a42500e615c7e1ba2df7f1e04e7323e9fc46a093444"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_env_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "266c4d9dc2b2cfe3a76ca364a4e80d575765d60bcfcbc458b8ee453d63290c98"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_env_cov.sv",
+      "role": "ibex_source",
+      "sha256": "ab81615eaebe92ecdec44fc51bc20841fffd537962046bd7744cff771fb6590b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "13cfdfddb613436739e89c499291bd903535b65b554154df44e5ddd8cac8ba16"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_scoreboard.sv",
+      "role": "ibex_source",
+      "sha256": "c65be7a54f49cda43e89c51a034e0e6f3370855cc3e398d5e34aed2f0275a7db"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_seq.sv",
+      "role": "ibex_source",
+      "sha256": "3a5ec00023976cebcab19456977db5e01c64fc8cc425b0aed6ac4b8e6773189c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "68adde04e7234bba2a2fb09e5de79ae1042b4e302c21b2996906b653688482d0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_test.sv",
+      "role": "ibex_source",
+      "sha256": "94c7247a4f2a6fc1eff75c23501e9b319102b6cfd2fe983702aad0ed2a9973f7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_virtual_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "44c274dd45ac817ca296795f0a349d1c71641d7e6e0c636a21320992a5fba660"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_base_vseq.sv",
+      "role": "ibex_source",
+      "sha256": "7ac9757eaebee08418749a50cc6b4622cce976611653325ba6ba5b6965646213"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_lib/dv_lib_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "47460459aaa1c9789ca307ee44753d119fdaddd807a8e67d4b0a64ba6b1def14"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_utils/dv_report_catcher.sv",
+      "role": "ibex_source",
+      "sha256": "f98328ad7e79173fb6da9d855d09ac9f373f7dba8be6b7c262280f92fc810e0d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_utils/dv_report_server.sv",
+      "role": "ibex_source",
+      "sha256": "c5cade354d043ae891a3ec5092d51a81bf2bbbb5b15cd7f70f3a35f343b99200"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_utils/dv_test_status_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "3c4b8504aff3d40f9c382306c4e792f239178ae0e0d03a8b5ac30559be768929"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_utils/dv_utils_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "eed85dbbc61c125c710107fb7dea7f90097516363503528f7fef1849f7706527"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/dv_utils/dv_vif_wrap.sv",
+      "role": "ibex_source",
+      "sha256": "93c41fd1bb119e7ad87f2437448a11784a44ed3d565740c40854e6449ebd65df"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/mem_bkdr_util/mem_bkdr_util.sv",
+      "role": "ibex_source",
+      "sha256": "a5cc762dae561840e72c73eb90c2834ded5eaa26be526574ad7d113365d51b79"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/mem_bkdr_util/mem_bkdr_util_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "d4fbcc3389f766908237186f436bc55592adf3d90434205cfabb565c6d56acc1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/mem_bkdr_util/mem_bkdr_util_row_adapter.sv",
+      "role": "ibex_source",
+      "sha256": "ef4e634e967ef2d06be369f0c8dbc6e7eb87740228c51c3d07f76f7ccb51c72f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/mem_model/mem_model.sv",
+      "role": "ibex_source",
+      "sha256": "9132b14c7f3d40587a1692e949dde30767444964aa23a176a9f39838b9eaf46a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/mem_model/mem_model_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "15c869d300116061b586189a17dff06411ba25f934d163ad30f938d19705b719"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_agent.sv",
+      "role": "ibex_source",
+      "sha256": "9f874be355a76160aae58b86ec462d85dc24b4c1565a24d72766e2c7309a29c0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_agent_cfg.sv",
+      "role": "ibex_source",
+      "sha256": "3c487050d886374a93ad0189bb2278864515389887f50382869f2f461481750d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_agent_cov.sv",
+      "role": "ibex_source",
+      "sha256": "a09b42581e4b5d5c6f66cca89610f26397af9c5df59e375b095cafde5e4f9cfd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_agent_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "60eedff91fd359117eecd586f3449f8ad91d5649e78a8468ead0ca35dd24ce92"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_driver_lib.sv",
+      "role": "ibex_source",
+      "sha256": "6604840bdb1cd7ce0d1d0774f92ce80eac1801e44a684640fe733adc5f5936bb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_if.sv",
+      "role": "ibex_source",
+      "sha256": "a46db3297c9cd6e7926159b97ab472be3e582be5fb22a4d9b13f2bb821de9d50"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_item.sv",
+      "role": "ibex_source",
+      "sha256": "c46a8e4b9171ea6119e833d959faf4cb7a9ba3fd8735e331bb5feeaadf81bea2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_monitor.sv",
+      "role": "ibex_source",
+      "sha256": "0f5a6c2438fda9a9295d30516b1a7c1e8e71141b29eb93d254fdb8f450545c53"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/push_pull_sequencer.sv",
+      "role": "ibex_source",
+      "sha256": "006e52d07d810a634635a37dd3b0d020a848524cb274c408239244fa37a2d572"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib/push_pull_base_seq.sv",
+      "role": "ibex_source",
+      "sha256": "253e929b888a062e170427aafb85eb17e0aa2eae991055e6e75951eba6d55825"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib/push_pull_device_seq.sv",
+      "role": "ibex_source",
+      "sha256": "9a2033905c66ebdb3c97ee33a634cde5d19fbb7b6abfe7db3d7cdc9f520ace96"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib/push_pull_host_seq.sv",
+      "role": "ibex_source",
+      "sha256": "4fc94587456e7525f889fd97425d2d132023848c6a1e9fc65b9dfd95e0f58cd7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib/push_pull_indefinite_host_seq.sv",
+      "role": "ibex_source",
+      "sha256": "58ae351ee3c68191bbd949833192ff873eb7fcf7d8fd2ae80f5d716b85779387"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/push_pull_agent/seq_lib/push_pull_seq_list.sv",
+      "role": "ibex_source",
+      "sha256": "b8bcb6e0278ceba00519c024e9b806e1387df6f6ea139f74898d66011e64fb28"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/dv/sv/str_utils/str_utils_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "34278338f0c3425dbd9d8dbeea51238698ad93e5ea32e24c34221137a72a5f71"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_alert/tb/prim_alert_tb.sv",
+      "role": "ibex_source",
+      "sha256": "fce6545a256d075bc139b2c7b334f9a4c18fd88b464ba85baaf1ceb9f79ed7d8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_ascon/ascon_model_dpi/ascon_model_dpi_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "01c08e62cb72539529d138f4ff30e0be2e460e933b4d4a26c13eb8010626aea4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_esc/tb/prim_esc_tb.sv",
+      "role": "ibex_source",
+      "sha256": "adc71850fdb64b5c52f0411512cfdfbfdcd07d5baddb7d7f36408ce9399ad4fb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_lfsr/prim_lfsr_tb.sv",
+      "role": "ibex_source",
+      "sha256": "008fe0f8cfe60771727d171ed8bd075ccb3d1f64fd718fa1e12a7b491dcd9e6d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_present/crypto_dpi_present/crypto_dpi_present_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "0d505c4adf01021fdd45eab4ba439201fa18d1d454cc33ce339d5061fc63b530"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_present/tb/prim_present_tb.sv",
+      "role": "ibex_source",
+      "sha256": "da16813ea6d87f2bebe20621c616a02efc783acf6d492f5bcd9f95a344c2ea50"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_prince/crypto_dpi_prince/crypto_dpi_prince_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "09b0941a70ac75c62fbbcd2c6ba66fae4342dc94fc4878401a858452737d78fd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/dv/prim_prince/tb/prim_prince_tb.sv",
+      "role": "ibex_source",
+      "sha256": "fca2399d73cb019763556f7fcf875b5cf46d12f032e1bafd6010c1408ef34746"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_async_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "1186c2adcce884a6c8b3aeace853b666e8b4a847dbc893eff80847d009ae2292"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "03eb55cb1f7c08692d8f5d6bd1fb38eb59e39fa2df8687e9b9d55e6b8da354de"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_async_fatal_tb.sv",
+      "role": "ibex_source",
+      "sha256": "76fb6454050daced27062ea5c06ef0e477989630dd7f65d8291e0040ee0c103d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_async_tb.sv",
+      "role": "ibex_source",
+      "sha256": "ba319eb52b357c499a9da2913c2cdcee6c7bd2e1ae212cf5495d88961f75d519"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "3e96a6e7d7a5f56d1481a5148a19938a354ed4c9227ecdb11501ca27cdbd3234"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_fatal_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "15bf9bfc099f0b99f4e1bb35aceec8126f3e280152bf5e4f3e13b59bc9659f64"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_fatal_tb.sv",
+      "role": "ibex_source",
+      "sha256": "3a54540a5440689291482a27a5cbea6f04bf8c496731c6023663b82be31f99ae"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_alert_rxtx_tb.sv",
+      "role": "ibex_source",
+      "sha256": "5533193a04960a60250fd816cfcc5fbc72d163b2ffdd2d1524eaff3569af6f9f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_arbiter_fixed_tb.sv",
+      "role": "ibex_source",
+      "sha256": "5df53e41e977e8cb9cfdd56265257a432481898baa1df1c2485b5f71273319be"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_arbiter_ppc_tb.sv",
+      "role": "ibex_source",
+      "sha256": "174497f38d7cd1df069e62a74854ccd285e5df30fa8fecad52e96f740f8039ac"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_arbiter_tree_tb.sv",
+      "role": "ibex_source",
+      "sha256": "6859957bdb0064aabb279888c760c7bd0d1ab97c0da4db30545bd74f06825ded"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_count_tb.sv",
+      "role": "ibex_source",
+      "sha256": "ca29d44aa56ed8d768ed0ac8542f6167eb8b9ed3b1c654d0aae1ab6863765452"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_esc_rxtx_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "15cc853b583ba9ffa8daf68ecfdf404d3f417ec8d9c8b1e36585e181bc36bd31"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_esc_rxtx_tb.sv",
+      "role": "ibex_source",
+      "sha256": "d68c778555bf46d58b8de64ac8b31556f5497d96f9192974cfefa861a7c67cd2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_fifo_async_sram_adapter_tb.sv",
+      "role": "ibex_source",
+      "sha256": "636be6d59ca47fb3c431cdf1bd782bdb4b613374471cd4ea68c1f7e02410d708"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_fifo_sync_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "da9604c484686d86df8c5b16d464f462bb64efb9cfc881c1948d6bb5e4736083"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_fifo_sync_tb.sv",
+      "role": "ibex_source",
+      "sha256": "d2e348e827e4958d9a665707f28478c9658de5415fab8558bffcc782b1e30a82"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_keccak_tb.sv",
+      "role": "ibex_source",
+      "sha256": "2e833eb0a4b562a9bf09b9c05acac5316aa1b8e160e9a0711de1e57538b0f323"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_lfsr_tb.sv",
+      "role": "ibex_source",
+      "sha256": "e43d078287df5950fd78d33d60c6a02a60666caa3ae5cb877d42db8da20c33ee"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_packer_tb.sv",
+      "role": "ibex_source",
+      "sha256": "a69d994507dec68874b9cfa0847d4517c16ba23b554cf66b2674c11196914b4f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_22_16_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "57f523dda6ea17854b24cfbbfc207949434f3042ed40588e45bf70cf7889ec06"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_22_16_tb.sv",
+      "role": "ibex_source",
+      "sha256": "6d5d1dc11b1c561a0199a0ef02ee1046119604ae4c2adba362d5181e3248f0df"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_28_22_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "002df3b4d6dbead440e736d95324e61e498a9bbc57f5052dabe6d0b8426edb12"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_28_22_tb.sv",
+      "role": "ibex_source",
+      "sha256": "39519d5a3cd66bcc01f7820470e94ce3c5d6703bfa92971d1e0cf7b3fd27c19c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_39_32_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "4b81774a3574d72e45dc777d829f405e8404ba1aa20990bfd72d8093eb24b8f6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_39_32_tb.sv",
+      "role": "ibex_source",
+      "sha256": "76f245aeaac93d5766b79c708f2014e32de5b53001d04c66a18d1b8189b7b215"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_64_57_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "c3e685d48343e3f7903312af8799d474d747b5fd3b215e6e0437b37fbc7f5884"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_64_57_tb.sv",
+      "role": "ibex_source",
+      "sha256": "d6ace5a19a0aac07d4db5f126a9522372828ef3da6d4727f5c17f4dbb27cf45b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_72_64_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "057900978cb678cf82a86651ecfc5c427792a83c4e43211059a74786d4a58d4b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_72_64_tb.sv",
+      "role": "ibex_source",
+      "sha256": "bd20c75b145bd7e81bd6b15f848ecfa2aa6d141ae84d96c4826f0f40f51c2150"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_22_16_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "386a7b0bc8775ce2f41cd3065737133a77336b575629da66194fbea961a7c7f4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_22_16_tb.sv",
+      "role": "ibex_source",
+      "sha256": "b41b40faff1d5bde58e4061205de5d8e98051d885dd27be2b2babd2224f85041"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_39_32_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "3224ebff8519a45199df7a5ada34f95b6482533521aa99b10902f3879567da1f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_39_32_tb.sv",
+      "role": "ibex_source",
+      "sha256": "fbd753a5fbad3c9bc93048cbe3eb4f399a5cfc970babf9ab8505d031f98c135e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_72_64_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "e3c947f163665760892a04b60430f049546c69461cad24dfe2b9466f9f4398c1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_72_64_tb.sv",
+      "role": "ibex_source",
+      "sha256": "3fe749c84e130d37c06fa3e59bb53a00ec301c9d1afc87ab6494bfca4a48cb22"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_76_68_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "03aa168cc525fbb8df1f6f7be8c6d88a6b62f63cdfe6c9333c411d61089e206d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_hamming_76_68_tb.sv",
+      "role": "ibex_source",
+      "sha256": "cba14c267c55aa77d1014a66a11b58e2f26af9ee6d63b5e5986c96f9f7d1edba"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_22_16_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "f4ee3098fdcc63c78f3ff1cac602f0c5cb5bbd40f3991ea09b122978a1a234a7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_22_16_tb.sv",
+      "role": "ibex_source",
+      "sha256": "e606af9f2129e3c7c595d30910c1b1f0f5bd419344da5dd0cb7e270c6887e906"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_28_22_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "6238c260fb8d6d8d8fe423db6432e5318b0f41c84741061ec03761acec8c86e9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_28_22_tb.sv",
+      "role": "ibex_source",
+      "sha256": "36a007ac891e15e69b4c104f62d6f704f9c31e5f43564b15d421d63a687a8595"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_39_32_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "8dbdc318cb6569e31a14f12be7a44f6c4a311d96ea4a2d755f32a6104a053764"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_39_32_tb.sv",
+      "role": "ibex_source",
+      "sha256": "8b1d485f6a3179830a2aaecc1eae3a3b64d7a143744d43851fef91b03038d89b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_64_57_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "b8531e40499aa99f51662640c6135273953a07fa0a2ecdcbd86f57bf9d61e6d4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_64_57_tb.sv",
+      "role": "ibex_source",
+      "sha256": "b04f34e0dd5dcca2958c6bf062eebae1b787049a8202bc0b9708df62fc6690b9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_72_64_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "cad8e36095e7cdd2a74bb6ce4aeb2f20ae5ea99e60dd4a879d4404d08992793a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_72_64_tb.sv",
+      "role": "ibex_source",
+      "sha256": "2a62fc42a6c22e9a09e7eb9ef43246eead01e01aa4523aba15479e4d5732a5b4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_22_16_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "f1866ba175a1fb79dc8455dd02ee2d76d2fa84f62b2a7be10043758e88b33b81"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_22_16_tb.sv",
+      "role": "ibex_source",
+      "sha256": "cd944d586f4641bdbaa854bdad2398a82d12f1287c53716201ee7a2f55ebbe00"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_39_32_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "186ab6bffb870f182d11376246791e5e1a2e81399230979d47dc370331cffb5e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_39_32_tb.sv",
+      "role": "ibex_source",
+      "sha256": "213f7090196e4c011357339617a50e0442728b2d079b381c099ff18b32044074"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_72_64_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "ca7378b0b30afc4ece2a0f7e66bf45c98b5948a8497e4822c14123f77c110066"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_72_64_tb.sv",
+      "role": "ibex_source",
+      "sha256": "d4cc29059e1381577fd47d2a6dd8d7f7926cad1884cb65e6631ab494e70711db"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_76_68_bind_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "694d76d34d3dda0f3cfc6324778e511e5ffb9b5d9c7acdf4b7eb7caa6dc1cd67"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/tb/prim_secded_inv_hamming_76_68_tb.sv",
+      "role": "ibex_source",
+      "sha256": "154066b019416c15fe1a468eeb49559aa8711c1ae6c483cb00a6c438c2167eb9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_alert_rxtx_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "4736677a1572bc13e20917e62403452aa2b835d34c56274ba9f69980d1c9460b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_alert_rxtx_async_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "bd5e35f337608ba5e29a96c9c8f4d581ada7f3b664c54b9649579cd249b8789e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_esc_rxtx_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "e07a48829b1f023122c74e5832736927e636a294d99a460d8f82a9a38d63b9e7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_fifo_sync_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "b4e0c45cfb66e6929445427d4cb583541ea06e7020d3959ffaf5f9c23a40da8f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_22_16_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "ea23ad27bda9c8783b43d72c9ac497715f6918c121752cb464d19d7b4b52ebf5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_28_22_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "11d27ea46cd5cecdf5b7d7cfdfc717c010d98e371c5cc19c9b0ac813c44a2df5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_39_32_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "32d1c13dc133cd34c871f913a90ace9139e381982b27bd654832e03b610955fa"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_64_57_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "471dc7e429830254f5c6ac7b1e39aef9382a935ee5798b2b9c41cef27d4c3d25"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_72_64_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "0f2c7f25980ed4a3e04f1feeb8eec16dec0573ae6eba5734de26aaf466a31c52"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_hamming_22_16_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "82bbd57d3f355da79748fa81b169e1c7bff2f5694b1d51c0e10b1417f2e0ea0e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_hamming_39_32_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "84d6326429ecc3f4fe410a64642769b3a7ffd3b2bb1ce46e60b678ea085a271c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_hamming_72_64_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "25b9faae8998ba0ce9b45fe23990465955282d1e5243c2b2135597d175b40037"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_hamming_76_68_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "69dfd124026800dc9f45e3b8fe3f60da5e4615a57609cc0288b9f9a71136cb95"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_22_16_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "b1faa5660dfc6c3bd49bea630430340687c2eeb4a0761900de1b63a6cac506dc"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_28_22_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "94ea70bb2428e7256d4d54767bc17abbb2f6df6f86d53dd4c90a7c421f56d6bb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_39_32_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "2e1fc5920fc93e0c4fd5ce3200aca555d2b901e3732974f97cd2fdcee63f7d3d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_64_57_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "f9929625ecde892aff61256ad52a1c40491f710089ac624bb56a6a94b773dd92"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_72_64_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "6a8f84aa221f7ba1757e7af136d865bd11b6332b2a4e8a4091d1208447d35cee"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_hamming_22_16_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "8566ab0bd295d9afaaee23fb7e42bc9f68d86b43cc69c04edc54bf879264214e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_hamming_39_32_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "734b6b4a61dc3f1ad5a9f40e23eb29ed505ffa73fc95d665ef70f77b0b4c452e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_hamming_72_64_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "bcddbf3c266eef50f93648fd181dc713a97f55ee2078a3faca6b4c33f815baba"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/fpv/vip/prim_secded_inv_hamming_76_68_assert_fpv.sv",
+      "role": "ibex_source",
+      "sha256": "acde607f1c6893eb6076c980c8d5c56945e460121c17392cd748a8d9c289fc9b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_ascon/prim_ascon_duplex_tb/rtl/prim_ascon_duplex_tb.sv",
+      "role": "ibex_source",
+      "sha256": "6353db93797b819b5918a0aac393f4544dc1c49e722503e3debdad093c888985"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_ascon/prim_ascon_duplex_tb/rtl/prim_ascon_duplex_tb_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "4b3100ccc8a76f9ec3927800d491deaa86dfebb4be6ba6bb7df0fabb355bce83"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_ascon/prim_ascon_round_tb/rtl/prim_ascon_round_tb.sv",
+      "role": "ibex_source",
+      "sha256": "6e6ab7f81f5084554ce9c9524edd0967422d00c7d826db2ad311fb407ff8173c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_crc32/prim_crc32_sim.sv",
+      "role": "ibex_source",
+      "sha256": "1eace780db800deed80af7d33b143cd4819c25ed1f9f94dff8c0610d7ec50719"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_flop_2sync/tb.sv",
+      "role": "ibex_source",
+      "sha256": "57e383918b9e152337e56d0c0e678dc267206d02c4d1a562fd59b541dc1c9c1e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_sync_reqack/rtl/prim_sync_reqack_tb.sv",
+      "role": "ibex_source",
+      "sha256": "78eaedd4810b25907f10e786cd29f67aa82e06aae1b7e5d03e7dc1be1f6b4ea1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/pre_dv/prim_trivium/rtl/prim_trivium_tb.sv",
+      "role": "ibex_source",
+      "sha256": "163c3882fcc51afd658ca6e9d9d5f8133341ec16db7a329ce7502889694d0039"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_alert_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "32d9e1647d61bab570c41c5d61b7464c29925c9d38f03d0648b626e8ce42c1f4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_alert_receiver.sv",
+      "role": "ibex_source",
+      "sha256": "939ef1b7c657fe26c9c44baa02fc24e9f1874caaaec22433383106561dd29f61"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_alert_sender.sv",
+      "role": "ibex_source",
+      "sha256": "288561001fd344dffb0d935cf85de264ca16e1296f1f30fdc8386659a9683b98"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_alert_to_diff.sv",
+      "role": "ibex_source",
+      "sha256": "f84e19ec71add865fd2ecf4a35cf3c2d105cf31e9ee4141f0e5276ce4336a8b2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_arbiter_fixed.sv",
+      "role": "ibex_source",
+      "sha256": "17cc878a5e7846d7c558c49da2fd45cecdd1014c389b0e50741f523ca62fe582"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_arbiter_ppc.sv",
+      "role": "ibex_source",
+      "sha256": "11d292fc6e20c7962e22b8cd5325b7acb2a08bedd059f9244268e6b08b0a61a8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_arbiter_tree.sv",
+      "role": "ibex_source",
+      "sha256": "cad891e0479a377896ecbcddaf6dd7d5b9aa6e5b18ba23654b61795fcf3083e1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_arbiter_tree_dup.sv",
+      "role": "ibex_source",
+      "sha256": "6bc08dc541b6682c2976af4c7ef5e4367f92528c604d912ddf8e2202ffa792dd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ascon_duplex.sv",
+      "role": "ibex_source",
+      "sha256": "b393860ca6465059f96e335dfabb7e59543cda31556a94e592f91b4b465a5927"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ascon_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "42ffc160b86e0b2ab51bbfd35ba422f1a369cd7e7a5d055c73e486df422e087e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ascon_round.sv",
+      "role": "ibex_source",
+      "sha256": "a778ef853e5689a02c46b4e5943f7da905e937df73662484aa24fd38e2f5fc13"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ascon_sbox.sv",
+      "role": "ibex_source",
+      "sha256": "c2008c23371e4d010f41e06612acb017c2d476bb7fb541a01432fd38c290bcf4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_assert.sv",
+      "role": "ibex_source",
+      "sha256": "d717d5dbcba3b5aa8a731ef9f8af18b036b49edef282f0a43a51f5ad2dd9bb40"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_blanker.sv",
+      "role": "ibex_source",
+      "sha256": "14792d96db2f0ea69d14aa89bebc53c3f822d2c6e6f7ab5cfbdadae531775a00"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cdc_rand_delay.sv",
+      "role": "ibex_source",
+      "sha256": "6b0f9f46a5559a354c9770e6eb7a4721b50b09d40d34b4efb62218c7a777829c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_cipher_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "9cd66bdbc64020e3fe1f14a5baee30a93609b7887a9d21df7991929087b0973f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_clock_gating_sync.sv",
+      "role": "ibex_source",
+      "sha256": "aa0783c5253ab607ea436193e520f82168bd926504f62eaaa68dd3f1c8e2edd7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_clock_meas.sv",
+      "role": "ibex_source",
+      "sha256": "50ccc8f117ec65aeb09906b4bc29d48cf5c02ea7370c438be580eaddea58024b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_clock_timeout.sv",
+      "role": "ibex_source",
+      "sha256": "a67b2adab3eeaa7893c4039b23371dff67245bc48a0391655449909e2c1527eb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_count.sv",
+      "role": "ibex_source",
+      "sha256": "b48580aefff674a48a674489c9b21a98d5399ca5b4c7623f3a7c907a75d8f0cb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_count_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "8e465ed25b7d59f29faf0f315243a774cf0e50d178ec2068d8c71983cb2f18df"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_crc32.sv",
+      "role": "ibex_source",
+      "sha256": "3b5cda9e6b2622320f88cc2b84077e6d38e3cb5af44bc71c211a99273eb9fd9f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_diff_decode.sv",
+      "role": "ibex_source",
+      "sha256": "e3ed6f83329589eed061c893d8b9ad1e00e975e23e9347ed31f68b50f0822d6d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_diff_encode.sv",
+      "role": "ibex_source",
+      "sha256": "ad20569f853e3ed67df0cdc4f1f9ca843023586292d4ada17207d9f96bb649bb"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_diff_to_alert.sv",
+      "role": "ibex_source",
+      "sha256": "054f968e07473be95624c2478061463c1c1fe0dc77930d55787cdcf0f208b90f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_dom_and_2share.sv",
+      "role": "ibex_source",
+      "sha256": "31d20ed656e7f79976cbd688d94123edd0c60dd816d98d979d027e981529323c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_double_lfsr.sv",
+      "role": "ibex_source",
+      "sha256": "437a24dacff2360c4392dd9d38650030b2122c35fbe207a4aba44b277a11fa97"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_edge_detector.sv",
+      "role": "ibex_source",
+      "sha256": "a4df5485f3f07427990b672a3745a9d94581479371b98f60903bf9805907fb22"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_edn_req.sv",
+      "role": "ibex_source",
+      "sha256": "2ee245e6c5469224ad35a2a53cd3a83ca2a5268277e9df5d7b819b8bbaec7fd1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_esc_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "113834e1cc58cc6d656c4e9ecbbd9b9bb8a37e39623d8ce2b26d1aa17c399704"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_esc_receiver.sv",
+      "role": "ibex_source",
+      "sha256": "96ba9b0a2fd33c274e818ceb50a934dd8399a63a9d7a6222fa6f694368d9b418"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_esc_sender.sv",
+      "role": "ibex_source",
+      "sha256": "048948b089946822e8f2bc0b54ae81fb21a48e522b1c7bd97adb6894eeef8d01"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async.sv",
+      "role": "ibex_source",
+      "sha256": "0fde480a5f513a4273540e0d70c7502d0e179b759414e3020c8d4d3d349cf6c7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async_simple.sv",
+      "role": "ibex_source",
+      "sha256": "4a7e4c2543194473227cb93f7d6de71bdaa2136d0abafbd0fe40e980fd1cf21a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_async_sram_adapter.sv",
+      "role": "ibex_source",
+      "sha256": "1fb4405f2aa48894d9afe63775e14904bca8d4df8384f5f430757a8f5f290e0f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync.sv",
+      "role": "ibex_source",
+      "sha256": "2655befe56a70ee672c2f1259a82ef2beb2adf429ed0405bcf26bea7c4de3630"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_fifo_sync_cnt.sv",
+      "role": "ibex_source",
+      "sha256": "be647efa36aa4228db8a9151ac07c83a95cdd9aef71a4488fa619a876d809fbc"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_filter.sv",
+      "role": "ibex_source",
+      "sha256": "a93454041ca882103395f8b1ce418591368de67b6e60edd395a8a158494c554a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_filter_ctr.sv",
+      "role": "ibex_source",
+      "sha256": "770a3ae13dc5fc389cb0ab513ab2becc9f1521ea83f55ce4eb517c77b1a7dfde"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_flop_macros.sv",
+      "role": "ibex_source",
+      "sha256": "2e8e6c2ee484899ae5d0020eaf0c9732c31537c60c30cb2a0a0acd2e92baee03"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_gate_gen.sv",
+      "role": "ibex_source",
+      "sha256": "594a4771feae6fb32de390d94d523da90b3ac8ab0a9889216753365d3f3f4c9d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_gf_mult.sv",
+      "role": "ibex_source",
+      "sha256": "c7b6b77c522631c1f5b4e3a397a9a69419c185449d69a72b4819a4b121e7e642"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_intr_hw.sv",
+      "role": "ibex_source",
+      "sha256": "2fb312f9db786982dd4c2bb656f9ba7862637b045dd704ea128a4ce6a4a1f8bc"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_keccak.sv",
+      "role": "ibex_source",
+      "sha256": "2aa7dd8714b01f0c0783c7b87a729517e4f6c94c8c0ac82143fc0fccd817cbfe"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_and_hardened.sv",
+      "role": "ibex_source",
+      "sha256": "dfbc4283e2e2b75da76f3ff28638d4201c050705edf1dfaf11da053e6b8bf29b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_combine.sv",
+      "role": "ibex_source",
+      "sha256": "ade8d17d3545d85e33dde1e242901b9e9097b11685ab2e0092d71e67a4d91494"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_dec.sv",
+      "role": "ibex_source",
+      "sha256": "1990feea62731786986fae7e8397da7d420eb7ebd4dd79c5aea64c18a8204970"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_or_hardened.sv",
+      "role": "ibex_source",
+      "sha256": "a132bfaf28c7bf8398bebc84628665a69f0eac6e981f9df82cc95f7e84332d9f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_sender.sv",
+      "role": "ibex_source",
+      "sha256": "7e3b1c3e02ea343bffbc6e2fca1b9f15d6834e885173a199cefc333f5449966f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lc_sync.sv",
+      "role": "ibex_source",
+      "sha256": "d6b6e2235983c86ac3e2c07528640e4940ead70c9b3ac5a08a484b5b8cf07d2c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_leading_one_ppc.sv",
+      "role": "ibex_source",
+      "sha256": "5fd9c8bc227da9d599e6f7cdf7acf75214c7e0e776e0e30892be6fc9d71106c9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_lfsr.sv",
+      "role": "ibex_source",
+      "sha256": "c61632878728613ba0403f2d068c03a5103165663b58d8dd50892ef032dec916"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_max_tree.sv",
+      "role": "ibex_source",
+      "sha256": "4a53784c66d03b8ab9f9fba5c36a11391783e1809002bca8be323617e4064562"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_msb_extend.sv",
+      "role": "ibex_source",
+      "sha256": "64bdd05aabd4d7fa5cb2f2fb2d59f66b74455e93f37c956f00fc65fc20713df9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi12_dec.sv",
+      "role": "ibex_source",
+      "sha256": "7e30e02744c255717d0094fd0b3cb5d77caf4626c5704dce37ac5c86c59d5d50"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi12_sender.sv",
+      "role": "ibex_source",
+      "sha256": "d57946855f6d5674f557b84976189449117f4f17014a7eca0fa716f8e990d012"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi12_sync.sv",
+      "role": "ibex_source",
+      "sha256": "44a06e1eb454387e104c51621dd99e5840d4b187ea7fda74bd8b5e0a824206e1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi16_dec.sv",
+      "role": "ibex_source",
+      "sha256": "34ae5437446015f276f09e30c515a5538af44fbe5617f73f61b464c613dccc20"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi16_sender.sv",
+      "role": "ibex_source",
+      "sha256": "cafef386918aee0fcccbaa1a36bf4c11b15a0051c8f94742d926a09c834590a4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi16_sync.sv",
+      "role": "ibex_source",
+      "sha256": "27d63c260b986b0db77b90a4f26d0c165f7451f01b60bbf48f3b7601059bb913"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi20_dec.sv",
+      "role": "ibex_source",
+      "sha256": "99a296946f4547c4907840db35dc8d65e7d61d20cbd8120e6f8e3bc3abd49bd6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi20_sender.sv",
+      "role": "ibex_source",
+      "sha256": "cda878555930047822ac382e1a19e2db5a31bb2dddb8f920165bc8d515e0b7d5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi20_sync.sv",
+      "role": "ibex_source",
+      "sha256": "5c582e50e12a201d5060a85fa33e1de2298804ed3d273334b66c58240f2dd190"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi24_dec.sv",
+      "role": "ibex_source",
+      "sha256": "677c30909b141e0f9adaf579ad4681ece28892b8911a1c85d7c11ca866bb7d8d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi24_sender.sv",
+      "role": "ibex_source",
+      "sha256": "9748a85ac3dd716d09be4047718dac6e78f7a1e23a03082fb95158abcf3367de"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi24_sync.sv",
+      "role": "ibex_source",
+      "sha256": "5072f6c7b6ad93ca1362fc84e986e994ca9d7e80c621fd6b14308d71ad675c19"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi28_dec.sv",
+      "role": "ibex_source",
+      "sha256": "64ae1fc075458e4cab87f8d7a665f548f78e1cbffb05b43041e48d7b941010b0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi28_sender.sv",
+      "role": "ibex_source",
+      "sha256": "0d036039d7d48b9fa614b93803167b0f1bc2dae5eb7aec2b3a6f33f39084c6ac"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi28_sync.sv",
+      "role": "ibex_source",
+      "sha256": "d55a1857dda0a0de5a1fbfc0af3860e1731df8cdb030c9da0efe6e654dd7d70f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi32_dec.sv",
+      "role": "ibex_source",
+      "sha256": "75dbc715d66adb61c72ecfa4747192317b0a036be240a9bfeedd52bde30a6932"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi32_sender.sv",
+      "role": "ibex_source",
+      "sha256": "b4dae09251ff294afea4532ed5e7205dbf52d4265aa75dc90d1b003e22f7fdd6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi32_sync.sv",
+      "role": "ibex_source",
+      "sha256": "66269bfff124800e2073a423bce9922ebd0f865d39608d40803b23397e3eee5b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi4_dec.sv",
+      "role": "ibex_source",
+      "sha256": "b33530adf41b05849d06424a40db5536dfb5ffd441752bf49af03ad3d7b5f48e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi4_sender.sv",
+      "role": "ibex_source",
+      "sha256": "2bd763ba3f489b406de68e6759650fe2ed7fd875298ac0adff71e70234993b39"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi4_sync.sv",
+      "role": "ibex_source",
+      "sha256": "8d6461687bb7f022f326875e401a271f1bf6df3a7a87bf625508b334530c20df"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi8_dec.sv",
+      "role": "ibex_source",
+      "sha256": "e34268f75dd36cc0bf6cce710e1ebbd900cb253fd977a394a84eaf2f19f52956"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi8_sender.sv",
+      "role": "ibex_source",
+      "sha256": "cfd926dd909081b590aade41fac9a91cb72c2493defb870cbaec45153f3aa951"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi8_sync.sv",
+      "role": "ibex_source",
+      "sha256": "2f0b9d5f5c95e0338cda232d61c390136cb0e17696c4edfd842007a6a9fbcaa7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_mubi_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "11a2f1a16ddaf750d859c95e07fc48c54743fe6ad3b5c5eabe2e14a51d9fb1af"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_multibit_sync.sv",
+      "role": "ibex_source",
+      "sha256": "d5f66230a58865d4e5610365a13aea1d52f75eac0772f13075ceb41daf2a7f64"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_onehot_check.sv",
+      "role": "ibex_source",
+      "sha256": "97aefa2e7ebd26e12ea9fc691908a62315e2135bdbb127f3c3d640eeb15096ca"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_onehot_enc.sv",
+      "role": "ibex_source",
+      "sha256": "e9a65c74e4478063ea00fc3d80eaff214fdbacfe07e91f13f28ceb725e5ad362"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_onehot_mux.sv",
+      "role": "ibex_source",
+      "sha256": "adf35f6708fd04cf2a01138033de3f5b23674685c213bcfc39fc3819d04cfa7c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_packer.sv",
+      "role": "ibex_source",
+      "sha256": "fa4558a5e753152bdc4232b6bf83691b9ebfe134c1f5814fea46dcc9bd21941c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_packer_fifo.sv",
+      "role": "ibex_source",
+      "sha256": "99aeb7564474111dc6662488c9f4ca6b788723e449b128d08ac54f8fc2da5cd2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_pad_wrapper_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "af14a8b1331d9c7d46a7d4b3784768868c113407179a6e4db0db5245e2301de6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_present.sv",
+      "role": "ibex_source",
+      "sha256": "7a6ae0e88160d93b5f70460e41806ef2b7b5b5726e2aa8038cf7cfab281d890c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_prince.sv",
+      "role": "ibex_source",
+      "sha256": "e3fa14d45eebe18e6404370540648d1037887877dbde4b22fddd83c2b43d1e0d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_pulse_sync.sv",
+      "role": "ibex_source",
+      "sha256": "1be70031ecf75195f5c4036727626d564e06584da5b510c95e3f295307e2cd6d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_racl_error_arb.sv",
+      "role": "ibex_source",
+      "sha256": "937d7416b3b5035466ac6e3c513823498f7f0d073811d23d553deefe6c13e9e6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_adv.sv",
+      "role": "ibex_source",
+      "sha256": "b69410fc7b7aeaa067d080cbd7fd86074456aa0c212779bfbd3b9f5d3abb7fa3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1p_scr.sv",
+      "role": "ibex_source",
+      "sha256": "823add68b2a538c23a1d7fb05a225ec4a45094508213a65d9ac500ec6fd7eb48"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1r1w_adv.sv",
+      "role": "ibex_source",
+      "sha256": "fb9235297a9467f31ffc7d5111769d8f1cb277ac6bd628fc05d8835520c44a65"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_1r1w_async_adv.sv",
+      "role": "ibex_source",
+      "sha256": "773579fcbd9a435fe56e3220cce33ccdb3e801a4e53953df5bdc90b7c48537d9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_2p_adv.sv",
+      "role": "ibex_source",
+      "sha256": "ed1477024e43be755ba7283cc35c7b61896b71bf7f94a66814f13feda06fb1e3"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_ram_2p_async_adv.sv",
+      "role": "ibex_source",
+      "sha256": "a7715c25807655308e23d0b617e272d2b9f7538e501592c40977bdb0e0bb6991"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_reg_cdc.sv",
+      "role": "ibex_source",
+      "sha256": "be295cb29ace82478f344b8d0fa8fd1f94fe58ebfec1826d44dd450e06027ea9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_reg_cdc_arb.sv",
+      "role": "ibex_source",
+      "sha256": "a09a6f543ec1f1b8052bf953c51664912079c5a08fd7a2dc38568798d56f31ea"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_reg_we_check.sv",
+      "role": "ibex_source",
+      "sha256": "0f38519d831f24bb9a1afc1041f6840eb42187a958788a5256aa0c698819af4a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_rom_adv.sv",
+      "role": "ibex_source",
+      "sha256": "05bd46dd76e46325fa0e053f4e2e2088126cd8397ce5d7feaf53d63278f34de5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sdc_example.sv",
+      "role": "ibex_source",
+      "sha256": "46c4ae470539234f3fb01520e3a7d963b9ad5d4e03ba428cfc97c133d9c75868"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sec_anchor_buf.sv",
+      "role": "ibex_source",
+      "sha256": "073be7f3daa8a738add627e1055704cc94d82cfb8ff11f6952c644abde20c702"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sec_anchor_flop.sv",
+      "role": "ibex_source",
+      "sha256": "7bb3cb240164715f3956831e35e95f1a3e7e901deae02cc1297669318986d7bf"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_22_16_dec.sv",
+      "role": "ibex_source",
+      "sha256": "1db557bc993dab53bcdeeb31a3051b4468f61a489c88387d0e9072c7cacd860b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_22_16_enc.sv",
+      "role": "ibex_source",
+      "sha256": "dc9be87f59567a2a6828de6e38de9f283ac7f48c088c852665e2767cea61fd35"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_28_22_dec.sv",
+      "role": "ibex_source",
+      "sha256": "bc719bdaaae7a7566528b346b2771b4dd907496a4f5a9b6105c0b12edd090598"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_28_22_enc.sv",
+      "role": "ibex_source",
+      "sha256": "7759abde1e32bd8c568831de1a139698897b873592714fd6a3926a35123fadb0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_39_32_dec.sv",
+      "role": "ibex_source",
+      "sha256": "13cbe5fdac6efeba3e92cbddc5c77efa68477996c616984d87f7abe438c2c61e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_39_32_enc.sv",
+      "role": "ibex_source",
+      "sha256": "31b80e9aefe5cc6df99fe7134a39c417809536b29de6892e6382a9ec3374b4c7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_64_57_dec.sv",
+      "role": "ibex_source",
+      "sha256": "473c72849e087ef8ff113034bc0bfd5557cb058a615da6c50dc26721adc1c63a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_64_57_enc.sv",
+      "role": "ibex_source",
+      "sha256": "c955ae516645355d3d095441f2025826a542360c391335e2acb500dbf5f23c31"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_72_64_dec.sv",
+      "role": "ibex_source",
+      "sha256": "b706646195e58396cff43b5256f25a474a180ea18eb483499cb85c649f5ee532"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_72_64_enc.sv",
+      "role": "ibex_source",
+      "sha256": "71c2c5924cf277fd978ab40ccc5eec939f609894ddf8adb3f81144baaa774755"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_22_16_dec.sv",
+      "role": "ibex_source",
+      "sha256": "ed611f2143cf73b7ff540807e41ba45cdc03c4c9b94c005c930ed08a4466a3b0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_22_16_enc.sv",
+      "role": "ibex_source",
+      "sha256": "4a6a3bdd2d466a3fbf9b2d389f0203972291f2b6b9eac089f73b0302bd7fd1a9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_39_32_dec.sv",
+      "role": "ibex_source",
+      "sha256": "1d01e347a42ae0e9de40c8dda1fb557f951c8db7c990ae2ba7c67e14073646af"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_39_32_enc.sv",
+      "role": "ibex_source",
+      "sha256": "d510dc23a3150a5f7b086cb465cfe679279489fc54678567d7889972efb76629"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_72_64_dec.sv",
+      "role": "ibex_source",
+      "sha256": "b6af19127ac10720d328f56f790fff4eee79481321374d3b52d3b432c7fe1bb2"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_72_64_enc.sv",
+      "role": "ibex_source",
+      "sha256": "2f8732b489b9c00993a189348c25766c519269b7bc58a56e4b800a93b8771f02"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_76_68_dec.sv",
+      "role": "ibex_source",
+      "sha256": "98b4a274d14b0f1877308f7fc62f0191ec48350a9376c77622ff12ce2c3f4c63"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_hamming_76_68_enc.sv",
+      "role": "ibex_source",
+      "sha256": "8b524f2e3ea9f481177ac729d8f38ff8bf063b2a4b467551b1a62aac9c1f0a6e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_22_16_dec.sv",
+      "role": "ibex_source",
+      "sha256": "2620fc37a5acfde0d54f0a638d13d3150b3c08acc840ce45a9ae4a24833711ef"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_22_16_enc.sv",
+      "role": "ibex_source",
+      "sha256": "b6df81ecfb12826002fa979c1beae2b8b47e8fa33bd465ad7c6e4784657e8ca9"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_28_22_dec.sv",
+      "role": "ibex_source",
+      "sha256": "06c0dfdf59f2dbfffa7c73e609ae6361c94927a298f13ac6815c9543633b35a4"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_28_22_enc.sv",
+      "role": "ibex_source",
+      "sha256": "15b373e491fba6d6251c241229bd78d2766214771942e3fac0bdbe4cbff720fd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_dec.sv",
+      "role": "ibex_source",
+      "sha256": "f07f26fd2375952e4ec7cfc1641cebcea373a8030d82dd5977a76f81c430cb12"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_39_32_enc.sv",
+      "role": "ibex_source",
+      "sha256": "4588fda3fd5ebdd711c98f6900caaaaddddf1257337c5b931ca86de7fb0ef8ff"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_64_57_dec.sv",
+      "role": "ibex_source",
+      "sha256": "e598eef60254ac4a0e6899f6d1e4af5ae5bbd2ac22395ac53ee925296bc8a826"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_64_57_enc.sv",
+      "role": "ibex_source",
+      "sha256": "74b3b327047b90682468614708bb4b1104b1f069c0dc3189e2b078622ac566b8"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_72_64_dec.sv",
+      "role": "ibex_source",
+      "sha256": "3763fa9e291c0e33217b18cf74b7dd3830f232065a6a62ad21582d6e2bdcfd9d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_72_64_enc.sv",
+      "role": "ibex_source",
+      "sha256": "d7c176fffecdf629db3c2e3958a4ca603e99a995b4aaeab9a2f73ad55e0e2d51"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_22_16_dec.sv",
+      "role": "ibex_source",
+      "sha256": "4fedd80e34009d4e54881ef2358ca3a7fd971acaa8f1621b1832aea6d0aaac3c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_22_16_enc.sv",
+      "role": "ibex_source",
+      "sha256": "74fc5522c24f1f3505a2dc7f3c34adaac07fdb54dce055268a4e2b3df3d6f416"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_39_32_dec.sv",
+      "role": "ibex_source",
+      "sha256": "975eda8d8623f617f9d4e89b948c44e2d657b000596cdeeb9ed62910f6d1e8f7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_39_32_enc.sv",
+      "role": "ibex_source",
+      "sha256": "b63ddfd743b51476dea494af1665433747ce021e0933d6e1e6b7a1b2ca5f9d3a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_72_64_dec.sv",
+      "role": "ibex_source",
+      "sha256": "ee22ebd7c918a537c883ce42c27ad2ab75125e35c6184c5e2dc2b1bd9fd0fb79"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_72_64_enc.sv",
+      "role": "ibex_source",
+      "sha256": "773f02fda14b0c20a41ddae143292b6b422b4b946da5476ea5a61ee97e1fd127"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_76_68_dec.sv",
+      "role": "ibex_source",
+      "sha256": "925fd53e9b06cd4d770f355cd72491bac8fbd21e038b596d778de26f10bc5de5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_inv_hamming_76_68_enc.sv",
+      "role": "ibex_source",
+      "sha256": "d7e15dc949ee0f935e012bb1d666cf1e329b016979e73b5a71f168971e261a82"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_secded_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "bcbd03333a30e7a1cb01195d1c40c7d0e736f91d9f73c2347ef5b0bd9dc3c82b"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sha2.sv",
+      "role": "ibex_source",
+      "sha256": "5744e5abb931036f17cecc20de34358d5fe297e955da7eb29089ac55d65cae50"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sha2_32.sv",
+      "role": "ibex_source",
+      "sha256": "1d850f8f9b6b9415b56b4411bc95c096eea5c7d8daf6202e5276a87233071507"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sha2_pad.sv",
+      "role": "ibex_source",
+      "sha256": "bb915fa003913af6b570a724896c8f877d1640cb32fdbc673a13360a07dbeaa7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sha2_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "7dc41a96fb1638bbb88982abfae26d91949f39d0217d300787c1fb71dda2cf65"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_slicer.sv",
+      "role": "ibex_source",
+      "sha256": "c1e76c9b9d4f740c8de2f52cce3c982e660070b5cbbaa028ed30739ccf13f91c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sparse_fsm_flop.sv",
+      "role": "ibex_source",
+      "sha256": "7c9fdf97523bb5eac16f0d219668811a790c2b5bc591660340e75b1cf429d11f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sram_arbiter.sv",
+      "role": "ibex_source",
+      "sha256": "d0e07972d5c241a8c77cd8cdb87ddf68d55ee9453bca7d102505ee359adfb2a1"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subreg.sv",
+      "role": "ibex_source",
+      "sha256": "25fb080996e7a9f1a8db6b827d57926850324e254c2758a921f4d67d13445992"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subreg_arb.sv",
+      "role": "ibex_source",
+      "sha256": "16530c91931e97b25e33334bfc5942fd254324189115f942585f26f56d8ae758"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subreg_ext.sv",
+      "role": "ibex_source",
+      "sha256": "dc22ea14c164661970db2a76060fc54cbbe1d432534eaadce0caa8a3a2935ce5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subreg_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "a38c3243535348fb4b0e5d233c0baa89eea3588b976d8bb050c7de4a2fd09bf0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subreg_shadow.sv",
+      "role": "ibex_source",
+      "sha256": "1357c2eafeaf4f8a7888c4a5ed1bab9f294714436396aa6878a80cb3c8cd1b2e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_subst_perm.sv",
+      "role": "ibex_source",
+      "sha256": "6cae23ff8a3c6d1dc775c2a55280f532cef98a9a6c787a2d717c50b5854ee3a6"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sum_tree.sv",
+      "role": "ibex_source",
+      "sha256": "d16835741dd2c365736f096073daae89a40567a33072ffbf7eefa045a02b7924"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sync_reqack.sv",
+      "role": "ibex_source",
+      "sha256": "ab0973ffc24c81ea0011f27377d775353862a2acc408b3332fae2271d786d228"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sync_reqack_data.sv",
+      "role": "ibex_source",
+      "sha256": "d1bb023c1ac5f89b63f61b573180add5f16c00db3c4c1ed0854e2408708ed867"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_sync_slow_fast.sv",
+      "role": "ibex_source",
+      "sha256": "77f243af15e393d6cfabd8102c5211b92f52deec51167d53abb1a3f44a0269cd"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_trivium.sv",
+      "role": "ibex_source",
+      "sha256": "1289afb113914afbaf348ab979fbdb3c40d1789b039401c5502c16e471cd1cad"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_trivium_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "6bed629b25a3ac753ecfc910461fe9960b9211723322dc84e63743365b95f37a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_util_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "f71235ef5b92eaa3d2ed5c676f76108082df93b8aae8f9baa816584d1d285208"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim/rtl/prim_xoshiro256pp.sv",
+      "role": "ibex_source",
+      "sha256": "004dd06ba3bf3effea26037a413dade3c66d2c23c72f79d2f16280a8bf09fe20"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_and2.sv",
+      "role": "ibex_source",
+      "sha256": "54d10f2ad40702c020a3074f0d11bd99073e5e6f3bd6cc6d8417b7f159d8a730"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_buf.sv",
+      "role": "ibex_source",
+      "sha256": "9b00bd8ac203169268262ac9337076781fa962b19beed36f28dde54e360aaaf5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_buf.sv",
+      "role": "ibex_source",
+      "sha256": "e986f0bcd51fc81b6cb575f5f00383fde4f45b4ed0c46a822e52631a03dbd893"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_div.sv",
+      "role": "ibex_source",
+      "sha256": "3d2ef35a6e0b2215cbc78b24979c27d916e6757a27d738f86b74c88bbc018f31"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_gating.sv",
+      "role": "ibex_source",
+      "sha256": "b2474320674e645d423f32ba1ce60b25509042d40c2de8fe28dcb7760a8fa882"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_inv.sv",
+      "role": "ibex_source",
+      "sha256": "c1988aec07ae5e38f42465be35500f84e17eb056cb2ae62808b57ec1e8f9be18"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_clock_mux2.sv",
+      "role": "ibex_source",
+      "sha256": "d0010a7d97322a118a3675fec879bdf59179ea6a1036ab6d0001feeada732f72"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flash.sv",
+      "role": "ibex_source",
+      "sha256": "88228b9c56a1d10d6f2c4daf9918c4de21ebebb78bb4434908527b86fba8986d"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop.sv",
+      "role": "ibex_source",
+      "sha256": "6645d657b107b024f9211d3a0134890d1e20146f68ba1772bf62575f7b4e5549"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop_2sync.sv",
+      "role": "ibex_source",
+      "sha256": "5780aef67607c161eb8a4b3326757af5b416eb5337aef0afc457fdebf2891c53"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop_en.sv",
+      "role": "ibex_source",
+      "sha256": "68854581eaa23a57f00c4b49ee0ce972147ffca9f2800da2859d1fe38cc5b476"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_flop_no_rst.sv",
+      "role": "ibex_source",
+      "sha256": "a9bed993f2c26d634359b5b0f8fe9f6e965a78c2a0c4f3c07ca6851ca4b17545"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_generic_flash_bank.sv",
+      "role": "ibex_source",
+      "sha256": "7bcd8912f8754e923813383774ee69b47d6cf9cd79abd6b9fcb15564b8ce1b73"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_pad_attr.sv",
+      "role": "ibex_source",
+      "sha256": "9a38ebec3c38ec34dc9d326fdf48b06f9633b3c0616796115b17c9a1293d8de0"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_pad_wrapper.sv",
+      "role": "ibex_source",
+      "sha256": "93d04f75dc741e31528c3847c767860f91cd2bb79af9a19a7285e9c1f6263594"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "e82d857795b3f82fa08cf9a7cece10629c2e39569d8f6bbeb226bcad62a26930"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1p.sv",
+      "role": "ibex_source",
+      "sha256": "f407382ba9136ce03d8d734c5279f73d2805f7460820f5498bb07fdb3e627aea"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1p_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "f51c6a588ec476b5cb2e95d9e8d19a67551732e9661a0c0933c6fccee8e92722"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1r1w.sv",
+      "role": "ibex_source",
+      "sha256": "734404e89eb8b39af204dc499c244aebc3fd00fc87aadcfc006dd6ec02f5b913"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_1r1w_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "cd0d1006faf18ce7f26de47861494146d0f72872b38be7f0b2564e24d8201b10"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_2p.sv",
+      "role": "ibex_source",
+      "sha256": "2d0990cd5ecd47db750279425b09447640ec881d20d75e10b157320ef3affc75"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_ram_2p_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "118b23a1742bda9193021676d17b9ddf360f68e1ac702107fea1239a6d9ab62c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_rom.sv",
+      "role": "ibex_source",
+      "sha256": "fe959c2fda365fd4e26b6cb02541ab8de1c7808cf1cca23ad87d3d4cd904b8c5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_rom_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "262a631ab5dc148945a0cda36ed4aa6b4f9bd9957ad984c12bd9979644378384"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_rst_sync.sv",
+      "role": "ibex_source",
+      "sha256": "5ea59afe93b02ba71f08f955704e46dd36c2266238f34430fc5bdd8bd5a46931"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_usb_diff_rx.sv",
+      "role": "ibex_source",
+      "sha256": "10b5a865b7f073ac828ebff639838d1a0d3486d4dbc874a4e9aba83ba830126a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_xnor2.sv",
+      "role": "ibex_source",
+      "sha256": "ebdd3179c32a81303227775e3e6ef0afdf8959efebf7a6892d122d4bc6a776c7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_generic/rtl/prim_xor2.sv",
+      "role": "ibex_source",
+      "sha256": "0151c9a85fdf79122a235bd5091a3034f96ad8efbe46d0880599ed02ecf4a66f"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_and2.sv",
+      "role": "ibex_source",
+      "sha256": "58b709b55c0e53434905e9cd5dd10632cbde256a32edecafe2482b14dde0f836"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_buf.sv",
+      "role": "ibex_source",
+      "sha256": "bed1d649efbdf479fe4cd8cdeff8131367d719ed204875f4a46db70ba6668ad5"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_clock_buf.sv",
+      "role": "ibex_source",
+      "sha256": "9d0331f75525be068a6eeef0f034ef14aacdeb547eaf0f78d5f3a8d5ae4b6404"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_clock_gating.sv",
+      "role": "ibex_source",
+      "sha256": "eb3561a174e569f77a0fb9f2cd921544524bd694bc77959e6fe45f339ea7566a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_clock_mux2.sv",
+      "role": "ibex_source",
+      "sha256": "cc61491d0675f2a05a7c17ba9d755f4d29c2a115390270ffece5fd735850fd39"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_flop.sv",
+      "role": "ibex_source",
+      "sha256": "5d0938f09b2e90968e632e1067deb33ba08c312a0aef8ee8b2c116cfb3541714"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_flop_en.sv",
+      "role": "ibex_source",
+      "sha256": "0a4b69b2b8dff2d1628389e6cfc817ea4670406f4ae2cd87fda03fbb09df625c"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_pad_attr.sv",
+      "role": "ibex_source",
+      "sha256": "e65613ecedd1e64bcf83cadc6926b5d38791d8dde19182cbcf3821bbf0bd5b22"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_pad_wrapper.sv",
+      "role": "ibex_source",
+      "sha256": "4f23742cd6f01d3db02f9e40d3d214ac7aba7d335493825225d50f09d39f0e47"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "435e6678fd798fb3abe46168f7db455a9588b102a9d63ab9710fe38cff62169e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_ram_1p.sv",
+      "role": "ibex_source",
+      "sha256": "99d8d9fd815d79d2a2dd1d72393146f9fe680d9366839528bee08e18aa04190a"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_xilinx_pkg.sv",
+      "role": "ibex_source",
+      "sha256": "1ebdd27f0bffbf06f28bbcfe2c057e49db812cb96010532097d840cceda657ea"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_xilinx_rom.sv",
+      "role": "ibex_source",
+      "sha256": "015485d303a1ec0ae0039039931acc1ac2239b6a9c878c12435aef3133a5a6b7"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_xnor2.sv",
+      "role": "ibex_source",
+      "sha256": "064de8167a4177e821252f22802e997532b5576947e07d7b3021e472cb67925e"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/vendor/lowrisc_ip/ip/prim_xilinx/rtl/prim_xor2.sv",
+      "role": "ibex_source",
+      "sha256": "ed71e68abece2d980e207261839a09e434465ae205cd5f208ec7241868b87ceb"
+    },
+    {
+      "kind": "repository",
+      "path": "Makefile",
+      "role": "implementation_input",
+      "sha256": "b073d865fa589e854ad152e49c169cc79f72ca8f3c67f180554a6edc6791e7e7"
+    },
+    {
+      "kind": "repository",
+      "path": "adapter.py",
+      "role": "implementation_input",
+      "sha256": "907a6b929b10223c2cf432c76cf34ad62673b92c638ae8ab38533514f050ca90"
+    },
+    {
+      "kind": "repository",
+      "path": "adapters/ibex_adapter.py",
+      "role": "implementation_input",
+      "sha256": "65512e69db8dbd012ddd7da84c73c92dd9065c7cba861e73278273614ce44c4e"
+    },
+    {
+      "kind": "repository",
+      "path": "build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v",
+      "role": "implementation_input",
+      "sha256": "b2cbc993734b362a0d811ba442fcd2ce5e4c7206397ef04b3f3720a789e65d07"
+    },
+    {
+      "kind": "repository",
+      "path": "build/sc_ibex/ibex_alu_wrapper.v",
+      "role": "implementation_input",
+      "sha256": "5d512403de819d18a8445a3ac953ecef2c1984f4fea238a00284efcc3d05f2ed"
+    },
+    {
+      "kind": "repository",
+      "path": "build/toolchain.lock.json",
+      "role": "implementation_input",
+      "sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45"
+    },
+    {
+      "kind": "repository",
+      "path": "designs/fetch_ibex.py",
+      "role": "implementation_input",
+      "sha256": "ba85960ec5b8cfd84ae7f257155baa091485c9c3c29909199b4a12ea719439b4"
+    },
+    {
+      "kind": "repository",
+      "path": "graph_extract.py",
+      "role": "implementation_input",
+      "sha256": "bf6c3c56bde992c66991cd9d868a7d34ce8faad9ce74bc22fa1eb7574e23625c"
+    },
+    {
+      "kind": "repository",
+      "path": "graph_match.py",
+      "role": "implementation_input",
+      "sha256": "4f710456bd61f76eb8d487fb0f8527d155acc165ad3c6b1ce044d04549e4f262"
+    },
+    {
+      "kind": "repository",
+      "path": "graph_merge.py",
+      "role": "implementation_input",
+      "sha256": "17f7826f5cac5d4526c70c4a1105ceff202b7fb22ed0adb6944882b25eb2023b"
+    },
+    {
+      "kind": "repository",
+      "path": "graph_viz.py",
+      "role": "implementation_input",
+      "sha256": "7169f7309ca8160e3bb8a34491948c5150fbe03fd0249e8e47741d9aea163ab1"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/capability_add32.sv",
+      "role": "implementation_input",
+      "sha256": "1c0bbf6d316328b547aa65a9ff3fd5936316de4c122db66819dd246cecbaf0ea"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/capability_add64.sv",
+      "role": "implementation_input",
+      "sha256": "296bbd32501bab89f9477401f5fd0bc53bbd1ea6e26b6e4f799800d105e9cef8"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/core_10ns.sdc",
+      "role": "implementation_input",
+      "sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/core_add_u64.sv",
+      "role": "implementation_input",
+      "sha256": "dd2b111758204c807385d57dbc57c9ca7dfe2067d391039f9263d9b6d66ed529"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/core_fused_add_mul_mac_u32.sv",
+      "role": "implementation_input",
+      "sha256": "09bed2bbae4ae5cc00a53a1c1e13c27d4ea84e87d24e351e45fe7249405b602b"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/core_mul_u32.sv",
+      "role": "implementation_input",
+      "sha256": "70a29c8bc46a00cfdd85e97df6514d0c3790585530d7d9e156c5608fe2d38c02"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/fused_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "3f1c06ef825d71be73f0ba57db9f71454a38b7ec2f4f8b28fae7f967a589db55"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/generated_fused_10ns.sdc",
+      "role": "implementation_input",
+      "sha256": "9eba208c2233cbee657e2033f544496efb6d8cbd585e095d7fa69619b257b6c9"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/generated_fused_add_mul_mac.sv",
+      "role": "implementation_input",
+      "sha256": "826b8457951747509e4328f407e9431f9b863057f4aa45a6991d0263480b09fe"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/graph_candidate_add_mul.sv",
+      "role": "implementation_input",
+      "sha256": "80bcb358d1242b42cd75ad1125ce1a7ac8244ca17825ba33f73c38cc373c9e7a"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/interface_separate_add_mul_mac.sv",
+      "role": "implementation_input",
+      "sha256": "18e30a49a97265487f49332542bddf491fe930205f5a13ddb488222d49b035f5"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/mul_add_10ns.sdc",
+      "role": "implementation_input",
+      "sha256": "c5a194bc9f4d8127ee5747a818cc4f791a1f66d5462c9d3466fd0b942fe22ecf"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/parallel_add_mul_mac_baseline.sv",
+      "role": "implementation_input",
+      "sha256": "c4d5b859606e96f4d7c2e3d2d8a37079f49d450e7256cb130427750d0260dc28"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/ppa_mul_add_dut.sv",
+      "role": "implementation_input",
+      "sha256": "a2a1142c391e107c033f7f4bb32f3d8ef34b466d576b9ef5eb580c207c6de2cd"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/radix4_reused_adder_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "166ea67082561a8472cbb041883308160653a11c5cb47e87221fbd929b82e9ac"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/registered_parallel_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "b70b370d792db14f310e88662e7bad52bf03cdbc6dd749b13fa4e1a404449916"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/scheduled_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "f29899914d0e82142e78a90f12aac7f5d1c5dfd7bf330398d9c695a1c0deae57"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/separate_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "18376cdcc42d3a97105b2be520ee6dbd43d561e76f06cac413e05a9300830106"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/shared_iterative_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "28207e75c810f3b08d2f87ee3fc345a6936b2fc826db95a51fac1961401f0a2b"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/shared_reused_adder_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "7654ab16009f2d44908bcbe9168006c8963852719ba9a125f67af61658f07d8f"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl/fma_experiment/tachyum_fma_single_wrapper.sv",
+      "role": "implementation_input",
+      "sha256": "01493d0ef16942479fcc0f45a9cc4b7cefdf70dd4638995e8ad833dee1836c70"
+    },
+    {
+      "kind": "repository",
+      "path": "rtl_generator.py",
+      "role": "implementation_input",
+      "sha256": "3bfd8d1661ec862893ea9c4635ea4ada7b5d9ea141759cd7f77f7b25355cf27f"
+    },
+    {
+      "kind": "repository",
+      "path": "sc_flow.py",
+      "role": "implementation_input",
+      "sha256": "1d553661707896a767cc0f9618f32d063f3fe7d21159ee0d72737e321c10f45f"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/collect_meeting_evidence.sh",
+      "role": "implementation_input",
+      "sha256": "1e52599270eb8bf322714126d334007cbc497584d16c8eebf432c4f6e330b086"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/graph_roundtrip.py",
+      "role": "implementation_input",
+      "sha256": "5023ce8ebb994ae19e37d45c0ea72c08090cbdf39df537a68f696eb3e9be1124"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/measurement_guardrails.py",
+      "role": "implementation_input",
+      "sha256": "b4760b237de19385c0b2ed0e61ca7d94e5570bc97bf86ae82c0ce3b6e38ddb12"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/meeting_cache.py",
+      "role": "implementation_input",
+      "sha256": "de495d6cd31d52407ba56fd4fa299d30c7d1bba14cdfd74a8f76bfc29e483bd7"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/professor_meeting_demo.py",
+      "role": "implementation_input",
+      "sha256": "ffd6ebc4bfe4a59c9ad056999ac95cacfefe1090970c468b55230add35083568"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/run_fair_baselines.py",
+      "role": "implementation_input",
+      "sha256": "eb1233cfae0e83bd189b34f467fd5cc01c61fab31995f14018cfbd3064db3223"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/run_fma_meeting_demo.sh",
+      "role": "implementation_input",
+      "sha256": "51f05f7534c83e6cb9710e4fd6319e3552a321984b226404bbf3a3647c1a667c"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/run_fma_ppa.py",
+      "role": "implementation_input",
+      "sha256": "925b208960e829bac77a43d62198b31b3065b0cf4b13b2e734116f3280881f9f"
+    },
+    {
+      "kind": "repository",
+      "path": "scripts/timing_opensta.tcl",
+      "role": "implementation_input",
+      "sha256": "6e9bb8f06af2d4dc69c5885ed310cf8735bcbbe0760868b41a862c88d30fd92d"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_core_semantics.sv",
+      "role": "implementation_input",
+      "sha256": "db3cb8a69c96f9c356325bfa3a7c46d6764923dda71705b5a656c10619d26aeb"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_demo_alu.sv",
+      "role": "implementation_input",
+      "sha256": "b4a2ef86ee7295870236354c93025098ba126655610b540fb1944bde07abf7ee"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_demo_variants.sv",
+      "role": "implementation_input",
+      "sha256": "ff4aad14abd05d533b7d158a8ff9bc5bdb7a89ea0bd94032014530339d155566"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_generated_fused_add_mul_mac.sv",
+      "role": "implementation_input",
+      "sha256": "76c874ec30fe4d91aec3d32ce2b1deb166c5dac595f515c5fc5e1b9f0c4d16ec"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_ibex_alu.sv",
+      "role": "implementation_input",
+      "sha256": "8e362a366c6fcd62fe2114005bb8a0f0ad97eee3c9a0f81aab1594e65dc9be17"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_integer_mul_add_variants.sv",
+      "role": "implementation_input",
+      "sha256": "283b3d8984ee7c247e7a9b9d9faa34ccc9e7f921179c640bc509a1c38b4eb3b7"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_interface_level_compare.sv",
+      "role": "implementation_input",
+      "sha256": "760d4bc8aa1a3b9b0f7e56b2e63ae098dfa84f17f3c33e7c09f740483482b0d4"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_mul_add_ppa.sv",
+      "role": "implementation_input",
+      "sha256": "84e4b7258136a6221b4b497c6da0fc38685e8d19530cf0153f4485d3ed188ca1"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_shared_iterative_mul_add.sv",
+      "role": "implementation_input",
+      "sha256": "2ccba1a4c2a6bf687d365f27355a7caeec16087b613ca06c835e1e8a4a461309"
+    },
+    {
+      "kind": "repository",
+      "path": "tb/tb_tachyum_fma_single.sv",
+      "role": "implementation_input",
+      "sha256": "10dd6cc172629f5843d6cf83d680c7e5a98876cf0947834d817f1bc622c96f44"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/.svlint.toml",
+      "role": "implementation_input",
+      "sha256": "1d43b3e171d8e0e9bcff639310c2c38a6f3a7c615531155ac91fdf4c3a5cb913"
+    },
+    {
+      "kind": "repository",
+      "path": "third_party/ibex/flake.lock",
+      "role": "implementation_input",
+      "sha256": "11abef456c3d40bf021b3c63f4b1e25ae8c965c875abf1b946b640e185830f38"
+    },
+    {
+      "kind": "repository",
+      "path": "toolchain.py",
+      "role": "implementation_input",
+      "sha256": "43945f21232af09333610bf06a3e252c84b44f5abf63fa1bef0f3f0aeab7aee4"
+    },
+    {
+      "kind": "repository",
+      "path": "verilator_flow.py",
+      "role": "implementation_input",
+      "sha256": "85f3317643a263f50db578f72b047fae16d3152e403d6d7bfc8b7480c73e1d1b"
+    },
+    {
+      "kind": "external",
+      "path": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+      "role": "locked_library",
+      "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895"
+    }
+  ],
+  "schema": "professor-meeting-bundle/v1"
+}

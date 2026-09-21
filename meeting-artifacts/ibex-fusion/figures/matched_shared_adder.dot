@@ -1,0 +1,53 @@
+digraph merged__ibex_alu_sub32__ibex_alu_ltu32_rtlil {
+  graph [rankdir=LR, fontname="Helvetica", labelloc="t", label="SUB/LTU structural candidate — shared adder highlighted", fontsize=16, nodesep=0.25, ranksep=0.6, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, style="filled", penwidth=1.2, margin="0.08,0.04"];
+  edge  [fontname="Helvetica", fontsize=8, color="#666666", arrowsize=0.6];
+  shared_00000 [label="not[32]", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  shared_00001 [label="add[34]", shape=box, fillcolor="#dbe9fb", color="#2f6fb5"];
+  a_00002 [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  a_00003 [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  a_00004 [label="operand_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  a_00005 [label="operand_b_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  a_00006 [label="result_o\n[32]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  b_00002 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  b_00003 [label="not", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  b_00004 [label="xor", shape=box, fillcolor="#e2f0dc", color="#3f7d35"];
+  b_00005 [label="mux", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  b_00006 [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  b_00007 [label="2'b01\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  b_00008 [label="31'b0000000000000000000000000000000\n[31]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  b_00009 [label="operand_a_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  b_00010 [label="operand_b_i\n[32]", shape=house, fillcolor="#ffffff", color="#333333"];
+  b_00011 [label="result_o\n[32]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  a_00002 -> shared_00001 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  a_00003 -> shared_00001 [label="2", penwidth=1.1, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  a_00004 -> shared_00001 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  a_00005 -> shared_00000 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00002 -> b_00005 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00003 -> b_00011 [headlabel="result_o", labelfontsize=7, labeldistance=1.4];
+  b_00004 -> b_00005 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  b_00005 -> b_00003 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00006 -> shared_00001 [label="2", penwidth=1.1, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00007 -> shared_00001 [label="2", penwidth=1.1, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  b_00008 -> b_00011 [label="31", penwidth=2.9, headlabel="result_o", labelfontsize=7, labeldistance=1.4];
+  b_00009 -> b_00004 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00009 -> b_00005 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  b_00009 -> shared_00001 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  b_00010 -> b_00004 [headlabel="B", labelfontsize=7, labeldistance=1.4];
+  b_00010 -> shared_00000 [label="32", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  shared_00000 -> shared_00001 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  shared_00001 -> a_00006 [label="32", penwidth=3.0, headlabel="result_o", labelfontsize=7, labeldistance=1.4];
+  shared_00001 -> b_00002 [headlabel="A", labelfontsize=7, labeldistance=1.4];
+  subgraph cluster_legend {
+    label="key"; fontname="Helvetica"; fontsize=10; color="#cccccc";
+    legend [shape=plaintext, fillcolor="white", label=<
+      <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+        <TR><TD BGCOLOR="#dbe9fb" WIDTH="16"></TD><TD ALIGN="LEFT">arith</TD></TR>
+        <TR><TD BGCOLOR="#f2f2f2" WIDTH="16"></TD><TD ALIGN="LEFT">const</TD></TR>
+        <TR><TD BGCOLOR="#e2f0dc" WIDTH="16"></TD><TD ALIGN="LEFT">logic</TD></TR>
+        <TR><TD BGCOLOR="#efe0f4" WIDTH="16"></TD><TD ALIGN="LEFT">mux</TD></TR>
+        <TR><TD BGCOLOR="#ffffff" WIDTH="16"></TD><TD ALIGN="LEFT">port_in</TD></TR>
+        <TR><TD BGCOLOR="#333333" WIDTH="16"></TD><TD ALIGN="LEFT">port_out</TD></TR>
+      </TABLE>>];
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "common_node_count": 2,
+  "common_subgraphs": [
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$202"
+          },
+          "b": {
+            "dst": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+            "src": "$auto$opt_expr.cc:277:group_cell_inputs$202"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$202",
+        "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      ],
+      "nodes_b": [
+        "$auto$opt_expr.cc:277:group_cell_inputs$202",
+        "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+      ]
+    }
+  ],
+  "coverage": {
+    "a": 0.2857142857142857,
+    "b": 0.16666666666666666
+  },
+  "engine": "native",
+  "graph_a": "ibex_alu_sub32",
+  "graph_b": "ibex_alu_ltu32",
+  "level": "rtlil",
+  "limitations": [
+    "Exact structural candidates only; no algebraic or e-graph equivalence.",
+    "Ambiguous repeated signatures are excluded rather than guessed.",
+    "A match is not evidence that fusion improves PPA."
+  ],
+  "match_mode": "exact_rooted_structural",
+  "matched_edges": [],
+  "matched_nodes": [
+    {
+      "a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+      "b": "$auto$opt_expr.cc:277:group_cell_inputs$202"
+    },
+    {
+      "a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+      "b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77"
+    }
+  ],
+  "metadata": {
+    "a": {
+      "design": "ibex_alu_sub32",
+      "level": "rtlil",
+      "top": "ibex_alu_sub32"
+    },
+    "b": {
+      "design": "ibex_alu_ltu32",
+      "level": "rtlil",
+      "top": "ibex_alu_ltu32"
+    }
+  },
+  "schema": "fu-graph-match/v1",
+  "unmatched": {
+    "a": [
+      "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "port:operand_a_i",
+      "port:operand_b_i",
+      "port:result_o"
+    ],
+    "b": [
+      "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+      "$flatten\\u.\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:108$87",
+      "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+      "$procmux$177",
+      "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:A",
+      "const:$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77:B",
+      "const:port:result_o:result_o",
+      "port:operand_a_i",
+      "port:operand_b_i",
+      "port:result_o"
+    ]
+  }
+}

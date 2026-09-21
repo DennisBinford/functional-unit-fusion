@@ -1,0 +1,37 @@
+{
+  "alu_operations": 14,
+  "alu_vectors": 3696,
+  "checks": 11871,
+  "client_vectors": 261,
+  "comparison_breakdown": {
+    "comparisons_per_vector": 3,
+    "total_comparisons": 11871,
+    "total_vectors": 3957
+  },
+  "latency": {
+    "combinational": true,
+    "registered_ii": "undefined",
+    "registered_latency": "undefined"
+  },
+  "log": "meeting-artifacts/ibex-fusion/module-preserving/simulation/simulation.log",
+  "operations": [
+    "ALU_ADD",
+    "ALU_SUB",
+    "ALU_XOR",
+    "ALU_OR",
+    "ALU_AND",
+    "ALU_SLL",
+    "ALU_SRL",
+    "ALU_SRA",
+    "ALU_LT",
+    "ALU_LTU",
+    "ALU_GE",
+    "ALU_GEU",
+    "ALU_EQ",
+    "ALU_NE"
+  ],
+  "schema": "fu-ibex-module-preserving-simulation/v1",
+  "source": "canonical upstream ibex_alu_wrapper, equal-interface separate wrapper, generated fused wrapper, and dedicated add client",
+  "status": "pass",
+  "tool": "verilator"
+}

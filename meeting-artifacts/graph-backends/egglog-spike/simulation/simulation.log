@@ -1,0 +1,7 @@
+$ /home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/obj_dir/Vtb_egglog_spike +dump +fu_seed=1 +verilator+seed+1
+
+EGGLOG_SPIKE_PASS checks=256
+- /home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/tb_egglog_spike.sv:12: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.051 devel
+- Verilator: $finish at 256ps; walltime 0.000 s; speed 7.053 us/s
+- Verilator: cpu 0.000 s on 1 threads; allocated 7 MB

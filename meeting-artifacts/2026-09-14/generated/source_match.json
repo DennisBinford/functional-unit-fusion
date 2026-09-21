@@ -1,0 +1,637 @@
+{
+  "common_node_count": 5,
+  "common_subgraphs": [
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i"
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 5,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+      ],
+      "nodes_b": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i"
+      ],
+      "nodes_b": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i"
+      ]
+    },
+    {
+      "edge_count": 3,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 4,
+      "nodes_a": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        },
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1",
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i"
+      ],
+      "nodes_b": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i"
+      ]
+    },
+    {
+      "edge_count": 2,
+      "edges": [
+        {
+          "a": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+            "src": "port:add_i"
+          },
+          "b": {
+            "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+            "src": "port:add_i"
+          }
+        },
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        }
+      ],
+      "node_count": 3,
+      "nodes_a": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:add_i",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:add_i",
+        "port:result_o"
+      ]
+    },
+    {
+      "edge_count": 1,
+      "edges": [
+        {
+          "a": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4"
+          },
+          "b": {
+            "dst": "port:result_o",
+            "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+          }
+        }
+      ],
+      "node_count": 2,
+      "nodes_a": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+        "port:result_o"
+      ],
+      "nodes_b": [
+        "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3",
+        "port:result_o"
+      ]
+    }
+  ],
+  "coverage": {
+    "a": 0.7142857142857143,
+    "b": 0.7142857142857143
+  },
+  "graph_a": "separate_mul_add",
+  "graph_b": "graph_candidate_add_mul",
+  "level": "rtlil",
+  "limitations": [
+    "Exact structural candidates only; no algebraic or e-graph equivalence.",
+    "Ambiguous repeated signatures are excluded rather than guessed.",
+    "A match is not evidence that fusion improves PPA."
+  ],
+  "match_mode": "exact_rooted_structural",
+  "matched_edges": [],
+  "matched_nodes": [
+    {
+      "a": "$add$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:17$2",
+      "b": "$add$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:15$2"
+    },
+    {
+      "a": "$mul$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:16$1",
+      "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:14$1"
+    },
+    {
+      "a": "$ternary$/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv:20$4",
+      "b": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv:16$3"
+    },
+    {
+      "a": "port:add_i",
+      "b": "port:add_i"
+    },
+    {
+      "a": "port:result_o",
+      "b": "port:result_o"
+    }
+  ],
+  "metadata": {
+    "a": {
+      "design": "separate_mul_add",
+      "level": "rtlil",
+      "sources": [
+        "/home/dabinford/research/rtl/fma_experiment/separate_mul_add.sv"
+      ],
+      "top": "separate_mul_add",
+      "yosys_passes": "hierarchy -top {top}; proc; opt -fast; memory -nomap; flatten; opt -fast"
+    },
+    "b": {
+      "design": "graph_candidate_add_mul",
+      "level": "rtlil",
+      "sources": [
+        "/home/dabinford/research/rtl/fma_experiment/graph_candidate_add_mul.sv"
+      ],
+      "top": "graph_candidate_add_mul",
+      "yosys_passes": "hierarchy -top {top}; proc; opt -fast; memory -nomap; flatten; opt -fast"
+    }
+  },
+  "runtime_seconds": 0.028897830052301288,
+  "schema": "fu-graph-match/v1",
+  "unmatched": {
+    "a": [
+      "port:a_i",
+      "port:b_i"
+    ],
+    "b": [
+      "port:a_i",
+      "port:b_i"
+    ]
+  }
+}

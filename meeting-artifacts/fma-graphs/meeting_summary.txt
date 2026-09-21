@@ -1,0 +1,17 @@
+Correctness: INTEGER_FMA_TEST_PASS checks=70
+Equivalent ADD-or-MUL area comparison:
+  separate selectable: 7137.578 um^2
+  shared iterative:    2507.848 um^2
+  saved:               4629.730 um^2 (64.86%)
+  tradeoff: ADD=1 cycle; unsigned MUL latency/II=32 cycles
+Structural graph demonstration (not the area comparison):
+  RTLIL exact nodes coalesced: 1
+  merged RTLIL candidate nodes: 12
+  synthesized AIG exact matches: 345
+  merged graph executable RTL: False
+Artifacts:
+  build/fma_meeting_demo/meeting_summary.json
+  build/fma_meeting_demo/graphs/separate_mul_add/separate_mul_add.rtlil.svg
+  build/fma_meeting_demo/graphs/fused_mul_add/fused_mul_add.rtlil.svg
+  build/fma_meeting_demo/graphs/separate-v-fused.rtlil.merged.svg
+  build/fma_meeting_demo/graphs/shared_iterative_mul_add/shared_iterative_mul_add.rtlil.svg

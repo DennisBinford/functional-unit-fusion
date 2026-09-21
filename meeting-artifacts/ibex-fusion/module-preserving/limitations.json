@@ -1,0 +1,14 @@
+{
+  "claims": [
+    "This is contract-guided module-preserving fusion; ibex_alu remains an upstream instance.",
+    "The contract and emitter verify the pinned adder encoding and generate the equal-interface wrapper."
+  ],
+  "not_claimed": [
+    "flattened RTLIL reconstruction",
+    "arbitrary whole-Ibex fusion",
+    "simultaneous ALU and client use",
+    "sequential ibex_multdiv_fast fusion"
+  ],
+  "schema": "fu-ibex-module-preserving-limitations/v1",
+  "status": "partial"
+}

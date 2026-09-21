@@ -1,0 +1,5097 @@
+{
+  "operations": [
+    "ADD",
+    "SUB",
+    "LT",
+    "LTU",
+    "GE",
+    "GEU",
+    "EQ",
+    "NE",
+    "XOR",
+    "OR",
+    "AND",
+    "SLL",
+    "SRL",
+    "SRA"
+  ],
+  "rows": [
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.2857142857142857
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "SUB"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.15384615384615385
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "LT"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.16666666666666666
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "LTU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.16666666666666666
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "GE"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.18181818181818182
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "GEU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.2222222222222222
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.2
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 5,
+          "kinds": {
+            "$add": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 6,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "ADD",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.3076923076923077
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.15384615384615385
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "LT"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.3333333333333333
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.16666666666666666
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "LTU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.3333333333333333
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.16666666666666666
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "GE"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.36363636363636365
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.18181818181818182
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "GEU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.4444444444444444
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.2222222222222222
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5714285714285714,
+        "b": 0.4
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.2
+      },
+      "exact_match_count": 2,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SUB",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2857142857142857,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 6,
+          "kinds": {
+            "$add": 1,
+            "$not": 1,
+            "const": 2,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 7,
+          "operators": 2
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SUB",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.46153846153846156,
+        "b": 0.5
+      },
+      "capability_match_count": 6,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.38461538461538464,
+        "b": 0.4166666666666667
+      },
+      "exact_match_count": 5,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LT",
+        "b": "LTU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:605:replace_const_cells$201",
+          "node_b": "$auto$opt_expr.cc:605:replace_const_cells$201",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$mux",
+          "kind_b": "$mux",
+          "node_a": "$procmux$177",
+          "node_b": "$procmux$177",
+          "operation": "mux",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.6153846153846154,
+        "b": 0.6666666666666666
+      },
+      "capability_match_count": 8,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.5384615384615384,
+        "b": 0.5833333333333334
+      },
+      "exact_match_count": 7,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 6,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LT",
+        "b": "GE"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.46153846153846156,
+        "b": 0.5454545454545454
+      },
+      "capability_match_count": 6,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.38461538461538464,
+        "b": 0.45454545454545453
+      },
+      "exact_match_count": 5,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LT",
+        "b": "GEU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3076923076923077,
+        "b": 0.4444444444444444
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.23076923076923078,
+        "b": 0.3333333333333333
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LT",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3076923076923077,
+        "b": 0.4
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.23076923076923078,
+        "b": 0.3
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LT",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.23076923076923078,
+        "b": 0.75
+      },
+      "capability_match_count": 3,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.15384615384615385,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.15384615384615385,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 15,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 4,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 13,
+          "operators": 7
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LT",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "capability_match_count": 6,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.4166666666666667,
+        "b": 0.4166666666666667
+      },
+      "exact_match_count": 5,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LTU",
+        "b": "GE"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$mux",
+          "kind_b": "$mux",
+          "node_a": "$procmux$177",
+          "node_b": "$procmux$177",
+          "operation": "mux",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5833333333333334,
+        "b": 0.6363636363636364
+      },
+      "capability_match_count": 7,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.5,
+        "b": 0.5454545454545454
+      },
+      "exact_match_count": 6,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        }
+      },
+      "largest_connected_exact_match": 5,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LTU",
+        "b": "GEU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.4444444444444444
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.25,
+        "b": 0.3333333333333333
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LTU",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.4
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.25,
+        "b": 0.3
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "LTU",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.25,
+        "b": 0.75
+      },
+      "capability_match_count": 3,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.16666666666666666,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.16666666666666666,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "LTU",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:99$83",
+          "operation": "not",
+          "width_a": 1,
+          "width_b": 1
+        },
+        {
+          "kind_a": "$xor",
+          "kind_b": "$xor",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:98$81",
+          "operation": "xor",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5,
+        "b": 0.5454545454545454
+      },
+      "capability_match_count": 6,
+      "current_graph_to_rtl_realization_possible": true,
+      "exact_coverage": {
+        "a": 0.4166666666666667,
+        "b": 0.45454545454545453
+      },
+      "exact_match_count": 5,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "GE",
+        "b": "GEU"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.4444444444444444
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.25,
+        "b": 0.3333333333333333
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "GE",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$204",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.3333333333333333,
+        "b": 0.4
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.25,
+        "b": 0.3
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "GE",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.25,
+        "b": 0.75
+      },
+      "capability_match_count": 3,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.16666666666666666,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.16666666666666666,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 14,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 3,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 12,
+          "operators": 6
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GE",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.36363636363636365,
+        "b": 0.4444444444444444
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.2727272727272727,
+        "b": 0.3333333333333333
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "GEU",
+        "b": "EQ"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.36363636363636365,
+        "b": 0.4
+      },
+      "capability_match_count": 4,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.2727272727272727,
+        "b": 0.3
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 2,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "GEU",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2727272727272727,
+        "b": 0.75
+      },
+      "capability_match_count": 3,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": []
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.18181818181818182,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.18181818181818182,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 13,
+          "kinds": {
+            "$add": 1,
+            "$mux": 1,
+            "$not": 2,
+            "$xor": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 11,
+          "operators": 5
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "GEU",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$not",
+          "kind_b": "$not",
+          "node_a": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "node_b": "$auto$opt_expr.cc:277:group_cell_inputs$202",
+          "operation": "not",
+          "width_a": 32,
+          "width_b": 32
+        },
+        {
+          "kind_a": "$add",
+          "kind_b": "$add",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:84$77",
+          "operation": "add",
+          "width_a": 34,
+          "width_b": 34
+        },
+        {
+          "kind_a": "$logic_not",
+          "kind_b": "$logic_not",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:95$79",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:95$79",
+          "operation": "logic_not",
+          "width_a": 1,
+          "width_b": 1
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.5555555555555556,
+        "b": 0.5
+      },
+      "capability_match_count": 5,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.4444444444444444,
+        "b": 0.4
+      },
+      "exact_match_count": 4,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "EQ",
+        "b": "NE"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2222222222222222,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2222222222222222,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2222222222222222,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 8,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 1,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 9,
+          "operators": 3
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "EQ",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "XOR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.2,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$logic_not"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 9,
+          "kinds": {
+            "$add": 1,
+            "$logic_not": 1,
+            "$not": 2,
+            "const": 3,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 10,
+          "operators": 4
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "NE",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$logic_not",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "XOR",
+        "b": "OR"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "XOR",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "XOR",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "XOR",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$xor": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "XOR",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.5,
+        "b": 0.5
+      },
+      "capability_match_count": 2,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "OR",
+        "b": "AND"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$or"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "OR",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "OR",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$or": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "OR",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$or",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "AND",
+        "b": "SLL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "AND",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 3,
+          "kinds": {
+            "$and": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "AND",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$and",
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [
+        {
+          "kind_a": "$sshr",
+          "kind_b": "$sshr",
+          "node_a": "$flatten\\u.\\u_ibex_alu.$sshr$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:178$105",
+          "node_b": "$flatten\\u.\\u_ibex_alu.$sshr$/home/dabinford/research/build/ibex_fusion/ibex_alu_operation_wrappers.v:178$105",
+          "operation": "shift",
+          "width_a": 33,
+          "width_b": 33
+        }
+      ],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.6,
+        "b": 0.6
+      },
+      "exact_match_count": 3,
+      "graph_stats": {
+        "a": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        },
+        "b": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 3,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": true,
+      "source_operations": {
+        "a": "SLL",
+        "b": "SRL"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SLL",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    },
+    {
+      "candidate_shared_operators": [],
+      "capability_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "capability_match_count": 0,
+      "current_graph_to_rtl_realization_possible": false,
+      "exact_coverage": {
+        "a": 0.0,
+        "b": 0.0
+      },
+      "exact_match_count": 0,
+      "graph_stats": {
+        "a": {
+          "edges": 4,
+          "kinds": {
+            "$sshr": 1,
+            "const": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 5,
+          "operators": 1
+        },
+        "b": {
+          "edges": 3,
+          "kinds": {
+            "$sshr": 1,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 4,
+          "operators": 1
+        }
+      },
+      "largest_connected_exact_match": 0,
+      "semantic_note": "Each specialization is independently verified against the upstream Ibex ALU and RV32I reference; a structural match does not assert operation equivalence.",
+      "semantically_valid": false,
+      "source_operations": {
+        "a": "SRL",
+        "b": "SRA"
+      },
+      "unsupported_executable_cell_kinds": [
+        "$sshr"
+      ]
+    }
+  ],
+  "schema": "fu-ibex-candidate-matrix/v1",
+  "selected_pair": {
+    "a": "SUB",
+    "b": "LTU",
+    "reason": "largest connected executable match after requested arithmetic preference"
+  },
+  "upstream_module": "ibex_alu",
+  "wrapper_source": {
+    "external": false,
+    "path": "rtl/ibex_fusion/ibex_alu_operation_wrappers.sv",
+    "sha256": "7098038389e3eeb010aba953876beee3ba443248cbab4ee6fb561dee72e6343c"
+  }
+}

@@ -1,0 +1,995 @@
+{
+  "attrs": {
+    "artifact_type": "structural_merged_candidate",
+    "hardware_status": {
+      "executable": false,
+      "reason": "structural candidate only; steering/control, RTL emission, functional verification, and synthesis remain required"
+    },
+    "match": {
+      "matched_node_count": 1,
+      "mode": "exact_rooted_structural",
+      "schema": "fu-graph-match/v1"
+    },
+    "merge_policy": {
+      "edges": "union exact edge records after endpoint remapping",
+      "nodes": "coalesce one-to-one exact matches"
+    },
+    "node_accounting": {
+      "coalesced": 1,
+      "graph_a": 4,
+      "graph_b": 17,
+      "merged_candidate": 20
+    },
+    "source_graphs": {
+      "a": {
+        "design": "graph_unit_a_mul",
+        "top": "graph_unit_a_mul"
+      },
+      "b": {
+        "design": "graph_unit_b_add_mul_mac",
+        "top": "graph_unit_b_add_mul_mac"
+      }
+    }
+  },
+  "design": "merged__graph_unit_a_mul__graph_unit_b_add_mul_mac",
+  "edges": [
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": [
+            {
+              "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+              "dst_port": "A",
+              "graph": "a",
+              "src": "port:a_a_i",
+              "src_port": "a_a_i"
+            }
+          ]
+        }
+      },
+      "dst": "shared:00000",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "a:00001",
+      "src_port": "a_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": [
+            {
+              "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+              "dst_port": "B",
+              "graph": "a",
+              "src": "port:b_a_i",
+              "src_port": "b_a_i"
+            }
+          ]
+        }
+      },
+      "dst": "shared:00000",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "a:00002",
+      "src_port": "b_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00005",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:00000",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00000",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:00002",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00000",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00003",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00003",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:00004",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "port:result_b_o",
+              "dst_port": "result_b_o",
+              "graph": "b",
+              "src": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00016",
+      "dst_port": "result_b_o",
+      "inverted": false,
+      "src": "b:00005",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2:B",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00002",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00006",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4:B",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00003",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00007",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:A",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00004",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:00008",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:B",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00004",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00009",
+      "src_port": "Y",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "port:a_b_i",
+              "src_port": "a_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00002",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00010",
+      "src_port": "a_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "port:a_b_i",
+              "src_port": "a_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "shared:00000",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "b:00010",
+      "src_port": "a_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+              "dst_port": "S",
+              "graph": "b",
+              "src": "port:add_mode_b_i",
+              "src_port": "add_mode_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00002",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "b:00011",
+      "src_port": "add_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+              "dst_port": "S",
+              "graph": "b",
+              "src": "port:add_mode_b_i",
+              "src_port": "add_mode_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00003",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "b:00011",
+      "src_port": "add_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "port:b_b_i",
+              "src_port": "b_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00003",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00012",
+      "src_port": "b_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "port:b_b_i",
+              "src_port": "b_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "shared:00000",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00012",
+      "src_port": "b_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "port:c_b_i",
+              "src_port": "c_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00004",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "b:00013",
+      "src_port": "c_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3",
+              "dst_port": "S",
+              "graph": "b",
+              "src": "port:mac_mode_b_i",
+              "src_port": "mac_mode_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00004",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "b:00014",
+      "src_port": "mac_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6",
+              "dst_port": "S",
+              "graph": "b",
+              "src": "port:mul_mode_b_i",
+              "src_port": "mul_mode_b_i"
+            }
+          ]
+        }
+      },
+      "dst": "b:00005",
+      "dst_port": "S",
+      "inverted": false,
+      "src": "b:00015",
+      "src_port": "mul_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": [
+            {
+              "dst": "port:product_a_o",
+              "dst_port": "product_a_o",
+              "graph": "a",
+              "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "a:00003",
+      "dst_port": "product_a_o",
+      "inverted": false,
+      "src": "shared:00000",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2",
+              "dst_port": "A",
+              "graph": "b",
+              "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00002",
+      "dst_port": "A",
+      "inverted": false,
+      "src": "shared:00000",
+      "src_port": "Y",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": [
+            {
+              "dst": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6",
+              "dst_port": "B",
+              "graph": "b",
+              "src": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1",
+              "src_port": "Y"
+            }
+          ]
+        }
+      },
+      "dst": "b:00005",
+      "dst_port": "B",
+      "inverted": false,
+      "src": "shared:00000",
+      "src_port": "Y",
+      "width": 64
+    }
+  ],
+  "level": "rtlil",
+  "nodes": [
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "a",
+            "b"
+          ],
+          "origins": {
+            "a": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+            "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1"
+          },
+          "shared_candidate": true
+        },
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 32,
+          "B_SIGNED": 0,
+          "B_WIDTH": 32,
+          "Y_WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8.24-8.37"
+      },
+      "id": "shared:00000",
+      "kind": "$mul",
+      "label": "mul[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": {
+            "a": "port:a_a_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "a:00001",
+      "kind": "port_in",
+      "label": "a_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": {
+            "a": "port:b_a_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "a:00002",
+      "kind": "port_in",
+      "label": "b_a_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "output",
+        "merge": {
+          "membership": [
+            "a"
+          ],
+          "origins": {
+            "a": "port:product_a_o"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "a:00003",
+      "kind": "port_out",
+      "label": "product_a_o",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "$add$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$5"
+          },
+          "shared_candidate": false
+        },
+        "parameters": {
+          "A_SIGNED": 0,
+          "A_WIDTH": 64,
+          "B_SIGNED": 0,
+          "B_WIDTH": 64,
+          "Y_WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20.50-20.71"
+      },
+      "id": "b:00000",
+      "kind": "$add",
+      "label": "add[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2"
+          },
+          "shared_candidate": false
+        },
+        "parameters": {
+          "WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17.24-17.65"
+      },
+      "id": "b:00002",
+      "kind": "$mux",
+      "label": "mux[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4"
+          },
+          "shared_candidate": false
+        },
+        "parameters": {
+          "WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18.24-19.63"
+      },
+      "id": "b:00003",
+      "kind": "$mux",
+      "label": "mux[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3"
+          },
+          "shared_candidate": false
+        },
+        "parameters": {
+          "WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19.25-19.62"
+      },
+      "id": "b:00004",
+      "kind": "$mux",
+      "label": "mux[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20$6"
+          },
+          "shared_candidate": false
+        },
+        "parameters": {
+          "WIDTH": 64
+        },
+        "src": "/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:20.23-20.71"
+      },
+      "id": "b:00005",
+      "kind": "$mux",
+      "label": "mux[64]",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:17$2:B"
+          },
+          "shared_candidate": false
+        },
+        "value": "00000000000000000000000000000000"
+      },
+      "id": "b:00006",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:18$4:B"
+          },
+          "shared_candidate": false
+        },
+        "value": "00000000000000000000000000000000"
+      },
+      "id": "b:00007",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:A"
+          },
+          "shared_candidate": false
+        },
+        "value": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "id": "b:00008",
+      "kind": "const",
+      "label": "64'b0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 64
+    },
+    {
+      "attrs": {
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "const:$ternary$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:19$3:B"
+          },
+          "shared_candidate": false
+        },
+        "value": "00000000000000000000000000000000"
+      },
+      "id": "b:00009",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:a_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00010",
+      "kind": "port_in",
+      "label": "a_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:add_mode_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00011",
+      "kind": "port_in",
+      "label": "add_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:b_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00012",
+      "kind": "port_in",
+      "label": "b_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:c_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00013",
+      "kind": "port_in",
+      "label": "c_b_i",
+      "width": 32
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:mac_mode_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00014",
+      "kind": "port_in",
+      "label": "mac_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "direction": "input",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:mul_mode_b_i"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00015",
+      "kind": "port_in",
+      "label": "mul_mode_b_i",
+      "width": 1
+    },
+    {
+      "attrs": {
+        "direction": "output",
+        "merge": {
+          "membership": [
+            "b"
+          ],
+          "origins": {
+            "b": "port:result_b_o"
+          },
+          "shared_candidate": false
+        }
+      },
+      "id": "b:00016",
+      "kind": "port_out",
+      "label": "result_b_o",
+      "width": 64
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 23,
+    "kinds": {
+      "$add": 1,
+      "$mul": 1,
+      "$mux": 4,
+      "const": 4,
+      "port_in": 8,
+      "port_out": 2
+    },
+    "nodes": 20,
+    "operators": 6
+  },
+  "top": "merged_candidate"
+}

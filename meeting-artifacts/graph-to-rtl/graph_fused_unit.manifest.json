@@ -1,0 +1,107 @@
+{
+  "evidence": {
+    "control_spec": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/control_spec.json",
+      "sha256": "a400c261591c7ad465cbc4671dbcc71ce4d573ef03bfbf384f9b91c0c12ba714"
+    },
+    "demo_script": {
+      "external": false,
+      "path": "scripts/graph_to_rtl_demo.py",
+      "sha256": "ebc606601701459b609119e83e1d216fce48a08c9039cf8d40749f48d91e64f6"
+    },
+    "emitter": {
+      "external": false,
+      "path": "graph_rtl_emit.py",
+      "sha256": "b833d17c0af291579449a75b273e8cb3ad3a6b5f37d5998724480ae131332de2"
+    },
+    "executable_graph": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/executable_graph.rtlil.json",
+      "sha256": "cdd8a04b44e7b958fc68aa0effae630a87fc69001f5a832cc735e9eda4529259"
+    },
+    "generated_rtl": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/graph_fused_unit.sv",
+      "sha256": "862110e11396255f5ca86870fafca6e995462f44230653b71d978b6c86b6d3d4"
+    },
+    "graph_a": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/graphs/graph_unit_a_mul.rtlil.graph.json",
+      "sha256": "e1bfa03385c05683db64ef961cd397ae2b7643eb84b424d136fbfa9a55c8c397"
+    },
+    "graph_b": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/graphs/graph_unit_b_add_mul_mac.rtlil.graph.json",
+      "sha256": "bb01c86a8dc79a00a96e0d12c2518f791a5c88ef3c4e0db30494fe2abf626d29"
+    },
+    "graph_backend": {
+      "external": false,
+      "path": "graph_backend.py",
+      "sha256": "0164e1f7c18005a522dd77ddd0c5c1f6b9155026edb5b89c5a4aebcf1fdac828"
+    },
+    "graph_extract": {
+      "external": false,
+      "path": "graph_extract.py",
+      "sha256": "b329ba9034a52a970d1acdc62bbb101fc35394e50ed57f42b227113f93330e40"
+    },
+    "graph_match": {
+      "external": false,
+      "path": "graph_match.py",
+      "sha256": "6af7b99c7ae6eb1e54b37baecbffbe6f97e45224bc058562506b783063b25a5a"
+    },
+    "graph_merge": {
+      "external": false,
+      "path": "graph_merge.py",
+      "sha256": "17f7826f5cac5d4526c70c4a1105ceff202b7fb22ed0adb6944882b25eb2023b"
+    },
+    "liberty": {
+      "external": true,
+      "path": "/home/dabinford/.sc/cache/lambdapdk-v0.2.17-49afb2b188ee16ae/lambdapdk/freepdk45/libs/nangate45/nldm/NangateOpenCellLibrary_typical.lib",
+      "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895"
+    },
+    "match": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/match.rtlil.json",
+      "sha256": "f18e6f8b96ed5ee5bdeafed0eda9c2f761e51b1c312622702be7390889328cb1"
+    },
+    "merge": {
+      "external": false,
+      "path": "meeting-artifacts/graph-to-rtl/structural_merge.rtlil.json",
+      "sha256": "0d0ae599b6e32d4661b69c270e636fe8ab16a0dd7fb41e933c47dac483cb5de0"
+    },
+    "realizer": {
+      "external": false,
+      "path": "executable_graph.py",
+      "sha256": "ae350659d7e3a98a11971e8e1d5a43f602913292de62cf5ea06d8551422045ba"
+    },
+    "sdc": {
+      "external": false,
+      "path": "rtl/fma_experiment/core_10ns.sdc",
+      "sha256": "60a4528f9392ada7f85c13249f30146a79283b65beff0f29dd688abda99843a4"
+    },
+    "source_a": {
+      "external": false,
+      "path": "rtl/fma_experiment/graph_unit_a_mul.sv",
+      "sha256": "0ee56dddb054b0658a6dc80fc8fd561ff7c2cf72d661caedb303123165c5a6b9"
+    },
+    "source_b": {
+      "external": false,
+      "path": "rtl/fma_experiment/graph_unit_b_add_mul_mac.sv",
+      "sha256": "e6b2922862fcd0d423974d44af6b13b512a696f7c4935853d69550a98ed93e59"
+    },
+    "testbench": {
+      "external": false,
+      "path": "tb/tb_graph_fused_unit.sv",
+      "sha256": "03ceb484c530e417aabf9e01aebaa7f01552dad851693c1041482c2f068cfb03"
+    },
+    "toolchain_lock": {
+      "external": false,
+      "path": "build/toolchain.lock.json",
+      "sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45"
+    }
+  },
+  "graph_to_rtl_status": "executable",
+  "schema": "fu-graph-rtl-manifest/v1",
+  "template_backed": false
+}

@@ -286,7 +286,7 @@ def _graph_from_netlist(
     graph = FUGraph(design=design, level=level, top=top)
 
     # Module ports become source/sink nodes so the graph has real boundaries.
-    driver_of_bit: Dict[Any, Tuple[str, str]] = {}
+    driver_of_bit: Dict[Any, Tuple[str, str, int]] = {}
     for port_name, port in module.get("ports", {}).items():
         direction = port.get("direction", "input")
         kind = "port_in" if direction == "input" else "port_out"
@@ -297,8 +297,8 @@ def _graph_from_netlist(
             attrs={"direction": direction},
         ))
         if direction == "input":
-            for bit in port.get("bits", []):
-                driver_of_bit[bit] = (node_id, port_name)
+            for source_position, bit in enumerate(port.get("bits", [])):
+                driver_of_bit[bit] = (node_id, port_name, source_position)
 
     # $scopeinfo carries source-hierarchy annotations, not logic. It survives
     # flatten and would otherwise show up as a stray node in every graph.
@@ -311,9 +311,9 @@ def _graph_from_netlist(
         for port_name, bits in cell.get("connections", {}).items():
             if directions.get(port_name) != "output":
                 continue
-            for bit in bits:
+            for source_position, bit in enumerate(bits):
                 if bit not in _CONST_BITS:
-                    driver_of_bit[bit] = (cell_name, port_name)
+                    driver_of_bit[bit] = (cell_name, port_name, source_position)
 
     for cell_name, cell in cells.items():
         cell_type = cell.get("type", "?")
@@ -354,7 +354,7 @@ def _graph_from_netlist(
 
 def _edges_for_input(
     graph: FUGraph,
-    driver_of_bit: Dict[Any, Tuple[str, str]],
+    driver_of_bit: Dict[Any, Tuple[str, str, int]],
     consumer: str,
     port_name: str,
     bits: Sequence[Any],
@@ -366,32 +366,38 @@ def _edges_for_input(
     Bits with no driver are literals, which get their own small constant node so
     the visualization shows where a design pins a value.
     """
-    grouped: Dict[Tuple[str, str], int] = {}
-    constant_bits: List[str] = []
-    for bit in bits:
+    grouped: Dict[Tuple[str, str], List[Tuple[int, int]]] = {}
+    constant_bits: List[Tuple[int, str]] = []
+    for position, bit in enumerate(bits):
         if bit in _CONST_BITS:
-            constant_bits.append(str(bit))
+            constant_bits.append((position, str(bit)))
             continue
         driver = driver_of_bit.get(bit)
         if driver is None:
             continue                      # undriven (dangling) bit
-        grouped[driver] = grouped.get(driver, 0) + 1
+        grouped.setdefault(driver[:2], []).append((position, driver[2]))
 
     edges = [
         Edge(src=src, dst=consumer, src_port=src_port,
-             dst_port=port_name, width=width)
-        for (src, src_port), width in grouped.items()
+             dst_port=port_name, width=len(positions),
+             attrs={"bit_lsb": min(dst_positions), "bit_positions": dst_positions,
+                    "source_bit_positions": source_positions})
+        for (src, src_port), pairs in grouped.items()
+        for positions, dst_positions, source_positions in [(pairs, [item[0] for item in pairs], [item[1] for item in pairs])]
     ]
 
     if constant_bits:
         const_id = "const:{}:{}".format(consumer, port_name)
-        value = "".join(reversed(constant_bits))
+        value = "".join(bit for _, bit in reversed(constant_bits))
         graph.nodes.append(Node(
             id=const_id, kind="const", label="{}'b{}".format(len(constant_bits), value),
             width=len(constant_bits), attrs={"value": value},
         ))
         edges.append(Edge(src=const_id, dst=consumer, src_port="Y",
-                          dst_port=port_name, width=len(constant_bits)))
+                          dst_port=port_name, width=len(constant_bits),
+                          attrs={"bit_lsb": min(position for position, _ in constant_bits),
+                                 "bit_positions": [position for position, _ in constant_bits],
+                                 "source_bit_positions": list(range(len(constant_bits)))}))
     return edges
 
 
@@ -690,6 +696,14 @@ DESIGNS: Dict[str, Dict[str, Any]] = {
     "capability_add64": {
         "top": "capability_add64",
         "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "capability_add64.sv")],
+    },
+    "graph_unit_a_mul": {
+        "top": "graph_unit_a_mul",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "graph_unit_a_mul.sv")],
+    },
+    "graph_unit_b_add_mul_mac": {
+        "top": "graph_unit_b_add_mul_mac",
+        "sources": lambda: [str(ROOT / "rtl" / "fma_experiment" / "graph_unit_b_add_mul_mac.sv")],
     },
 }
 

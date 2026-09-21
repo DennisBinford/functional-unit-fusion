@@ -1,0 +1,18 @@
+{
+  "fu_graph_v1_lossless": false,
+  "reason": [
+    "fu-graph/v1 is a semantic analysis graph, not a complete RTLIL wire/process/netname serialization.",
+    "Yosys-native RTLIL and JSON sidecars retain exact tool-native connectivity and parameters for read-back.",
+    "write_verilog read-back is a synthesized/netlist-style reconstruction, not source-text preservation."
+  ],
+  "schema": "fu-graph-roundtrip/v1",
+  "source": "/home/dabinford/research/rtl/fma_experiment/generated_fused_add_mul_mac.sv",
+  "stages": {
+    "readback_verilog": "/home/dabinford/research/meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.readback.v",
+    "rtlil": "/home/dabinford/research/meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.rtlil",
+    "yosys_json": "/home/dabinford/research/meeting-artifacts/2026-09-14/roundtrip/generated_fused_add_mul_mac.yosys.json"
+  },
+  "status": "pass",
+  "tool": "/home/dabinford/research/tools/oss-cad-suite/bin/yosys",
+  "top": "generated_fused_add_mul_mac"
+}

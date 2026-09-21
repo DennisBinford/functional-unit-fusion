@@ -1,0 +1,815 @@
+{
+  "backend_capabilities": {
+    "fu-graph-json": {
+      "canonical": true,
+      "load": true,
+      "provenance": true,
+      "save": true
+    },
+    "networkx": {
+      "available": true,
+      "graphml": false,
+      "multidigraph": true,
+      "node_link_json": true,
+      "parallel_edges": true,
+      "ports": true,
+      "provenance": true
+    }
+  },
+  "egraph_feasibility": {
+    "backend_capabilities": {
+      "available": false,
+      "constants": true,
+      "explicit_slice": true,
+      "multi_output": false,
+      "mux": true,
+      "sequential": false,
+      "unsigned_add": true,
+      "unsigned_mul": true,
+      "variables": true,
+      "zero_extend": true
+    },
+    "isolated_spike": {
+      "command": "/tmp/egglog-spike-20260914/bin/python scripts/egglog_feasibility_spike.py",
+      "cost_extraction": "egglog EGraph.extract lowest-cost term; local estimate 2 -> 1",
+      "environment": "/tmp/egglog-spike-20260914",
+      "fu_executable_graph": "meeting-artifacts/graph-backends/egglog-spike/selected_executable_graph.json",
+      "rewrite": "BV8(x) + BV8(0) -> BV8(x)",
+      "rtl": "meeting-artifacts/graph-backends/egglog-spike/egglog_spike.sv",
+      "selected_expression": "BV8.var(\"x\")",
+      "simulation_checks": 256,
+      "status": "pass",
+      "version": "1.0.0"
+    },
+    "language": {
+      "extraction": "DAG/global-output extraction required to preserve physical sharing",
+      "schema": "fu-egraph-language/v1",
+      "semantic_requirements": [
+        "finite_width",
+        "unsigned_only",
+        "explicit_widths",
+        "no_implicit_truncation"
+      ],
+      "terms": [
+        "var",
+        "const",
+        "add",
+        "mul",
+        "mux",
+        "zero_extend",
+        "slice"
+      ]
+    },
+    "next_step": "pin egglog or build a Rust egg adapter, then return selected terms to fu-executable-graph/v1",
+    "python_egglog": null,
+    "reason": "egglog is not installed in the project interpreter; the pinned isolated 1.0.0 spike passed",
+    "rust_egg": "Rust crate; no repository-local adapter installed",
+    "schema": "fu-egraph-feasibility/v1",
+    "status": "isolated_spike_pass"
+  },
+  "limitations": [
+    "NetworkX contributes a Weisfeiler-Lehman structural hash and lossless graph conversion; the final conservative semantic matcher remains shared with the native engine, so this is not a second matching algorithm.",
+    "The egglog result is an isolated feasibility spike, not integrated project-backend support; global multi-output extraction remains open."
+  ],
+  "memory_measurement": null,
+  "networkx_representation": "MultiDiGraph with stable hash-derived multiedge keys",
+  "pairs": [
+    {
+      "label": "executable_rtlil_pair",
+      "level": "rtlil",
+      "native": {
+        "coverage": {
+          "a": 0.25,
+          "b": 0.058823529411764705
+        },
+        "deterministic_match_hash": "803893c28e547b2f2a3cc1f3b8b5161e0ed3fe4e9bcca5bef3251dc56d921f61",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+            "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1"
+          }
+        ],
+        "runtime_seconds": 0.0005505660083144903
+      },
+      "networkx": {
+        "coverage": {
+          "a": 0.25,
+          "b": 0.058823529411764705
+        },
+        "deterministic_match_hash": "803893c28e547b2f2a3cc1f3b8b5161e0ed3fe4e9bcca5bef3251dc56d921f61",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_a_mul.sv:8$1",
+            "b": "$mul$/home/dabinford/research/rtl/fma_experiment/graph_unit_b_add_mul_mac.sv:16$1"
+          }
+        ],
+        "runtime_seconds": 0.0013836179859936237,
+        "structural_algorithm": {
+          "a": "18548d884b0cb522a03e63fcc0ded446",
+          "algorithm": "weisfeiler_lehman_graph_hash",
+          "b": "6d3f88081fa8ffa7680ba33307336e60"
+        }
+      },
+      "semantic_difference": false,
+      "sources": [
+        "/home/dabinford/research/meeting-artifacts/graph-to-rtl/graphs/graph_unit_a_mul.rtlil.graph.json",
+        "/home/dabinford/research/meeting-artifacts/graph-to-rtl/graphs/graph_unit_b_add_mul_mac.rtlil.graph.json"
+      ]
+    },
+    {
+      "label": "capability_add32_add64",
+      "level": "rtlil",
+      "native": {
+        "coverage": {
+          "a": 1.0,
+          "b": 1.0
+        },
+        "deterministic_match_hash": "1cf0182e41a9a7d06ac49e4550961713c4854be5a86d84789354242d55e785ab",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add32.sv:8$1",
+            "b": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add64.sv:8$1",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  },
+                  {
+                    "from_width": 32,
+                    "input": 1,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:a_i",
+            "b": "port:a_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:b_i",
+            "b": "port:b_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:result_o",
+            "b": "port:result_o",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          }
+        ],
+        "runtime_seconds": 0.00033787195570766926
+      },
+      "networkx": {
+        "coverage": {
+          "a": 1.0,
+          "b": 1.0
+        },
+        "deterministic_match_hash": "1cf0182e41a9a7d06ac49e4550961713c4854be5a86d84789354242d55e785ab",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add32.sv:8$1",
+            "b": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add64.sv:8$1",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  },
+                  {
+                    "from_width": 32,
+                    "input": 1,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:a_i",
+            "b": "port:a_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:b_i",
+            "b": "port:b_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          },
+          {
+            "a": "port:result_o",
+            "b": "port:result_o",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "b_implements_a"
+            }
+          }
+        ],
+        "runtime_seconds": 0.0004819959867745638,
+        "structural_algorithm": {
+          "a": "594ab0e276f1042758626f040d62592b",
+          "algorithm": "weisfeiler_lehman_graph_hash",
+          "b": "a97b23a38db4b6e8b7dad64106a74801"
+        }
+      },
+      "semantic_difference": false,
+      "sources": [
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32.rtlil.graph.json",
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64.rtlil.graph.json"
+      ]
+    },
+    {
+      "label": "capability_add64_add32",
+      "level": "rtlil",
+      "native": {
+        "coverage": {
+          "a": 1.0,
+          "b": 1.0
+        },
+        "deterministic_match_hash": "df6a221f905922f0c3e2d5a4449ed184a517bab0f6fcd41811df75561c2d2f3d",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add64.sv:8$1",
+            "b": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add32.sv:8$1",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  },
+                  {
+                    "from_width": 32,
+                    "input": 1,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:a_i",
+            "b": "port:a_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:b_i",
+            "b": "port:b_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:result_o",
+            "b": "port:result_o",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          }
+        ],
+        "runtime_seconds": 0.00025688810274004936
+      },
+      "networkx": {
+        "coverage": {
+          "a": 1.0,
+          "b": 1.0
+        },
+        "deterministic_match_hash": "df6a221f905922f0c3e2d5a4449ed184a517bab0f6fcd41811df75561c2d2f3d",
+        "largest_bounded_subgraph": 0,
+        "matched_nodes": [
+          {
+            "a": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add64.sv:8$1",
+            "b": "$add$/home/dabinford/research/rtl/fma_experiment/capability_add32.sv:8$1",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  },
+                  {
+                    "from_width": 32,
+                    "input": 1,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:a_i",
+            "b": "port:a_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:b_i",
+            "b": "port:b_i",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          },
+          {
+            "a": "port:result_o",
+            "b": "port:result_o",
+            "capability": {
+              "adaptation": {
+                "direction": "implementer_to_required",
+                "implementer_width": 64,
+                "input_extension": [
+                  {
+                    "from_width": 32,
+                    "input": 0,
+                    "mode": "zero_extend",
+                    "to_width": 64
+                  }
+                ],
+                "output_slicing": {
+                  "from_width": 64,
+                  "range": "[31:0]",
+                  "to_width": 32
+                },
+                "required_width": 32
+              },
+              "direction": "a_implements_b"
+            }
+          }
+        ],
+        "runtime_seconds": 0.0004915229510515928,
+        "structural_algorithm": {
+          "a": "a97b23a38db4b6e8b7dad64106a74801",
+          "algorithm": "weisfeiler_lehman_graph_hash",
+          "b": "594ab0e276f1042758626f040d62592b"
+        }
+      },
+      "semantic_difference": false,
+      "sources": [
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/capability_add64/capability_add64.rtlil.graph.json",
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/capability_add32/capability_add32.rtlil.graph.json"
+      ]
+    },
+    {
+      "label": "horizontal_ibex_rtlil",
+      "level": "rtlil",
+      "native": {
+        "coverage": {
+          "a": 0.05194805194805195,
+          "b": 0.11363636363636363
+        },
+        "deterministic_match_hash": "26509dcfb8b170ce73ec7faea6dbf80ed6200f228cc683ec99a4a4f9ad2f0c1c",
+        "largest_bounded_subgraph": 5,
+        "matched_nodes": [
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$and$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:178$247",
+            "b": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:178$105"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$and$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:205$254",
+            "b": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:205$112"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$auto$opt_expr.cc:702:replace_const_cells$619",
+            "b": "$flatten\\u_ibex_alu.$auto$opt_expr.cc:702:replace_const_cells$202"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$or$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:204$253",
+            "b": "$flatten\\u_ibex_alu.$or$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:204$111"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$295_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$144_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$297_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$146_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$300_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$149_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$300_CMP0",
+            "b": "$flatten\\u_ibex_alu.$procmux$149_CMP0"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$303",
+            "b": "$flatten\\u_ibex_alu.$procmux$152"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$305",
+            "b": "$flatten\\u_ibex_alu.$procmux$154"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$320",
+            "b": "$flatten\\u_ibex_alu.$procmux$169"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$334",
+            "b": "$flatten\\u_ibex_alu.$procmux$183"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$ternary$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:171$246",
+            "b": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:171$104"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:101$228",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:101$86"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:206$255",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:206$113"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:98$225",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:98$83"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.$ternary$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:1232$275:B",
+            "b": "const:$flatten\\u_ibex_alu.$add$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:84$79:A"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.\\alu_i.$procmux$291:A",
+            "b": "const:$flatten\\u_ibex_alu.$procmux$140:A"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.\\alu_i.$procmux$291:B",
+            "b": "const:$flatten\\u_ibex_alu.$procmux$140:B"
+          },
+          {
+            "a": "port:alu_operator_i",
+            "b": "port:operator_i"
+          }
+        ],
+        "runtime_seconds": 0.10217547812499106
+      },
+      "networkx": {
+        "coverage": {
+          "a": 0.05194805194805195,
+          "b": 0.11363636363636363
+        },
+        "deterministic_match_hash": "26509dcfb8b170ce73ec7faea6dbf80ed6200f228cc683ec99a4a4f9ad2f0c1c",
+        "largest_bounded_subgraph": 5,
+        "matched_nodes": [
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$and$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:178$247",
+            "b": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:178$105"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$and$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:205$254",
+            "b": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:205$112"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$auto$opt_expr.cc:702:replace_const_cells$619",
+            "b": "$flatten\\u_ibex_alu.$auto$opt_expr.cc:702:replace_const_cells$202"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$or$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:204$253",
+            "b": "$flatten\\u_ibex_alu.$or$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:204$111"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$295_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$144_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$297_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$146_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$300_ANY",
+            "b": "$flatten\\u_ibex_alu.$procmux$149_ANY"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$300_CMP0",
+            "b": "$flatten\\u_ibex_alu.$procmux$149_CMP0"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$303",
+            "b": "$flatten\\u_ibex_alu.$procmux$152"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$305",
+            "b": "$flatten\\u_ibex_alu.$procmux$154"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$320",
+            "b": "$flatten\\u_ibex_alu.$procmux$169"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$procmux$334",
+            "b": "$flatten\\u_ibex_alu.$procmux$183"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$ternary$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:171$246",
+            "b": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:171$104"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:101$228",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:101$86"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:206$255",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:206$113"
+          },
+          {
+            "a": "$flatten\\u_ex_block.\\alu_i.$xor$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:98$225",
+            "b": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:98$83"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.$ternary$/home/dabinford/research/build/ibex_fused_ex_block/ibex_fused_ex_block_wrapper.v:1232$275:B",
+            "b": "const:$flatten\\u_ibex_alu.$add$/home/dabinford/research/build/sc_ibex/ibex_alu_wrapper.v:84$79:A"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.\\alu_i.$procmux$291:A",
+            "b": "const:$flatten\\u_ibex_alu.$procmux$140:A"
+          },
+          {
+            "a": "const:$flatten\\u_ex_block.\\alu_i.$procmux$291:B",
+            "b": "const:$flatten\\u_ibex_alu.$procmux$140:B"
+          },
+          {
+            "a": "port:alu_operator_i",
+            "b": "port:operator_i"
+          }
+        ],
+        "runtime_seconds": 0.11544032790698111,
+        "structural_algorithm": {
+          "a": "1286951ac31de0fcca525b4e01ef9cc8",
+          "algorithm": "weisfeiler_lehman_graph_hash",
+          "b": "e5a30e84bae9a927f944261e0d2ec5ac"
+        }
+      },
+      "semantic_difference": false,
+      "sources": [
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/ibex_fused_ex_block_wrapper/ibex_fused_ex_block_wrapper.rtlil.graph.json",
+        "/home/dabinford/research/meeting-artifacts/2026-09-14/studies/ibex_alu_wrapper/ibex_alu_wrapper.rtlil.graph.json"
+      ]
+    }
+  ],
+  "schema": "fu-graph-backend-comparison/v1"
+}

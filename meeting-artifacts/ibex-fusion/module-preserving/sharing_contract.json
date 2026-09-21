@@ -1,0 +1,86 @@
+{
+  "classification": "contract-guided module-preserving fusion",
+  "generated_top": "ibex_alu_add_client_fused",
+  "interface": {
+    "alu_operand_a_i": {
+      "direction": "input",
+      "width": 32
+    },
+    "alu_operand_b_i": {
+      "direction": "input",
+      "width": 32
+    },
+    "client_operand_a_i": {
+      "direction": "input",
+      "width": 32
+    },
+    "client_operand_b_i": {
+      "direction": "input",
+      "width": 32
+    },
+    "client_select_i": {
+      "direction": "input",
+      "width": 1
+    },
+    "operator_i": {
+      "direction": "input",
+      "width": 7
+    },
+    "result_o": {
+      "direction": "output",
+      "width": 32
+    }
+  },
+  "mode_semantics": {
+    "alu": "same 14 base RV32I operations as ibex_alu_wrapper",
+    "client": "client_operand_a_i + client_operand_b_i modulo 2^32"
+  },
+  "operand_paths": {
+    "alu_a": "{alu_operand_a_i,1'b1}",
+    "alu_b": "{alu_operand_b_i,1'b0}",
+    "client_a": "{client_operand_a_i,1'b1}",
+    "client_b": "{client_operand_b_i,1'b0}"
+  },
+  "resource_owner": {
+    "module": "ibex_alu",
+    "package_source": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_pkg.sv",
+      "sha256": "d79438e9c857d94552b02af03c725b88d2cbf5c9c165c6fa0632b92c3e26e26f"
+    },
+    "resolved_commit": "8ed87e07e3331561bce93af1568d9b376948e701",
+    "source": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_alu.sv",
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    }
+  },
+  "result_routing": {
+    "alu": "ibex_alu.result_o_or_comparison_result",
+    "client": "ibex_alu.adder_result_o",
+    "output": "result_o"
+  },
+  "schema": "fu-ibex-sharing-contract/v1",
+  "selector": {
+    "encoding": {
+      "0": "ibex_alu",
+      "1": "independent_add_client"
+    },
+    "port": "client_select_i",
+    "width": 1
+  },
+  "shared_resource": {
+    "architectural_result_slice": "[32:1]",
+    "architectural_result_width": 32,
+    "extended_result_port": "adder_result_ext_o",
+    "extended_result_width": 34,
+    "kind": "$add",
+    "operand_width": 33,
+    "result_port": "adder_result_o"
+  },
+  "simultaneous_use": {
+    "preserved": false,
+    "restriction": "client_select_i chooses one adder client per combinational evaluation"
+  },
+  "version": 1
+}

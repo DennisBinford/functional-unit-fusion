@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="white"/><style>text{font-family:sans-serif;fill:#202124}.title{font-size:26px;font-weight:bold}.subtitle{font-size:17px}.region{fill:#f1f3f4;stroke:#6b7280;stroke-width:3}.green{fill:#d9f2df;stroke:#238636;stroke-width:3}.red{fill:#ffe0e0;stroke:#c62828;stroke-width:3}.purple{fill:#eadcf8;stroke:#7b4397;stroke-width:3}.blue{fill:#dcecff;stroke:#2463a6;stroke-width:3}.label{font-size:16px}.small{font-size:13px}</style>
+<text x="600" y="38" text-anchor="middle" class="title">Whole-Ibex ALU — equal-interface separate architecture schematic</text>
+<text x="600" y="68" text-anchor="middle" class="subtitle">Before fusion; conceptual schematic, not an RTLIL graph</text>
+<rect x="55" y="105" width="490" height="410" rx="14" class="region"/><text x="300" y="140" text-anchor="middle" class="title">Preserved ibex_alu region</text>
+<text x="85" y="182" class="label">alu_operand_a_i / alu_operand_b_i</text><line x1="300" y1="190" x2="300" y2="245" stroke="#555" stroke-width="3"/>
+<rect x="165" y="245" width="270" height="95" rx="10" class="green"/><text x="300" y="282" text-anchor="middle" class="label">internal $add</text><text x="300" y="310" text-anchor="middle" class="small">{operand_width}-bit operands</text><text x="300" y="328" text-anchor="middle" class="small">existing Ibex resource</text>
+<line x1="300" y1="340" x2="300" y2="390" stroke="#555" stroke-width="3"/><text x="300" y="420" text-anchor="middle" class="label">adder_result_o → ALU result path</text>
+<rect x="625" y="105" width="490" height="410" rx="14" class="region"/><text x="870" y="140" text-anchor="middle" class="title">Dedicated client path</text>
+<rect x="735" y="175" width="270" height="78" rx="10" class="blue"/><text x="870" y="207" text-anchor="middle" class="label">client operands</text><text x="870" y="232" text-anchor="middle" class="small">client_operand_a_i / b_i</text>
+<line x1="870" y1="253" x2="870" y2="285" stroke="#555" stroke-width="3"/>
+<rect x="735" y="285" width="270" height="95" rx="10" class="red"/><text x="870" y="322" text-anchor="middle" class="label">dedicated $add</text><text x="870" y="350" text-anchor="middle" class="small">independent client resource</text>
+<line x1="870" y1="380" x2="870" y2="420" stroke="#555" stroke-width="3"/>
+<rect x="735" y="420" width="270" height="70" rx="10" class="purple"/><text x="870" y="450" text-anchor="middle" class="label">selector/output mux</text><text x="870" y="473" text-anchor="middle" class="small">client_select_i</text>
+<line x1="545" y1="455" x2="735" y2="455" stroke="#7b4397" stroke-width="4" stroke-dasharray="8,6"/><text x="640" y="445" text-anchor="middle" class="small">existing output selection</text>
+<text x="600" y="575" text-anchor="middle" class="title">2 × $add</text><text x="600" y="610" text-anchor="middle" class="subtitle">re-extracted graph: $add=2, $mux=9, cells=1043</text>
+<text x="600" y="655" text-anchor="middle" class="small">Contract owner: ibex_alu; separate wrapper retains the Ibex ALU region.</text>
+</svg>

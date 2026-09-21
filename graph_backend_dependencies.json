@@ -1,0 +1,17 @@
+{
+  "schema": "fu-graph-backend-dependencies/v1",
+  "policy": "optional backends are never installed by tests or Make targets",
+  "primary": {"name": "networkx", "role": "structural graph analysis", "minimum": "3.1", "version_used": "3.1", "status": "present in system Python"},
+  "optional": [
+    {"name": "egglog", "role": "Python equality saturation feasibility", "status": "not installed"},
+    {"name": "egg", "role": "Rust equality saturation alternative", "status": "not vendored; adapter pending"},
+    {"name": "rustworkx", "role": "not selected", "status": "not installed"},
+    {"name": "igraph", "role": "not selected", "status": "not installed"}
+  ],
+  "source_references": [
+    "https://networkx.org/documentation/stable/",
+    "https://github.com/networkx/networkx",
+    "https://github.com/egraphs-good/egg",
+    "https://github.com/egraphs-good/egglog"
+  ]
+}

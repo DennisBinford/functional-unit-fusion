@@ -1,0 +1,117 @@
+{
+  "comparison": "literal area(whole Ibex ALU)+area(dedicated 32-bit ADD)",
+  "conditions": {
+    "combinational": true,
+    "constraint_ns": 2.5,
+    "library": "locked Nangate45/FreePDK45 typical",
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "registered_ii": "undefined",
+    "registered_latency": "undefined",
+    "workload": "identical structural synthesis flow"
+  },
+  "criterion_fused_below_literal_sum": true,
+  "dedicated_add": {
+    "area_um2": 187.53000000000003,
+    "cell_count": 153,
+    "critical_delay_ns": 1.12,
+    "design": "ibex_independent_add_client",
+    "fmax_mhz": 892.8571428571428,
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "power_mw": 0.0511,
+    "slack_ns": 0.88,
+    "status": "pass",
+    "synthesis_result": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/dedicated_add/ppa.json"
+  },
+  "fused": {
+    "area_um2": 1115.869999999999,
+    "cell_count": 924,
+    "critical_delay_ns": 1.88,
+    "design": "ibex_alu_add_client_fused",
+    "fmax_mhz": 531.9148936170213,
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "power_mw": 0.325,
+    "slack_ns": 0.12,
+    "status": "pass",
+    "synthesis_result": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/fused/ppa.json"
+  },
+  "fused_delta_percent": -2.9833487511563845,
+  "fused_delta_um2": -34.31400000000053,
+  "fused_power_mw": 0.325,
+  "literal_area_sum_um2": 1150.1839999999995,
+  "literal_power_sum_mw": 0.3081,
+  "pretechmap": {
+    "dedicated_add": {
+      "edges": 3,
+      "kinds": {
+        "$add": 1,
+        "port_in": 2,
+        "port_out": 1
+      },
+      "nodes": 4,
+      "operators": 1
+    },
+    "fused": {
+      "edges": 193,
+      "kinds": {
+        "$add": 1,
+        "$and": 2,
+        "$eq": 27,
+        "$logic_not": 2,
+        "$meminit": 1,
+        "$memrd_v2": 1,
+        "$mux": 12,
+        "$not": 4,
+        "$or": 3,
+        "$pmux": 2,
+        "$reduce_or": 8,
+        "$sshr": 1,
+        "$xor": 3,
+        "const": 43,
+        "port_in": 6,
+        "port_out": 1
+      },
+      "nodes": 117,
+      "operators": 67
+    },
+    "whole_alu": {
+      "edges": 180,
+      "kinds": {
+        "$add": 1,
+        "$and": 2,
+        "$eq": 27,
+        "$logic_not": 2,
+        "$meminit": 1,
+        "$memrd_v2": 1,
+        "$mux": 8,
+        "$not": 4,
+        "$or": 3,
+        "$pmux": 2,
+        "$reduce_or": 8,
+        "$sshr": 1,
+        "$xor": 3,
+        "const": 41,
+        "port_in": 3,
+        "port_out": 1
+      },
+      "nodes": 108,
+      "operators": 63
+    }
+  },
+  "schema": "fu-ibex-module-preserving-core-ppa/v1",
+  "selector_mux_overhead": {
+    "equal_interface_separate_muxes": 9,
+    "fused_muxes": 12
+  },
+  "whole_alu": {
+    "area_um2": 962.6539999999995,
+    "cell_count": 827,
+    "critical_delay_ns": 1.9500000000000002,
+    "design": "ibex_alu_wrapper",
+    "fmax_mhz": 512.8205128205128,
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "power_mw": 0.257,
+    "slack_ns": 0.05,
+    "status": "pass",
+    "synthesis_result": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/whole_alu/ppa.json"
+  }
+}

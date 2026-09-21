@@ -333,7 +333,7 @@ def _signatures(graph: Dict[str, Any], capability: bool = False) -> Dict[str, Tu
     return signatures
 
 
-def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any], mode: str = "exact") -> Dict[str, Any]:
+def _compare_native(graph_a: Dict[str, Any], graph_b: Dict[str, Any], mode: str = "exact") -> Dict[str, Any]:
     _validate_graph_pair(graph_a, graph_b)
     if mode not in ("exact", "capability"):
         raise GraphMatchError("unknown match mode {!r}".format(mode))
@@ -436,6 +436,61 @@ def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any], mode: str = "exact
     return result
 
 
+def compare(graph_a: Dict[str, Any], graph_b: Dict[str, Any], mode: str = "exact",
+            engine: str = "native") -> Dict[str, Any]:
+    """Compare graphs with the selected structural engine.
+
+    The NetworkX engine deliberately converts through the canonical backend
+    before running the same conservative matcher. This validates interchange
+    fidelity without pretending that two different matching algorithms have
+    different semantics.
+    """
+    if engine == "native":
+        result = _compare_native(graph_a, graph_b, mode)
+    elif engine == "networkx":
+        from graph_backend import GraphBackendError, NetworkXBackend
+        try:
+            network_a = NetworkXBackend.to_networkx(graph_a)
+            network_b = NetworkXBackend.to_networkx(graph_b)
+            # NetworkX's WL implementation does not accept MultiDiGraph edge
+            # attributes directly. Collapse only for this structural hash;
+            # canonical conversion below still preserves every parallel edge.
+            from networkx.algorithms.graph_hashing import weisfeiler_lehman_graph_hash
+            def simple(graph):
+                import networkx as nx
+                result = nx.DiGraph()
+                for node_id, attrs in graph.nodes(data=True):
+                    result.add_node(node_id, wl_label=json.dumps(
+                        {"kind": attrs.get("kind"), "width": attrs.get("width"),
+                         "label": attrs.get("label"), "attrs": attrs.get("attrs", {})},
+                        sort_keys=True, separators=(",", ":")))
+                for src, dst, attrs in graph.edges(data=True):
+                    label = json.dumps({key: attrs.get(key) for key in
+                                        ("src_port", "dst_port", "width", "inverted")},
+                                       sort_keys=True, separators=(",", ":"))
+                    if result.has_edge(src, dst):
+                        result[src][dst]["wl_edge"] += "|" + label
+                    else:
+                        result.add_edge(src, dst, wl_edge=label)
+                return result
+            simple_a, simple_b = simple(network_a), simple(network_b)
+            networkx_hashes = {
+                "algorithm": "weisfeiler_lehman_graph_hash",
+                "a": weisfeiler_lehman_graph_hash(simple_a, node_attr="wl_label", edge_attr="wl_edge"),
+                "b": weisfeiler_lehman_graph_hash(simple_b, node_attr="wl_label", edge_attr="wl_edge"),
+            }
+            graph_a = NetworkXBackend.to_canonical_fu_graph(network_a)
+            graph_b = NetworkXBackend.to_canonical_fu_graph(network_b)
+        except GraphBackendError as exc:
+            raise GraphMatchError(str(exc))
+        result = _compare_native(graph_a, graph_b, mode)
+        result["networkx_structural_algorithm"] = networkx_hashes
+    else:
+        raise GraphMatchError("unknown matching engine {!r}".format(engine))
+    result["engine"] = engine
+    return result
+
+
 def enumerate_common_subgraphs(graph_a: Dict[str, Any], graph_b: Dict[str, Any],
                                matched_nodes: List[Dict[str, str]],
                                min_size: int = 2, max_size: int = 6,
@@ -515,10 +570,15 @@ def main() -> int:
     parser.add_argument("--max-subgraph-size", type=int, default=6)
     parser.add_argument("--mode", choices=("exact", "capability"), default="exact",
                         help="exact (default) or directional width-capability matching")
+    parser.add_argument("--engine", choices=("native", "networkx"), default="native",
+                        help="native matcher or NetworkX conversion backend")
     args = parser.parse_args()
-    graph_a = json.loads(args.graph_a.read_text())
-    graph_b = json.loads(args.graph_b.read_text())
-    result = compare(graph_a, graph_b, mode=args.mode)
+    try:
+        graph_a = json.loads(args.graph_a.read_text())
+        graph_b = json.loads(args.graph_b.read_text())
+        result = compare(graph_a, graph_b, mode=args.mode, engine=args.engine)
+    except (OSError, ValueError, GraphMatchError) as exc:
+        parser.error("matching failed: {}".format(exc))
     result["common_subgraphs"] = enumerate_common_subgraphs(
         graph_a, graph_b, result["matched_nodes"], max_size=args.max_subgraph_size)
     args.output.parent.mkdir(parents=True, exist_ok=True)

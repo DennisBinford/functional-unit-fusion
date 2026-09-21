@@ -1,0 +1,1512 @@
+{
+  "additional_mux_count": 3,
+  "additional_post_fusion_mux_nodes": [
+    {
+      "id": "$flatten\\u_owner.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:171$116",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_owner.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:187$120",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$150",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$159",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$162",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$164",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$170",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$196",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$198",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$213",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$219",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:890$85",
+      "kind": "$mux",
+      "label": "mux[7]",
+      "width": 7
+    }
+  ],
+  "after_graph": "meeting-artifacts/ibex-fusion/module-preserving/generated_fused.rtlil.graph.json",
+  "after_only_nodes": [
+    {
+      "id": "$auto$mem.cc:305:emit$147",
+      "kind": "$memrd_v2",
+      "label": "memrdv2",
+      "width": 1
+    },
+    {
+      "id": "$auto$mem.cc:351:emit$148",
+      "kind": "$meminit",
+      "label": "meminit",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$and$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:178$117",
+      "kind": "$and",
+      "label": "and",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$eq$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:95$93",
+      "kind": "$logic_not",
+      "label": "logicnot",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$eq$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:99$97",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$not$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:106$100",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$not$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:108$101",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:207$128",
+      "kind": "$or",
+      "label": "or",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:208$131",
+      "kind": "$or",
+      "label": "or",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_owner.$sshr$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:178$119",
+      "kind": "$sshr",
+      "label": "sshr[33]",
+      "width": 33
+    },
+    {
+      "id": "$flatten\\u_owner.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:171$116",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_owner.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:187$120",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_owner.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:101$98",
+      "kind": "$xor",
+      "label": "xor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$150",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$159",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$162",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$164",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$168_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$170",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$173",
+      "kind": "$pmux",
+      "label": "pmux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$175_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$175_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$175_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$196",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$198",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$201",
+      "kind": "$pmux",
+      "label": "pmux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$207_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP5",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP6",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$207_CMP7",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP0",
+      "kind": "$logic_not",
+      "label": "logicnot",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$211_CMP5",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$213",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$214_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$219",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:890$85",
+      "kind": "$mux",
+      "label": "mux[7]",
+      "width": 7
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$147:ARST",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$147:CLK",
+      "kind": "const",
+      "label": "1'bx",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$147:EN",
+      "kind": "const",
+      "label": "1'b1",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$147:SRST",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:351:emit$148:ADDR",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "id": "const:$flatten\\u_owner.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:84$91:B",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$150:B",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$162:A",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$162:B",
+      "kind": "const",
+      "label": "1'b1",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$164:B",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$174_CMP2:B",
+      "kind": "const",
+      "label": "7'b0011111",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$174_CMP3:B",
+      "kind": "const",
+      "label": "7'b0100000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$175_CMP2:B",
+      "kind": "const",
+      "label": "7'b0100001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$175_CMP3:B",
+      "kind": "const",
+      "label": "7'b0100010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$201:A",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "id": "const:$procmux$201:B",
+      "kind": "const",
+      "label": "31'b0000000000000000000000000000000",
+      "width": 31
+    },
+    {
+      "id": "const:$procmux$207_CMP0:B",
+      "kind": "const",
+      "label": "7'b0011101",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP1:B",
+      "kind": "const",
+      "label": "7'b0011110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP2:B",
+      "kind": "const",
+      "label": "7'b0011011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP3:B",
+      "kind": "const",
+      "label": "7'b0011100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP4:B",
+      "kind": "const",
+      "label": "7'b0011001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP5:B",
+      "kind": "const",
+      "label": "7'b0011010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP6:B",
+      "kind": "const",
+      "label": "7'b0101011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$207_CMP7:B",
+      "kind": "const",
+      "label": "7'b0101100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP0:B",
+      "kind": "const",
+      "label": "7'b0001010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP1:B",
+      "kind": "const",
+      "label": "7'b0001001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP2:B",
+      "kind": "const",
+      "label": "7'b0001000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP3:B",
+      "kind": "const",
+      "label": "7'b0001100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP4:B",
+      "kind": "const",
+      "label": "7'b0001011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP1:B",
+      "kind": "const",
+      "label": "7'b0000001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP2:B",
+      "kind": "const",
+      "label": "7'b0010110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP3:B",
+      "kind": "const",
+      "label": "7'b0010111",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP4:B",
+      "kind": "const",
+      "label": "7'b0011000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP0:B",
+      "kind": "const",
+      "label": "7'b0000010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP1:B",
+      "kind": "const",
+      "label": "7'b0000101",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP2:B",
+      "kind": "const",
+      "label": "7'b0000011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP3:B",
+      "kind": "const",
+      "label": "7'b0000110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP4:B",
+      "kind": "const",
+      "label": "7'b0000100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$211_CMP5:B",
+      "kind": "const",
+      "label": "7'b0000111",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$213:B",
+      "kind": "const",
+      "label": "31'b0000000000000000000000000000000",
+      "width": 31
+    },
+    {
+      "id": "const:$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:890$85:B",
+      "kind": "const",
+      "label": "7'b0000000",
+      "width": 7
+    },
+    {
+      "id": "port:alu_operand_a_i",
+      "kind": "port_in",
+      "label": "alu_operand_a_i",
+      "width": 32
+    },
+    {
+      "id": "port:alu_operand_b_i",
+      "kind": "port_in",
+      "label": "alu_operand_b_i",
+      "width": 32
+    },
+    {
+      "id": "port:client_operand_a_i",
+      "kind": "port_in",
+      "label": "client_operand_a_i",
+      "width": 32
+    },
+    {
+      "id": "port:client_operand_b_i",
+      "kind": "port_in",
+      "label": "client_operand_b_i",
+      "width": 32
+    },
+    {
+      "id": "port:result_o",
+      "kind": "port_out",
+      "label": "result_o",
+      "width": 32
+    }
+  ],
+  "after_operation_counts": {
+    "$add": 1,
+    "$and": 2,
+    "$eq": 27,
+    "$logic_not": 2,
+    "$meminit": 1,
+    "$memrd_v2": 1,
+    "$mux": 12,
+    "$not": 4,
+    "$or": 3,
+    "$pmux": 2,
+    "$reduce_or": 8,
+    "$sshr": 1,
+    "$xor": 3,
+    "const": 43,
+    "port_in": 6,
+    "port_out": 1
+  },
+  "before_graph": "meeting-artifacts/ibex-fusion/module-preserving/equal_interface_separate.rtlil.graph.json",
+  "before_only_nodes": [
+    {
+      "id": "$auto$mem.cc:305:emit$146",
+      "kind": "$memrd_v2",
+      "label": "memrdv2",
+      "width": 1
+    },
+    {
+      "id": "$auto$mem.cc:351:emit$147",
+      "kind": "$meminit",
+      "label": "meminit",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_client.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:814$75",
+      "kind": "$add",
+      "label": "add[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:178$115",
+      "kind": "$and",
+      "label": "and",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:95$91",
+      "kind": "$logic_not",
+      "label": "logicnot",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$eq$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:99$95",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:106$98",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$not$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:108$99",
+      "kind": "$not",
+      "label": "not",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:207$126",
+      "kind": "$or",
+      "label": "or",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:208$129",
+      "kind": "$or",
+      "label": "or",
+      "width": 1
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$sshr$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:178$117",
+      "kind": "$sshr",
+      "label": "sshr[33]",
+      "width": 33
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:171$114",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:187$118",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:101$96",
+      "kind": "$xor",
+      "label": "xor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$149",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$161",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$167_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$169",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$172",
+      "kind": "$pmux",
+      "label": "pmux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$173_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$173_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$173_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$173_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$174_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$190_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$195",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$197",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$200",
+      "kind": "$pmux",
+      "label": "pmux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$206_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP5",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$206_CMP7",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$208_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$208_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$208_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$208_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$208_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP0",
+      "kind": "$logic_not",
+      "label": "logicnot",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$209_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_ANY",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP0",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP1",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP2",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP3",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP4",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$procmux$210_CMP5",
+      "kind": "$eq",
+      "label": "eq",
+      "width": 1
+    },
+    {
+      "id": "$reduce_or$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$82",
+      "kind": "$reduce_or",
+      "label": "reduceor",
+      "width": 1
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$83",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$84",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$146:ARST",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$146:CLK",
+      "kind": "const",
+      "label": "1'bx",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$146:EN",
+      "kind": "const",
+      "label": "1'b1",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:305:emit$146:SRST",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$auto$mem.cc:351:emit$147:ADDR",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "id": "const:$flatten\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:84$89:B",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$149:B",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$161:A",
+      "kind": "const",
+      "label": "1'b0",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$161:B",
+      "kind": "const",
+      "label": "1'b1",
+      "width": 1
+    },
+    {
+      "id": "const:$procmux$173_CMP2:B",
+      "kind": "const",
+      "label": "7'b0011111",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$173_CMP3:B",
+      "kind": "const",
+      "label": "7'b0100000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$173_CMP4:B",
+      "kind": "const",
+      "label": "7'b0101011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$174_CMP2:B",
+      "kind": "const",
+      "label": "7'b0100001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$174_CMP3:B",
+      "kind": "const",
+      "label": "7'b0100010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$190_CMP0:B",
+      "kind": "const",
+      "label": "7'b0001010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$200:A",
+      "kind": "const",
+      "label": "32'b00000000000000000000000000000000",
+      "width": 32
+    },
+    {
+      "id": "const:$procmux$200:B",
+      "kind": "const",
+      "label": "31'b0000000000000000000000000000000",
+      "width": 31
+    },
+    {
+      "id": "const:$procmux$206_CMP0:B",
+      "kind": "const",
+      "label": "7'b0011101",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP1:B",
+      "kind": "const",
+      "label": "7'b0011110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP2:B",
+      "kind": "const",
+      "label": "7'b0011011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP3:B",
+      "kind": "const",
+      "label": "7'b0011100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP4:B",
+      "kind": "const",
+      "label": "7'b0011001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP5:B",
+      "kind": "const",
+      "label": "7'b0011010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$206_CMP7:B",
+      "kind": "const",
+      "label": "7'b0101100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$208_CMP1:B",
+      "kind": "const",
+      "label": "7'b0001001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$208_CMP2:B",
+      "kind": "const",
+      "label": "7'b0001000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$208_CMP3:B",
+      "kind": "const",
+      "label": "7'b0001100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$208_CMP4:B",
+      "kind": "const",
+      "label": "7'b0001011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP1:B",
+      "kind": "const",
+      "label": "7'b0000001",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP2:B",
+      "kind": "const",
+      "label": "7'b0010110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP3:B",
+      "kind": "const",
+      "label": "7'b0010111",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$209_CMP4:B",
+      "kind": "const",
+      "label": "7'b0011000",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP0:B",
+      "kind": "const",
+      "label": "7'b0000010",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP1:B",
+      "kind": "const",
+      "label": "7'b0000101",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP2:B",
+      "kind": "const",
+      "label": "7'b0000011",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP3:B",
+      "kind": "const",
+      "label": "7'b0000110",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP4:B",
+      "kind": "const",
+      "label": "7'b0000100",
+      "width": 7
+    },
+    {
+      "id": "const:$procmux$210_CMP5:B",
+      "kind": "const",
+      "label": "7'b0000111",
+      "width": 7
+    },
+    {
+      "id": "const:$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$83:B",
+      "kind": "const",
+      "label": "31'b0000000000000000000000000000000",
+      "width": 31
+    },
+    {
+      "id": "port:alu_operand_a_i",
+      "kind": "port_in",
+      "label": "alu_operand_a_i",
+      "width": 32
+    },
+    {
+      "id": "port:alu_operand_b_i",
+      "kind": "port_in",
+      "label": "alu_operand_b_i",
+      "width": 32
+    },
+    {
+      "id": "port:client_operand_a_i",
+      "kind": "port_in",
+      "label": "client_operand_a_i",
+      "width": 32
+    },
+    {
+      "id": "port:client_operand_b_i",
+      "kind": "port_in",
+      "label": "client_operand_b_i",
+      "width": 32
+    },
+    {
+      "id": "port:result_o",
+      "kind": "port_out",
+      "label": "result_o",
+      "width": 32
+    }
+  ],
+  "before_operation_counts": {
+    "$add": 2,
+    "$and": 2,
+    "$eq": 27,
+    "$logic_not": 2,
+    "$meminit": 1,
+    "$memrd_v2": 1,
+    "$mux": 9,
+    "$not": 4,
+    "$or": 3,
+    "$pmux": 2,
+    "$reduce_or": 8,
+    "$sshr": 1,
+    "$xor": 3,
+    "const": 41,
+    "port_in": 6,
+    "port_out": 1
+  },
+  "changed_pre_fusion_mux_nodes": [
+    {
+      "id": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:171$114",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$flatten\\u_ibex_alu.$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:187$118",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$149",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$161",
+      "kind": "$mux",
+      "label": "mux[33]",
+      "width": 33
+    },
+    {
+      "id": "$procmux$169",
+      "kind": "$mux",
+      "label": "mux",
+      "width": 1
+    },
+    {
+      "id": "$procmux$195",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$procmux$197",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$83",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    },
+    {
+      "id": "$ternary$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:864$84",
+      "kind": "$mux",
+      "label": "mux[32]",
+      "width": 32
+    }
+  ],
+  "comparison": "graph_match.compare(mode='exact') plus semantic resource classification",
+  "limitations": [
+    "Yosys-generated node IDs are labels only; graph_match semantic signatures determine exact matches.",
+    "The shared-adder classification uses the contract-compatible 34-bit Ibex resource role because its incoming paths are intentionally changed by fusion."
+  ],
+  "matched_retained_nodes": [
+    {
+      "after_id": "$auto$opt_expr.cc:277:group_cell_inputs$224",
+      "after_kind": "$not",
+      "before_id": "$auto$opt_expr.cc:277:group_cell_inputs$214",
+      "before_kind": "$not"
+    },
+    {
+      "after_id": "$flatten\\u_owner.$and$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:205$124",
+      "after_kind": "$and",
+      "before_id": "$flatten\\u_ibex_alu.$and$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:205$122",
+      "before_kind": "$and"
+    },
+    {
+      "after_id": "$flatten\\u_owner.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:204$123",
+      "after_kind": "$or",
+      "before_id": "$flatten\\u_ibex_alu.$or$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:204$121",
+      "before_kind": "$or"
+    },
+    {
+      "after_id": "$flatten\\u_owner.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:206$125",
+      "after_kind": "$xor",
+      "before_id": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:206$123",
+      "before_kind": "$xor"
+    },
+    {
+      "after_id": "$flatten\\u_owner.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:98$95",
+      "after_kind": "$xor",
+      "before_id": "$flatten\\u_ibex_alu.$xor$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:98$93",
+      "before_kind": "$xor"
+    },
+    {
+      "after_id": "const:$auto$mem.cc:351:emit$148:DATA",
+      "after_kind": "const",
+      "before_id": "const:$auto$mem.cc:351:emit$147:DATA",
+      "before_kind": "const"
+    },
+    {
+      "after_id": "const:$flatten\\u_owner.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:84$91:A",
+      "after_kind": "const",
+      "before_id": "const:$flatten\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:84$89:A",
+      "before_kind": "const"
+    },
+    {
+      "after_id": "port:client_select_i",
+      "after_kind": "port_in",
+      "before_id": "port:client_select_i",
+      "before_kind": "port_in"
+    },
+    {
+      "after_id": "port:operator_i",
+      "after_kind": "port_in",
+      "before_id": "port:operator_i",
+      "before_kind": "port_in"
+    }
+  ],
+  "removed_dedicated_add": [
+    {
+      "classification": "before-only dedicated client $add",
+      "id": "$flatten\\u_client.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:814$75",
+      "kind": "$add",
+      "width": 32
+    }
+  ],
+  "retained_shared_add": {
+    "after_id": "$flatten\\u_owner.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/fused.v:84$91",
+    "after_width": 34,
+    "before_id": "$flatten\\u_ibex_alu.$add$/home/dabinford/research/build/ibex_fusion/module_preserving/separate.v:84$89",
+    "before_width": 34,
+    "classification": "semantic retained Ibex internal $add; exact inputs were rewired by the preserved interface"
+  },
+  "schema": "fu-ibex-graph-diff/v1"
+}

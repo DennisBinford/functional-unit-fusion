@@ -1,0 +1,270 @@
+{
+  "classification": "contract-guided module-preserving fusion",
+  "evidence": {
+    "actual_after_graph_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fused_rtlil.dot",
+      "sha256": "aa44cccd5d891a0d24cee23517f2e7b5628a2d0409b7d16d0d6136d8395bbb65"
+    },
+    "actual_after_graph_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fused_rtlil.svg",
+      "sha256": "bba0dc72ee656089a2ab7258d53767c490f51022f9e548126bb9fce66e601f02"
+    },
+    "actual_before_graph_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_separate_rtlil.dot",
+      "sha256": "befbc37d1abfc5f07ad47f32181fbb0482f895478b3160bcfc156bc2f8651488"
+    },
+    "actual_before_graph_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_separate_rtlil.svg",
+      "sha256": "89914d21a7bb75055435a14cc4fbf4bee4a4aabf4bccb7c4603e3ebc9269d737"
+    },
+    "after_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fused_after.svg",
+      "sha256": "1bc11e1d54560767b4b0b41bedf4788763291955236302445967b4f298497b43"
+    },
+    "architecture_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/module_preserving_architecture.svg",
+      "sha256": "6cf0bbf07c918b7ec1cddbdaf540497686cf341d6f625c317f297d43a4a607cd"
+    },
+    "before_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_separate_before.svg",
+      "sha256": "65b081153f8a4ef8f5be17875d29b5f4edc5eeccd6db289fe147326420854a45"
+    },
+    "canonical_after_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/generated_fused.rtlil.graph.json",
+      "sha256": "d885be0bc03f3cac56d8124714da819fc1dbb30869575cae7808a610f2e917d2"
+    },
+    "canonical_before_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/equal_interface_separate.rtlil.graph.json",
+      "sha256": "d80371bbf18b8b9d6c95141547ecf1c7ed7fa89945bd736326f822a6781c761a"
+    },
+    "canonical_wrapper": {
+      "external": false,
+      "path": "rtl/ibex_alu_wrapper.sv",
+      "sha256": "9bbc6e785c3f76009121ae808dbb7b9ed7fcabd8fcf0d42ae0e343be58303314"
+    },
+    "client_path_after_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_client_path_after.dot",
+      "sha256": "54008a236826fe727f72463b9e86bfa18f2666d147a911401c81c4d38425d45c"
+    },
+    "client_path_after_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_client_path_after.svg",
+      "sha256": "927f4693b9c6e34d71728124e06cf846aba3412c525ea7ffbb249848a518eaf0"
+    },
+    "client_path_after_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/whole_alu_rtlil_client_path_after.graph.json",
+      "sha256": "fced1ca6fd20586b367aa6ec89d32aec9e54c5796acc3e85fdb35acd0e616f71"
+    },
+    "client_path_before_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_client_path_before.dot",
+      "sha256": "0cbcf3bbfbc8a6ea38e2f902875a68b5bbebbcb81ed78b2fd20529db3185b6aa"
+    },
+    "client_path_before_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_client_path_before.svg",
+      "sha256": "de711333a8f80c460b959826398b82be003ee63ead399e52f3e1e07be6da26ab"
+    },
+    "client_path_before_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/whole_alu_rtlil_client_path_before.graph.json",
+      "sha256": "81fd13fa57dd1538ee3b89f532ffd0f1dc17d6f74bea841d743e8b533ce1dd29"
+    },
+    "client_path_comparison": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_client_path_comparison.svg",
+      "sha256": "f41f339087624b5e6bfa7a9401ca1efc8bfea71d0055fef1a9e3ad0879328e1b"
+    },
+    "client_path_provenance": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/whole_alu_rtlil_client_path.provenance.json",
+      "sha256": "474ed1768b22239352d434e9619b103ab1c8a470dec2108d76af97451a183b43"
+    },
+    "contract": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/sharing_contract.json",
+      "sha256": "3795af797a45fdb3575443ad2df54280dc26dbfd7c002ac1162ccbb94c28dcaa"
+    },
+    "demo": {
+      "external": false,
+      "path": "scripts/ibex_module_preserving_demo.py",
+      "sha256": "88bfb221162f69fa932a7c3aa1c01091e9a29f22ec03ee1a8272bcbf218382c7"
+    },
+    "difference_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fusion_diff.svg",
+      "sha256": "9fac5e9a8e5d4d8442621ec1fcc9503ba9f6c3e37300fc12ba21b7e165605a61"
+    },
+    "emitter": {
+      "external": false,
+      "path": "scripts/ibex_module_preserving_emit.py",
+      "sha256": "8e07c080b858662a373b8014d9d96bbf9d94992c49ce78596a88416d29fa3b99"
+    },
+    "equal_interface_ppa": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/equal_interface_ppa.json",
+      "sha256": "80115d4ae1a2a35cce91178990e8f63c53c0e788d95c2937c466dd6b49dcd26d"
+    },
+    "fused_rtl": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/ibex_alu_add_client_fused.sv",
+      "sha256": "1b0545da18d71046beae35f999e82bbd7fa3bd20bdbafb2035214ee4a29eb54e"
+    },
+    "fusion_cone_after": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_fusion_cone_after.svg",
+      "sha256": "1e429416564e33475bf173e1669aec0d159bfaeeb8c5c1a4f5928dfa993bbfd7"
+    },
+    "fusion_cone_after_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_fusion_cone_after.dot",
+      "sha256": "3132e089a5d317c46ce0f2b2e824aa00d6ec5cbf3253163de9e32e5a42f19770"
+    },
+    "fusion_cone_before": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_fusion_cone_before.svg",
+      "sha256": "a9069a971ec373db075e8bd8eca147227baf6d8ee448b341655776489bb5092e"
+    },
+    "fusion_cone_before_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_rtlil_fusion_cone_before.dot",
+      "sha256": "609c61eab0ce63deac895912374d81d5351739aead90399199a761fb106fe6a2"
+    },
+    "generated_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/generated_reextracted.rtlil.graph.json",
+      "sha256": "d885be0bc03f3cac56d8124714da819fc1dbb30869575cae7808a610f2e917d2"
+    },
+    "graph_diff": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/whole_alu_before_after.rtlil.diff.json",
+      "sha256": "bdff2b10fc84a634ac23343b871691d3fa2db6ba32fa80cec3d976aae945c0da"
+    },
+    "graph_extract": {
+      "external": false,
+      "path": "graph_extract.py",
+      "sha256": "b329ba9034a52a970d1acdc62bbb101fc35394e50ed57f42b227113f93330e40"
+    },
+    "graph_match": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/whole_alu_before_after.rtlil.match.json",
+      "sha256": "29bba1a8c5a3cb5c9e9304345c41fee3d82870993205c861503abbac2dd08df8"
+    },
+    "graph_viz": {
+      "external": false,
+      "path": "graph_viz.py",
+      "sha256": "dd5147e9cb764a40cea57bcde3865ceed2ed15ac6de8b2a2496927d22f9343ee"
+    },
+    "highlighted_after_graph_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fused_rtlil_highlighted.dot",
+      "sha256": "f910249cae35f5ad05362bb3b3a8ca86a289ae65245e830dd1f24f4ce800d944"
+    },
+    "highlighted_after_graph_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_fused_rtlil_highlighted.svg",
+      "sha256": "1d1f00d20ddfdbd7867ca66c519561b9f9f55b0bbd405e30b1eecae61cd8341b"
+    },
+    "highlighted_before_graph_dot": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_separate_rtlil_highlighted.dot",
+      "sha256": "58f037836727132d28893a831e3dad6069f65a0e2763eba6879f9d5a754c1bba"
+    },
+    "highlighted_before_graph_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_separate_rtlil_highlighted.svg",
+      "sha256": "f46d790a917c6535958860c892767753eeec29080a239a74098b42e97a31e904"
+    },
+    "limitations": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/limitations.json",
+      "sha256": "7c595972bf66171dfe167aa17dda34d586dd281f92fd6a7efef8d3032d8c9312"
+    },
+    "literal_core_ppa": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/literal_core_ppa.json",
+      "sha256": "0ff3f3ba97726d948576cf4279529c79afd60677d529cdcd7e276c837c8e7bbe"
+    },
+    "ppa_figure": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/figures/whole_alu_ppa.svg",
+      "sha256": "ecf298bdd233d4ae6eed7573c7752f3954b1bde6e16f487181974a05c3596bdd"
+    },
+    "sc_flow": {
+      "external": false,
+      "path": "sc_flow.py",
+      "sha256": "1d553661707896a767cc0f9618f32d063f3fe7d21159ee0d72737e321c10f45f"
+    },
+    "sdc": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/ibex_module_preserving.sdc",
+      "sha256": "d3d60aa882875524e8989c064435d9163c2fcce48d71d5a839c658d39be46466"
+    },
+    "separate_rtl": {
+      "external": false,
+      "path": "rtl/ibex_fusion/ibex_alu_add_client_separate.sv",
+      "sha256": "421d227e6953c2c45fff2cc6bf4fd6689d7b73d251afdd1bb994d87339fe862e"
+    },
+    "simulation_result": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/simulation_result.json",
+      "sha256": "075e2c3809e4dc3f73fc2da873d00b072d6ab5b8f669e02a693bce4dd89345b1"
+    },
+    "testbench": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/tb_module_preserving.sv",
+      "sha256": "8e0c3818f2853e4a7a5e019d26a0674a0c691b90f469858b2ebe550894168845"
+    },
+    "toolchain": {
+      "external": false,
+      "path": "toolchain.py",
+      "sha256": "43945f21232af09333610bf06a3e252c84b44f5abf63fa1bef0f3f0aeab7aee4"
+    },
+    "toolchain_lock": {
+      "external": false,
+      "path": "build/toolchain.lock.json",
+      "sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45"
+    },
+    "upstream_alu": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_alu.sv",
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    "upstream_lock": {
+      "external": false,
+      "path": "designs/ibex.source.json",
+      "sha256": "ec2ad1ab34501e062a195ce2f158ad37496ed17387bdd4702aff7a775b7bdf6c"
+    },
+    "upstream_pkg": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_pkg.sv",
+      "sha256": "d79438e9c857d94552b02af03c725b88d2cbf5c9c165c6fa0632b92c3e26e26f"
+    },
+    "verilator_flow": {
+      "external": false,
+      "path": "verilator_flow.py",
+      "sha256": "85f3317643a263f50db578f72b047fae16d3152e403d6d7bfc8b7480c73e1d1b"
+    }
+  },
+  "external_dependencies": {
+    "liberty": {
+      "external": true,
+      "identity": "NangateOpenCellLibrary_typical / FreePDK45 demo corner",
+      "path": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/whole_alu/ibex_alu_wrapper/job0/synthesis/0/inputs/sc_nangate45_NangateOpenCellLibrary_typical.lib",
+      "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895"
+    }
+  },
+  "schema": "fu-ibex-module-preserving-manifest/v1",
+  "version": 1
+}

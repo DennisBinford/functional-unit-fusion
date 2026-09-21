@@ -1,0 +1,61 @@
+{
+  "count": 6,
+  "note": "Six post-checkpoint figures; gate/AIG views are structural observations only.",
+  "records": [
+    {
+      "design": "graph_unit_a_mul",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__rtlil.dot",
+      "edges": 3,
+      "level": "rtlil",
+      "nodes": 4,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/rtlil/graph_unit_a_mul.rtlil.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__rtlil.svg"
+    },
+    {
+      "design": "graph_unit_b_add_mul_mac",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__rtlil.dot",
+      "edges": 20,
+      "level": "rtlil",
+      "nodes": 17,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/rtlil/graph_unit_b_add_mul_mac.rtlil.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__rtlil.svg"
+    },
+    {
+      "design": "graph_unit_a_mul",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__gate.dot",
+      "edges": 12497,
+      "level": "gate",
+      "nodes": 6219,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/gate/graph_unit_a_mul.gate.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__gate.svg"
+    },
+    {
+      "design": "graph_unit_b_add_mul_mac",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__gate.dot",
+      "edges": 13471,
+      "level": "gate",
+      "nodes": 6679,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/gate/graph_unit_b_add_mul_mac.gate.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__gate.svg"
+    },
+    {
+      "design": "graph_unit_a_mul",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__aig.dot",
+      "edges": 32191,
+      "level": "aig",
+      "nodes": 21748,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/aig/graph_unit_a_mul.aig.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_a_mul__aig.svg"
+    },
+    {
+      "design": "graph_unit_b_add_mul_mac",
+      "dot": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__aig.dot",
+      "edges": 34569,
+      "level": "aig",
+      "nodes": 23381,
+      "source": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/studies/aig/graph_unit_b_add_mul_mac.aig.graph.json",
+      "svg": "/home/dabinford/research/meeting-artifacts/graph-to-rtl/post-checkpoint-figures/graph_unit_b_add_mul_mac__aig.svg"
+    }
+  ],
+  "schema": "graph-to-rtl-figures/v1"
+}

@@ -51,6 +51,7 @@ _CLASS_STYLE = {
     "port_out": {"fill": "#333333", "line": "#333333"},
     "const":   {"fill": "#f2f2f2", "line": "#999999"},
     "module":  {"fill": "#e8eaf6", "line": "#3949ab"},
+    "boundary": {"fill": "#ffffff", "line": "#6b7280"},
     "ast":     {"fill": "#f7f7f7", "line": "#666666"},
     "other":   {"fill": "#eeeeee", "line": "#555555"},
 }
@@ -61,6 +62,11 @@ _HIGHLIGHT_STYLE = {
     "shared":   {"fill": "#ffe08a", "line": "#b8860b", "penwidth": "2.5"},
     "unique_a": {"fill": "#cfe3f7", "line": "#2f6fb5", "penwidth": "1.4"},
     "unique_b": {"fill": "#f7d6d6", "line": "#b03030", "penwidth": "1.4"},
+    "retained": {"fill": "#e5e7eb", "line": "#6b7280", "penwidth": "1.5"},
+    "shared_add": {"fill": "#d9f2df", "line": "#238636", "penwidth": "3.0"},
+    "removed_add": {"fill": "#ffe0e0", "line": "#c62828", "penwidth": "2.5"},
+    "inserted_mux": {"fill": "#eadcf8", "line": "#7b4397", "penwidth": "2.5"},
+    "added_interface": {"fill": "#dcecff", "line": "#2463a6", "penwidth": "2.0"},
 }
 
 _ARITH = {"$add", "$sub", "$neg", "$mul", "$div", "$mod", "$alu", "$fa", "$lcu"}
@@ -72,7 +78,7 @@ _MUX = {"$mux", "$pmux", "$bmux", "$demux", "$_MUX_", "$_NMUX_", "$_MUX4_"}
 def node_class(node: Node) -> str:
     """Map a node's cell type onto a colour class."""
     kind = node.kind
-    if kind in ("port_in", "port_out", "const", "module"):
+    if kind in ("port_in", "port_out", "const", "module", "boundary"):
         return kind
     if kind.startswith("AST_"):
         return "ast"
@@ -219,12 +225,14 @@ def to_dot(
         label = node.label
         if node.width and node.width > 1 and "[" not in label:
             label = "{}\n[{}]".format(label, node.width)
+        style_attr = ', style="filled,dashed"' if cls == "boundary" else ""
         lines.append(
-            '  {} [label="{}", shape={}, fillcolor="{}", color="{}"{}{}];'.format(
+            '  {} [label="{}", shape={}, fillcolor="{}", color="{}"{}{}{}];'.format(
                 _dot_id(node.id), _escape(label), _shape(node),
                 style["fill"], style["line"],
                 ', penwidth={}'.format(style["penwidth"]) if "penwidth" in style else "",
                 ', fontcolor="white"' if cls == "port_out" and not group else "",
+                style_attr,
             )
         )
 

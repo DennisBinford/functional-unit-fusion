@@ -1,0 +1,36 @@
+{
+  "checked": [
+    "candidate_matrix",
+    "control",
+    "converted_wrappers",
+    "demo_script",
+    "emitter",
+    "executable_graph",
+    "generated_rtl",
+    "graph_a",
+    "graph_b",
+    "graph_extract",
+    "graph_match",
+    "graph_merge",
+    "limitations",
+    "manifest_validator",
+    "match",
+    "merge",
+    "ppa",
+    "realizer",
+    "reextracted_graph",
+    "sc_flow",
+    "sdc",
+    "testbench",
+    "toolchain",
+    "toolchain_lock",
+    "upstream_alu",
+    "upstream_lock",
+    "upstream_pkg",
+    "wrapper_rtl"
+  ],
+  "external": [
+    "external:liberty"
+  ],
+  "valid": true
+}

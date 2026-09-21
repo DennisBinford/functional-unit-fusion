@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<rect width="100%" height="100%" fill="white"/><style>text{font-family:sans-serif;fill:#222}.title{font-size:22px;font-weight:bold}.axis{stroke:#555;stroke-width:2}.delay{fill:#efe0f4;stroke:#7b4397;stroke-width:2}</style>
+<text x="500" y="35" text-anchor="middle" class="title">Whole-Ibex module-preserving PPA</text>
+<text x="500" y="65" text-anchor="middle">Area comparison (µm²)</text>
+<line x1="70" y1="390" x2="820" y2="390" class="axis"/>
+<rect x="110" y="109.9" width="120" height="280.1" fill="#4c78a8"/><text x="170" y="420" text-anchor="middle">literal core</text><text x="170" y="101.9" text-anchor="middle">1150.184 um²</text><rect x="330" y="90.0" width="120" height="300.0" fill="#f58518"/><text x="390" y="420" text-anchor="middle">equal separate</text><text x="390" y="82.0" text-anchor="middle">1232.112 um²</text><rect x="550" y="118.3" width="120" height="271.7" fill="#54a24b"/><text x="610" y="420" text-anchor="middle">fused</text><text x="610" y="110.3" text-anchor="middle">1115.870 um²</text><text x="500" y="485" text-anchor="middle" class="title">Equal-interface critical delay</text>
+<rect x="280" y="505" width="170" height="28" class="delay"/><rect x="650" y="505" width="170" height="28" class="delay"/>
+<text x="365" y="524" text-anchor="middle">separate 1.860 ns</text><text x="735" y="524" text-anchor="middle">fused 1.880 ns</text>
+</svg>

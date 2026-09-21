@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360" viewBox="0 0 700 360">
+<rect width="100%" height="100%" fill="white"/>
+<text x="350" y="28" text-anchor="middle" font-family="sans-serif" font-size="18">Ibex LT/GE mapped area</text>
+<rect x="90" y="172.2" width="100" height="127.8" fill="#6b8fb3"/>
+<text x="140" y="325" text-anchor="middle" font-family="sans-serif">A SUB</text>
+<text x="140" y="166.2" text-anchor="middle" font-family="sans-serif" font-size="12">201.362</text>
+<rect x="290" y="216.8" width="100" height="83.2" fill="#6b8fb3"/>
+<text x="340" y="325" text-anchor="middle" font-family="sans-serif">B LTU</text>
+<text x="340" y="210.8" text-anchor="middle" font-family="sans-serif" font-size="12">131.138</text>
+<rect x="490" y="80.0" width="100" height="220.0" fill="#6b8fb3"/>
+<text x="540" y="325" text-anchor="middle" font-family="sans-serif">fused</text>
+<text x="540" y="74.0" text-anchor="middle" font-family="sans-serif" font-size="12">346.598</text>
+</svg>

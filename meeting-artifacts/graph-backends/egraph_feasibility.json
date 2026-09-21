@@ -1,0 +1,51 @@
+{
+  "backend_capabilities": {
+    "available": false,
+    "constants": true,
+    "explicit_slice": true,
+    "multi_output": false,
+    "mux": true,
+    "sequential": false,
+    "unsigned_add": true,
+    "unsigned_mul": true,
+    "variables": true,
+    "zero_extend": true
+  },
+  "isolated_spike": {
+    "command": "/tmp/egglog-spike-20260914/bin/python scripts/egglog_feasibility_spike.py",
+    "cost_extraction": "egglog EGraph.extract lowest-cost term; local estimate 2 -> 1",
+    "environment": "/tmp/egglog-spike-20260914",
+    "fu_executable_graph": "meeting-artifacts/graph-backends/egglog-spike/selected_executable_graph.json",
+    "rewrite": "BV8(x) + BV8(0) -> BV8(x)",
+    "rtl": "meeting-artifacts/graph-backends/egglog-spike/egglog_spike.sv",
+    "selected_expression": "BV8.var(\"x\")",
+    "simulation_checks": 256,
+    "status": "pass",
+    "version": "1.0.0"
+  },
+  "language": {
+    "extraction": "DAG/global-output extraction required to preserve physical sharing",
+    "schema": "fu-egraph-language/v1",
+    "semantic_requirements": [
+      "finite_width",
+      "unsigned_only",
+      "explicit_widths",
+      "no_implicit_truncation"
+    ],
+    "terms": [
+      "var",
+      "const",
+      "add",
+      "mul",
+      "mux",
+      "zero_extend",
+      "slice"
+    ]
+  },
+  "next_step": "pin egglog or build a Rust egg adapter, then return selected terms to fu-executable-graph/v1",
+  "python_egglog": null,
+  "reason": "egglog is not installed in the project interpreter; the pinned isolated 1.0.0 spike passed",
+  "rust_egg": "Rust crate; no repository-local adapter installed",
+  "schema": "fu-egraph-feasibility/v1",
+  "status": "isolated_spike_pass"
+}

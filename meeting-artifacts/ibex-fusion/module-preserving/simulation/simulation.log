@@ -1,0 +1,5 @@
+IBEX_MODULE_PRESERVING_PASS checks=11871 alu_operations=14 client_vectors=261
+- /home/dabinford/research/meeting-artifacts/ibex-fusion/module-preserving/tb_module_preserving.sv:70: Verilog $finish
+- S i m u l a t i o n   R e p o r t: Verilator 5.051 devel
+- Verilator: $finish at 8us; walltime 0.001 s; speed 11.939 ms/s
+- Verilator: cpu 0.001 s on 1 threads; allocated 7 MB

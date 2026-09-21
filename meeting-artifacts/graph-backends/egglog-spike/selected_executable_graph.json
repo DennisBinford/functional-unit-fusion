@@ -1,0 +1,95 @@
+{
+  "adapters": {
+    "output_selection_muxes": [],
+    "shared_input_muxes": [],
+    "zero_extensions": 0
+  },
+  "control_spec": {
+    "outputs": [
+      "y_o"
+    ],
+    "schema": "fu-egraph-control/v1"
+  },
+  "design": "egglog_spike",
+  "edges": [
+    {
+      "attrs": {
+        "provenance": {
+          "egraph_term": "BV8.var(\"x\")"
+        }
+      },
+      "dst": "port:y_o",
+      "dst_port": "y_o",
+      "inverted": false,
+      "src": "port:x_i",
+      "src_port": "x_i",
+      "width": 8
+    }
+  ],
+  "hardware_status": {
+    "executable": true,
+    "graph_to_rtl_status": "executable",
+    "template_backed": false
+  },
+  "level": "rtlil",
+  "match_provenance": {
+    "engine": "egglog",
+    "rewrite": "BV8(x) + BV8(0) -> BV8(x)"
+  },
+  "nodes": [
+    {
+      "attrs": {
+        "direction": "input",
+        "provenance": {
+          "egraph_term": "BV8.var(\\\"x\\\")",
+          "width": 8
+        },
+        "signed": false
+      },
+      "id": "port:x_i",
+      "kind": "port_in",
+      "label": "x_i",
+      "width": 8
+    },
+    {
+      "attrs": {
+        "direction": "output",
+        "provenance": {
+          "egraph_term": "BV8.var(\"x\")",
+          "width": 8
+        },
+        "signed": false
+      },
+      "id": "port:y_o",
+      "kind": "port_out",
+      "label": "y_o",
+      "width": 8
+    }
+  ],
+  "outputs": [
+    {
+      "name": "y_o",
+      "source_graph": "egraph",
+      "source_node": "port:y_o",
+      "source_port": "y_o",
+      "width": 8
+    }
+  ],
+  "schema": "fu-executable-graph/v1",
+  "source_graphs": {
+    "egraph": {
+      "language": "fu-egraph-language/v1",
+      "width": 8
+    }
+  },
+  "structural_merge_provenance": {
+    "artifact_type": "egraph_selected_term",
+    "executable": false
+  },
+  "top": "egglog_spike",
+  "topological_order": [
+    "port:x_i",
+    "port:y_o"
+  ],
+  "version": 1
+}

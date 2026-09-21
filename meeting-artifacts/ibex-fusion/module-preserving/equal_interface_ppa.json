@@ -1,0 +1,93 @@
+{
+  "comparison": "equal-interface separate wrapper versus fused wrapper",
+  "conditions": {
+    "combinational": true,
+    "constraint_ns": 2.5,
+    "library": "locked Nangate45/FreePDK45 typical",
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "registered_ii": "undefined",
+    "registered_latency": "undefined",
+    "workload": "identical structural synthesis flow"
+  },
+  "delta_percent": -9.434369602763391,
+  "delta_um2": -116.24199999999996,
+  "fused": {
+    "area_um2": 1115.869999999999,
+    "cell_count": 924,
+    "critical_delay_ns": 1.88,
+    "design": "ibex_alu_add_client_fused",
+    "fmax_mhz": 531.9148936170213,
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "power_mw": 0.325,
+    "slack_ns": 0.12,
+    "status": "pass",
+    "synthesis_result": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/fused/ppa.json"
+  },
+  "fused_power_mw": 0.325,
+  "pretechmap": {
+    "fused": {
+      "edges": 193,
+      "kinds": {
+        "$add": 1,
+        "$and": 2,
+        "$eq": 27,
+        "$logic_not": 2,
+        "$meminit": 1,
+        "$memrd_v2": 1,
+        "$mux": 12,
+        "$not": 4,
+        "$or": 3,
+        "$pmux": 2,
+        "$reduce_or": 8,
+        "$sshr": 1,
+        "$xor": 3,
+        "const": 43,
+        "port_in": 6,
+        "port_out": 1
+      },
+      "nodes": 117,
+      "operators": 67
+    },
+    "separate": {
+      "edges": 185,
+      "kinds": {
+        "$add": 2,
+        "$and": 2,
+        "$eq": 27,
+        "$logic_not": 2,
+        "$meminit": 1,
+        "$memrd_v2": 1,
+        "$mux": 9,
+        "$not": 4,
+        "$or": 3,
+        "$pmux": 2,
+        "$reduce_or": 8,
+        "$sshr": 1,
+        "$xor": 3,
+        "const": 41,
+        "port_in": 6,
+        "port_out": 1
+      },
+      "nodes": 113,
+      "operators": 65
+    }
+  },
+  "schema": "fu-ibex-module-preserving-interface-ppa/v1",
+  "selector_mux_overhead": {
+    "equal_interface_separate_muxes": 9,
+    "fused_muxes": 12
+  },
+  "separate": {
+    "area_um2": 1232.111999999999,
+    "cell_count": 1043,
+    "critical_delay_ns": 1.8599999999999999,
+    "design": "ibex_alu_add_client_separate",
+    "fmax_mhz": 537.6344086021505,
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "power_mw": 0.335,
+    "slack_ns": 0.14,
+    "status": "pass",
+    "synthesis_result": "/home/dabinford/research/build/ibex_fusion/module_preserving/ppa/equal_interface_separate/ppa.json"
+  },
+  "separate_power_mw": 0.335
+}

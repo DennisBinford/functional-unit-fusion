@@ -1,0 +1,67 @@
+{
+  "backend": "verilator",
+  "binary": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/obj_dir/Vtb_egglog_spike",
+  "compile_command": [
+    "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+    "-f",
+    "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_compile.f"
+  ],
+  "compile_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/compile.log",
+  "compile_response_file": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_compile.f",
+  "cxx": "/home/dabinford/research/tools/mm/root/envs/eda/bin/g++",
+  "cxx_family": "gcc",
+  "defines": [],
+  "design_top": "egglog_spike",
+  "executable": "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+  "integration": "python_subprocess_cli",
+  "jobs": 1,
+  "lint_command": [
+    "/home/dabinford/research/tools/oss-cad-suite/bin/verilator",
+    "-f",
+    "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_lint.f"
+  ],
+  "lint_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/lint.log",
+  "lint_response_file": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_lint.f",
+  "lint_testbench": true,
+  "manifest_file": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/verilator_command.json",
+  "mode": "systemverilog_testbench_via_binary",
+  "object_dir": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/obj_dir",
+  "official_documentation": {
+    "arguments": "https://verilator.org/guide/latest/exe_verilator.html",
+    "binary_example": "https://verilator.org/guide/latest/example_binary.html",
+    "files": "https://verilator.org/guide/latest/files.html",
+    "verilating": "https://verilator.org/guide/latest/verilating.html"
+  },
+  "option_rationale": {
+    "+fu_seed": "Seed the testbench's explicit deterministic xorshift32 generator.",
+    "+verilator+seed": "Pin Verilator runtime random initialization for reproducibility.",
+    "--Mdir": "Keep all generated C++ and build artifacts in the run directory.",
+    "--assert": "Compile SystemVerilog assertions and unique/priority checks.",
+    "--binary": "Generate C++ and build a standalone simulation executable.",
+    "--timing": "Implement SystemVerilog delays/event timing used by the testbench.",
+    "--top-module": "Select the self-checking SystemVerilog testbench explicitly.",
+    "--trace-vcd": "Compile VCD waveform support used for activity-based power.",
+    "-MAKEFLAGS": "Select the recorded C++20 compiler for Verilator's generated build.",
+    "-Wall": "Enable Verilator's stronger lint/style warning set; warnings remain fatal.",
+    "-f": "Read a preserved response file rather than construct an opaque long command.",
+    "-j": "Bound Verilation/build parallelism for reproducible resource use."
+  },
+  "output_dir": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation",
+  "rtl_sources": [
+    "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/egglog_spike.sv"
+  ],
+  "run_command": [
+    "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/obj_dir/Vtb_egglog_spike",
+    "+dump",
+    "+fu_seed=1",
+    "+verilator+seed+1"
+  ],
+  "schema_version": 1,
+  "seed": 1,
+  "simulation_log": "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/simulation/simulation.log",
+  "testbench_sources": [
+    "/home/dabinford/research/meeting-artifacts/graph-backends/egglog-spike/tb_egglog_spike.sv"
+  ],
+  "testbench_top": "tb_egglog_spike",
+  "trace": false
+}

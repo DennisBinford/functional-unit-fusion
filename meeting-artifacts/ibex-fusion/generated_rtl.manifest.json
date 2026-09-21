@@ -1,0 +1,191 @@
+{
+  "evidence": {
+    "candidate_matrix": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/candidate_matrix.json",
+      "sha256": "172c8a28aa367175367b8e4a2c3b51831fa4827ea6a9e9104fdb16d50a088423"
+    },
+    "control": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/control_spec.json",
+      "sha256": "88d28c8b4542c5738393571aae23e66cffadf3195eb8ac0bf84e4623ce6ca632"
+    },
+    "converted_wrappers": {
+      "external": false,
+      "path": "build/ibex_fusion/ibex_alu_operation_wrappers.v",
+      "sha256": "ae04635bc07235c74ccbe0140e754c1c4de43efddd84ca5f4b23b51d5a492e79"
+    },
+    "demo_script": {
+      "external": false,
+      "path": "scripts/ibex_fusion_demo.py",
+      "sha256": "074eae2e9eee8cd2452496f9b9bb028e4fd26edb809ae519eba3b0cf61c4294d"
+    },
+    "emitter": {
+      "external": false,
+      "path": "graph_rtl_emit.py",
+      "sha256": "b833d17c0af291579449a75b273e8cb3ad3a6b5f37d5998724480ae131332de2"
+    },
+    "executable_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/executable_graph.rtlil.json",
+      "sha256": "f6bec57c2db09f69778493539c9e5ee8d81490b83087ef0cb486ce75e628ef63"
+    },
+    "generated_rtl": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/ibex_fused_sub_ltu32.sv",
+      "sha256": "f95db5c491ddc524d95cdb636575b462abf4d66da0125b21d60bbb0c623a925b"
+    },
+    "graph_a": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/graphs/ibex_alu_sub32.rtlil.graph.json",
+      "sha256": "d716370b618e8b4d88b0be5ea70f7b0917ea3217d6a218c80f2d827c2efb2a94"
+    },
+    "graph_b": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/graphs/ibex_alu_ltu32.rtlil.graph.json",
+      "sha256": "8099feddfab93fc4ebadc889848b982bc62d33fe4f94eab549405f6bf2e155d2"
+    },
+    "graph_extract": {
+      "external": false,
+      "path": "graph_extract.py",
+      "sha256": "b329ba9034a52a970d1acdc62bbb101fc35394e50ed57f42b227113f93330e40"
+    },
+    "graph_match": {
+      "external": false,
+      "path": "graph_match.py",
+      "sha256": "6af7b99c7ae6eb1e54b37baecbffbe6f97e45224bc058562506b783063b25a5a"
+    },
+    "graph_merge": {
+      "external": false,
+      "path": "graph_merge.py",
+      "sha256": "17f7826f5cac5d4526c70c4a1105ceff202b7fb22ed0adb6944882b25eb2023b"
+    },
+    "limitations": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/limitations.json",
+      "sha256": "48ee0241d1f8b0a277649ba44e18329486bd68e7904b5666d8e7e5488b411232"
+    },
+    "manifest_validator": {
+      "external": false,
+      "path": "ibex_fusion_manifest.py",
+      "sha256": "ede08beac201a7c08133002331288756199f91983b0c3e0d2f32825adad70b72"
+    },
+    "match": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/match.rtlil.json",
+      "sha256": "78f0c51e73a7ed67446282e3ad7abc0a7f04890afd5e2fbd32c299775443b413"
+    },
+    "merge": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/structural_merge.rtlil.json",
+      "sha256": "29aeb38f0519e4197da40c8fdea7bad75fb0ac3b1c109663cde5ce23eee13530"
+    },
+    "ppa": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/ppa.json",
+      "sha256": "c0054b912c89d645db16d936d8bc33a8a3eaf6cd38d59d11969e1db7f4956a8d"
+    },
+    "realizer": {
+      "external": false,
+      "path": "executable_graph.py",
+      "sha256": "ae350659d7e3a98a11971e8e1d5a43f602913292de62cf5ea06d8551422045ba"
+    },
+    "reextracted_graph": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/generated_reextracted.rtlil.graph.json",
+      "sha256": "9b47fa3ac64e320e1cbcfbcef225d0075811fd2ad5b6c52b88f496dddd479d5c"
+    },
+    "sc_flow": {
+      "external": false,
+      "path": "sc_flow.py",
+      "sha256": "1d553661707896a767cc0f9618f32d063f3fe7d21159ee0d72737e321c10f45f"
+    },
+    "sdc": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/ibex_fusion.sdc",
+      "sha256": "d3d60aa882875524e8989c064435d9163c2fcce48d71d5a839c658d39be46466"
+    },
+    "testbench": {
+      "external": false,
+      "path": "meeting-artifacts/ibex-fusion/tb_ibex_fusion.sv",
+      "sha256": "1b60ab3f192b8c9b42caa7be3093b08f8303866157e932b699e5986752be16af"
+    },
+    "toolchain": {
+      "external": false,
+      "path": "toolchain.py",
+      "sha256": "43945f21232af09333610bf06a3e252c84b44f5abf63fa1bef0f3f0aeab7aee4"
+    },
+    "toolchain_lock": {
+      "external": false,
+      "path": "build/toolchain.lock.json",
+      "sha256": "e7af815c59121fc0a7d78adc4533e2780766bd0647a0fe7d4b4fb28b3a810b45"
+    },
+    "upstream_alu": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_alu.sv",
+      "sha256": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+    },
+    "upstream_lock": {
+      "external": false,
+      "path": "designs/ibex.source.json",
+      "sha256": "ec2ad1ab34501e062a195ce2f158ad37496ed17387bdd4702aff7a775b7bdf6c"
+    },
+    "upstream_pkg": {
+      "external": false,
+      "path": "third_party/ibex/rtl/ibex_pkg.sv",
+      "sha256": "d79438e9c857d94552b02af03c725b88d2cbf5c9c165c6fa0632b92c3e26e26f"
+    },
+    "wrapper_rtl": {
+      "external": false,
+      "path": "rtl/ibex_fusion/ibex_alu_operation_wrappers.sv",
+      "sha256": "7098038389e3eeb010aba953876beee3ba443248cbab4ee6fb561dee72e6343c"
+    }
+  },
+  "external_dependencies": {
+    "liberty": {
+      "external": true,
+      "identity": "NangateOpenCellLibrary_typical / FreePDK45 demo corner",
+      "path": "/home/dabinford/research/build/ibex_fusion/ppa/unit_a/ibex_alu_sub32/job0/synthesis/0/inputs/sc_nangate45_NangateOpenCellLibrary_typical.lib",
+      "sha256": "2efd0b32eb580e4e60e72fc0575bb3bc69aac907c91d908442e4ae6d7fe55895"
+    }
+  },
+  "generated_graph_stats": {
+    "edges": 26,
+    "kinds": {
+      "$add": 1,
+      "$mux": 4,
+      "$not": 4,
+      "$xor": 1,
+      "const": 5,
+      "port_in": 5,
+      "port_out": 1
+    },
+    "nodes": 21,
+    "operators": 10
+  },
+  "graph_to_rtl_status": "executable",
+  "ppa_summary": {
+    "fused_area_um2": 346.59800000000126,
+    "literal_sum_um2": 332.50000000000034
+  },
+  "schema": "fu-ibex-fusion-manifest/v1",
+  "selected_pair": {
+    "a": "SUB",
+    "b": "LTU"
+  },
+  "simulation": {
+    "checks": 524,
+    "log": "meeting-artifacts/ibex-fusion/simulation/simulation.log",
+    "operations": 2,
+    "status": "pass",
+    "tool": "verilator",
+    "vectors": 262
+  },
+  "template_backed": false,
+  "upstream": {
+    "commit": "8ed87e07e3331561bce93af1568d9b376948e701",
+    "repository": "https://github.com/lowRISC/ibex.git",
+    "source_hash": "06ce1c3ce30807f715478cf9e3bc279cac1c1cc2fb95d289516169fadcf7b7dc"
+  },
+  "version": 1
+}

@@ -1,0 +1,65 @@
+{
+  "claim_classifications": {
+    "sequential_alu_multdiv": "unimplemented",
+    "structural_merge": "non-executable candidate",
+    "sub_ltu": "generated from fu-executable-graph/v1",
+    "whole_alu": "preserves upstream ibex_alu; contract-guided module-preserving fusion"
+  },
+  "graph_emitted_sub_ltu": {
+    "artifact_directory": "meeting-artifacts/ibex-fusion",
+    "classification": "fully graph-emitted RTLIL operation-specialized fusion",
+    "ppa": "meeting-artifacts/ibex-fusion/ppa.json",
+    "simulation": {
+      "checks": 524,
+      "log": "meeting-artifacts/ibex-fusion/simulation/simulation.log",
+      "operations": 2,
+      "status": "pass",
+      "tool": "verilator",
+      "vectors": 262
+    },
+    "throughput": {
+      "fused_shared_adder_client": 1,
+      "note": "This SUB/LTU experiment has no multiplier; these are combinational cones, so registered latency and II are undefined without a wrapper.",
+      "separate_sub_ltu_clients": 2,
+      "simultaneous_use_preserved": false
+    }
+  },
+  "legacy_intermediate": {
+    "path": "meeting-artifacts/ibex-fusion/ibex_fused_lt_ge32.sv",
+    "status": "retained exploratory intermediate; not accepted evidence or workflow input"
+  },
+  "limitations": "meeting-artifacts/ibex-fusion/module-preserving/limitations.json",
+  "schema": "fu-ibex-fusion-results/v2",
+  "specialization_scan": {
+    "artifact": "meeting-artifacts/ibex-fusion/candidate_matrix.json",
+    "pair_count": 91,
+    "selected": {
+      "a": "SUB",
+      "b": "LTU"
+    }
+  },
+  "whole_alu_module_preserving": {
+    "artifact_directory": "meeting-artifacts/ibex-fusion/module-preserving",
+    "classification": "contract-guided module-preserving fusion",
+    "contract": "meeting-artifacts/ibex-fusion/module-preserving/sharing_contract.json",
+    "equal_interface_ppa": "meeting-artifacts/ibex-fusion/module-preserving/equal_interface_ppa.json",
+    "equal_interface_separate_area_um2": 1232.111999999999,
+    "equal_interface_separate_power_mw": 0.335,
+    "fused_area_um2": 1115.869999999999,
+    "fused_power_mw": 0.325,
+    "literal_area_um2": 1150.1839999999995,
+    "literal_core_ppa": "meeting-artifacts/ibex-fusion/module-preserving/literal_core_ppa.json",
+    "literal_power_mw": 0.3081,
+    "manifest": "meeting-artifacts/ibex-fusion/module-preserving/manifest.json",
+    "power_basis": "estimated peak power at 400 MHz using default flow activity assumptions",
+    "simulation": {
+      "alu_operations": 14,
+      "alu_vectors": 3696,
+      "checks": 11871,
+      "client_vectors": 261,
+      "log": "meeting-artifacts/ibex-fusion/module-preserving/simulation/simulation.log",
+      "status": "pass",
+      "tool": "verilator"
+    }
+  }
+}
