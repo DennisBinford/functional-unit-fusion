@@ -1,0 +1,364 @@
+{
+  "fallthrough": [],
+  "graph_paths": {
+    "a": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/a.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/a.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/a.rtlil.graph.json"
+    },
+    "b": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/b.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/b.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/right_shifter_single_lanes/b.rtlil.graph.json"
+    }
+  },
+  "match_evidence": {
+    "gate": {
+      "common_node_count": 332,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.4322916666666667,
+        "b": 0.4322916666666667
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1003",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1003"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1004",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1004"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1005",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1005"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1012",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1012"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1013",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1013"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1014",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1014"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1021",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1021"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1022",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1022"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1023",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1023"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1030",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1030"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1031",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1031"
+        },
+        {
+          "a": "$abc$702$auto$blifparse.cc:397:parse_blif$1032",
+          "b": "$abc$702$auto$blifparse.cc:397:parse_blif$1032"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 436,
+        "b": 436
+      }
+    },
+    "module": {
+      "common_node_count": 2,
+      "common_subgraph_sizes": [
+        2
+      ],
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [],
+      "matched_nodes": [
+        {
+          "a": "right_shifter_74_with_outside_bits",
+          "b": "right_shifter_74_with_outside_bits"
+        },
+        {
+          "a": "tachyum_single_1_right_shifter",
+          "b": "tachyum_single_2_right_shifter"
+        }
+      ],
+      "unmatched_counts": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    "rtlil": {
+      "common_node_count": 17,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.8947368421052632,
+        "b": 0.8947368421052632
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:47$1",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:47$1"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:48$2",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:48$2"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:49$3",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:49$3"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:50$4",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:50$4"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:51$5",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:51$5"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:52$6",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:52$6"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:53$7",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:53$7"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:48$2:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:48$2:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:49$3:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:49$3:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:50$4:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:50$4:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:51$5:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:51$5:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:52$6:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v:52$6:B"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 2,
+        "b": 2
+      }
+    }
+  },
+  "metrics": {
+    "gate": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.4322916666666667,
+        "b": 0.4322916666666667
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 1984,
+          "kinds": {
+            "$_ANDNOT_": 25,
+            "$_AND_": 97,
+            "$_MUX_": 408,
+            "$_NAND_": 146,
+            "$_NOR_": 18,
+            "$_NOT_": 52,
+            "$_ORNOT_": 18,
+            "port_in": 2,
+            "port_out": 2
+          },
+          "nodes": 768,
+          "operators": 764
+        },
+        "b": {
+          "edges": 1984,
+          "kinds": {
+            "$_ANDNOT_": 25,
+            "$_AND_": 97,
+            "$_MUX_": 408,
+            "$_NAND_": 146,
+            "$_NOR_": 18,
+            "$_NOT_": 52,
+            "$_ORNOT_": 18,
+            "port_in": 2,
+            "port_out": 2
+          },
+          "nodes": 768,
+          "operators": 764
+        }
+      },
+      "level": "gate",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 332,
+      "operator_match_size": 328,
+      "runtime_seconds": 0.15058361110277474,
+      "useful_candidate": true
+    },
+    "module": {
+      "connected_subgraph_size": 2,
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 1,
+          "kinds": {
+            "module": 2
+          },
+          "nodes": 2,
+          "operators": 2
+        },
+        "b": {
+          "edges": 1,
+          "kinds": {
+            "module": 2
+          },
+          "nodes": 2,
+          "operators": 2
+        }
+      },
+      "level": "module",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 2,
+      "operator_match_size": 2,
+      "runtime_seconds": 0.00014235102571547031,
+      "useful_candidate": true
+    },
+    "rtlil": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.8947368421052632,
+        "b": 0.8947368421052632
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 31,
+          "kinds": {
+            "$mux": 7,
+            "const": 8,
+            "port_in": 2,
+            "port_out": 2
+          },
+          "nodes": 19,
+          "operators": 7
+        },
+        "b": {
+          "edges": 31,
+          "kinds": {
+            "$mux": 7,
+            "const": 8,
+            "port_in": 2,
+            "port_out": 2
+          },
+          "nodes": 19,
+          "operators": 7
+        }
+      },
+      "level": "rtlil",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 17,
+      "operator_match_size": 7,
+      "runtime_seconds": 0.06352912681177258,
+      "useful_candidate": true
+    }
+  },
+  "pair": "right_shifter_single_lanes",
+  "policy": {
+    "evaluate_all_for_report": true,
+    "gate_is_structural_only": true,
+    "leaf_module_falls_through": true,
+    "order": [
+      "module",
+      "rtlil",
+      "gate"
+    ],
+    "rtlil_is_first_word_level": true,
+    "whole_module_requires_top_match": true
+  },
+  "render_paths": {
+    "gate": {
+      "a": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.gate.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.gate.svg"
+      },
+      "b": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.gate.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.gate.svg"
+      }
+    },
+    "module": {
+      "a": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.module.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.module.svg"
+      },
+      "b": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.module.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.module.svg"
+      }
+    },
+    "rtlil": {
+      "a": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.rtlil.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/a.rtlil.svg"
+      },
+      "b": {
+        "dot": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.rtlil.dot",
+        "svg": "meeting-artifacts/2026-09-21-tachyum-module-study/figures/right_shifter_single_lanes/b.rtlil.svg"
+      }
+    }
+  },
+  "schema": "fu-hierarchy-study/v1",
+  "selected_level": "module"
+}

@@ -1,0 +1,333 @@
+{
+  "fallthrough": [],
+  "graph_paths": {
+    "a": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/a.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/a.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/a.rtlil.graph.json"
+    },
+    "b": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/b.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/b.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/left_shifter_single_lanes/b.rtlil.graph.json"
+    }
+  },
+  "match_evidence": {
+    "gate": {
+      "common_node_count": 170,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.26479750778816197,
+        "b": 0.26479750778816197
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1005",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1005"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1006",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1006"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1008",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1008"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1009",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1009"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1020",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1020"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1022",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1022"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1023",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1023"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1024",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1024"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1031",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1031"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1033",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1033"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1034",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1034"
+        },
+        {
+          "a": "$abc$612$auto$blifparse.cc:397:parse_blif$1035",
+          "b": "$abc$612$auto$blifparse.cc:397:parse_blif$1035"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 472,
+        "b": 472
+      }
+    },
+    "module": {
+      "common_node_count": 2,
+      "common_subgraph_sizes": [
+        2
+      ],
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [],
+      "matched_nodes": [
+        {
+          "a": "left_shifter_76",
+          "b": "left_shifter_76"
+        },
+        {
+          "a": "tachyum_single_1_left_shifter",
+          "b": "tachyum_single_2_left_shifter"
+        }
+      ],
+      "unmatched_counts": {
+        "a": 0,
+        "b": 0
+      }
+    },
+    "rtlil": {
+      "common_node_count": 17,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:45$1",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:45$1"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:48$2",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:48$2"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:51$3",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:51$3"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:54$4",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:54$4"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:57$5",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:57$5"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:60$6",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:60$6"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:63$7",
+          "b": "$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:63$7"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:45$1:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:45$1:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:48$2:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:48$2:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:51$3:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:51$3:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:54$4:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:54$4:B"
+        },
+        {
+          "a": "const:$flatten\\lane_single_1.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:57$5:B",
+          "b": "const:$flatten\\lane_single_2.$ternary$third_party/tachyum-fma-rtl/left_shifter_76.v:57$5:B"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 0,
+        "b": 0
+      }
+    }
+  },
+  "metrics": {
+    "gate": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.26479750778816197,
+        "b": 0.26479750778816197
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 1667,
+          "kinds": {
+            "$_ANDNOT_": 3,
+            "$_AND_": 106,
+            "$_MUX_": 317,
+            "$_NAND_": 144,
+            "$_NOR_": 1,
+            "$_NOT_": 4,
+            "$_OR_": 64,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 642,
+          "operators": 639
+        },
+        "b": {
+          "edges": 1667,
+          "kinds": {
+            "$_ANDNOT_": 3,
+            "$_AND_": 106,
+            "$_MUX_": 317,
+            "$_NAND_": 144,
+            "$_NOR_": 1,
+            "$_NOT_": 4,
+            "$_OR_": 64,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 642,
+          "operators": 639
+        }
+      },
+      "level": "gate",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 170,
+      "operator_match_size": 167,
+      "runtime_seconds": 0.11345855705440044,
+      "useful_candidate": true
+    },
+    "module": {
+      "connected_subgraph_size": 2,
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 1,
+          "kinds": {
+            "module": 2
+          },
+          "nodes": 2,
+          "operators": 2
+        },
+        "b": {
+          "edges": 1,
+          "kinds": {
+            "module": 2
+          },
+          "nodes": 2,
+          "operators": 2
+        }
+      },
+      "level": "module",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 2,
+      "operator_match_size": 2,
+      "runtime_seconds": 0.00015914207324385643,
+      "useful_candidate": true
+    },
+    "rtlil": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 1.0,
+        "b": 1.0
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 29,
+          "kinds": {
+            "$mux": 7,
+            "const": 7,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 17,
+          "operators": 7
+        },
+        "b": {
+          "edges": 29,
+          "kinds": {
+            "$mux": 7,
+            "const": 7,
+            "port_in": 2,
+            "port_out": 1
+          },
+          "nodes": 17,
+          "operators": 7
+        }
+      },
+      "level": "rtlil",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 17,
+      "operator_match_size": 7,
+      "runtime_seconds": 0.06135911704041064,
+      "useful_candidate": true
+    }
+  },
+  "pair": "left_shifter_single_lanes",
+  "policy": {
+    "evaluate_all_for_report": true,
+    "gate_is_structural_only": true,
+    "leaf_module_falls_through": true,
+    "order": [
+      "module",
+      "rtlil",
+      "gate"
+    ],
+    "rtlil_is_first_word_level": true,
+    "whole_module_requires_top_match": true
+  },
+  "render_paths": {},
+  "schema": "fu-hierarchy-study/v1",
+  "selected_level": "module"
+}

@@ -1,0 +1,384 @@
+{
+  "fallthrough": [],
+  "graph_paths": {
+    "a": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/a.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/a.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/a.rtlil.graph.json"
+    },
+    "b": {
+      "gate": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/b.gate.graph.json",
+      "module": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/b.module.graph.json",
+      "rtlil": "meeting-artifacts/2026-09-21-tachyum-module-study/graphs/leading_zero_single_lanes/b.rtlil.graph.json"
+    }
+  },
+  "match_evidence": {
+    "gate": {
+      "common_node_count": 179,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.47989276139410186,
+        "b": 0.47989276139410186
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1519",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1519"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1520",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1520"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1521",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1521"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1522",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1522"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1523",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1523"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1524",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1524"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1525",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1525"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1526",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1526"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1528",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1528"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1543",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1543"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1544",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1544"
+        },
+        {
+          "a": "$abc$1471$auto$blifparse.cc:397:parse_blif$1545",
+          "b": "$abc$1471$auto$blifparse.cc:397:parse_blif$1545"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 194,
+        "b": 194
+      }
+    },
+    "module": {
+      "common_node_count": 9,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.6923076923076923,
+        "b": 0.6923076923076923
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [],
+      "matched_nodes": [
+        {
+          "a": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+          "b": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110"
+        },
+        {
+          "a": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+          "b": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010"
+        },
+        {
+          "a": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+          "b": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100"
+        },
+        {
+          "a": "fast_leading_zeros_detector_originator_4_block",
+          "b": "fast_leading_zeros_detector_originator_4_block"
+        },
+        {
+          "a": "leading_zeros_detector_74_with_muxes",
+          "b": "leading_zeros_detector_74_with_muxes"
+        },
+        {
+          "a": "scell_aoi2222",
+          "b": "scell_aoi2222"
+        },
+        {
+          "a": "scell_iind3",
+          "b": "scell_iind3"
+        },
+        {
+          "a": "scell_or2",
+          "b": "scell_or2"
+        },
+        {
+          "a": "tachyum_single_1_leading_zero_detector",
+          "b": "tachyum_single_2_leading_zero_detector"
+        }
+      ],
+      "unmatched_counts": {
+        "a": 4,
+        "b": 4
+      }
+    },
+    "rtlil": {
+      "common_node_count": 277,
+      "common_subgraph_sizes": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "coverage": {
+        "a": 0.3493064312736444,
+        "b": 0.3493064312736444
+      },
+      "match_mode": "exact_rooted_structural",
+      "matched_node_sample": [
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:226$6",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:226$6"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:227$8",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:227$8"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:228$11",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:228$11"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:229$13",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:229$13"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:230$16",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:230$16"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:231$19",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:231$19"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:232$23",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:232$23"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:233$25",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:233$25"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:234$28",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:234$28"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:235$31",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:235$31"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:236$35",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:236$35"
+        },
+        {
+          "a": "$flatten\\lane_single_1.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:237$38",
+          "b": "$flatten\\lane_single_2.$logic_and$third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v:237$38"
+        }
+      ],
+      "matched_nodes": [],
+      "unmatched_counts": {
+        "a": 516,
+        "b": 516
+      }
+    }
+  },
+  "metrics": {
+    "gate": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.47989276139410186,
+        "b": 0.47989276139410186
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 820,
+          "kinds": {
+            "$_ANDNOT_": 61,
+            "$_AND_": 168,
+            "$_NAND_": 54,
+            "$_NOR_": 57,
+            "$_ORNOT_": 17,
+            "$_OR_": 12,
+            "port_in": 1,
+            "port_out": 3
+          },
+          "nodes": 373,
+          "operators": 369
+        },
+        "b": {
+          "edges": 820,
+          "kinds": {
+            "$_ANDNOT_": 61,
+            "$_AND_": 168,
+            "$_NAND_": 54,
+            "$_NOR_": 57,
+            "$_ORNOT_": 17,
+            "$_OR_": 12,
+            "port_in": 1,
+            "port_out": 3
+          },
+          "nodes": 373,
+          "operators": 369
+        }
+      },
+      "level": "gate",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 179,
+      "operator_match_size": 175,
+      "runtime_seconds": 0.09897976601496339,
+      "useful_candidate": true
+    },
+    "module": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.6923076923076923,
+        "b": 0.6923076923076923
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 23,
+          "kinds": {
+            "module": 13
+          },
+          "nodes": 13,
+          "operators": 13
+        },
+        "b": {
+          "edges": 23,
+          "kinds": {
+            "module": 13
+          },
+          "nodes": 13,
+          "operators": 13
+        }
+      },
+      "level": "module",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 9,
+      "operator_match_size": 9,
+      "runtime_seconds": 0.005702591966837645,
+      "useful_candidate": true
+    },
+    "rtlil": {
+      "connected_subgraph_size": 6,
+      "coverage": {
+        "a": 0.3493064312736444,
+        "b": 0.3493064312736444
+      },
+      "engine": "native",
+      "graph_size": {
+        "a": {
+          "edges": 1345,
+          "kinds": {
+            "$and": 178,
+            "$logic_and": 101,
+            "$logic_not": 72,
+            "$logic_or": 66,
+            "$mux": 1,
+            "$not": 230,
+            "$or": 112,
+            "$reduce_or": 26,
+            "const": 3,
+            "port_in": 1,
+            "port_out": 3
+          },
+          "nodes": 793,
+          "operators": 786
+        },
+        "b": {
+          "edges": 1345,
+          "kinds": {
+            "$and": 178,
+            "$logic_and": 101,
+            "$logic_not": 72,
+            "$logic_or": 66,
+            "$mux": 1,
+            "$not": 230,
+            "$or": 112,
+            "$reduce_or": 26,
+            "const": 3,
+            "port_in": 1,
+            "port_out": 3
+          },
+          "nodes": 793,
+          "operators": 786
+        }
+      },
+      "level": "rtlil",
+      "match_mode": "exact_rooted_structural",
+      "match_size": 277,
+      "operator_match_size": 270,
+      "runtime_seconds": 0.24525369820185006,
+      "useful_candidate": true
+    }
+  },
+  "pair": "leading_zero_single_lanes",
+  "policy": {
+    "evaluate_all_for_report": true,
+    "gate_is_structural_only": true,
+    "leaf_module_falls_through": true,
+    "order": [
+      "module",
+      "rtlil",
+      "gate"
+    ],
+    "rtlil_is_first_word_level": true,
+    "whole_module_requires_top_match": true
+  },
+  "render_paths": {},
+  "schema": "fu-hierarchy-study/v1",
+  "selected_level": "module"
+}

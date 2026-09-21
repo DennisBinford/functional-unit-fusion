@@ -1,0 +1,65 @@
+digraph right_shifter_single_lanes_b_rtlil {
+  graph [rankdir=LR, fontname="Helvetica", labelloc="t", label="right_shifter_single_lanes_b - rtlil level (19 nodes, 31 edges)", fontsize=16, nodesep=0.25, ranksep=0.6, bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=10, style="filled", penwidth=1.2, margin="0.08,0.04"];
+  edge  [fontname="Helvetica", fontsize=8, color="#666666", arrowsize=0.6];
+  port_data_i [label="data_i\n[74]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_shift_i [label="shift_i\n[7]", shape=house, fillcolor="#ffffff", color="#333333"];
+  port_outside_o [label="outside_o\n[26]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  port_shifted_o [label="shifted_o\n[74]", shape=invhouse, fillcolor="#333333", color="#333333", fontcolor="white"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 [label="mux[100]", shape=box, fillcolor="#efe0f4", color="#7b4397"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1_A [label="26'b00000000000000000000000000\n[26]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1_B [label="26'b00000000000000000000000000\n[26]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2_B [label="2'b00\n[2]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3_B [label="4'b0000\n[4]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4_B [label="8'b00000000\n[8]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5_B [label="16'b0000000000000000\n[16]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6_B [label="32'b00000000000000000000000000000000\n[32]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7_B [label="64'b0000000000000000000000000000000000000000000000000000000000000000\n[64]", shape=plaintext, fillcolor="#f2f2f2", color="#999999"];
+  port_data_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [label="74", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1_A -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [label="26", penwidth=2.6, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  port_data_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [label="74", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [label="26", penwidth=2.6, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_47_1 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 [label="98", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 [label="2", penwidth=1.1, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_48_2 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 [label="96", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 [label="4", penwidth=1.2, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_49_3 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 [label="92", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 [label="8", penwidth=1.5, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_50_4 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 [label="84", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 [label="16", penwidth=2.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_51_5 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 [label="68", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 [label="32", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 [label="100", penwidth=3.0, headlabel="A", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_52_6 -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 [label="36", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  const__flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7_B -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 [label="64", penwidth=3.0, headlabel="B", labelfontsize=7, labeldistance=1.4];
+  port_shift_i -> _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 [headlabel="S", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 -> port_outside_o [label="26", penwidth=2.6, headlabel="outside_o", labelfontsize=7, labeldistance=1.4];
+  _flatten_lane_single_2__ternary_third_party_tachyum_fma_rtl_right_shifter_74_with_outside_bits_v_53_7 -> port_shifted_o [label="74", penwidth=3.0, headlabel="shifted_o", labelfontsize=7, labeldistance=1.4];
+  subgraph cluster_legend {
+    label="key"; fontname="Helvetica"; fontsize=10; color="#cccccc";
+    legend [shape=plaintext, fillcolor="white", label=<
+      <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="2">
+        <TR><TD BGCOLOR="#f2f2f2" WIDTH="16"></TD><TD ALIGN="LEFT">const</TD></TR>
+        <TR><TD BGCOLOR="#efe0f4" WIDTH="16"></TD><TD ALIGN="LEFT">mux</TD></TR>
+        <TR><TD BGCOLOR="#ffffff" WIDTH="16"></TD><TD ALIGN="LEFT">port_in</TD></TR>
+        <TR><TD BGCOLOR="#333333" WIDTH="16"></TD><TD ALIGN="LEFT">port_out</TD></TR>
+      </TABLE>>];
+  }
+}

@@ -1,0 +1,3308 @@
+{
+  "attrs": {
+    "sources": [
+      "third_party/tachyum-fma-rtl/f_mul_add.v",
+      "third_party/tachyum-fma-rtl/adder10.v",
+      "third_party/tachyum-fma-rtl/adder10_no_cin.v",
+      "third_party/tachyum-fma-rtl/adder13.v",
+      "third_party/tachyum-fma-rtl/adder13_no_cin.v",
+      "third_party/tachyum-fma-rtl/adder161_no_cin_no_cout.v",
+      "third_party/tachyum-fma-rtl/adder162_no_cin.v",
+      "third_party/tachyum-fma-rtl/booth_radix4_recoder_for_fma.v",
+      "third_party/tachyum-fma-rtl/combined_mul53_for_fpga.v",
+      "third_party/tachyum-fma-rtl/compound_adder.v",
+      "third_party/tachyum-fma-rtl/compressors_53_radix4.v",
+      "third_party/tachyum-fma-rtl/csa_4to2_inv_inp.v",
+      "third_party/tachyum-fma-rtl/dff.v",
+      "third_party/tachyum-fma-rtl/dffe.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_2_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_3_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_4_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_originator_4_block.v",
+      "third_party/tachyum-fma-rtl/incrementer.v",
+      "third_party/tachyum-fma-rtl/incrementer_11.v",
+      "third_party/tachyum-fma-rtl/incrementer_8.v",
+      "third_party/tachyum-fma-rtl/leading_zeros_detector_161_with_muxes.v",
+      "third_party/tachyum-fma-rtl/leading_zeros_detector_26_with_muxes.v",
+      "third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v",
+      "third_party/tachyum-fma-rtl/left_shifter_163.v",
+      "third_party/tachyum-fma-rtl/left_shifter_28.v",
+      "third_party/tachyum-fma-rtl/left_shifter_76.v",
+      "third_party/tachyum-fma-rtl/mul53_double_single_bf16_merger.v",
+      "third_party/tachyum-fma-rtl/mul53_double_single_bf16_merger_of_line_0.v",
+      "third_party/tachyum-fma-rtl/mul53_double_single_bf16_merger_of_line_26.v",
+      "third_party/tachyum-fma-rtl/mul53_radix4_csa.v",
+      "third_party/tachyum-fma-rtl/mux2.v",
+      "third_party/tachyum-fma-rtl/mux5d.v",
+      "third_party/tachyum-fma-rtl/radix4_booth_mux.v",
+      "third_party/tachyum-fma-rtl/reduction_level_0_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/reduction_level_1_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/reduction_level_2_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/reduction_level_3_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/reduction_level_4_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/reduction_level_5_and_6_53_radix_4.v",
+      "third_party/tachyum-fma-rtl/right_shifter_161_with_outside_bits.v",
+      "third_party/tachyum-fma-rtl/right_shifter_26_with_outside_bits.v",
+      "third_party/tachyum-fma-rtl/right_shifter_74_with_outside_bits.v",
+      "third_party/tachyum-fma-rtl/three_two_compressor_array_53.v",
+      "third_party/tachyum-fma-rtl/three_two_compressor_array_inv_inp_53.v",
+      "third_party/tachyum-fma-rtl/three_two_compressor_array_inv_out_53.v",
+      "third_party/tachyum-fma-rtl/tb/scells.v"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt_clean"
+  },
+  "design": "tachyum_f_mul_add_parent",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "reduction_level_0_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "reduction_level_1_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "reduction_level_2_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "reduction_level_3_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "reduction_level_4_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "reduction_level_5_and_6_53_radix_4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inv",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "src_port": "",
+      "width": 205
+    },
+    {
+      "attrs": {},
+      "dst": "scell_maoi222",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "src_port": "",
+      "width": 102
+    },
+    {
+      "attrs": {},
+      "dst": "scell_oai22",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "src_port": "",
+      "width": 206
+    },
+    {
+      "attrs": {},
+      "dst": "scell_xor4",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "src_port": "",
+      "width": 103
+    },
+    {
+      "attrs": {},
+      "dst": "scell_or2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_or2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_or2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_aoi2222",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_aoi2222",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "adder10",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 6
+    },
+    {
+      "attrs": {},
+      "dst": "adder13",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 12
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "adder10_no_cin",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 16
+    },
+    {
+      "attrs": {},
+      "dst": "adder13_no_cin",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "incrementer_8",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 6
+    },
+    {
+      "attrs": {},
+      "dst": "incrementer_11",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000001000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 6
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000110101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000011000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "left_shifter_163",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "left_shifter_28",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "left_shifter_76",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "mul53_radix4_csa",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000011010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000101101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000010010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000001000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000110101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000011000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001001001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 5
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001111110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 5
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000100011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001110000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000101000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010010010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010100001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dff\\SIZE=s32'00000000000000000000000000000011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$11a2bd001f49099fa39658c2bd027dd1036b64cb\\three_two_compressor_array_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$c82d9a48c232a5dba20be69f4f1dbd0e89585bc6\\three_two_compressor_array_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "adder161_no_cin_no_cout",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "adder162_no_cin",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$b79c3399390693bb97b2770cb2cbb7d90fb82cd6\\three_two_compressor_array_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 16
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$2ca05859ce45759214be725acc6b4a9960985864\\three_two_compressor_array_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 8
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "leading_zeros_detector_26_with_muxes",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 8
+    },
+    {
+      "attrs": {},
+      "dst": "leading_zeros_detector_161_with_muxes",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "leading_zeros_detector_74_with_muxes",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "right_shifter_26_with_outside_bits",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "right_shifter_161_with_outside_bits",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "right_shifter_74_with_outside_bits",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "f_mul_add",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_161_with_muxes",
+      "src_port": "",
+      "width": 10
+    },
+    {
+      "attrs": {},
+      "dst": "fast_leading_zeros_detector_originator_4_block",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_161_with_muxes",
+      "src_port": "",
+      "width": 40
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_161_with_muxes",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_161_with_muxes",
+      "src_port": "",
+      "width": 3
+    },
+    {
+      "attrs": {},
+      "dst": "fast_leading_zeros_detector_originator_4_block",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_26_with_muxes",
+      "src_port": "",
+      "width": 7
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_26_with_muxes",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_26_with_muxes",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 5
+    },
+    {
+      "attrs": {},
+      "dst": "fast_leading_zeros_detector_originator_4_block",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 19
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "booth_radix4_recoder_for_fma",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 27
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 27
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\radix4_booth_mux\\SIZE=s32'00000000000000000000000000110101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 27
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000011",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000101",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001001",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "mul53_double_single_bf16_merger_of_line_0",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "mul53_double_single_bf16_merger_of_line_26",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111000",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "mul53_radix4_csa",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$31ddce6ea39caf903ebb74db62f6e80138d3c720\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_0_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$cae2c7735421f1c92ccb979bfa03608b87953349\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_0_53_radix_4",
+      "src_port": "",
+      "width": 6
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$8c8703a8860a7e977e35a67fafeb72948556bafe\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_0_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$51bc74052aab44c6fa79398c5ab1434fdb320468\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_0_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$b2e1bd7c2566f28e9ecf2550a6ba89ded899bc1f\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$b62e41a4d71317076b53b3e0d737d3aecf73a883\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$dbd082b4221a9926084b8f9675620dbe4ea8b81a\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$d7733a78c71f1e8f092e40a32dce18d73adbbe7c\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$742f5d4a0846f3c151b074a28b3f13e05965ebbd\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$c70af042a5d6b014dd725b4873eb7f6cb94b80d7\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_1_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$f324528d53703f6c87ecdaf8f0cc844328df0006\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_2_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$81fe302101717e25d0a822c0e557f927738d7779\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_2_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$1aa0e2c1159a2f8ce3e2709a5b60b9b26759882b\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_2_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$d4047e98b5e097e9040ae072052598e27f6bd408\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_2_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$4e6aeca567a677d98312d0809c72508960d1da04\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_3_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$434abb6ea72739d9505aaaa6a1741b433852087e\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_3_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$7ddd2b8ea51d7ad3bb9bc048fdde0739a6a29bf4\\three_two_compressor_array_inv_inp_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_3_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$9769f0f8ef234a67b07f360fa4a670c0de740d50\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_4_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod$7695741cc1f92104201c64297f8adc08c6b7ff18\\three_two_compressor_array_inv_out_53",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_4_53_radix_4",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "reduction_level_5_and_6_53_radix_4",
+      "src_port": "",
+      "width": 1
+    }
+  ],
+  "level": "module",
+  "nodes": [
+    {
+      "attrs": {
+        "cells": 1127,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":161},{\"direction\":\"output\",\"width\":161},{\"direction\":\"input\",\"width\":161},{\"direction\":\"input\",\"width\":161},{\"direction\":\"input\",\"width\":161}]}",
+        "port_bits": 805,
+        "ports": 5
+      },
+      "id": "$paramod$11a2bd001f49099fa39658c2bd027dd1036b64cb\\three_two_compressor_array_53",
+      "kind": "module",
+      "label": "$paramod$11a2bd001f49099fa39658c2bd027dd1036b64cb\\three_two_compressor_array_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 582,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":82},{\"direction\":\"output\",\"width\":82},{\"direction\":\"input\",\"width\":70},{\"direction\":\"input\",\"width\":70},{\"direction\":\"input\",\"width\":70}]}",
+        "port_bits": 374,
+        "ports": 5
+      },
+      "id": "$paramod$1aa0e2c1159a2f8ce3e2709a5b60b9b26759882b\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$1aa0e2c1159a2f8ce3e2709a5b60b9b26759882b\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 91,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":13},{\"direction\":\"output\",\"width\":13},{\"direction\":\"input\",\"width\":13},{\"direction\":\"input\",\"width\":13},{\"direction\":\"input\",\"width\":13}]}",
+        "port_bits": 65,
+        "ports": 5
+      },
+      "id": "$paramod$2ca05859ce45759214be725acc6b4a9960985864\\three_two_compressor_array_53",
+      "kind": "module",
+      "label": "$paramod$2ca05859ce45759214be725acc6b4a9960985864\\three_two_compressor_array_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 509,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":60},{\"direction\":\"input\",\"width\":57},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58}]}",
+        "port_bits": 293,
+        "ports": 5
+      },
+      "id": "$paramod$31ddce6ea39caf903ebb74db62f6e80138d3c720\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$31ddce6ea39caf903ebb74db62f6e80138d3c720\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 651,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":101},{\"direction\":\"output\",\"width\":101},{\"direction\":\"input\",\"width\":82},{\"direction\":\"input\",\"width\":83},{\"direction\":\"input\",\"width\":83}]}",
+        "port_bits": 450,
+        "ports": 5
+      },
+      "id": "$paramod$434abb6ea72739d9505aaaa6a1741b433852087e\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$434abb6ea72739d9505aaaa6a1741b433852087e\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 664,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":88},{\"direction\":\"output\",\"width\":88},{\"direction\":\"input\",\"width\":75},{\"direction\":\"input\",\"width\":75},{\"direction\":\"input\",\"width\":84}]}",
+        "port_bits": 410,
+        "ports": 5
+      },
+      "id": "$paramod$4e6aeca567a677d98312d0809c72508960d1da04\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$4e6aeca567a677d98312d0809c72508960d1da04\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 504,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":60},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":56}]}",
+        "port_bits": 292,
+        "ports": 5
+      },
+      "id": "$paramod$51bc74052aab44c6fa79398c5ab1434fdb320468\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$51bc74052aab44c6fa79398c5ab1434fdb320468\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 537,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63}]}",
+        "port_bits": 327,
+        "ports": 5
+      },
+      "id": "$paramod$742f5d4a0846f3c151b074a28b3f13e05965ebbd\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$742f5d4a0846f3c151b074a28b3f13e05965ebbd\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 677,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":103},{\"direction\":\"output\",\"width\":103},{\"direction\":\"input\",\"width\":101},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":73}]}",
+        "port_bits": 453,
+        "ports": 5
+      },
+      "id": "$paramod$7695741cc1f92104201c64297f8adc08c6b7ff18\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$7695741cc1f92104201c64297f8adc08c6b7ff18\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 219,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":73},{\"direction\":\"output\",\"width\":73},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 293,
+        "ports": 5
+      },
+      "id": "$paramod$7ddd2b8ea51d7ad3bb9bc048fdde0739a6a29bf4\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$7ddd2b8ea51d7ad3bb9bc048fdde0739a6a29bf4\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 581,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":83},{\"direction\":\"output\",\"width\":83},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":71},{\"direction\":\"input\",\"width\":71}]}",
+        "port_bits": 377,
+        "ports": 5
+      },
+      "id": "$paramod$81fe302101717e25d0a822c0e557f927738d7779\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$81fe302101717e25d0a822c0e557f927738d7779\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 507,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":63},{\"direction\":\"output\",\"width\":63},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":59}]}",
+        "port_bits": 301,
+        "ports": 5
+      },
+      "id": "$paramod$8c8703a8860a7e977e35a67fafeb72948556bafe\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$8c8703a8860a7e977e35a67fafeb72948556bafe\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 798,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":106},{\"direction\":\"output\",\"width\":106},{\"direction\":\"input\",\"width\":89},{\"direction\":\"input\",\"width\":89},{\"direction\":\"input\",\"width\":102}]}",
+        "port_bits": 492,
+        "ports": 5
+      },
+      "id": "$paramod$9769f0f8ef234a67b07f360fa4a670c0de740d50\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$9769f0f8ef234a67b07f360fa4a670c0de740d50\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 531,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":67},{\"direction\":\"input\",\"width\":61},{\"direction\":\"input\",\"width\":61},{\"direction\":\"input\",\"width\":63}]}",
+        "port_bits": 319,
+        "ports": 5
+      },
+      "id": "$paramod$b2e1bd7c2566f28e9ecf2550a6ba89ded899bc1f\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$b2e1bd7c2566f28e9ecf2550a6ba89ded899bc1f\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 537,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63}]}",
+        "port_bits": 327,
+        "ports": 5
+      },
+      "id": "$paramod$b62e41a4d71317076b53b3e0d737d3aecf73a883\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$b62e41a4d71317076b53b3e0d737d3aecf73a883\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 70,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":10},{\"direction\":\"output\",\"width\":10},{\"direction\":\"input\",\"width\":10},{\"direction\":\"input\",\"width\":10},{\"direction\":\"input\",\"width\":10}]}",
+        "port_bits": 50,
+        "ports": 5
+      },
+      "id": "$paramod$b79c3399390693bb97b2770cb2cbb7d90fb82cd6\\three_two_compressor_array_53",
+      "kind": "module",
+      "label": "$paramod$b79c3399390693bb97b2770cb2cbb7d90fb82cd6\\three_two_compressor_array_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 531,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":67},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":61},{\"direction\":\"input\",\"width\":61}]}",
+        "port_bits": 319,
+        "ports": 5
+      },
+      "id": "$paramod$c70af042a5d6b014dd725b4873eb7f6cb94b80d7\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$c70af042a5d6b014dd725b4873eb7f6cb94b80d7\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1134,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":162},{\"direction\":\"output\",\"width\":162},{\"direction\":\"input\",\"width\":162},{\"direction\":\"input\",\"width\":162},{\"direction\":\"input\",\"width\":162}]}",
+        "port_bits": 810,
+        "ports": 5
+      },
+      "id": "$paramod$c82d9a48c232a5dba20be69f4f1dbd0e89585bc6\\three_two_compressor_array_53",
+      "kind": "module",
+      "label": "$paramod$c82d9a48c232a5dba20be69f4f1dbd0e89585bc6\\three_two_compressor_array_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 506,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58}]}",
+        "port_bits": 298,
+        "ports": 5
+      },
+      "id": "$paramod$cae2c7735421f1c92ccb979bfa03608b87953349\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$cae2c7735421f1c92ccb979bfa03608b87953349\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 589,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":73},{\"direction\":\"output\",\"width\":73},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":67},{\"direction\":\"input\",\"width\":67}]}",
+        "port_bits": 349,
+        "ports": 5
+      },
+      "id": "$paramod$d4047e98b5e097e9040ae072052598e27f6bd408\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$d4047e98b5e097e9040ae072052598e27f6bd408\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 543,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"input\",\"width\":64},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63}]}",
+        "port_bits": 328,
+        "ports": 5
+      },
+      "id": "$paramod$d7733a78c71f1e8f092e40a32dce18d73adbbe7c\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$d7733a78c71f1e8f092e40a32dce18d73adbbe7c\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 538,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":70},{\"direction\":\"output\",\"width\":70},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":64}]}",
+        "port_bits": 330,
+        "ports": 5
+      },
+      "id": "$paramod$dbd082b4221a9926084b8f9675620dbe4ea8b81a\\three_two_compressor_array_inv_inp_53",
+      "kind": "module",
+      "label": "$paramod$dbd082b4221a9926084b8f9675620dbe4ea8b81a\\three_two_compressor_array_inv_inp_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 598,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":74},{\"direction\":\"output\",\"width\":74},{\"direction\":\"input\",\"width\":68},{\"direction\":\"input\",\"width\":68},{\"direction\":\"input\",\"width\":70}]}",
+        "port_bits": 354,
+        "ports": 5
+      },
+      "id": "$paramod$f324528d53703f6c87ecdaf8f0cc844328df0006\\three_two_compressor_array_inv_out_53",
+      "kind": "module",
+      "label": "$paramod$f324528d53703f6c87ecdaf8f0cc844328df0006\\three_two_compressor_array_inv_out_53",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 11,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":10},{\"direction\":\"input\",\"width\":10},{\"direction\":\"output\",\"width\":10},{\"direction\":\"output\",\"width\":10}]}",
+        "port_bits": 40,
+        "ports": 4
+      },
+      "id": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001010",
+      "kind": "module",
+      "label": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 14,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":13},{\"direction\":\"input\",\"width\":13},{\"direction\":\"output\",\"width\":13},{\"direction\":\"output\",\"width\":13}]}",
+        "port_bits": 52,
+        "ports": 4
+      },
+      "id": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001101",
+      "kind": "module",
+      "label": "$paramod\\compound_adder\\WIDTH=s32'00000000000000000000000000001101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":107},{\"direction\":\"input\",\"width\":57},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":59},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":56},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"output\",\"width\":107}]}",
+        "port_bits": 1778,
+        "ports": 29
+      },
+      "id": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "kind": "module",
+      "label": "$paramod\\compressors_53_radix4\\SIZE=s32'00000000000000000000000000110101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 617,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":103},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":103},{\"direction\":\"input\",\"width\":103},{\"direction\":\"input\",\"width\":103},{\"direction\":\"input\",\"width\":103},{\"direction\":\"output\",\"width\":103}]}",
+        "port_bits": 619,
+        "ports": 7
+      },
+      "id": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "kind": "module",
+      "label": "$paramod\\csa_4to2_inv_inp\\DW=s32'00000000000000000000000001100111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":3},{\"direction\":\"output\",\"width\":3}]}",
+        "port_bits": 7,
+        "ports": 3
+      },
+      "id": "$paramod\\dff\\SIZE=s32'00000000000000000000000000000011",
+      "kind": "module",
+      "label": "$paramod\\dff\\SIZE=s32'00000000000000000000000000000011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":3},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":3}]}",
+        "port_bits": 8,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":4}]}",
+        "port_bits": 10,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000100",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":7},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":7}]}",
+        "port_bits": 16,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000111",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000000111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":8},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":8}]}",
+        "port_bits": 18,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001000",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":11},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":11}]}",
+        "port_bits": 24,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":14},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":14}]}",
+        "port_bits": 30,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001110",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000001110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":17},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":17}]}",
+        "port_bits": 36,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010001",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":19},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":19}]}",
+        "port_bits": 40,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":21},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":21}]}",
+        "port_bits": 44,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010101",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":22},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":22}]}",
+        "port_bits": 46,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010110",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":23},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":23}]}",
+        "port_bits": 48,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010111",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000010111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":28},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":28}]}",
+        "port_bits": 58,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011100",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":30},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":30}]}",
+        "port_bits": 62,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011110",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":31},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":31}]}",
+        "port_bits": 64,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011111",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000011111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":35},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":35}]}",
+        "port_bits": 72,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000100011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000100011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":51},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":51}]}",
+        "port_bits": 104,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":55},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":55}]}",
+        "port_bits": 112,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110111",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000110111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":56},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":56}]}",
+        "port_bits": 114,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111000",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":59},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":59}]}",
+        "port_bits": 120,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111011",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000000111011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":73}]}",
+        "port_bits": 148,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001001001",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001001001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":112},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":112}]}",
+        "port_bits": 226,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001110000",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001110000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":126},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":126}]}",
+        "port_bits": 254,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001111110",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000001111110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":146},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":146}]}",
+        "port_bits": 294,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010010010",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010010010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":161},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":161}]}",
+        "port_bits": 324,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010100001",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000010100001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":324},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":324}]}",
+        "port_bits": 650,
+        "ports": 4
+      },
+      "id": "$paramod\\dffe\\SIZE=s32'00000000000000000000000101000100",
+      "kind": "module",
+      "label": "$paramod\\dffe\\SIZE=s32'00000000000000000000000101000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 9,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":2},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":5},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4}]}",
+        "port_bits": 16,
+        "ports": 5
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000100",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 9,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":2},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":7},{\"direction\":\"input\",\"width\":6},{\"direction\":\"input\",\"width\":6}]}",
+        "port_bits": 22,
+        "ports": 5
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 21,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":3},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":8},{\"direction\":\"input\",\"width\":6},{\"direction\":\"input\",\"width\":6},{\"direction\":\"input\",\"width\":6}]}",
+        "port_bits": 30,
+        "ports": 6
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_3_block\\SIZE=s32'00000000000000000000000000000110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 22,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2}]}",
+        "port_bits": 17,
+        "ports": 7
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 24,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":6},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4}]}",
+        "port_bits": 27,
+        "ports": 7
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":5},{\"direction\":\"output\",\"width\":5}]}",
+        "port_bits": 11,
+        "ports": 3
+      },
+      "id": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000101",
+      "kind": "module",
+      "label": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":7}]}",
+        "port_bits": 15,
+        "ports": 3
+      },
+      "id": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000111",
+      "kind": "module",
+      "label": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000000111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":8},{\"direction\":\"output\",\"width\":8}]}",
+        "port_bits": 17,
+        "ports": 3
+      },
+      "id": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000001000",
+      "kind": "module",
+      "label": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000001000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":24},{\"direction\":\"output\",\"width\":24}]}",
+        "port_bits": 49,
+        "ports": 3
+      },
+      "id": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000011000",
+      "kind": "module",
+      "label": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000011000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":53},{\"direction\":\"output\",\"width\":53}]}",
+        "port_bits": 107,
+        "ports": 3
+      },
+      "id": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000110101",
+      "kind": "module",
+      "label": "$paramod\\incrementer\\WIDTH=s32'00000000000000000000000000110101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 17,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000001",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 17,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000010",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 15,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000011",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 11,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000100",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 12,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000101",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 12,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000110",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 16,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000111",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000000111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 22,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001000",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 22,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001001",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 21,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001010",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 15,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001011",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001100",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 4,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001101",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 9,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001110",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 17,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001111",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000001111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 17,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010000",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 13,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010001",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 11,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010010",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 10,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010011",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010011",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 10,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010100",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 17,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010101",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 21,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010110",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 21,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010111",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000010111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 19,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011000",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 15,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":58},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 117,
+        "ports": 7
+      },
+      "id": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011001",
+      "kind": "module",
+      "label": "$paramod\\mul53_double_single_bf16_merger\\ID=s32'00000000000000000000000000011001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":2},{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 4,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000001",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000001",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":2},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 7,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000010",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":12},{\"direction\":\"output\",\"width\":6},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 19,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000110",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":14},{\"direction\":\"output\",\"width\":7},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 22,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000111",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000000111",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":36},{\"direction\":\"output\",\"width\":18},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 55,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000010010",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000010010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":52},{\"direction\":\"output\",\"width\":26},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 79,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000011010",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000011010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":90},{\"direction\":\"output\",\"width\":45},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 136,
+        "ports": 3
+      },
+      "id": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000101101",
+      "kind": "module",
+      "label": "$paramod\\mux2\\SIZE=s32'00000000000000000000000000101101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":40},{\"direction\":\"output\",\"width\":8},{\"direction\":\"input\",\"width\":5}]}",
+        "port_bits": 53,
+        "ports": 3
+      },
+      "id": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000001000",
+      "kind": "module",
+      "label": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000001000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":120},{\"direction\":\"output\",\"width\":24},{\"direction\":\"input\",\"width\":5}]}",
+        "port_bits": 149,
+        "ports": 3
+      },
+      "id": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000011000",
+      "kind": "module",
+      "label": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000011000",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":265},{\"direction\":\"output\",\"width\":53},{\"direction\":\"input\",\"width\":5}]}",
+        "port_bits": 323,
+        "ports": 3
+      },
+      "id": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000110101",
+      "kind": "module",
+      "label": "$paramod\\mux5d\\SIZE=s32'00000000000000000000000000110101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 4,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":2},{\"direction\":\"output\",\"width\":54},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 165,
+        "ports": 5
+      },
+      "id": "$paramod\\radix4_booth_mux\\SIZE=s32'00000000000000000000000000110101",
+      "kind": "module",
+      "label": "$paramod\\radix4_booth_mux\\SIZE=s32'00000000000000000000000000110101",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":10},{\"direction\":\"input\",\"width\":10},{\"direction\":\"output\",\"width\":10}]}",
+        "port_bits": 32,
+        "ports": 5
+      },
+      "id": "adder10",
+      "kind": "module",
+      "label": "adder10",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":10},{\"direction\":\"input\",\"width\":10},{\"direction\":\"output\",\"width\":10}]}",
+        "port_bits": 31,
+        "ports": 4
+      },
+      "id": "adder10_no_cin",
+      "kind": "module",
+      "label": "adder10_no_cin",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":13},{\"direction\":\"input\",\"width\":13},{\"direction\":\"output\",\"width\":13}]}",
+        "port_bits": 41,
+        "ports": 5
+      },
+      "id": "adder13",
+      "kind": "module",
+      "label": "adder13",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":13},{\"direction\":\"input\",\"width\":13},{\"direction\":\"output\",\"width\":13}]}",
+        "port_bits": 40,
+        "ports": 4
+      },
+      "id": "adder13_no_cin",
+      "kind": "module",
+      "label": "adder13_no_cin",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":161},{\"direction\":\"input\",\"width\":161},{\"direction\":\"output\",\"width\":161}]}",
+        "port_bits": 483,
+        "ports": 3
+      },
+      "id": "adder161_no_cin_no_cout",
+      "kind": "module",
+      "label": "adder161_no_cin_no_cout",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":162},{\"direction\":\"input\",\"width\":162},{\"direction\":\"output\",\"width\":162}]}",
+        "port_bits": 487,
+        "ports": 4
+      },
+      "id": "adder162_no_cin",
+      "kind": "module",
+      "label": "adder162_no_cin",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":2},{\"direction\":\"input\",\"width\":3},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 6,
+        "ports": 3
+      },
+      "id": "booth_radix4_recoder_for_fma",
+      "kind": "module",
+      "label": "booth_radix4_recoder_for_fma",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 4030,
+        "is_top": true,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000001110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000010111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000011111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000100011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000100011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000100011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000101101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000111011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001001001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001110000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001111110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001111110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001111110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001111110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000001111110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000010010010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000010100001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000101000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000001101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000011000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000011000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\WIDTH=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":64},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":64},{\"direction\":\"input\",\"width\":64},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":64},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 290,
+        "ports": 22
+      },
+      "id": "f_mul_add",
+      "kind": "module",
+      "label": "f_mul_add",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 7,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":2}]}",
+        "port_bits": 7,
+        "ports": 3
+      },
+      "id": "fast_leading_zeros_detector_originator_4_block",
+      "kind": "module",
+      "label": "fast_leading_zeros_detector_originator_4_block",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":11},{\"direction\":\"output\",\"width\":11}]}",
+        "port_bits": 23,
+        "ports": 3
+      },
+      "id": "incrementer_11",
+      "kind": "module",
+      "label": "incrementer_11",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":8},{\"direction\":\"output\",\"width\":8}]}",
+        "port_bits": 17,
+        "ports": 3
+      },
+      "id": "incrementer_8",
+      "kind": "module",
+      "label": "incrementer_8",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 836,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000110\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":161},{\"direction\":\"output\",\"width\":161},{\"direction\":\"output\",\"width\":8}]}",
+        "port_bits": 331,
+        "ports": 4
+      },
+      "id": "leading_zeros_detector_161_with_muxes",
+      "kind": "module",
+      "label": "leading_zeros_detector_161_with_muxes",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 102,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":26},{\"direction\":\"output\",\"width\":26},{\"direction\":\"output\",\"width\":5}]}",
+        "port_bits": 58,
+        "ports": 4
+      },
+      "id": "leading_zeros_detector_26_with_muxes",
+      "kind": "module",
+      "label": "leading_zeros_detector_26_with_muxes",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 345,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000110\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":74},{\"direction\":\"output\",\"width\":74},{\"direction\":\"output\",\"width\":7}]}",
+        "port_bits": 156,
+        "ports": 4
+      },
+      "id": "leading_zeros_detector_74_with_muxes",
+      "kind": "module",
+      "label": "leading_zeros_detector_74_with_muxes",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 8,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":163},{\"direction\":\"input\",\"width\":8},{\"direction\":\"output\",\"width\":163}]}",
+        "port_bits": 334,
+        "ports": 3
+      },
+      "id": "left_shifter_163",
+      "kind": "module",
+      "label": "left_shifter_163",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 5,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":28},{\"direction\":\"input\",\"width\":5},{\"direction\":\"output\",\"width\":28}]}",
+        "port_bits": 61,
+        "ports": 3
+      },
+      "id": "left_shifter_28",
+      "kind": "module",
+      "label": "left_shifter_28",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 7,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":76},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":76}]}",
+        "port_bits": 159,
+        "ports": 3
+      },
+      "id": "left_shifter_76",
+      "kind": "module",
+      "label": "left_shifter_76",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 10,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":57},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 115,
+        "ports": 6
+      },
+      "id": "mul53_double_single_bf16_merger_of_line_0",
+      "kind": "module",
+      "label": "mul53_double_single_bf16_merger_of_line_0",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":56},{\"direction\":\"input\",\"width\":54},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1}]}",
+        "port_bits": 115,
+        "ports": 7
+      },
+      "id": "mul53_double_single_bf16_merger_of_line_26",
+      "kind": "module",
+      "label": "mul53_double_single_bf16_merger_of_line_26",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 165,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000000111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000001111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010110\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000010111\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000011000\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\ID=s32'00000000000000000000000000011001\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000011\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000110101\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000111000\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":107},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":53},{\"direction\":\"input\",\"width\":53},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":107}]}",
+        "port_bits": 325,
+        "ports": 9
+      },
+      "id": "mul53_radix4_csa",
+      "kind": "module",
+      "label": "mul53_radix4_csa",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 9,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":57},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":59},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":56},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"input\",\"width\":58},{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":60},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":62},{\"direction\":\"output\",\"width\":63},{\"direction\":\"output\",\"width\":63}]}",
+        "port_bits": 2674,
+        "ports": 45
+      },
+      "id": "reduction_level_0_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_0_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":60},{\"direction\":\"input\",\"width\":60},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":60},{\"direction\":\"input\",\"width\":60},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":62},{\"direction\":\"input\",\"width\":63},{\"direction\":\"input\",\"width\":63},{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":67},{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":70},{\"direction\":\"output\",\"width\":70},{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69},{\"direction\":\"output\",\"width\":69}]}",
+        "port_bits": 1932,
+        "ports": 30
+      },
+      "id": "reduction_level_1_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_1_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 4,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":67},{\"direction\":\"input\",\"width\":67},{\"direction\":\"input\",\"width\":67},{\"direction\":\"input\",\"width\":67},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":70},{\"direction\":\"input\",\"width\":70},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":69},{\"direction\":\"input\",\"width\":69},{\"direction\":\"output\",\"width\":74},{\"direction\":\"output\",\"width\":74},{\"direction\":\"output\",\"width\":83},{\"direction\":\"output\",\"width\":83},{\"direction\":\"output\",\"width\":82},{\"direction\":\"output\",\"width\":82},{\"direction\":\"output\",\"width\":73},{\"direction\":\"output\",\"width\":73}]}",
+        "port_bits": 1446,
+        "ports": 20
+      },
+      "id": "reduction_level_2_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_2_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":74},{\"direction\":\"input\",\"width\":74},{\"direction\":\"input\",\"width\":83},{\"direction\":\"input\",\"width\":83},{\"direction\":\"input\",\"width\":82},{\"direction\":\"input\",\"width\":82},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":73},{\"direction\":\"output\",\"width\":88},{\"direction\":\"output\",\"width\":88},{\"direction\":\"output\",\"width\":101},{\"direction\":\"output\",\"width\":101},{\"direction\":\"output\",\"width\":73},{\"direction\":\"output\",\"width\":73}]}",
+        "port_bits": 1148,
+        "ports": 14
+      },
+      "id": "reduction_level_3_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_3_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":88},{\"direction\":\"input\",\"width\":88},{\"direction\":\"input\",\"width\":101},{\"direction\":\"input\",\"width\":101},{\"direction\":\"input\",\"width\":73},{\"direction\":\"input\",\"width\":73},{\"direction\":\"output\",\"width\":106},{\"direction\":\"output\",\"width\":106},{\"direction\":\"output\",\"width\":103},{\"direction\":\"output\",\"width\":103}]}",
+        "port_bits": 942,
+        "ports": 10
+      },
+      "id": "reduction_level_4_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_4_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\DW=s32'00000000000000000000000001100111\",\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":106},{\"direction\":\"input\",\"width\":106},{\"direction\":\"input\",\"width\":103},{\"direction\":\"input\",\"width\":103},{\"direction\":\"output\",\"width\":107},{\"direction\":\"output\",\"width\":107}]}",
+        "port_bits": 632,
+        "ports": 6
+      },
+      "id": "reduction_level_5_and_6_53_radix_4",
+      "kind": "module",
+      "label": "reduction_level_5_and_6_53_radix_4",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 8,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":161},{\"direction\":\"output\",\"width\":55},{\"direction\":\"input\",\"width\":8},{\"direction\":\"output\",\"width\":161}]}",
+        "port_bits": 385,
+        "ports": 4
+      },
+      "id": "right_shifter_161_with_outside_bits",
+      "kind": "module",
+      "label": "right_shifter_161_with_outside_bits",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 5,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":26},{\"direction\":\"output\",\"width\":10},{\"direction\":\"input\",\"width\":5},{\"direction\":\"output\",\"width\":26}]}",
+        "port_bits": 67,
+        "ports": 4
+      },
+      "id": "right_shifter_26_with_outside_bits",
+      "kind": "module",
+      "label": "right_shifter_26_with_outside_bits",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 7,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":74},{\"direction\":\"output\",\"width\":26},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":74}]}",
+        "port_bits": 181,
+        "ports": 4
+      },
+      "id": "right_shifter_74_with_outside_bits",
+      "kind": "module",
+      "label": "right_shifter_74_with_outside_bits",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 8,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 9,
+        "ports": 9
+      },
+      "id": "scell_aoi2222",
+      "kind": "module",
+      "label": "scell_aoi2222",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 5,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 4,
+        "ports": 4
+      },
+      "id": "scell_iind3",
+      "kind": "module",
+      "label": "scell_iind3",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_ind2",
+      "kind": "module",
+      "label": "scell_ind2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_inr2",
+      "kind": "module",
+      "label": "scell_inr2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 2,
+        "ports": 2
+      },
+      "id": "scell_inv",
+      "kind": "module",
+      "label": "scell_inv",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 6,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 4,
+        "ports": 4
+      },
+      "id": "scell_maoi222",
+      "kind": "module",
+      "label": "scell_maoi222",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_nd2",
+      "kind": "module",
+      "label": "scell_nd2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_nr2",
+      "kind": "module",
+      "label": "scell_nr2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 4,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 5,
+        "ports": 5
+      },
+      "id": "scell_oai22",
+      "kind": "module",
+      "label": "scell_oai22",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_or2",
+      "kind": "module",
+      "label": "scell_or2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 5,
+        "ports": 5
+      },
+      "id": "scell_xor4",
+      "kind": "module",
+      "label": "scell_xor4",
+      "width": null
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 159,
+    "kinds": {
+      "module": 139
+    },
+    "nodes": 139,
+    "operators": 139
+  },
+  "top": "f_mul_add"
+}

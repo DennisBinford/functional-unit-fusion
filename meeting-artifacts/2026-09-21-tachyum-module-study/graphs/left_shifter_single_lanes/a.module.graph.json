@@ -1,0 +1,60 @@
+{
+  "attrs": {
+    "sources": [
+      "meeting-artifacts/2026-09-21-tachyum-module-study/rtl/tachyum_pair_wrappers.sv",
+      "third_party/tachyum-fma-rtl/left_shifter_76.v"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt_clean"
+  },
+  "design": "left_shifter_single_lanes_a",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "left_shifter_76",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "tachyum_single_1_left_shifter",
+      "src_port": "",
+      "width": 1
+    }
+  ],
+  "level": "module",
+  "nodes": [
+    {
+      "attrs": {
+        "cells": 7,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":76},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":76}]}",
+        "port_bits": 159,
+        "ports": 3
+      },
+      "id": "left_shifter_76",
+      "kind": "module",
+      "label": "left_shifter_76",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": true,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":76},{\"direction\":\"input\",\"width\":7},{\"direction\":\"output\",\"width\":76}]}",
+        "port_bits": 159,
+        "ports": 3
+      },
+      "id": "tachyum_single_1_left_shifter",
+      "kind": "module",
+      "label": "tachyum_single_1_left_shifter",
+      "width": null
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 1,
+    "kinds": {
+      "module": 2
+    },
+    "nodes": 2,
+    "operators": 2
+  },
+  "top": "tachyum_single_1_left_shifter"
+}

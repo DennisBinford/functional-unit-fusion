@@ -1,0 +1,10 @@
+{
+  "decision": "rejected_for_existing_contract",
+  "interface": "existing f_mul_add packed 64-bit binary32 mode; two independent 32-bit lane results and four per-lane flags",
+  "latency_cycles": 4,
+  "mutual_exclusion": "none: the two selected shifters are parallel lane resources and both may be active for the same format_single transaction",
+  "ppa_blocker": "A one-shifter reconstruction cannot preserve both binary32 lane outputs, four-cycle latency, and one-operation-per-cycle throughput when both source lanes are active.",
+  "ppa_status": "not_run",
+  "sharing_contract_required": "at most one lane request may use the shared 74-bit shifter at a time, with a scheduler or a changed packed-lane interface",
+  "throughput": "one packed operation per cycle (source README contract; both binary32 lanes participate in one operation)"
+}

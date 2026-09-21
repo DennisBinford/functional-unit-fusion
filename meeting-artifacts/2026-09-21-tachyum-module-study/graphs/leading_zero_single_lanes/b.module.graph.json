@@ -1,0 +1,406 @@
+{
+  "attrs": {
+    "sources": [
+      "meeting-artifacts/2026-09-21-tachyum-module-study/rtl/tachyum_pair_wrappers.sv",
+      "third_party/tachyum-fma-rtl/leading_zeros_detector_74_with_muxes.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_originator_4_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_2_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_3_block.v",
+      "third_party/tachyum-fma-rtl/fast_leading_zeros_detector_concatenating_4_block.v",
+      "third_party/tachyum-fma-rtl/tb/scells.v"
+    ],
+    "yosys_passes": "hierarchy -top {top}; proc; opt_clean"
+  },
+  "design": "leading_zero_single_lanes_b",
+  "edges": [
+    {
+      "attrs": {},
+      "dst": "scell_or2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_aoi2222",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_aoi2222",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 4
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_iind3",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_ind2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_inr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nd2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "scell_nr2",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "fast_leading_zeros_detector_originator_4_block",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 5
+    },
+    {
+      "attrs": {},
+      "dst": "fast_leading_zeros_detector_originator_4_block",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 19
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 2
+    },
+    {
+      "attrs": {},
+      "dst": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "leading_zeros_detector_74_with_muxes",
+      "src_port": "",
+      "width": 1
+    },
+    {
+      "attrs": {},
+      "dst": "leading_zeros_detector_74_with_muxes",
+      "dst_port": "instantiates",
+      "inverted": false,
+      "src": "tachyum_single_2_leading_zero_detector",
+      "src_port": "",
+      "width": 1
+    }
+  ],
+  "level": "module",
+  "nodes": [
+    {
+      "attrs": {
+        "cells": 9,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":2},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":7},{\"direction\":\"input\",\"width\":6},{\"direction\":\"input\",\"width\":6}]}",
+        "port_bits": 22,
+        "ports": 5
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_2_block\\SIZE=s32'00000000000000000000000000000110",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 22,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":4},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2},{\"direction\":\"input\",\"width\":2}]}",
+        "port_bits": 17,
+        "ports": 7
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000010",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 24,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":6},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4},{\"direction\":\"input\",\"width\":4}]}",
+        "port_bits": 27,
+        "ports": 7
+      },
+      "id": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "kind": "module",
+      "label": "$paramod\\fast_leading_zeros_detector_concatenating_4_block\\SIZE=s32'00000000000000000000000000000100",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 7,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"input\",\"width\":4},{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":2}]}",
+        "port_bits": 7,
+        "ports": 3
+      },
+      "id": "fast_leading_zeros_detector_originator_4_block",
+      "kind": "module",
+      "label": "fast_leading_zeros_detector_originator_4_block",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 345,
+        "is_top": false,
+        "module_signature": "{\"children\":[{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000010\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000100\",\"parameters\":[]},{\"parameterized_type\":\"$paramod\\\\SIZE=s32'00000000000000000000000000000110\",\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]},{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"input\",\"width\":74},{\"direction\":\"output\",\"width\":74},{\"direction\":\"output\",\"width\":7}]}",
+        "port_bits": 156,
+        "ports": 4
+      },
+      "id": "leading_zeros_detector_74_with_muxes",
+      "kind": "module",
+      "label": "leading_zeros_detector_74_with_muxes",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 8,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 9,
+        "ports": 9
+      },
+      "id": "scell_aoi2222",
+      "kind": "module",
+      "label": "scell_aoi2222",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 5,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 4,
+        "ports": 4
+      },
+      "id": "scell_iind3",
+      "kind": "module",
+      "label": "scell_iind3",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_ind2",
+      "kind": "module",
+      "label": "scell_ind2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 3,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_inr2",
+      "kind": "module",
+      "label": "scell_inr2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_nd2",
+      "kind": "module",
+      "label": "scell_nd2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 2,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_nr2",
+      "kind": "module",
+      "label": "scell_nr2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": false,
+        "module_signature": "{\"children\":[],\"ports\":[{\"direction\":\"input\",\"width\":1},{\"direction\":\"input\",\"width\":1},{\"direction\":\"output\",\"width\":1}]}",
+        "port_bits": 3,
+        "ports": 3
+      },
+      "id": "scell_or2",
+      "kind": "module",
+      "label": "scell_or2",
+      "width": null
+    },
+    {
+      "attrs": {
+        "cells": 1,
+        "is_top": true,
+        "module_signature": "{\"children\":[{\"parameterized_type\":null,\"parameters\":[]}],\"ports\":[{\"direction\":\"output\",\"width\":1},{\"direction\":\"output\",\"width\":7},{\"direction\":\"input\",\"width\":74},{\"direction\":\"output\",\"width\":74}]}",
+        "port_bits": 156,
+        "ports": 4
+      },
+      "id": "tachyum_single_2_leading_zero_detector",
+      "kind": "module",
+      "label": "tachyum_single_2_leading_zero_detector",
+      "width": null
+    }
+  ],
+  "schema": "fu-graph/v1",
+  "stats": {
+    "edges": 23,
+    "kinds": {
+      "module": 13
+    },
+    "nodes": 13,
+    "operators": 13
+  },
+  "top": "tachyum_single_2_leading_zero_detector"
+}
