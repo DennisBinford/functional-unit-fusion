@@ -97,6 +97,50 @@ def _add_fixture():
 
 
 class ExecutableGraphTest(unittest.TestCase):
+    def test_interface_preflight_blocks_rejected_emission_but_override_is_diagnostic(self):
+        a, b = _fixture(); match, merge, control = _evidence(a, b)
+        contract = {
+            "candidate_id": "synthetic_rejected",
+            "interface": {"operand_sources": [{"name": "a", "width": 32}, {"name": "b", "width": 32}],
+                          "externally_visible_results": 1, "selection_mode": "client_selection",
+                          "simultaneous_use_preserved": False, "latency": {"kind": "combinational"},
+                          "throughput": {"available_clients_per_evaluation": 1}},
+            "requirements": {"equal_external_interface": True, "simultaneous_use_required": True,
+                              "required_clients_per_evaluation": 1},
+            "shared_resource": {"kind": "$mul", "width": 64},
+            "match_evidence": {"matched_operator_count": 2, "shared_resource_kind": "$mul",
+                               "shared_resource_width": 64},
+        }
+        contract["comparison_contract"] = copy.deepcopy(contract)
+        contract["comparison_contract"].pop("comparison_contract", None)
+        with self.assertRaisesRegex(ExecutableGraphError, "simultaneous.*use"):
+            realize(a, b, match, merge, control, candidate_contract=contract)
+        plan = realize(a, b, match, merge, control, candidate_contract=contract, diagnostic_override=True)
+        self.assertEqual(plan["decision_stage"]["decision"], "REJECT")
+        self.assertTrue(plan["hardware_status"]["diagnostic_override"])
+        self.assertIn("*", emit(plan))
+
+    def test_interface_preflight_measurement_decision_is_embedded_in_plan(self):
+        a, b = _fixture(); match, merge, control = _evidence(a, b)
+        contract = {
+            "candidate_id": "synthetic_measure",
+            "interface": {"operand_sources": [{"name": "a", "width": 32}, {"name": "b", "width": 32}],
+                          "externally_visible_results": 1, "selection_mode": "client_selection",
+                          "simultaneous_use_preserved": False, "latency": {"kind": "combinational"},
+                          "throughput": {"available_clients_per_evaluation": 1}},
+            "requirements": {"equal_external_interface": True, "simultaneous_use_required": False,
+                              "required_clients_per_evaluation": 1},
+            "shared_resource": {"kind": "$mul", "width": 64},
+            "match_evidence": {"matched_operator_count": 2, "shared_resource_kind": "$mul",
+                               "shared_resource_width": 64},
+        }
+        contract["comparison_contract"] = copy.deepcopy(contract)
+        contract["comparison_contract"].pop("comparison_contract", None)
+        plan = realize(a, b, match, merge, control, candidate_contract=contract,
+                       routing_evidence={"pretechmap": {"mux_count": 2}})
+        self.assertEqual(plan["decision_stage"]["decision"], "MEASURE")
+        self.assertTrue(plan["decision_stage"]["measurement_required"])
+
     def test_valid_plan_has_shared_mul_and_two_operand_muxes(self):
         a, b = _fixture(); match, merge, control = _evidence(a, b)
         plan = realize(a, b, match, merge, control)

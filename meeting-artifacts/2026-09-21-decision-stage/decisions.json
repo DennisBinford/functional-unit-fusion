@@ -1,0 +1,566 @@
+{
+  "cases": {
+    "independent_sub_ltu": {
+      "contract": {
+        "candidate_id": "independent_sub_ltu",
+        "classification": "Selected-source, independent-input, time-multiplexed sharing derived from two Ibex operation specializations. Only one client result is available at a time.",
+        "comparison_contract": {
+          "candidate_id": "independent_sub_ltu_baseline",
+          "classification": "Selected-source, independent-input, time-multiplexed sharing derived from two Ibex operation specializations. Only one client result is available at a time.",
+          "comparison_contract": {},
+          "interface": {
+            "externally_visible_results": 1,
+            "latency": {
+              "kind": "combinational",
+              "registered": "undefined_without_wrapper"
+            },
+            "operand_sources": [
+              {
+                "independent": true,
+                "name": "source_a",
+                "width": 33
+              },
+              {
+                "independent": true,
+                "name": "source_b",
+                "width": 33
+              }
+            ],
+            "selection_mode": "client_selection",
+            "simultaneous_use_preserved": false,
+            "throughput": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            }
+          },
+          "match_evidence": {
+            "matched_operator_count": 2,
+            "shared_resource_kind": "$add",
+            "shared_resource_width": 34
+          },
+          "requirements": {
+            "equal_external_interface": true,
+            "max_area_increase_percent": 0.0,
+            "max_delay_increase_ns": null,
+            "required_clients_per_evaluation": 1,
+            "simultaneous_use_required": false
+          },
+          "schema": "fu-candidate-contract/v1",
+          "shared_resource": {
+            "kind": "$add",
+            "width": 34
+          },
+          "version": 1
+        },
+        "interface": {
+          "externally_visible_results": 1,
+          "latency": {
+            "kind": "combinational",
+            "registered": "undefined_without_wrapper"
+          },
+          "operand_sources": [
+            {
+              "independent": true,
+              "name": "source_a",
+              "width": 33
+            },
+            {
+              "independent": true,
+              "name": "source_b",
+              "width": 33
+            }
+          ],
+          "selection_mode": "client_selection",
+          "simultaneous_use_preserved": false,
+          "throughput": {
+            "available_clients_per_evaluation": 1,
+            "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+          }
+        },
+        "match_evidence": {
+          "matched_operator_count": 2,
+          "shared_resource_kind": "$add",
+          "shared_resource_width": 34
+        },
+        "requirements": {
+          "equal_external_interface": true,
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null,
+          "required_clients_per_evaluation": 1,
+          "simultaneous_use_required": false
+        },
+        "schema": "fu-candidate-contract/v1",
+        "shared_resource": {
+          "kind": "$add",
+          "width": 34
+        },
+        "version": 1
+      },
+      "evidence_notes": [
+        "original Ibex ALU result is corroborating evidence only",
+        "MUX2 area is mapped cell-population evidence, not causal decomposition"
+      ],
+      "interface_pair_check": {
+        "compared_fields": {
+          "number_of_externally_visible_results": {
+            "a": 1,
+            "b": 1,
+            "equal": true
+          },
+          "number_of_independent_operand_pairs": {
+            "a": 2,
+            "b": 2,
+            "equal": true
+          },
+          "selection_model": {
+            "a": "client_selection",
+            "b": "client_selection",
+            "equal": true
+          },
+          "simultaneous_use_preserved": {
+            "a": false,
+            "b": false,
+            "equal": true
+          },
+          "throughput": {
+            "a": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            },
+            "b": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            },
+            "equal": true
+          }
+        },
+        "equal_external_interface": true
+      },
+      "interpretation": "Selected-source independent-input sharing; area-losing measured case against the 323.456 um2 equal-interface baseline. The 332.500 um2 literal sum is resource accounting only.",
+      "measured": {
+        "candidate_id": "independent_sub_ltu",
+        "correctness": {
+          "status": "pass"
+        },
+        "decision": "REJECT",
+        "deltas": {
+          "area_percent": 7.154605263158393,
+          "area_um2": 23.142000000001588,
+          "critical_delay_ns": 0.1299999999999999,
+          "fmax_mhz": -66.9481923988053
+        },
+        "policy": {
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null
+        },
+        "reasons": [
+          {
+            "code": "performance_bound_unspecified",
+            "message": "delay worsened but no acceptable performance bound was supplied"
+          },
+          {
+            "code": "area_policy_exceeded",
+            "message": "measured area exceeds the explicit policy"
+          }
+        ],
+        "schema": "fu-fusion-decision/v1",
+        "stage": "measured",
+        "version": 1
+      },
+      "preflight": {
+        "candidate_id": "independent_sub_ltu",
+        "decision": "MEASURE",
+        "diagnostic_override": {
+          "allowed": false,
+          "purpose": "emit a rejected candidate for diagnosis only"
+        },
+        "measurement_required": true,
+        "profitability_claim": "none_before_synthesis",
+        "reasons": [],
+        "routing_overhead": {
+          "mapped_mux_area_um2": 104.272,
+          "mapped_mux_cell": "MUX2",
+          "mapped_mux_count": 56,
+          "measured_area_um2": null,
+          "pretechmap_mux_count": 4,
+          "status": "screening_only",
+          "uncertainty": [
+            "screening evidence is not measured area or delay",
+            "routing congestion, placement, buffering, and cell remapping remain unknown",
+            "MUX2 population is mapped-cell evidence, not a formal causal decomposition"
+          ]
+        },
+        "schema": "fu-fusion-decision/v1",
+        "stage": "preflight",
+        "version": 1
+      },
+      "resource_accounting_reference": {
+        "label": "resource-accounting reference; not an equal-interface baseline",
+        "literal_sum_um2": 332.50000000000034
+      }
+    },
+    "same_input_sub_ltu_control": {
+      "contract": {
+        "candidate_id": "same_input_sub_ltu_control",
+        "classification": "Same-input, operation-selected, time-multiplexed sharing within one ALU interface.",
+        "comparison_contract": {
+          "candidate_id": "same_input_sub_ltu_baseline",
+          "classification": "Same-input, operation-selected, time-multiplexed sharing within one ALU interface.",
+          "comparison_contract": {},
+          "interface": {
+            "externally_visible_results": 1,
+            "latency": {
+              "kind": "combinational",
+              "registered": "undefined_without_wrapper"
+            },
+            "operand_sources": [
+              {
+                "independent": false,
+                "name": "source_a",
+                "width": 33
+              }
+            ],
+            "selection_mode": "operation_selection",
+            "simultaneous_use_preserved": false,
+            "throughput": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            }
+          },
+          "match_evidence": {
+            "matched_operator_count": 2,
+            "shared_resource_kind": "$add",
+            "shared_resource_width": 34
+          },
+          "requirements": {
+            "equal_external_interface": true,
+            "max_area_increase_percent": 0.0,
+            "max_delay_increase_ns": null,
+            "required_clients_per_evaluation": 1,
+            "simultaneous_use_required": false
+          },
+          "schema": "fu-candidate-contract/v1",
+          "shared_resource": {
+            "kind": "$add",
+            "width": 34
+          },
+          "version": 1
+        },
+        "interface": {
+          "externally_visible_results": 1,
+          "latency": {
+            "kind": "combinational",
+            "registered": "undefined_without_wrapper"
+          },
+          "operand_sources": [
+            {
+              "independent": false,
+              "name": "source_a",
+              "width": 33
+            }
+          ],
+          "selection_mode": "operation_selection",
+          "simultaneous_use_preserved": false,
+          "throughput": {
+            "available_clients_per_evaluation": 1,
+            "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+          }
+        },
+        "match_evidence": {
+          "matched_operator_count": 2,
+          "shared_resource_kind": "$add",
+          "shared_resource_width": 34
+        },
+        "requirements": {
+          "equal_external_interface": true,
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null,
+          "required_clients_per_evaluation": 1,
+          "simultaneous_use_required": false
+        },
+        "schema": "fu-candidate-contract/v1",
+        "shared_resource": {
+          "kind": "$add",
+          "width": 34
+        },
+        "version": 1
+      },
+      "interface_pair_check": {
+        "compared_fields": {
+          "number_of_externally_visible_results": {
+            "a": 1,
+            "b": 1,
+            "equal": true
+          },
+          "number_of_independent_operand_pairs": {
+            "a": 1,
+            "b": 1,
+            "equal": true
+          },
+          "selection_model": {
+            "a": "operation_selection",
+            "b": "operation_selection",
+            "equal": true
+          },
+          "simultaneous_use_preserved": {
+            "a": false,
+            "b": false,
+            "equal": true
+          },
+          "throughput": {
+            "a": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            },
+            "b": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            },
+            "equal": true
+          }
+        },
+        "equal_external_interface": true
+      },
+      "interpretation": "Beneficial same-input operation-selected control within one ALU interface; not an independent-client result.",
+      "measured": {
+        "candidate_id": "same_input_sub_ltu_control",
+        "correctness": {
+          "status": "pass"
+        },
+        "decision": "FUSE",
+        "deltas": {
+          "area_percent": -1.0588235294116675,
+          "area_um2": -2.393999999999778,
+          "critical_delay_ns": -0.07000000000000006,
+          "fmax_mhz": 45.196280991735534
+        },
+        "policy": {
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null
+        },
+        "reasons": [],
+        "schema": "fu-fusion-decision/v1",
+        "stage": "measured",
+        "version": 1
+      },
+      "preflight": {
+        "candidate_id": "same_input_sub_ltu_control",
+        "decision": "MEASURE",
+        "diagnostic_override": {
+          "allowed": false,
+          "purpose": "emit a rejected candidate for diagnosis only"
+        },
+        "measurement_required": true,
+        "profitability_claim": "none_before_synthesis",
+        "reasons": [],
+        "routing_overhead": {
+          "mapped_mux_area_um2": 0.0,
+          "mapped_mux_cell": "MUX2",
+          "mapped_mux_count": 0,
+          "measured_area_um2": null,
+          "pretechmap_mux_count": 2,
+          "status": "screening_only",
+          "uncertainty": [
+            "screening evidence is not measured area or delay",
+            "routing congestion, placement, buffering, and cell remapping remain unknown",
+            "MUX2 population is mapped-cell evidence, not a formal causal decomposition"
+          ]
+        },
+        "schema": "fu-fusion-decision/v1",
+        "stage": "preflight",
+        "version": 1
+      }
+    },
+    "whole_ibex_alu_plus_add_client": {
+      "contract": {
+        "candidate_id": "whole_ibex_alu_plus_add_client",
+        "classification": "contract-guided module-preserving fusion",
+        "comparison_contract": {
+          "candidate_id": "whole_ibex_alu_plus_add_client_baseline",
+          "classification": "contract-guided module-preserving fusion",
+          "comparison_contract": {},
+          "interface": {
+            "externally_visible_results": 1,
+            "latency": {
+              "kind": "combinational",
+              "registered": "undefined_without_wrapper"
+            },
+            "operand_sources": [
+              {
+                "independent": true,
+                "name": "source_a",
+                "width": 33
+              },
+              {
+                "independent": true,
+                "name": "source_b",
+                "width": 33
+              }
+            ],
+            "selection_mode": "client_selection",
+            "simultaneous_use_preserved": false,
+            "throughput": {
+              "available_clients_per_evaluation": 1,
+              "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+            }
+          },
+          "match_evidence": {
+            "matched_operator_count": 2,
+            "shared_resource_kind": "$add",
+            "shared_resource_width": 34
+          },
+          "requirements": {
+            "equal_external_interface": true,
+            "max_area_increase_percent": 0.0,
+            "max_delay_increase_ns": null,
+            "required_clients_per_evaluation": 1,
+            "simultaneous_use_required": false
+          },
+          "schema": "fu-candidate-contract/v1",
+          "shared_resource": {
+            "kind": "$add",
+            "width": 34
+          },
+          "version": 1
+        },
+        "interface": {
+          "externally_visible_results": 1,
+          "latency": {
+            "kind": "combinational",
+            "registered": "undefined_without_wrapper"
+          },
+          "operand_sources": [
+            {
+              "independent": true,
+              "name": "source_a",
+              "width": 33
+            },
+            {
+              "independent": true,
+              "name": "source_b",
+              "width": 33
+            }
+          ],
+          "selection_mode": "client_selection",
+          "simultaneous_use_preserved": false,
+          "throughput": {
+            "available_clients_per_evaluation": 1,
+            "registered_latency_and_initiation_interval": "undefined_without_wrapper"
+          }
+        },
+        "match_evidence": {
+          "matched_operator_count": 2,
+          "shared_resource_kind": "$add",
+          "shared_resource_width": 34
+        },
+        "requirements": {
+          "equal_external_interface": true,
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null,
+          "required_clients_per_evaluation": 1,
+          "simultaneous_use_required": false
+        },
+        "schema": "fu-candidate-contract/v1",
+        "shared_resource": {
+          "kind": "$add",
+          "width": 34
+        },
+        "version": 1
+      },
+      "interface_pair_check": {
+        "basis": "equal-interface separate wrapper versus fused wrapper",
+        "equal_external_interface": true
+      },
+      "interpretation": "Contract-guided whole-Ibex ALU plus ADD-client result using equal external interfaces; not proof of automatic whole-module discovery.",
+      "measured": {
+        "candidate_id": "whole_ibex_alu_plus_add_client",
+        "correctness": {
+          "status": "pass"
+        },
+        "decision": "TRADEOFF",
+        "deltas": {
+          "area_percent": -9.434369602763391,
+          "area_um2": -116.24199999999996,
+          "critical_delay_ns": 0.020000000000000018,
+          "fmax_mhz": -5.719514985129194
+        },
+        "policy": {
+          "max_area_increase_percent": 0.0,
+          "max_delay_increase_ns": null
+        },
+        "reasons": [
+          {
+            "code": "performance_bound_unspecified",
+            "message": "delay worsened but no acceptable performance bound was supplied"
+          }
+        ],
+        "schema": "fu-fusion-decision/v1",
+        "stage": "measured",
+        "version": 1
+      },
+      "preflight": {
+        "candidate_id": "whole_ibex_alu_plus_add_client",
+        "decision": "MEASURE",
+        "diagnostic_override": {
+          "allowed": false,
+          "purpose": "emit a rejected candidate for diagnosis only"
+        },
+        "measurement_required": true,
+        "profitability_claim": "none_before_synthesis",
+        "reasons": [],
+        "routing_overhead": {
+          "mapped_mux_area_um2": null,
+          "mapped_mux_cell": null,
+          "mapped_mux_count": null,
+          "measured_area_um2": null,
+          "pretechmap_mux_count": 12,
+          "status": "screening_only",
+          "uncertainty": [
+            "screening evidence is not measured area or delay",
+            "routing congestion, placement, buffering, and cell remapping remain unknown",
+            "MUX2 population is mapped-cell evidence, not a formal causal decomposition"
+          ]
+        },
+        "schema": "fu-fusion-decision/v1",
+        "stage": "preflight",
+        "version": 1
+      }
+    }
+  },
+  "generated_by": "scripts/interface_aware_decision.py",
+  "policy": {
+    "acceptable_area_increase_percent": 0.0,
+    "acceptable_delay_increase_ns": null,
+    "unspecified_performance_bound": "report_tradeoff"
+  },
+  "purpose": "Conservative preflight screening followed by separate measured policy evaluation.",
+  "schema": "fu-interface-aware-decision-report/v1",
+  "scope_limits": [
+    "Preflight can reject incompatible interfaces or insufficient contracts and can authorize measurement; it cannot predict profitability.",
+    "Two examples do not establish a universal area threshold.",
+    "Generalization requires more equal-interface synthesized/correctness-validated cases across widths, operators, controls, libraries, and timing policies."
+  ],
+  "source_artifacts": [
+    {
+      "path": "meeting-artifacts/2026-09-21/interface-control/interface_control_results.json",
+      "sha256": "bbbbfffdc853226761f99fc33ef5170764dedc38e989d61e66aa9a150c9a3de5"
+    },
+    {
+      "path": "meeting-artifacts/2026-09-21/sub_ltu/interface_contract.json",
+      "sha256": "d6cf2be216cc356c88ac65a6578d38ac99930c1b4bc602c01c3aa447a9bb526b"
+    },
+    {
+      "path": "meeting-artifacts/2026-09-21/fresh/ppa.json",
+      "sha256": "a6f79f0ee11802e32f7587e12b4923a47b7d7acca6f15c2db15920b52bff2f7e"
+    },
+    {
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/sharing_contract.json",
+      "sha256": "3795af797a45fdb3575443ad2df54280dc26dbfd7c002ac1162ccbb94c28dcaa"
+    },
+    {
+      "path": "meeting-artifacts/ibex-fusion/module-preserving/equal_interface_ppa.json",
+      "sha256": "80115d4ae1a2a35cce91178990e8f63c53c0e788d95c2937c466dd6b49dcd26d"
+    }
+  ],
+  "version": 1
+}

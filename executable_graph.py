@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Tuple
 
 from graph_extract import GRAPH_SCHEMA, normalize_operation
+from fusion_decision import preflight_candidate
 
 
 EXECUTABLE_SCHEMA = "fu-executable-graph/v1"
@@ -234,7 +235,22 @@ def _validate_merge(graph_a, graph_b, match, merge, pair):
 
 
 def realize(graph_a: Dict[str, Any], graph_b: Dict[str, Any], match: Dict[str, Any],
-            merge: Dict[str, Any], control: Dict[str, Any]) -> Dict[str, Any]:
+            merge: Dict[str, Any], control: Dict[str, Any],
+            candidate_contract: Optional[Dict[str, Any]] = None,
+            routing_evidence: Optional[Dict[str, Any]] = None,
+            diagnostic_override: bool = False) -> Dict[str, Any]:
+    decision = None
+    if candidate_contract is not None:
+        decision = preflight_candidate(
+            candidate_contract,
+            baseline_contract=candidate_contract.get("comparison_contract"),
+            routing_evidence=routing_evidence)
+        if decision["decision"] == "UNSUPPORTED":
+            reason = "; ".join(item["message"] for item in decision["reasons"])
+            raise ExecutableGraphError("preflight unsupported: {}".format(reason))
+        if decision["decision"] == "REJECT" and not diagnostic_override:
+            reason = "; ".join(item["message"] for item in decision["reasons"])
+            raise ExecutableGraphError("preflight rejected: {}".format(reason))
     for graph in (graph_a, graph_b):
         if graph.get("schema") != GRAPH_SCHEMA:
             raise ExecutableGraphError("source graph has the wrong schema")
@@ -440,6 +456,10 @@ def realize(graph_a: Dict[str, Any], graph_b: Dict[str, Any], match: Dict[str, A
               "adapters": {"zero_extensions": len(additions_a) + len(additions_b), "shared_input_muxes": mux_ids,
                             "output_selection_muxes": [item["source_node"] for item in outputs]},
               "hardware_status": {"executable": True, "template_backed": False, "graph_to_rtl_status": "executable"}}
+    if decision is not None:
+        result["decision_stage"] = decision
+        result["hardware_status"]["diagnostic_override"] = bool(
+            diagnostic_override and decision["decision"] == "REJECT")
     return result
 
 
@@ -448,9 +468,15 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser.add_argument("graph_a", type=Path); parser.add_argument("graph_b", type=Path)
     parser.add_argument("match", type=Path); parser.add_argument("merge", type=Path)
     parser.add_argument("control", type=Path); parser.add_argument("-o", "--output", type=Path, required=True)
+    parser.add_argument("--candidate-contract", type=Path)
+    parser.add_argument("--routing-evidence", type=Path)
+    parser.add_argument("--diagnostic-override", action="store_true")
     args = parser.parse_args(argv)
     try:
-        result = realize(_load(args.graph_a), _load(args.graph_b), _load(args.match), _load(args.merge), _load(args.control))
+        result = realize(_load(args.graph_a), _load(args.graph_b), _load(args.match), _load(args.merge), _load(args.control),
+                         candidate_contract=_load(args.candidate_contract) if args.candidate_contract else None,
+                         routing_evidence=_load(args.routing_evidence) if args.routing_evidence else None,
+                         diagnostic_override=args.diagnostic_override)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
         print("wrote {} ({} nodes, {} edges)".format(args.output, len(result["nodes"]), len(result["edges"])))
